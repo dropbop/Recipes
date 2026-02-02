@@ -29,7 +29,7 @@ A personal recipe lab notebook site with Win98 aesthetic. Static HTML/CSS/JS, no
 ## Recipe JSON Schema
 
 Key fields:
-- `id`, `title`, `canonical` (boolean for "dialed in" recipes)
+- `id`, `title`, `canonical` (boolean — shows burgundy border on index cards, used for filtering; not displayed on recipe page)
 - `description` — 1-2 sentence blurb shown in Overview tab; explains what the dish is and what makes this version distinct
 - `subtitle`, `source` — optional metadata
 - `ingredientGroups[].items[]` with `quantity`, `quantityMax` (for ranges like "4–6"), `unit`, `item`, `note`, `scalable`
@@ -49,3 +49,6 @@ Six desktop background colors selectable via View menu, persisted in localStorag
 - All paths must be relative (works on GitHub Pages at `/Recipes/`)
 - `.nojekyll` file prevents Jekyll processing
 - Tab order: Overview → Recipe → Notes
+  - **Overview:** description, deviations from tradition, source
+  - **Recipe:** scaling controls, ingredients, directions (single scroll for cooking)
+  - **Notes:** cooking notes + lab log combined
