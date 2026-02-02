@@ -1,0 +1,653 @@
+/* Win95 Recipe Lab Notebook Styles */
+
+/* === Base === */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #D4C5B9 0%, #E8DDD0 100%);
+    font-family: "Georgia", serif;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+/* === Window Chrome === */
+.window {
+    background: #C0C0C0;
+    border: 2px solid;
+    border-color: #FFFFFF #808080 #808080 #FFFFFF;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.title-bar {
+    background: linear-gradient(to right, #000080, #1084D0);
+    color: white;
+    padding: 3px 5px;
+    font-family: "MS Sans Serif", Tahoma, sans-serif;
+    font-size: 11px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title-bar-text {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.window-controls {
+    display: flex;
+    gap: 2px;
+}
+
+.window-btn {
+    width: 16px;
+    height: 14px;
+    background: #C0C0C0;
+    border: 1px solid;
+    border-color: #FFFFFF #808080 #808080 #FFFFFF;
+    font-size: 10px;
+    line-height: 12px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.window-btn:active {
+    border-color: #808080 #FFFFFF #FFFFFF #808080;
+}
+
+/* === Menu Bar === */
+.menu-bar {
+    background: #ECE9D8;
+    border-bottom: 1px solid #808080;
+    padding: 4px;
+    font-family: "MS Sans Serif", Tahoma, sans-serif;
+    font-size: 11px;
+}
+
+.menu-item {
+    display: inline-block;
+    padding: 4px 8px;
+    cursor: pointer;
+}
+
+.menu-item:hover {
+    background: #316AC5;
+    color: white;
+}
+
+/* === Content Area === */
+.content {
+    background: white;
+    padding: 20px;
+    min-height: 500px;
+    position: relative;
+}
+
+/* === Recipe Header === */
+.recipe-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px groove #808080;
+}
+
+.recipe-number {
+    font-family: "Courier New", monospace;
+    font-size: 48px;
+    color: #800020;
+    font-weight: bold;
+}
+
+.recipe-title {
+    font-family: "Comic Sans MS", "Trebuchet MS", sans-serif;
+    font-size: 24px;
+    color: #000080;
+}
+
+.recipe-subtitle {
+    font-family: "Georgia", serif;
+    font-size: 14px;
+    color: #666;
+    font-style: italic;
+}
+
+.recipe-meta {
+    display: flex;
+    gap: 15px;
+    font-family: "MS Sans Serif", Tahoma, sans-serif;
+    font-size: 11px;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* === Difficulty Stamp === */
+.difficulty {
+    position: absolute;
+    top: 80px;
+    right: 30px;
+    transform: rotate(15deg);
+}
+
+.stamp {
+    border: 3px solid #800020;
+    color: #800020;
+    padding: 5px 10px;
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: inline-block;
+    transform: rotate(-5deg);
+}
+
+/* === Canonical Badge === */
+.canonical-badge {
+    display: inline-block;
+    background: linear-gradient(to bottom, #FFD700, #FFA500);
+    color: #800020;
+    padding: 2px 8px;
+    font-family: "MS Sans Serif", Tahoma, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    border: 1px solid #DAA520;
+    margin-left: 10px;
+}
+
+/* === Recipe Image === */
+.recipe-image {
+    float: right;
+    width: 200px;
+    height: 150px;
+    background: #F0F0F0;
+    border: 2px inset #808080;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    color: #808080;
+    margin: 0 0 15px 15px;
+}
+
+/* === Tabs === */
+.info-tabs {
+    display: flex;
+    gap: 0;
+    margin: 20px 0 0 0;
+    flex-wrap: wrap;
+}
+
+.tab {
+    background: #ECE9D8;
+    border: 1px solid #808080;
+    border-bottom: none;
+    padding: 5px 15px;
+    cursor: pointer;
+    font-family: "MS Sans Serif", Tahoma, sans-serif;
+    font-size: 11px;
+    position: relative;
+    top: 1px;
+}
+
+.tab:hover {
+    background: #D4D0C8;
+}
+
+.tab.active {
+    background: white;
+    z-index: 1;
+    border-bottom: 1px solid white;
+}
+
+.tab-content {
+    display: none;
+    border: 1px solid #808080;
+    border-top: none;
+    padding: 15px;
+    background: white;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* === Sections === */
+.section {
+    background: #FFFEF7;
+    border: 1px inset #808080;
+    padding: 15px;
+    margin: 15px 0;
+}
+
+.section-title {
+    font-family: "MS Sans Serif", Tahoma, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    color: #800020;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+/* === Ingredients === */
+.ingredient {
+    font-family: "Georgia", serif;
+    line-height: 1.8;
+    padding-left: 20px;
+    position: relative;
+}
+
+.ingredient:before {
+    content: "\25B8";
+    position: absolute;
+    left: 0;
+    color: #800020;
+}
+
+.ingredient-quantity {
+    font-weight: bold;
+    color: #000080;
+}
+
+.ingredient-note {
+    font-style: italic;
+    color: #666;
+    font-size: 14px;
+}
+
+.note {
+    font-style: italic;
+    color: #666;
+    font-size: 14px;
+}
+
+/* === Scaling Controls === */
+.scaling-controls {
+    background: #ECE9D8;
+    border: 1px solid #808080;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-family: "MS Sans Serif", Tahoma, sans-serif;
+    font-size: 11px;
+}
+
+.scaling-label {
+    font-weight: bold;
+}
+
+.spin-button-container {
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+.spin-input {
+    width: 50px;
+    height: 22px;
+    border: 1px inset #808080;
+    text-align: center;
+    font-family: "MS Sans Serif", Tahoma, sans-serif;
+    font-size: 12px;
+    background: white;
+}
+
+.spin-buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.spin-btn {
+    width: 16px;
+    height: 11px;
+    background: #C0C0C0;
+    border: 1px solid;
+    border-color: #FFFFFF #808080 #808080 #FFFFFF;
+    font-size: 8px;
+    line-height: 8px;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spin-btn:active {
+    border-color: #808080 #FFFFFF #FFFFFF #808080;
+}
+
+.scaling-info {
+    color: #666;
+    font-style: italic;
+}
+
+/* === Directions === */
+.direction {
+    margin: 15px 0;
+    line-height: 1.6;
+}
+
+.direction-number {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: #800020;
+    color: white;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    margin-right: 10px;
+    font-family: "MS Sans Serif", Tahoma, sans-serif;
+}
+
+.direction-title {
+    font-weight: bold;
+    color: #000080;
+}
+
+/* === Notes & Deviations === */
+.note-item {
+    margin: 10px 0;
+    padding-left: 20px;
+    position: relative;
+    line-height: 1.6;
+}
+
+.note-item:before {
+    content: "\25C6";
+    position: absolute;
+    left: 0;
+    color: #800020;
+}
+
+.deviation-item {
+    margin: 10px 0;
+    padding-left: 20px;
+    position: relative;
+    line-height: 1.6;
+}
+
+.deviation-item:before {
+    content: "\2192";
+    position: absolute;
+    left: 0;
+    color: #800020;
+}
+
+/* === Lab Log === */
+.log-entry {
+    margin: 15px 0;
+    padding: 10px;
+    background: #FFFFF0;
+    border-left: 3px solid #800020;
+}
+
+.log-date {
+    font-family: "Courier New", monospace;
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.log-text {
+    line-height: 1.6;
+}
+
+.empty-log {
+    color: #999;
+    font-style: italic;
+    text-align: center;
+    padding: 30px;
+}
+
+/* === Tags === */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.tag {
+    display: inline-block;
+    background: #E0E0E0;
+    border: 1px solid #808080;
+    padding: 2px 8px;
+    font-family: "MS Sans Serif", Tahoma, sans-serif;
+    font-size: 10px;
+    color: #333;
+}
+
+.tag.seafood { background: #B0E0E6; }
+.tag.beef { background: #CD5C5C; color: white; }
+.tag.italian { background: #98FB98; }
+.tag.quick { background: #FFD700; }
+.tag.braise { background: #DEB887; }
+
+/* === Footer === */
+.footer-note {
+    text-align: center;
+    font-family: "Comic Sans MS", sans-serif;
+    color: #800020;
+    font-size: 18px;
+    margin-top: 30px;
+    padding: 15px;
+    background: #FFF8DC;
+    border: 2px ridge #808080;
+}
+
+/* === Recipe Cards (Index Page) === */
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.recipe-card {
+    background: white;
+    border: 1px solid #808080;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+.recipe-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+.recipe-card:active {
+    transform: translateY(0);
+}
+
+.recipe-icon {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.recipe-card-title {
+    font-family: "MS Sans Serif", Tahoma, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: #000080;
+    margin-bottom: 5px;
+    word-wrap: break-word;
+}
+
+.recipe-card-version {
+    font-family: "Courier New", monospace;
+    font-size: 10px;
+    color: #666;
+}
+
+.recipe-card-difficulty {
+    font-family: "MS Sans Serif", Tahoma, sans-serif;
+    font-size: 9px;
+    color: #800020;
+    margin-top: 5px;
+}
+
+.recipe-card .tags {
+    justify-content: center;
+    margin-top: 8px;
+}
+
+/* === Status Bar === */
+.status-bar {
+    background: #ECE9D8;
+    border-top: 1px solid #FFFFFF;
+    padding: 4px 8px;
+    font-family: "MS Sans Serif", Tahoma, sans-serif;
+    font-size: 11px;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+}
+
+.status-bar-section {
+    border: 1px inset #808080;
+    padding: 2px 8px;
+    background: #F0F0F0;
+}
+
+/* === Error Dialog === */
+.error-dialog {
+    text-align: center;
+    padding: 40px;
+}
+
+.error-icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.error-message {
+    font-family: "MS Sans Serif", Tahoma, sans-serif;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.error-btn {
+    background: #C0C0C0;
+    border: 2px solid;
+    border-color: #FFFFFF #808080 #808080 #FFFFFF;
+    padding: 5px 30px;
+    font-family: "MS Sans Serif", Tahoma, sans-serif;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.error-btn:active {
+    border-color: #808080 #FFFFFF #FFFFFF #808080;
+}
+
+/* === Toolbar === */
+.toolbar {
+    background: #ECE9D8;
+    border-bottom: 1px solid #808080;
+    padding: 4px;
+    display: flex;
+    gap: 5px;
+}
+
+.toolbar-btn {
+    background: #C0C0C0;
+    border: 1px solid;
+    border-color: #FFFFFF #808080 #808080 #FFFFFF;
+    padding: 3px 8px;
+    font-family: "MS Sans Serif", Tahoma, sans-serif;
+    font-size: 11px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.toolbar-btn:hover {
+    background: #D4D0C8;
+}
+
+.toolbar-btn:active {
+    border-color: #808080 #FFFFFF #FFFFFF #808080;
+}
+
+/* === Mobile Responsive === */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .window {
+        margin: 0;
+    }
+
+    .content {
+        padding: 10px;
+    }
+
+    .recipe-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .recipe-number {
+        font-size: 36px;
+    }
+
+    .recipe-title {
+        font-size: 20px;
+    }
+
+    .difficulty {
+        position: static;
+        transform: rotate(5deg);
+        margin: 10px 0;
+    }
+
+    .recipe-image {
+        float: none;
+        margin: 10px auto;
+    }
+
+    .info-tabs {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        flex-wrap: nowrap;
+    }
+
+    .tab {
+        min-width: 80px;
+        flex-shrink: 0;
+    }
+
+    .scaling-controls {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    .recipe-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .recipe-icon {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 400px) {
+    .recipe-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Viewer</title>
+  <link rel="stylesheet" href="css/win95.css">
+</head>
+<body>
+
+<div class="window">
+  <div class="title-bar">
+    <span class="title-bar-text" id="window-title">Recipe Viewer</span>
+    <div class="window-controls">
+      <div class="window-btn">_</div>
+      <div class="window-btn" onclick="location.href='index.html'">X</div>
+    </div>
+  </div>
+
+  <div class="menu-bar">
+    <span class="menu-item" onclick="location.href='index.html'">Back</span>
+    <span class="menu-item">File</span>
+    <span class="menu-item">Edit</span>
+    <span class="menu-item">View</span>
+    <span class="menu-item">Help</span>
+  </div>
+
+  <div class="content">
+    <div class="recipe-header">
+      <span class="recipe-number" id="recipe-number">0.0</span>
+      <div>
+        <span class="recipe-title" id="recipe-title">LOADING...</span>
+        <span class="canonical-badge" id="canonical-badge" style="display:none;">DIALED IN</span>
+        <div class="recipe-subtitle" id="recipe-subtitle"></div>
+        <div class="recipe-meta" id="recipe-meta"></div>
+        <div class="tags" id="recipe-tags"></div>
+      </div>
+    </div>
+
+    <div class="difficulty">
+      <span class="stamp" id="difficulty-stamp">LOADING</span>
+    </div>
+
+    <div class="info-tabs">
+      <div class="tab active" data-tab="ingredients">INGREDIENTS</div>
+      <div class="tab" data-tab="directions">DIRECTIONS</div>
+      <div class="tab" data-tab="notes">NOTES</div>
+      <div class="tab" data-tab="log">LAB LOG</div>
+      <div class="tab" data-tab="deviations">DEVIATIONS</div>
+    </div>
+
+    <div class="tab-content active" id="ingredients-content">
+      <div class="scaling-controls" id="scaling-controls">
+        <span class="scaling-label">SERVINGS:</span>
+        <span class="scaling-info">Loading...</span>
+      </div>
+      <!-- Ingredients rendered by JS -->
+    </div>
+
+    <div class="tab-content" id="directions-content">
+      <!-- Directions rendered by JS -->
+    </div>
+
+    <div class="tab-content" id="notes-content">
+      <!-- Notes rendered by JS -->
+    </div>
+
+    <div class="tab-content" id="log-content">
+      <!-- Lab log rendered by JS -->
+    </div>
+
+    <div class="tab-content" id="deviations-content">
+      <!-- Deviations rendered by JS -->
+    </div>
+  </div>
+
+  <div class="status-bar">
+    <span class="status-bar-section" id="status-servings">Ready</span>
+    <span class="status-bar-section" id="status-version"></span>
+  </div>
+</div>
+
+<script src="js/scaling.js"></script>
+<script src="js/recipe-loader.js"></script>
+</body>
+</html>

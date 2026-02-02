@@ -1,0 +1,145 @@
+{
+  "id": "shrimp-scampi",
+  "title": "Shrimp Scampi",
+  "subtitle": "Intentionally Imperfect",
+  "version": "1",
+  "canonical": false,
+  "difficulty": "Medium",
+  "tags": ["seafood", "italian", "quick", "weeknight"],
+  "source": "Traditional Italian-American, heavily adapted",
+  "time": {
+    "prep": 15,
+    "cook": 10
+  },
+  "servings": {
+    "base": 4,
+    "unit": "servings"
+  },
+  "ingredientGroups": [
+    {
+      "name": "Shrimp",
+      "items": [
+        {
+          "quantity": 2.5,
+          "unit": "lbs",
+          "item": "colossal shrimp",
+          "note": "peeled, deveined, no tails",
+          "scalable": true
+        },
+        {
+          "quantity": null,
+          "unit": "",
+          "item": "salt, black pepper, MSG",
+          "note": "to taste",
+          "scalable": false
+        },
+        {
+          "quantity": null,
+          "unit": "",
+          "item": "avocado oil",
+          "note": "or similar high-smoke-point oil",
+          "scalable": false
+        }
+      ]
+    },
+    {
+      "name": "Sauce",
+      "items": [
+        {
+          "quantity": 4,
+          "unit": "tbsp",
+          "item": "butter",
+          "note": "see notes - may need 5-6 tbsp",
+          "scalable": true
+        },
+        {
+          "quantity": 5,
+          "unit": "cloves",
+          "item": "garlic, pressed",
+          "note": "see notes on pressed vs sliced",
+          "scalable": true
+        },
+        {
+          "quantity": null,
+          "unit": "",
+          "item": "red pepper flakes",
+          "note": "pinch",
+          "scalable": false
+        },
+        {
+          "quantity": 0.5,
+          "unit": "cup",
+          "item": "dry white wine",
+          "note": null,
+          "scalable": true
+        },
+        {
+          "quantity": 1,
+          "unit": "",
+          "item": "lemon, juiced",
+          "note": null,
+          "scalable": true
+        }
+      ]
+    },
+    {
+      "name": "To Finish",
+      "items": [
+        {
+          "quantity": null,
+          "unit": "",
+          "item": "flat-leaf parsley",
+          "note": "roughly chopped",
+          "scalable": false
+        },
+        {
+          "quantity": null,
+          "unit": "",
+          "item": "long pasta",
+          "note": "linguine, spaghetti, whatever's in the pantry",
+          "scalable": false
+        }
+      ]
+    }
+  ],
+  "directions": [
+    {
+      "step": 1,
+      "title": "Shrimp",
+      "text": "Toss shrimp with salt, pepper, and MSG. Lay out in a single layer on paper towels on a plate - let the surface dry out. Get a stainless steel pan ripping hot with a thin layer of avocado oil. Sear shrimp mostly on one side until you build a deep golden crust and a good fond in the pan, flipping briefly to finish. Pull shrimp out and set aside. They can be slightly underdone; they're going back in later."
+    },
+    {
+      "step": 2,
+      "title": "Sauce",
+      "text": "Same pan. Add 4 tbsp butter - the water content in the butter will help deglaze the fond as it melts. Add pressed garlic and red pepper flakes, cook until fragrant. Add white wine and lemon juice, let it reduce. It's still going to be liquidy in its final form; that's fine."
+    },
+    {
+      "step": 3,
+      "title": "Pasta",
+      "text": "Boil your long noodle on the side while the sauce comes together. Drain, reserving a splash of pasta water."
+    },
+    {
+      "step": 4,
+      "title": "Combine",
+      "text": "Toss pasta into the sauce with a splash of pasta water. Return shrimp to the pan, finish cooking them if necessary. Kill the heat, add parsley, toss everything together."
+    }
+  ],
+  "notes": [
+    "The sauce was a little lean. 4 tbsp butter and 1/2 cup wine across 2.5 lbs of shrimp and a full portion of pasta runs thin. Next time, either bump butter to 5-6 tbsp, or mount a tablespoon of cold butter into the finished sauce off-heat right before combining. The cold butter trick emulsifies the sauce and gives it a glossy, clingy consistency instead of pooling at the bottom of the bowl.",
+    "Pressed garlic is not traditional. Sliced garlic is. Pressing releases more allicin - sharper, more pungent, burns faster. Sliced gives a mellower, sweeter presence that sits further back in the dish. Both work. Try sliced once to know the difference.",
+    "MSG is standing in for shell stock. Traditional restaurant versions sweat the shells in butter first, strain, then build the sauce in that shrimp-fortified fat. MSG gets you to a similar glutamate baseline with deshelled product and zero extra steps. If you ever have shell-on shrimp, try the stock method as a comparison.",
+    "Deglazing with butter before the wine means the fond dissolves into the fat phase first, carrying more sear flavor into the lipid-soluble side of the sauce. This happened naturally from the sequencing but it's a nice mechanical bonus worth keeping intentional.",
+    "Avocado oil for the sear, not butter. Butter burns at the temperatures you need for a proper Maillard sear on shrimp. Butter is the sauce fat. Oil is the sear fat. Don't combine these steps."
+  ],
+  "deviations": [
+    "Hard sear on colossal shrimp instead of gentle saute - different texture and richer flavor base from the fond",
+    "Pressed garlic instead of sliced - sharper, more pungent",
+    "MSG instead of shell stock - same glutamate baseline, zero extra steps"
+  ],
+  "log": [
+    {
+      "date": "2026-01-31",
+      "entry": "Sauce ran lean at these ratios. Next time bump butter to 5-6 tbsp, or mount cold butter at the end for emulsification."
+    }
+  ]
+}

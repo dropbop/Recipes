@@ -1,310 +1,123 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-body {
-    background: linear-gradient(135deg, #D4C5B9 0%, #E8DDD0 100%);
-    font-family: "Georgia", serif;
-    margin: 0;
-    padding: 20px;
-}
-
-.window {
-    background: #C0C0C0;
-    border: 2px solid;
-    border-color: #FFFFFF #808080 #808080 #FFFFFF;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.title-bar {
-    background: linear-gradient(to right, #000080, #1084D0);
-    color: white;
-    padding: 3px 5px;
-    font-family: "MS Sans Serif", sans-serif;
-    font-size: 11px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.window-controls {
-    display: flex;
-    gap: 2px;
-}
-
-.window-btn {
-    width: 16px;
-    height: 14px;
-    background: #C0C0C0;
-    border: 1px solid;
-    border-color: #FFFFFF #808080 #808080 #FFFFFF;
-    font-size: 10px;
-    line-height: 12px;
-    text-align: center;
-}
-
-.menu-bar {
-    background: #ECE9D8;
-    border-bottom: 1px solid #808080;
-    padding: 4px;
-    font-family: "MS Sans Serif", sans-serif;
-    font-size: 11px;
-}
-
-.menu-item {
-    display: inline-block;
-    padding: 4px 8px;
-    cursor: pointer;
-}
-
-.menu-item:hover {
-    background: #316AC5;
-    color: white;
-}
-
-.content {
-    background: white;
-    padding: 20px;
-    min-height: 600px;
-}
-
-.recipe-header {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-    border-bottom: 2px groove #808080;
-}
-
-.recipe-number {
-    font-family: "Courier New", monospace;
-    font-size: 48px;
-    color: #800020;
-    font-weight: bold;
-}
-
-.recipe-title {
-    font-family: "Comic Sans MS", "Trebuchet MS", sans-serif;
-    font-size: 24px;
-    color: #000080;
-}
-
-.recipe-image {
-    float: right;
-    width: 200px;
-    height: 150px;
-    background: #F0F0F0;
-    border: 2px inset #808080;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 10px;
-    color: #808080;
-    margin: 0 0 15px 15px;
-}
-
-.info-tabs {
-    display: flex;
-    gap: 0;
-    margin: 20px 0;
-}
-
-.tab {
-    background: #ECE9D8;
-    border: 1px solid #808080;
-    border-bottom: none;
-    padding: 5px 15px;
-    cursor: pointer;
-    font-family: "MS Sans Serif", sans-serif;
-    font-size: 11px;
-}
-
-.tab.active {
-    background: white;
-    position: relative;
-    top: 1px;
-    z-index: 1;
-}
-
-.section {
-    background: #FFFEF7;
-    border: 1px inset #808080;
-    padding: 15px;
-    margin: 15px 0;
-}
-
-.section-title {
-    font-family: "MS Sans Serif", sans-serif;
-    font-size: 11px;
-    font-weight: bold;
-    color: #800020;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-}
-
-.ingredient {
-    font-family: "Georgia", serif;
-    line-height: 1.8;
-    padding-left: 20px;
-    position: relative;
-}
-
-.ingredient:before {
-    content: "▸";
-    position: absolute;
-    left: 0;
-    color: #800020;
-}
-
-.note {
-    font-style: italic;
-    color: #666;
-    font-size: 14px;
-}
-
-.direction {
-    margin: 15px 0;
-    line-height: 1.6;
-}
-
-.direction-number {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    background: #800020;
-    color: white;
-    text-align: center;
-    line-height: 20px;
-    font-size: 12px;
-    margin-right: 10px;
-    font-family: "MS Sans Serif", sans-serif;
-}
-
-.footer-note {
-    text-align: center;
-    font-family: "Comic Sans MS", sans-serif;
-    color: #800020;
-    font-size: 18px;
-    margin-top: 30px;
-    padding: 15px;
-    background: #FFF8DC;
-    border: 2px ridge #808080;
-}
-
-.difficulty {
-    position: absolute;
-    top: 80px;
-    right: 30px;
-    transform: rotate(15deg);
-}
-
-.stamp {
-    border: 3px solid #800020;
-    color: #800020;
-    padding: 5px 10px;
-    font-family: "Courier New", monospace;
-    font-weight: bold;
-    text-transform: uppercase;
-    display: inline-block;
-    transform: rotate(-5deg);
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Explorer</title>
+  <link rel="stylesheet" href="css/win95.css">
 </head>
 <body>
 
 <div class="window">
-    <div class="title-bar">
-        <span>🍖 Recipe Viewer - 4.20 Braised Short Rib</span>
-        <div class="window-controls">
-            <div class="window-btn">_</div>
-            <div class="window-btn">□</div>
-            <div class="window-btn">X</div>
-        </div>
+  <div class="title-bar">
+    <span class="title-bar-text">Recipe Explorer - Lab Notebook</span>
+    <div class="window-controls">
+      <div class="window-btn">_</div>
+      <div class="window-btn">X</div>
     </div>
-    
-    <div class="menu-bar">
-        <span class="menu-item">File</span>
-        <span class="menu-item">Edit</span>
-        <span class="menu-item">Recipes</span>
-        <span class="menu-item">Favorites</span>
-        <span class="menu-item">Help</span>
+  </div>
+
+  <div class="menu-bar">
+    <span class="menu-item">File</span>
+    <span class="menu-item">Edit</span>
+    <span class="menu-item">View</span>
+    <span class="menu-item">Favorites</span>
+    <span class="menu-item">Help</span>
+  </div>
+
+  <div class="toolbar">
+    <button class="toolbar-btn" onclick="filterRecipes('all')">All</button>
+    <button class="toolbar-btn" onclick="filterRecipes('canonical')">Dialed In</button>
+    <button class="toolbar-btn" onclick="filterRecipes('experimenting')">Experimenting</button>
+  </div>
+
+  <div class="content" style="min-height: 400px;">
+    <div class="recipe-grid" id="recipe-grid">
+      <!-- Recipe cards rendered by JS -->
     </div>
-    
-    <div class="content">
-        <div class="recipe-header">
-            <span class="recipe-number">4.20</span>
-            <span class="recipe-title">BRAISED SHORT RIB</span>
-        </div>
-        
-        <div class="difficulty">
-            <span class="stamp">HARD TO FUCK UP</span>
-        </div>
-        
-        <div class="recipe-image">
-            [Loading Image...]<br>
-            shortrib.jpg
-        </div>
-        
-        <div class="info-tabs">
-            <div class="tab active">INGREDIENTS</div>
-            <div class="tab">DIRECTIONS</div>
-            <div class="tab">TIPS</div>
-            <div class="tab">PRINT</div>
-        </div>
-        
-        <div class="section">
-            <div class="section-title">◆ Main Components</div>
-            <div class="ingredient">Bone-in short ribs (4-6) <span class="note">- alternative: anything with collagen who cares</span></div>
-            <div class="ingredient">1 tbsp ground pepper <span class="note">- a lot is what matters not the volume</span></div>
-            <div class="ingredient">2 tbsp crushed peppercorns <span class="note">- it's more pepper! grind it if you want</span></div>
-            <div class="ingredient">Like 8 cloves garlic <span class="note">- most of a head, just use a fuckton</span></div>
-            <div class="ingredient">1-2 tbsp tomato paste</div>
-            <div class="ingredient">Chianti or similar wine <span class="note">- 2 cups worth</span></div>
-        </div>
-        
-        <div class="section">
-            <div class="section-title">◆ Herbs & Aromatics</div>
-            <div class="ingredient">Sage</div>
-            <div class="ingredient">Thyme</div>
-            <div class="ingredient">Bay leaves</div>
-            <div class="ingredient" style="margin-top: 10px;">
-                <strong>Optional vegetables:</strong> pearl onions, carrot, celery, onion, bell pepper, potato
-                <div class="note" style="margin-left: 20px;">Add them at the right time, not the wrong one. What the right time is is left as an exercise to the reader.</div>
-            </div>
-        </div>
-        
-        <div class="section">
-            <div class="section-title">◆ Directions</div>
-            <div class="direction">
-                <span class="direction-number">1</span>
-                Salt short ribs. You may sear them but need not. I sometimes sear them and use the fond for something else entirely, then use the seared ribs with a fondless pot. Chaos.
-            </div>
-            <div class="direction">
-                <span class="direction-number">2</span>
-                Turn the garlic into a paste using salt and a mortar and pestle. This is important.
-            </div>
-            <div class="direction">
-                <span class="direction-number">3</span>
-                Rub short ribs with garlic paste and tomato paste. Get messy.
-            </div>
-            <div class="direction">
-                <span class="direction-number">4</span>
-                In a tightly covered dutch oven, braise in 2 cups wine with all the herbs n shit, about 3.5 hours, turning every 30 mins or so. Set timers or forget and panic.
-            </div>
-            <div class="direction">
-                <span class="direction-number">5</span>
-                Serve with polenta or mashed potato or something. Top with parsnip chips if you're feeling fancy.
-            </div>
-        </div>
-        
-        <div class="footer-note">
-            "What a dish" ⭐⭐⭐⭐⭐
-        </div>
-    </div>
+  </div>
+
+  <div class="status-bar">
+    <span class="status-bar-section" id="recipe-count">Loading...</span>
+    <span class="status-bar-section" id="filter-status">Filter: All</span>
+  </div>
 </div>
 
+<script src="js/manifest.js"></script>
+<script>
+  let currentFilter = 'all';
+
+  document.addEventListener('DOMContentLoaded', () => {
+    renderRecipeGrid(RECIPE_MANIFEST);
+    updateStatus();
+  });
+
+  function renderRecipeGrid(recipes) {
+    const grid = document.getElementById('recipe-grid');
+    grid.innerHTML = '';
+
+    const filtered = filterByCurrentFilter(recipes);
+
+    if (filtered.length === 0) {
+      grid.innerHTML = '<p style="text-align: center; color: #666; grid-column: 1/-1;">No recipes match the current filter.</p>';
+      return;
+    }
+
+    filtered.forEach(recipe => {
+      const card = createRecipeCard(recipe);
+      grid.appendChild(card);
+    });
+  }
+
+  function createRecipeCard(recipe) {
+    const card = document.createElement('div');
+    card.className = 'recipe-card';
+    card.onclick = () => location.href = `recipe.html?id=${recipe.id}`;
+
+    const icon = recipe.canonical ? '\uD83D\uDCD6' : '\uD83D\uDCC4';
+    const canonicalStar = recipe.canonical ? ' \u2B50' : '';
+    const totalTime = (recipe.time?.prep || 0) + (recipe.time?.cook || 0);
+
+    const tagsHtml = recipe.tags.slice(0, 3).map(tag =>
+      `<span class="tag ${tag}">${tag}</span>`
+    ).join('');
+
+    card.innerHTML = `
+      <div class="recipe-icon">${icon}</div>
+      <div class="recipe-card-title">${recipe.title}${canonicalStar}</div>
+      <div class="recipe-card-version">v${recipe.version}</div>
+      <div class="recipe-card-difficulty">${recipe.difficulty}</div>
+      <div style="font-size: 10px; color: #666; margin-top: 5px;">${totalTime} min total</div>
+      <div class="tags">${tagsHtml}</div>
+    `;
+
+    return card;
+  }
+
+  function filterRecipes(filter) {
+    currentFilter = filter;
+    renderRecipeGrid(RECIPE_MANIFEST);
+    updateStatus();
+  }
+
+  function filterByCurrentFilter(recipes) {
+    if (currentFilter === 'all') return recipes;
+    if (currentFilter === 'canonical') return recipes.filter(r => r.canonical);
+    if (currentFilter === 'experimenting') return recipes.filter(r => !r.canonical);
+    return recipes;
+  }
+
+  function updateStatus() {
+    const filtered = filterByCurrentFilter(RECIPE_MANIFEST);
+    document.getElementById('recipe-count').textContent = `${filtered.length} recipe${filtered.length !== 1 ? 's' : ''}`;
+
+    const filterLabels = {
+      'all': 'All',
+      'canonical': 'Dialed In',
+      'experimenting': 'Experimenting'
+    };
+    document.getElementById('filter-status').textContent = `Filter: ${filterLabels[currentFilter]}`;
+  }
+</script>
 </body>
 </html>

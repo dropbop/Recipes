@@ -1,0 +1,135 @@
+{
+  "id": "braised-short-rib",
+  "title": "Braised Short Rib",
+  "version": "4.20",
+  "canonical": true,
+  "difficulty": "Hard to Fuck Up",
+  "tags": ["beef", "braise", "dutch-oven", "winter"],
+  "source": "Family tradition, heavily improvised",
+  "time": {
+    "prep": 20,
+    "cook": 210
+  },
+  "servings": {
+    "base": 4,
+    "unit": "servings"
+  },
+  "ingredientGroups": [
+    {
+      "name": "Main Components",
+      "items": [
+        {
+          "quantity": 4,
+          "unit": "",
+          "item": "bone-in short ribs",
+          "note": "alternative: anything with collagen who cares",
+          "scalable": true
+        },
+        {
+          "quantity": 1,
+          "unit": "tbsp",
+          "item": "ground pepper",
+          "note": "a lot is what matters not the volume",
+          "scalable": true
+        },
+        {
+          "quantity": 2,
+          "unit": "tbsp",
+          "item": "crushed peppercorns",
+          "note": "it's more pepper! grind it if you want",
+          "scalable": true
+        },
+        {
+          "quantity": 8,
+          "unit": "cloves",
+          "item": "garlic",
+          "note": "most of a head, just use a fuckton",
+          "scalable": true
+        },
+        {
+          "quantity": 1.5,
+          "unit": "tbsp",
+          "item": "tomato paste",
+          "note": null,
+          "scalable": true
+        },
+        {
+          "quantity": 2,
+          "unit": "cups",
+          "item": "Chianti or similar wine",
+          "note": null,
+          "scalable": true
+        }
+      ]
+    },
+    {
+      "name": "Herbs & Aromatics",
+      "items": [
+        {
+          "quantity": null,
+          "unit": "",
+          "item": "sage",
+          "note": "a few sprigs",
+          "scalable": false
+        },
+        {
+          "quantity": null,
+          "unit": "",
+          "item": "thyme",
+          "note": "a few sprigs",
+          "scalable": false
+        },
+        {
+          "quantity": null,
+          "unit": "",
+          "item": "bay leaves",
+          "note": "2-3",
+          "scalable": false
+        }
+      ]
+    },
+    {
+      "name": "Optional Vegetables",
+      "items": [
+        {
+          "quantity": null,
+          "unit": "",
+          "item": "pearl onions, carrot, celery, onion, bell pepper, potato",
+          "note": "add them at the right time, not the wrong one",
+          "scalable": false
+        }
+      ]
+    }
+  ],
+  "directions": [
+    {
+      "step": 1,
+      "text": "Salt short ribs. You may sear them but need not. I sometimes sear them and use the fond for something else entirely, then use the seared ribs with a fondless pot. Chaos."
+    },
+    {
+      "step": 2,
+      "text": "Turn the garlic into a paste using salt and a mortar and pestle. This is important."
+    },
+    {
+      "step": 3,
+      "text": "Rub short ribs with garlic paste and tomato paste. Get messy."
+    },
+    {
+      "step": 4,
+      "text": "In a tightly covered dutch oven, braise in 2 cups wine with all the herbs n shit, about 3.5 hours, turning every 30 mins or so. Set timers or forget and panic."
+    },
+    {
+      "step": 5,
+      "text": "Serve with polenta or mashed potato or something. Top with parsnip chips if you're feeling fancy."
+    }
+  ],
+  "notes": [
+    "What the right time is for adding vegetables is left as an exercise to the reader.",
+    "The longer you braise, the more the meat falls off the bone. 3.5 hours is minimum; 4+ is better if you have time."
+  ],
+  "deviations": [
+    "Garlic paste instead of whole cloves - more intense flavor distribution",
+    "Double pepper (ground AND crushed) - because why not"
+  ],
+  "log": []
+}
