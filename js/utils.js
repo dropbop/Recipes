@@ -74,7 +74,72 @@ function getTagColor(tag) {
   return TAG_COLORS[Math.abs(hash) % TAG_COLORS.length];
 }
 
+// === Theme System ===
+const THEMES = {
+  teal:     '#547E7E',
+  slate:    '#5A6A7A',
+  olive:    '#6B6B4A',
+  plum:     '#6B4A5E',
+  storm:    '#4A5A6B',
+  charcoal: '#4A4A4A'
+};
+
+function setTheme(name) {
+  if (!THEMES[name]) return;
+  document.body.style.setProperty('--desktop-bg', THEMES[name]);
+  document.body.style.backgroundColor = THEMES[name];
+  localStorage.setItem('recipe-lab-theme', name);
+  updateThemeCheckmarks(name);
+}
+
+function updateThemeCheckmarks(activeName) {
+  const items = document.querySelectorAll('#theme-dropdown .menu-dropdown-item');
+  items.forEach(item => {
+    const checkmark = item.querySelector('.checkmark');
+    const onclick = item.getAttribute('onclick');
+    const match = onclick && onclick.match(/setTheme\('(\w+)'\)/);
+    const themeName = match ? match[1] : null;
+    if (checkmark) {
+      checkmark.textContent = (themeName === activeName) ? '✓' : '';
+    }
+  });
+}
+
+// Apply saved theme immediately (before DOMContentLoaded)
+(function() {
+  const saved = localStorage.getItem('recipe-lab-theme') || 'teal';
+  if (THEMES[saved]) {
+    document.body.style.backgroundColor = THEMES[saved];
+  }
+})();
+
+// Update checkmarks after DOM ready
+document.addEventListener('DOMContentLoaded', () => {
+  const saved = localStorage.getItem('recipe-lab-theme') || 'teal';
+  updateThemeCheckmarks(saved);
+
+  // Menu click handler for mobile
+  const viewMenu = document.getElementById('view-menu');
+  if (viewMenu) {
+    viewMenu.addEventListener('click', (e) => {
+      // Don't toggle when clicking dropdown items
+      if (e.target.classList.contains('menu-dropdown-item')) return;
+      if (e.target.classList.contains('checkmark')) return;
+      viewMenu.classList.toggle('menu-open');
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!viewMenu.contains(e.target)) {
+        viewMenu.classList.remove('menu-open');
+      }
+    });
+  }
+});
+
 // Export to window for use across pages
 window.formatQuantity = formatQuantity;
 window.getTagColor = getTagColor;
 window.FRACTIONS = FRACTIONS;
+window.setTheme = setTheme;
+window.THEMES = THEMES;

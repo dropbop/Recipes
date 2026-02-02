@@ -21,15 +21,25 @@
   <div class="menu-bar">
     <span class="menu-item"><u>F</u>ile</span>
     <span class="menu-item"><u>E</u>dit</span>
-    <span class="menu-item"><u>V</u>iew</span>
+    <span class="menu-item" id="view-menu">
+      <u>V</u>iew
+      <div class="menu-dropdown" id="theme-dropdown">
+        <span class="menu-dropdown-item" onclick="setTheme('teal')"><span class="checkmark">✓</span> Teal</span>
+        <span class="menu-dropdown-item" onclick="setTheme('slate')"><span class="checkmark"></span> Slate</span>
+        <span class="menu-dropdown-item" onclick="setTheme('olive')"><span class="checkmark"></span> Olive</span>
+        <span class="menu-dropdown-item" onclick="setTheme('plum')"><span class="checkmark"></span> Plum</span>
+        <span class="menu-dropdown-item" onclick="setTheme('storm')"><span class="checkmark"></span> Storm</span>
+        <span class="menu-dropdown-item" onclick="setTheme('charcoal')"><span class="checkmark"></span> Charcoal</span>
+      </div>
+    </span>
     <span class="menu-item">Fav<u>o</u>rites</span>
     <span class="menu-item"><u>H</u>elp</span>
   </div>
 
   <div class="toolbar">
-    <button class="toolbar-btn" onclick="filterRecipes('all')">All</button>
-    <button class="toolbar-btn" onclick="filterRecipes('canonical')">Dialed In</button>
-    <button class="toolbar-btn" onclick="filterRecipes('experimenting')">Experimenting</button>
+    <button class="toolbar-btn active" onclick="filterRecipes('all', event)">All</button>
+    <button class="toolbar-btn" onclick="filterRecipes('canonical', event)">Dialed In</button>
+    <button class="toolbar-btn" onclick="filterRecipes('experimenting', event)">Experimenting</button>
   </div>
 
   <div class="content" style="min-height: 400px;">
@@ -73,11 +83,10 @@
 
   function createRecipeCard(recipe) {
     const card = document.createElement('div');
-    card.className = 'recipe-card';
+    card.className = 'recipe-card' + (recipe.canonical ? ' canonical' : '');
     card.onclick = () => location.href = `recipe.html?id=${recipe.id}`;
 
     const icon = recipe.canonical ? '\uD83D\uDCD6' : '\uD83D\uDCC4';
-    const canonicalStar = recipe.canonical ? ' \u2B50' : '';
     const totalTime = (recipe.time?.prep || 0) + (recipe.time?.cook || 0);
 
     const tagsHtml = recipe.tags.slice(0, 3).map(tag =>
@@ -86,9 +95,7 @@
 
     card.innerHTML = `
       <div class="recipe-icon">${icon}</div>
-      <div class="recipe-card-title">${recipe.title}${canonicalStar}</div>
-      <div class="recipe-card-version">v${recipe.version}</div>
-      <div class="recipe-card-difficulty">${recipe.difficulty}</div>
+      <div class="recipe-card-title">${recipe.title}</div>
       <div style="font-size: 10px; color: #666; margin-top: 5px;">${totalTime} min total</div>
       <div class="tags">${tagsHtml}</div>
     `;
@@ -96,10 +103,18 @@
     return card;
   }
 
-  function filterRecipes(filter) {
+  function filterRecipes(filter, event) {
     currentFilter = filter;
     renderRecipeGrid(RECIPE_MANIFEST);
     updateStatus();
+
+    // Update toolbar button states
+    document.querySelectorAll('.toolbar-btn').forEach(btn => {
+      btn.classList.remove('active');
+    });
+    if (event && event.target) {
+      event.target.classList.add('active');
+    }
   }
 
   function filterByCurrentFilter(recipes) {

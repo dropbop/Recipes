@@ -22,23 +22,28 @@
     <span class="menu-item" onclick="location.href='index.html'"><u>B</u>ack</span>
     <span class="menu-item"><u>F</u>ile</span>
     <span class="menu-item"><u>E</u>dit</span>
-    <span class="menu-item"><u>V</u>iew</span>
+    <span class="menu-item" id="view-menu">
+      <u>V</u>iew
+      <div class="menu-dropdown" id="theme-dropdown">
+        <span class="menu-dropdown-item" onclick="setTheme('teal')"><span class="checkmark">✓</span> Teal</span>
+        <span class="menu-dropdown-item" onclick="setTheme('slate')"><span class="checkmark"></span> Slate</span>
+        <span class="menu-dropdown-item" onclick="setTheme('olive')"><span class="checkmark"></span> Olive</span>
+        <span class="menu-dropdown-item" onclick="setTheme('plum')"><span class="checkmark"></span> Plum</span>
+        <span class="menu-dropdown-item" onclick="setTheme('storm')"><span class="checkmark"></span> Storm</span>
+        <span class="menu-dropdown-item" onclick="setTheme('charcoal')"><span class="checkmark"></span> Charcoal</span>
+      </div>
+    </span>
     <span class="menu-item" onclick="window.print()"><u>P</u>rint</span>
     <span class="menu-item"><u>H</u>elp</span>
   </div>
 
   <div class="content">
-    <span class="stamp" id="difficulty-stamp">Loading</span>
-
     <div class="recipe-header">
-      <span class="recipe-number" id="recipe-number">0.0</span>
-      <div>
-        <span class="recipe-title" id="recipe-title">Loading...</span>
-        <span class="canonical-badge" id="canonical-badge" style="display:none;">Dialed In</span>
-        <div class="recipe-subtitle" id="recipe-subtitle"></div>
-        <div class="recipe-meta" id="recipe-meta"></div>
-        <div class="tags" id="recipe-tags"></div>
-      </div>
+      <span class="recipe-title" id="recipe-title">Loading...</span>
+      <span class="canonical-badge" id="canonical-badge" style="display:none;">Dialed In</span>
+      <div class="recipe-subtitle" id="recipe-subtitle"></div>
+      <div class="recipe-meta" id="recipe-meta"></div>
+      <div class="tags" id="recipe-tags"></div>
     </div>
 
     <div class="info-tabs">
@@ -54,7 +59,7 @@
         <span class="scaling-label">Servings:</span>
         <span class="scaling-info">Loading...</span>
       </div>
-      <!-- Ingredients rendered by JS -->
+      <div id="ingredients-list"></div>
     </div>
 
     <div class="tab-content" id="directions-content">
@@ -76,7 +81,7 @@
 
   <div class="status-bar">
     <span class="status-bar-section" id="status-servings">Scale: 1×</span>
-    <span class="status-bar-section" id="status-version"></span>
+    <span class="status-bar-section" id="status-info"></span>
   </div>
 </div>
 

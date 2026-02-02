@@ -6,7 +6,8 @@
 }
 
 body {
-    background-color: #547E7E;
+    --desktop-bg: #547E7E;
+    background-color: var(--desktop-bg);
     font-family: "Georgia", serif;
     margin: 0;
     padding: 20px;
@@ -74,11 +75,60 @@ body {
     display: inline-block;
     padding: 4px 8px;
     cursor: pointer;
+    position: relative;
 }
 
 .menu-item:hover {
     background: #316AC5;
     color: white;
+}
+
+/* === Dropdown Menu === */
+.menu-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #C0C0C0;
+    border: 1px solid;
+    border-color: #FFFFFF #808080 #808080 #FFFFFF;
+    box-shadow: 2px 2px 0px #000;
+    min-width: 140px;
+    z-index: 100;
+    padding: 2px;
+    font-family: "MS Sans Serif", Tahoma, sans-serif;
+    font-size: 11px;
+}
+
+.menu-item:hover .menu-dropdown,
+.menu-item.menu-open .menu-dropdown {
+    display: block;
+}
+
+.menu-dropdown-item {
+    display: block;
+    padding: 4px 20px 4px 8px;
+    cursor: default;
+    white-space: nowrap;
+    color: #000;
+}
+
+.menu-dropdown-item:hover {
+    background: #000080;
+    color: white;
+}
+
+.menu-dropdown-separator {
+    height: 1px;
+    background: #808080;
+    margin: 2px 0;
+    border-bottom: 1px solid #FFFFFF;
+}
+
+.menu-dropdown-item .checkmark {
+    display: inline-block;
+    width: 16px;
+    margin-left: -4px;
 }
 
 /* === Content Area === */
@@ -89,36 +139,11 @@ body {
     position: relative;
 }
 
-/* === Difficulty Stamp === */
-.stamp {
-    float: right;
-    border: 2px solid #800020;
-    color: #800020;
-    padding: 3px 8px;
-    font-family: "Courier New", monospace;
-    font-weight: bold;
-    font-size: 10px;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    opacity: 0.7;
-    margin: 0 0 10px 10px;
-}
-
 /* === Recipe Header === */
 .recipe-header {
-    display: flex;
-    align-items: center;
-    gap: 15px;
     margin-bottom: 20px;
     padding-bottom: 10px;
     border-bottom: 1px solid #C0C0C0;
-}
-
-.recipe-number {
-    font-family: "Courier New", monospace;
-    font-size: 36px;
-    color: #800020;
-    font-weight: bold;
 }
 
 .recipe-title {
@@ -142,6 +167,13 @@ body {
     font-size: 11px;
     color: #666;
     margin-top: 5px;
+}
+
+.recipe-meta span::before {
+    content: "■ ";
+    color: #800020;
+    font-size: 8px;
+    vertical-align: middle;
 }
 
 /* === Canonical Badge === */
@@ -478,6 +510,10 @@ hr.win-hr {
     border-color: #808080 #FFFFFF #FFFFFF #808080;
 }
 
+.recipe-card.canonical {
+    border-left: 3px solid #800020;
+}
+
 .recipe-icon {
     font-size: 48px;
     margin-bottom: 10px;
@@ -490,19 +526,6 @@ hr.win-hr {
     color: #000080;
     margin-bottom: 5px;
     word-wrap: break-word;
-}
-
-.recipe-card-version {
-    font-family: "Courier New", monospace;
-    font-size: 10px;
-    color: #666;
-}
-
-.recipe-card-difficulty {
-    font-family: "MS Sans Serif", Tahoma, sans-serif;
-    font-size: 9px;
-    color: #800020;
-    margin-top: 5px;
 }
 
 .recipe-card .tags {
@@ -585,8 +608,10 @@ hr.win-hr {
     background: #D4D0C8;
 }
 
-.toolbar-btn:active {
+.toolbar-btn:active,
+.toolbar-btn.active {
     border-color: #808080 #FFFFFF #FFFFFF #808080;
+    background: #B0B0B0;
 }
 
 /* === Mobile Responsive === */
@@ -604,23 +629,11 @@ hr.win-hr {
     }
 
     .recipe-header {
-        flex-direction: column;
         text-align: center;
-    }
-
-    .recipe-number {
-        font-size: 28px;
     }
 
     .recipe-title {
         font-size: 18px;
-    }
-
-    .stamp {
-        float: none;
-        display: block;
-        margin: 10px 0;
-        text-align: center;
     }
 
     .recipe-image {
@@ -692,10 +705,6 @@ hr.win-hr {
 
     .content {
         padding: 0;
-    }
-
-    .stamp {
-        opacity: 1;
     }
 
     .section {

@@ -40,10 +40,9 @@ async function loadRecipe(id) {
 function renderRecipe(recipe) {
   // Update window title
   document.title = `Recipe Viewer - ${recipe.title}`;
-  document.getElementById('window-title').textContent = `\uD83D\uDCCB ${recipe.version} ${recipe.title}`;
+  document.getElementById('window-title').textContent = `\uD83D\uDCCB ${recipe.title}`;
 
   // Header
-  document.getElementById('recipe-number').textContent = recipe.version;
   document.getElementById('recipe-title').textContent = recipe.title;
 
   // Subtitle - hide if empty
@@ -58,11 +57,6 @@ function renderRecipe(recipe) {
   // Canonical badge
   if (recipe.canonical) {
     document.getElementById('canonical-badge').style.display = 'inline-block';
-  }
-
-  // Difficulty stamp
-  if (recipe.difficulty) {
-    document.getElementById('difficulty-stamp').textContent = recipe.difficulty;
   }
 
   // Meta info (time)
@@ -83,8 +77,8 @@ function renderRecipe(recipe) {
     document.getElementById('recipe-tags').innerHTML = tagsHtml;
   }
 
-  // Status bar version
-  document.getElementById('status-version').textContent = `Version ${recipe.version}`;
+  // Status bar source
+  document.getElementById('status-info').textContent = recipe.source || '';
 
   // Ingredients
   renderIngredients(recipe);
@@ -103,7 +97,7 @@ function renderRecipe(recipe) {
 }
 
 function renderIngredients(recipe) {
-  const container = document.getElementById('ingredients-content');
+  const container = document.getElementById('ingredients-list');
   let html = '';
 
   recipe.ingredientGroups.forEach((group, groupIndex) => {
@@ -122,7 +116,7 @@ function renderIngredients(recipe) {
     html += '</div>';
   });
 
-  container.innerHTML += html;
+  container.innerHTML = html;
 }
 
 function renderDirections(recipe) {

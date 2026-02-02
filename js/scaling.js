@@ -40,6 +40,13 @@ function setMultiplier(factor) {
     btn.classList.remove('active');
   });
 
+  // Find and activate the matching button
+  const matchingBtn = [...document.querySelectorAll('.multiplier-btn')].find(btn => {
+    const onclick = btn.getAttribute('onclick');
+    return onclick && onclick.includes(`setMultiplier(${factor})`);
+  });
+  if (matchingBtn) matchingBtn.classList.add('active');
+
   const scaleFactor = currentServings / baseServings;
   updateScalingInfo(scaleFactor);
   scaleIngredients(scaleFactor);
