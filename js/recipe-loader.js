@@ -114,7 +114,7 @@ function renderOverview(recipe) {
   let html = '';
 
   if (recipe.description) {
-    html += `<p style="line-height: 1.6; margin-bottom: 15px;">${recipe.description}</p>`;
+    html += `<div class="section"><div class="section-title">\u25C6 Overview</div><p>${recipe.description}</p></div>`;
   }
 
   if (recipe.deviations && recipe.deviations.length > 0) {

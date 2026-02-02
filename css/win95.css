@@ -421,7 +421,7 @@ hr.win-hr {
 }
 
 .note-item:before {
-    content: "\25C6";
+    content: "\25B8";
     position: absolute;
     left: 0;
     color: #800020;
