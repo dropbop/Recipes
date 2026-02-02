@@ -6,6 +6,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 A personal recipe lab notebook site with Win98 aesthetic. Static HTML/CSS/JS, no build step, deployed via GitHub Pages.
 
+## Adding Recipes
+
+If the user wants to add a new recipe, **read `recipe-writing-guide.md` in full** before proceeding. That guide covers the JSON schema, voice preservation, and the required back-and-forth workflow for confirming entries with the user. Do not skip the confirmation steps.
+
 ## Architecture
 
 **Two-page structure:**
