@@ -2,6 +2,7 @@
   "id": "shrimp-scampi",
   "title": "Shrimp Scampi",
   "subtitle": "Intentionally Imperfect",
+  "description": "A hard-seared take on scampi that trades the traditional gentle saute for fond and crust. The MSG is doing the work that shell stock would do in a restaurant version.",
   "canonical": false,
   "tags": ["seafood", "italian", "quick", "weeknight"],
   "source": "Traditional Italian-American, heavily adapted",
@@ -123,16 +124,23 @@
     }
   ],
   "notes": [
-    "The sauce was a little lean. 4 tbsp butter and 1/2 cup wine across 2.5 lbs of shrimp and a full portion of pasta runs thin. Next time, either bump butter to 5-6 tbsp, or mount a tablespoon of cold butter into the finished sauce off-heat right before combining. The cold butter trick emulsifies the sauce and gives it a glossy, clingy consistency instead of pooling at the bottom of the bowl.",
-    "Pressed garlic is not traditional. Sliced garlic is. Pressing releases more allicin - sharper, more pungent, burns faster. Sliced gives a mellower, sweeter presence that sits further back in the dish. Both work. Try sliced once to know the difference.",
-    "MSG is standing in for shell stock. Traditional restaurant versions sweat the shells in butter first, strain, then build the sauce in that shrimp-fortified fat. MSG gets you to a similar glutamate baseline with deshelled product and zero extra steps. If you ever have shell-on shrimp, try the stock method as a comparison.",
-    "Deglazing with butter before the wine means the fond dissolves into the fat phase first, carrying more sear flavor into the lipid-soluble side of the sauce. This happened naturally from the sequencing but it's a nice mechanical bonus worth keeping intentional.",
-    "Avocado oil for the sear, not butter. Butter burns at the temperatures you need for a proper Maillard sear on shrimp. Butter is the sauce fat. Oil is the sear fat. Don't combine these steps."
+    "The sauce was a little lean at these ratios. Next time, bump butter to 5-6 tbsp, or mount a tablespoon of cold butter into the finished sauce off-heat. The cold butter trick emulsifies and gives it a glossy, clingy consistency instead of pooling.",
+    "Deglazing with butter before the wine means the fond dissolves into the fat phase first, carrying more sear flavor into the lipid-soluble side of the sauce. Worth keeping intentional.",
+    "Avocado oil for the sear, not butter. Butter burns at the temperatures you need for a proper Maillard sear. Butter is the sauce fat. Oil is the sear fat. Don't combine."
   ],
   "deviations": [
-    "Hard sear on colossal shrimp instead of gentle saute - different texture and richer flavor base from the fond",
-    "Pressed garlic instead of sliced - sharper, more pungent",
-    "MSG instead of shell stock - same glutamate baseline, zero extra steps"
+    {
+      "what": "Hard sear on colossal shrimp instead of gentle saute",
+      "why": "Builds fond in the pan and creates a crispy crust on the shrimp. Different texture profile, richer flavor base for the sauce."
+    },
+    {
+      "what": "Pressed garlic instead of sliced",
+      "why": "Pressing releases more allicin — sharper, more pungent, burns faster. Sliced gives a mellower, sweeter presence. Both work; this version wants the punch."
+    },
+    {
+      "what": "MSG instead of shell stock",
+      "why": "Traditional restaurant versions sweat shells in butter first, then build sauce in that shrimp-fortified fat. MSG hits the same glutamate baseline with deshelled product and zero extra steps."
+    }
   ],
   "log": [
     {

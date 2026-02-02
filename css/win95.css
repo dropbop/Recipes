@@ -514,11 +514,6 @@ hr.win-hr {
     border-left: 3px solid #800020;
 }
 
-.recipe-icon {
-    font-size: 48px;
-    margin-bottom: 10px;
-}
-
 .recipe-card-title {
     font-family: "MS Sans Serif", Tahoma, sans-serif;
     font-size: 12px;
@@ -663,10 +658,6 @@ hr.win-hr {
         gap: 10px;
         padding: 10px;
     }
-
-    .recipe-icon {
-        font-size: 36px;
-    }
 }
 
 @media (max-width: 400px) {
@@ -701,7 +692,25 @@ hr.win-hr {
         display: block !important;
         border: none;
         padding: 10px 0;
+        margin-top: 20px;
     }
+
+    .tab-content::before {
+        display: block;
+        font-family: "MS Sans Serif", Tahoma, sans-serif;
+        font-size: 14px;
+        font-weight: bold;
+        color: #000080;
+        border-bottom: 2px solid #800020;
+        padding-bottom: 5px;
+        margin-bottom: 15px;
+    }
+
+    #ingredients-content::before { content: "Ingredients"; }
+    #directions-content::before { content: "Directions"; }
+    #deviations-content::before { content: "Deviations from Tradition"; }
+    #notes-content::before { content: "Notes"; }
+    #log-content::before { content: "Lab Log"; }
 
     .content {
         padding: 0;

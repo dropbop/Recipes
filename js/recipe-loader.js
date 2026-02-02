@@ -121,7 +121,14 @@ function renderIngredients(recipe) {
 
 function renderDirections(recipe) {
   const container = document.getElementById('directions-content');
-  let html = '<div class="section"><div class="section-title">\u25C6 Method</div>';
+  let html = '';
+
+  // Description blurb before method
+  if (recipe.description) {
+    html += `<p class="note">${recipe.description}</p>`;
+  }
+
+  html += '<div class="section"><div class="section-title">\u25C6 Method</div>';
 
   recipe.directions.forEach(dir => {
     const title = dir.title ? `<span class="direction-title">${dir.title}:</span> ` : '';
@@ -162,7 +169,12 @@ function renderDeviations(recipe) {
 
   let html = '<div class="section"><div class="section-title">\u25C6 Deviations from Tradition</div>';
   recipe.deviations.forEach(dev => {
-    html += `<div class="deviation-item">${dev}</div>`;
+    // Support both string format (legacy) and object format {what, why}
+    if (typeof dev === 'string') {
+      html += `<div class="deviation-item">${dev}</div>`;
+    } else {
+      html += `<div class="deviation-item"><strong>${dev.what}</strong> \u2014 ${dev.why}</div>`;
+    }
   });
   html += '</div>';
 

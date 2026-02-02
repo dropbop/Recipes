@@ -82,10 +82,22 @@ function updateScalingInfo(factor) {
   }
 }
 
+function formatScaleFactor(factor) {
+  // Common fractions
+  if (factor === 0.5) return '\u00BD';
+  if (factor === 0.25) return '\u00BC';
+  if (factor === 0.75) return '\u00BE';
+  if (factor === 0.333 || Math.abs(factor - 1/3) < 0.01) return '\u2153';
+  if (factor === 0.666 || Math.abs(factor - 2/3) < 0.01) return '\u2154';
+  // Integers or decimals
+  if (Number.isInteger(factor)) return factor.toString();
+  return factor.toFixed(2).replace(/\.?0+$/, '');
+}
+
 function updateStatusBar(factor) {
   const statusEl = document.getElementById('status-servings');
   if (statusEl) {
-    statusEl.textContent = `Scale: ${factor}×`;
+    statusEl.textContent = `Scale: ${formatScaleFactor(factor)}×`;
   }
 }
 

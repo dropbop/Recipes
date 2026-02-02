@@ -1,6 +1,7 @@
 {
   "id": "braised-short-rib",
   "title": "Braised Short Rib",
+  "description": "A pepper-heavy wine braise. The garlic paste is the whole trick — it penetrates the meat in a way whole cloves can't.",
   "canonical": true,
   "tags": ["beef", "braise", "dutch-oven", "winter"],
   "source": "Family tradition, heavily improvised",
@@ -128,8 +129,14 @@
     "The longer you braise, the more the meat falls off the bone. 3.5 hours is minimum; 4+ is better if you have time."
   ],
   "deviations": [
-    "Garlic paste instead of whole cloves - more intense flavor distribution",
-    "Double pepper (ground AND crushed) - because why not"
+    {
+      "what": "Garlic paste instead of whole cloves",
+      "why": "More intense flavor distribution. The paste penetrates the meat surface; whole cloves just sit next to it."
+    },
+    {
+      "what": "Double pepper (ground AND crushed)",
+      "why": "Ground pepper integrates into the paste and rub. Crushed peppercorns add texture and bursts of heat. Why choose?"
+    }
   ],
   "log": []
 }
