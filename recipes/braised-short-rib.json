@@ -20,6 +20,7 @@
       "items": [
         {
           "quantity": 4,
+          "quantityMax": 6,
           "unit": "",
           "item": "bone-in short ribs",
           "note": "alternative: anything with collagen who cares",
@@ -47,7 +48,8 @@
           "scalable": true
         },
         {
-          "quantity": 1.5,
+          "quantity": 1,
+          "quantityMax": 2,
           "unit": "tbsp",
           "item": "tomato paste",
           "note": null,

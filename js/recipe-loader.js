@@ -1,4 +1,5 @@
 // Recipe Loader - Fetches and renders recipe JSON
+// Depends on: utils.js (must load first — provides formatQuantity, getTagColor)
 
 document.addEventListener('DOMContentLoaded', init);
 
@@ -39,14 +40,19 @@ async function loadRecipe(id) {
 function renderRecipe(recipe) {
   // Update window title
   document.title = `Recipe Viewer - ${recipe.title}`;
-  document.getElementById('window-title').textContent = `Recipe Viewer - ${recipe.version} ${recipe.title}`;
+  document.getElementById('window-title').textContent = `\uD83D\uDCCB ${recipe.version} ${recipe.title}`;
 
   // Header
   document.getElementById('recipe-number').textContent = recipe.version;
-  document.getElementById('recipe-title').textContent = recipe.title.toUpperCase();
+  document.getElementById('recipe-title').textContent = recipe.title;
 
+  // Subtitle - hide if empty
+  const subtitleEl = document.getElementById('recipe-subtitle');
   if (recipe.subtitle) {
-    document.getElementById('recipe-subtitle').textContent = recipe.subtitle;
+    subtitleEl.textContent = recipe.subtitle;
+    subtitleEl.style.display = '';
+  } else {
+    subtitleEl.style.display = 'none';
   }
 
   // Canonical badge
@@ -56,7 +62,7 @@ function renderRecipe(recipe) {
 
   // Difficulty stamp
   if (recipe.difficulty) {
-    document.getElementById('difficulty-stamp').textContent = recipe.difficulty.toUpperCase();
+    document.getElementById('difficulty-stamp').textContent = recipe.difficulty;
   }
 
   // Meta info (time)
@@ -69,13 +75,16 @@ function renderRecipe(recipe) {
     `;
   }
 
-  // Tags
+  // Tags with dynamic colors
   if (recipe.tags && recipe.tags.length > 0) {
     const tagsHtml = recipe.tags.map(tag =>
-      `<span class="tag ${tag}">${tag}</span>`
+      `<span class="tag" style="background: ${getTagColor(tag)}">${tag}</span>`
     ).join('');
     document.getElementById('recipe-tags').innerHTML = tagsHtml;
   }
+
+  // Status bar version
+  document.getElementById('status-version').textContent = `Version ${recipe.version}`;
 
   // Ingredients
   renderIngredients(recipe);
@@ -102,8 +111,8 @@ function renderIngredients(recipe) {
       <div class="section-title">\u25C6 ${group.name}</div>`;
 
     group.items.forEach((item, itemIndex) => {
-      const quantity = formatQuantity(item.quantity, item.unit);
-      const note = item.note ? `<span class="ingredient-note"> - ${item.note}</span>` : '';
+      const quantity = formatQuantity(item.quantity, item.unit, item.quantityMax);
+      const note = item.note ? `<span class="ingredient-note"> \u2014 ${item.note}</span>` : '';
 
       html += `<div class="ingredient" data-group="${groupIndex}" data-item="${itemIndex}">
         <span class="ingredient-quantity">${quantity}</span> ${item.item}${note}
@@ -113,7 +122,7 @@ function renderIngredients(recipe) {
     html += '</div>';
   });
 
-  container.innerHTML = html;
+  container.innerHTML += html;
 }
 
 function renderDirections(recipe) {
@@ -235,48 +244,4 @@ function showError(message) {
       <button class="error-btn" onclick="location.href='index.html'">OK</button>
     </div>
   `;
-}
-
-// Helper to format quantity (duplicated from scaling.js for standalone use)
-function formatQuantity(num, unit) {
-  if (num === null || num === undefined) return '';
-
-  const FRACTIONS = {
-    0.125: '\u215B',
-    0.25: '\u00BC',
-    0.333: '\u2153',
-    0.375: '\u215C',
-    0.5: '\u00BD',
-    0.625: '\u215D',
-    0.666: '\u2154',
-    0.75: '\u00BE',
-    0.875: '\u215E'
-  };
-
-  if (Number.isInteger(num)) {
-    return unit ? `${num} ${unit}` : `${num}`;
-  }
-
-  const whole = Math.floor(num);
-  const frac = num - whole;
-
-  let closestFrac = '';
-  let minDiff = 1;
-
-  for (const [key, symbol] of Object.entries(FRACTIONS)) {
-    const diff = Math.abs(frac - parseFloat(key));
-    if (diff < minDiff && diff < 0.05) {
-      minDiff = diff;
-      closestFrac = symbol;
-    }
-  }
-
-  let result;
-  if (closestFrac) {
-    result = whole > 0 ? `${whole}${closestFrac}` : closestFrac;
-  } else {
-    result = num % 1 === 0 ? num.toString() : num.toFixed(2).replace(/\.?0+$/, '');
-  }
-
-  return unit ? `${result} ${unit}` : result;
 }

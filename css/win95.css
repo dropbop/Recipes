@@ -1,4 +1,4 @@
-/* Win95 Recipe Lab Notebook Styles */
+/* Win98 Recipe Lab Notebook Styles */
 
 /* === Base === */
 * {
@@ -6,7 +6,7 @@
 }
 
 body {
-    background: linear-gradient(135deg, #D4C5B9 0%, #E8DDD0 100%);
+    background-color: #547E7E;
     font-family: "Georgia", serif;
     margin: 0;
     padding: 20px;
@@ -18,7 +18,7 @@ body {
     background: #C0C0C0;
     border: 2px solid;
     border-color: #FFFFFF #808080 #808080 #FFFFFF;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    box-shadow: 2px 2px 0px #000;
     max-width: 800px;
     margin: 0 auto;
 }
@@ -63,7 +63,7 @@ body {
 
 /* === Menu Bar === */
 .menu-bar {
-    background: #ECE9D8;
+    background: #C0C0C0;
     border-bottom: 1px solid #808080;
     padding: 4px;
     font-family: "MS Sans Serif", Tahoma, sans-serif;
@@ -89,6 +89,21 @@ body {
     position: relative;
 }
 
+/* === Difficulty Stamp === */
+.stamp {
+    float: right;
+    border: 2px solid #800020;
+    color: #800020;
+    padding: 3px 8px;
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.7;
+    margin: 0 0 10px 10px;
+}
+
 /* === Recipe Header === */
 .recipe-header {
     display: flex;
@@ -96,20 +111,21 @@ body {
     gap: 15px;
     margin-bottom: 20px;
     padding-bottom: 10px;
-    border-bottom: 2px groove #808080;
+    border-bottom: 1px solid #C0C0C0;
 }
 
 .recipe-number {
     font-family: "Courier New", monospace;
-    font-size: 48px;
+    font-size: 36px;
     color: #800020;
     font-weight: bold;
 }
 
 .recipe-title {
-    font-family: "Comic Sans MS", "Trebuchet MS", sans-serif;
-    font-size: 24px;
+    font-family: "Trebuchet MS", "Tahoma", sans-serif;
+    font-size: 20px;
     color: #000080;
+    letter-spacing: 0.04em;
 }
 
 .recipe-subtitle {
@@ -128,35 +144,17 @@ body {
     margin-top: 5px;
 }
 
-/* === Difficulty Stamp === */
-.difficulty {
-    position: absolute;
-    top: 80px;
-    right: 30px;
-    transform: rotate(15deg);
-}
-
-.stamp {
-    border: 3px solid #800020;
-    color: #800020;
-    padding: 5px 10px;
-    font-family: "Courier New", monospace;
-    font-weight: bold;
-    text-transform: uppercase;
-    display: inline-block;
-    transform: rotate(-5deg);
-}
-
 /* === Canonical Badge === */
 .canonical-badge {
     display: inline-block;
-    background: linear-gradient(to bottom, #FFD700, #FFA500);
-    color: #800020;
+    background: #C0C0C0;
+    color: #000080;
     padding: 2px 8px;
-    font-family: "MS Sans Serif", Tahoma, sans-serif;
+    font-family: "Tahoma", "MS Sans Serif", sans-serif;
     font-size: 10px;
     font-weight: bold;
-    border: 1px solid #DAA520;
+    border: 1px solid;
+    border-color: #FFFFFF #808080 #808080 #FFFFFF;
     margin-left: 10px;
 }
 
@@ -184,7 +182,7 @@ body {
 }
 
 .tab {
-    background: #ECE9D8;
+    background: #C0C0C0;
     border: 1px solid #808080;
     border-bottom: none;
     padding: 5px 15px;
@@ -234,6 +232,14 @@ body {
     margin-bottom: 10px;
 }
 
+/* === Win98 Horizontal Rule === */
+hr.win-hr {
+    border: none;
+    border-top: 1px solid #808080;
+    border-bottom: 1px solid #FFFFFF;
+    margin: 12px 0;
+}
+
 /* === Ingredients === */
 .ingredient {
     font-family: "Georgia", serif;
@@ -268,19 +274,41 @@ body {
 
 /* === Scaling Controls === */
 .scaling-controls {
-    background: #ECE9D8;
+    background: #C0C0C0;
     border: 1px solid #808080;
     padding: 10px 15px;
     margin-bottom: 15px;
     display: flex;
     align-items: center;
     gap: 15px;
+    flex-wrap: wrap;
     font-family: "MS Sans Serif", Tahoma, sans-serif;
     font-size: 11px;
 }
 
 .scaling-label {
     font-weight: bold;
+}
+
+.multiplier-buttons {
+    display: flex;
+    gap: 3px;
+}
+
+.multiplier-btn {
+    background: #C0C0C0;
+    border: 1px solid;
+    border-color: #FFFFFF #808080 #808080 #FFFFFF;
+    padding: 2px 8px;
+    font-family: "MS Sans Serif", Tahoma, sans-serif;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.multiplier-btn:active,
+.multiplier-btn.active {
+    border-color: #808080 #FFFFFF #FFFFFF #808080;
+    background: #B0B0B0;
 }
 
 .spin-button-container {
@@ -385,18 +413,19 @@ body {
 .log-entry {
     margin: 15px 0;
     padding: 10px;
-    background: #FFFFF0;
+    background: #FFFFF8;
     border-left: 3px solid #800020;
 }
 
 .log-date {
     font-family: "Courier New", monospace;
-    font-size: 12px;
+    font-size: 11px;
     color: #666;
     margin-bottom: 5px;
 }
 
 .log-text {
+    font-family: "Georgia", serif;
     line-height: 1.6;
 }
 
@@ -425,24 +454,6 @@ body {
     color: #333;
 }
 
-.tag.seafood { background: #B0E0E6; }
-.tag.beef { background: #CD5C5C; color: white; }
-.tag.italian { background: #98FB98; }
-.tag.quick { background: #FFD700; }
-.tag.braise { background: #DEB887; }
-
-/* === Footer === */
-.footer-note {
-    text-align: center;
-    font-family: "Comic Sans MS", sans-serif;
-    color: #800020;
-    font-size: 18px;
-    margin-top: 30px;
-    padding: 15px;
-    background: #FFF8DC;
-    border: 2px ridge #808080;
-}
-
 /* === Recipe Cards (Index Page) === */
 .recipe-grid {
     display: grid;
@@ -457,16 +468,14 @@ body {
     padding: 15px;
     text-align: center;
     cursor: pointer;
-    transition: transform 0.1s;
 }
 
 .recipe-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    background: #F0F0F0;
 }
 
 .recipe-card:active {
-    transform: translateY(0);
+    border-color: #808080 #FFFFFF #FFFFFF #808080;
 }
 
 .recipe-icon {
@@ -503,7 +512,7 @@ body {
 
 /* === Status Bar === */
 .status-bar {
-    background: #ECE9D8;
+    background: #C0C0C0;
     border-top: 1px solid #FFFFFF;
     padding: 4px 8px;
     font-family: "MS Sans Serif", Tahoma, sans-serif;
@@ -552,7 +561,7 @@ body {
 
 /* === Toolbar === */
 .toolbar {
-    background: #ECE9D8;
+    background: #C0C0C0;
     border-bottom: 1px solid #808080;
     padding: 4px;
     display: flex;
@@ -600,17 +609,18 @@ body {
     }
 
     .recipe-number {
-        font-size: 36px;
+        font-size: 28px;
     }
 
     .recipe-title {
-        font-size: 20px;
+        font-size: 18px;
     }
 
-    .difficulty {
-        position: static;
-        transform: rotate(5deg);
+    .stamp {
+        float: none;
+        display: block;
         margin: 10px 0;
+        text-align: center;
     }
 
     .recipe-image {
@@ -649,5 +659,46 @@ body {
 @media (max-width: 400px) {
     .recipe-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+/* === Print Styles === */
+@media print {
+    body {
+        background: white;
+        padding: 0;
+    }
+
+    .window {
+        max-width: none;
+        box-shadow: none;
+        border: none;
+    }
+
+    .title-bar,
+    .menu-bar,
+    .toolbar,
+    .status-bar,
+    .info-tabs,
+    .scaling-controls {
+        display: none !important;
+    }
+
+    .tab-content {
+        display: block !important;
+        border: none;
+        padding: 10px 0;
+    }
+
+    .content {
+        padding: 0;
+    }
+
+    .stamp {
+        opacity: 1;
+    }
+
+    .section {
+        break-inside: avoid;
     }
 }

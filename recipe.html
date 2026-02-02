@@ -10,48 +10,48 @@
 
 <div class="window">
   <div class="title-bar">
-    <span class="title-bar-text" id="window-title">Recipe Viewer</span>
+    <span class="title-bar-text" id="window-title">📋 Recipe Viewer</span>
     <div class="window-controls">
       <div class="window-btn">_</div>
-      <div class="window-btn" onclick="location.href='index.html'">X</div>
+      <div class="window-btn">□</div>
+      <div class="window-btn" onclick="location.href='index.html'">×</div>
     </div>
   </div>
 
   <div class="menu-bar">
-    <span class="menu-item" onclick="location.href='index.html'">Back</span>
-    <span class="menu-item">File</span>
-    <span class="menu-item">Edit</span>
-    <span class="menu-item">View</span>
-    <span class="menu-item">Help</span>
+    <span class="menu-item" onclick="location.href='index.html'"><u>B</u>ack</span>
+    <span class="menu-item"><u>F</u>ile</span>
+    <span class="menu-item"><u>E</u>dit</span>
+    <span class="menu-item"><u>V</u>iew</span>
+    <span class="menu-item" onclick="window.print()"><u>P</u>rint</span>
+    <span class="menu-item"><u>H</u>elp</span>
   </div>
 
   <div class="content">
+    <span class="stamp" id="difficulty-stamp">Loading</span>
+
     <div class="recipe-header">
       <span class="recipe-number" id="recipe-number">0.0</span>
       <div>
-        <span class="recipe-title" id="recipe-title">LOADING...</span>
-        <span class="canonical-badge" id="canonical-badge" style="display:none;">DIALED IN</span>
+        <span class="recipe-title" id="recipe-title">Loading...</span>
+        <span class="canonical-badge" id="canonical-badge" style="display:none;">Dialed In</span>
         <div class="recipe-subtitle" id="recipe-subtitle"></div>
         <div class="recipe-meta" id="recipe-meta"></div>
         <div class="tags" id="recipe-tags"></div>
       </div>
     </div>
 
-    <div class="difficulty">
-      <span class="stamp" id="difficulty-stamp">LOADING</span>
-    </div>
-
     <div class="info-tabs">
-      <div class="tab active" data-tab="ingredients">INGREDIENTS</div>
-      <div class="tab" data-tab="directions">DIRECTIONS</div>
-      <div class="tab" data-tab="notes">NOTES</div>
-      <div class="tab" data-tab="log">LAB LOG</div>
-      <div class="tab" data-tab="deviations">DEVIATIONS</div>
+      <div class="tab active" data-tab="ingredients">Ingredients</div>
+      <div class="tab" data-tab="directions">Directions</div>
+      <div class="tab" data-tab="notes">Notes</div>
+      <div class="tab" data-tab="log">Lab Log</div>
+      <div class="tab" data-tab="deviations">Deviations</div>
     </div>
 
     <div class="tab-content active" id="ingredients-content">
       <div class="scaling-controls" id="scaling-controls">
-        <span class="scaling-label">SERVINGS:</span>
+        <span class="scaling-label">Servings:</span>
         <span class="scaling-info">Loading...</span>
       </div>
       <!-- Ingredients rendered by JS -->
@@ -75,11 +75,12 @@
   </div>
 
   <div class="status-bar">
-    <span class="status-bar-section" id="status-servings">Ready</span>
+    <span class="status-bar-section" id="status-servings">Scale: 1×</span>
     <span class="status-bar-section" id="status-version"></span>
   </div>
 </div>
 
+<script src="js/utils.js"></script>
 <script src="js/scaling.js"></script>
 <script src="js/recipe-loader.js"></script>
 </body>

@@ -10,19 +10,20 @@
 
 <div class="window">
   <div class="title-bar">
-    <span class="title-bar-text">Recipe Explorer - Lab Notebook</span>
+    <span class="title-bar-text">📂 Recipe Explorer - Lab Notebook</span>
     <div class="window-controls">
       <div class="window-btn">_</div>
-      <div class="window-btn">X</div>
+      <div class="window-btn">□</div>
+      <div class="window-btn">×</div>
     </div>
   </div>
 
   <div class="menu-bar">
-    <span class="menu-item">File</span>
-    <span class="menu-item">Edit</span>
-    <span class="menu-item">View</span>
-    <span class="menu-item">Favorites</span>
-    <span class="menu-item">Help</span>
+    <span class="menu-item"><u>F</u>ile</span>
+    <span class="menu-item"><u>E</u>dit</span>
+    <span class="menu-item"><u>V</u>iew</span>
+    <span class="menu-item">Fav<u>o</u>rites</span>
+    <span class="menu-item"><u>H</u>elp</span>
   </div>
 
   <div class="toolbar">
@@ -43,6 +44,7 @@
   </div>
 </div>
 
+<script src="js/utils.js"></script>
 <script src="js/manifest.js"></script>
 <script>
   let currentFilter = 'all';
@@ -79,7 +81,7 @@
     const totalTime = (recipe.time?.prep || 0) + (recipe.time?.cook || 0);
 
     const tagsHtml = recipe.tags.slice(0, 3).map(tag =>
-      `<span class="tag ${tag}">${tag}</span>`
+      `<span class="tag" style="background: ${getTagColor(tag)}">${tag}</span>`
     ).join('');
 
     card.innerHTML = `
