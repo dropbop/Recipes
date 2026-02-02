@@ -1,0 +1,137 @@
+{
+  "id": "grilled-sambal-shrimp",
+  "title": "Grilled Sambal Shrimp",
+  "description": "Spicy coconut-lime marinade, best on grilled shrimp but works on chicken too. Don't pan sear — the sugars burn.",
+  "canonical": true,
+  "tags": ["seafood", "grilling", "marinade", "thai"],
+  "time": {
+    "prep": 10,
+    "cook": 10
+  },
+  "servings": {
+    "base": 2,
+    "unit": "lbs shrimp"
+  },
+  "ingredientGroups": [
+    {
+      "name": "Marinade",
+      "items": [
+        {
+          "quantity": 3,
+          "quantityMax": null,
+          "unit": "inches",
+          "item": "ginger",
+          "note": null,
+          "scalable": true
+        },
+        {
+          "quantity": 5,
+          "quantityMax": null,
+          "unit": "cloves",
+          "item": "garlic",
+          "note": null,
+          "scalable": true
+        },
+        {
+          "quantity": 0.75,
+          "quantityMax": null,
+          "unit": "cup",
+          "item": "coconut milk",
+          "note": "from a can",
+          "scalable": true
+        },
+        {
+          "quantity": 0.25,
+          "quantityMax": null,
+          "unit": "cup",
+          "item": "sambal oelek",
+          "note": null,
+          "scalable": true
+        },
+        {
+          "quantity": 0.25,
+          "quantityMax": null,
+          "unit": "cup",
+          "item": "fresh lime juice",
+          "note": null,
+          "scalable": true
+        },
+        {
+          "quantity": 2,
+          "quantityMax": null,
+          "unit": "tbsp",
+          "item": "brown sugar",
+          "note": null,
+          "scalable": true
+        },
+        {
+          "quantity": 1.75,
+          "quantityMax": null,
+          "unit": "tsp",
+          "item": "Morton kosher salt",
+          "note": null,
+          "scalable": true
+        },
+        {
+          "quantity": 2,
+          "quantityMax": null,
+          "unit": "tbsp",
+          "item": "neutral oil",
+          "note": null,
+          "scalable": true
+        }
+      ]
+    },
+    {
+      "name": "For Serving",
+      "items": [
+        {
+          "quantity": null,
+          "quantityMax": null,
+          "unit": "",
+          "item": "cilantro",
+          "note": "chopped",
+          "scalable": false
+        },
+        {
+          "quantity": null,
+          "quantityMax": null,
+          "unit": "",
+          "item": "lime wedges",
+          "note": null,
+          "scalable": false
+        }
+      ]
+    }
+  ],
+  "directions": [
+    {
+      "step": 1,
+      "title": "Marinade",
+      "text": "Blend all marinade ingredients together."
+    },
+    {
+      "step": 2,
+      "title": "Marinate",
+      "text": "Marinate shrimp 2-4 hours, or chicken thighs 4-8 hours."
+    },
+    {
+      "step": 3,
+      "title": "Grill",
+      "text": "Grill on skewers. Reserve the marinade."
+    },
+    {
+      "step": 4,
+      "title": "Sauce",
+      "text": "Simmer the reserved marinade and use as a sauce."
+    }
+  ],
+  "notes": [
+    "Reserve the marinade after pulling the protein — simmer it and use as a sauce. It rocks.",
+    "Don't pan sear — you'll burn the sugars and it's a pain to clean.",
+    "For chicken, use thighs and marinate longer (4-8 hours).",
+    "Works fine in the oven too."
+  ],
+  "deviations": [],
+  "log": []
+}

@@ -41,5 +41,13 @@ const RECIPE_MANIFEST = [
     tags: ["pork", "mexican", "braise", "pressure-cooker", "meal-prep"],
     time: { prep: 20, cook: 90 },
     canonical: false
+  },
+  {
+    id: "grilled-sambal-shrimp",
+    title: "Grilled Sambal Shrimp",
+    desc: "Spicy coconut-lime marinade for shrimp or chicken",
+    tags: ["seafood", "grilling", "marinade", "thai"],
+    time: { prep: 10, cook: 10 },
+    canonical: true
   }
 ];
