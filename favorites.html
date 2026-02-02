@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Recipe Viewer</title>
+  <title>Favorites</title>
   <link rel="stylesheet" href="css/win95.css">
 </head>
 <body>
 
 <div class="window">
   <div class="title-bar">
-    <span class="title-bar-text" id="window-title">Recipe Viewer</span>
+    <span class="title-bar-text">Favorites</span>
     <div class="window-controls">
       <div class="window-btn">_</div>
       <div class="window-btn">□</div>
@@ -31,49 +31,16 @@
         <span class="menu-dropdown-item" onclick="setTheme('charcoal')"><span class="checkmark"></span> Charcoal</span>
       </div>
     </span>
-    <span class="menu-item" onclick="window.print()"><u>P</u>rint</span>
   </div>
 
-  <div class="content">
-    <div class="recipe-header">
-      <span class="recipe-title" id="recipe-title">Loading...</span>
-      <div class="recipe-subtitle" id="recipe-subtitle"></div>
-      <div class="recipe-meta" id="recipe-meta"></div>
-      <div class="tags" id="recipe-tags"></div>
-    </div>
-
-    <div class="info-tabs">
-      <div class="tab active" data-tab="overview">Overview</div>
-      <div class="tab" data-tab="recipe">Recipe</div>
-      <div class="tab" data-tab="notes">Notes</div>
-    </div>
-
-    <div class="tab-content active" id="overview-content">
-      <!-- Description, deviations, source rendered by JS -->
-    </div>
-
-    <div class="tab-content" id="recipe-content">
-      <div class="scaling-controls" id="scaling-controls">
-        <span class="scaling-label">Servings:</span>
-        <span class="scaling-info">Loading...</span>
-      </div>
-      <div id="ingredients-list"></div>
-      <div id="directions-list"></div>
-    </div>
-
-    <div class="tab-content" id="notes-content">
-      <!-- Notes + lab log rendered by JS -->
-    </div>
+  <div class="content" style="min-height: 400px;">
   </div>
 
   <div class="status-bar">
-    <span class="status-bar-section" id="status-servings">Scale: 1×</span>
-    <span class="status-bar-section" id="status-info"></span>
+    <span class="status-bar-section">Favorites</span>
   </div>
 </div>
 
 <script src="js/utils.js"></script>
-<script src="js/scaling.js"></script>
-<script src="js/recipe-loader.js"></script>
 </body>
 </html>
