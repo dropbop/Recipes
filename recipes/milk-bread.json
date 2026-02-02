@@ -1,0 +1,183 @@
+{
+  "id": "milk-bread",
+  "title": "Milk Bread",
+  "description": "Soft, pillowy bread using the tangzhong method. The real fun is infusing the milk with herbs or rolling in toppings like grana padano and black pepper before shaping.",
+  "canonical": true,
+  "tags": ["bread", "baking", "japanese"],
+  "source": "Chef John — https://www.allrecipes.com/recipe/283940/chef-johns-milk-bread/ — https://www.youtube.com/watch?v=8N1BXksM-8Y",
+  "time": {
+    "prep": 20,
+    "cook": 250
+  },
+  "servings": {
+    "base": 1,
+    "unit": "loaf"
+  },
+  "ingredientGroups": [
+    {
+      "name": "Tangzhong (Roux Starter)",
+      "items": [
+        {
+          "quantity": 0.25,
+          "quantityMax": null,
+          "unit": "cup",
+          "item": "bread flour",
+          "note": null,
+          "scalable": true
+        },
+        {
+          "quantity": 0.25,
+          "quantityMax": null,
+          "unit": "cup",
+          "item": "water",
+          "note": null,
+          "scalable": true
+        },
+        {
+          "quantity": 0.333,
+          "quantityMax": null,
+          "unit": "cup",
+          "item": "whole milk",
+          "note": "infuse with herbs for a variation",
+          "scalable": true
+        }
+      ]
+    },
+    {
+      "name": "Dough",
+      "items": [
+        {
+          "quantity": 2.5,
+          "quantityMax": null,
+          "unit": "cups",
+          "item": "bread flour",
+          "note": null,
+          "scalable": true
+        },
+        {
+          "quantity": 1.25,
+          "quantityMax": null,
+          "unit": "tsp",
+          "item": "kosher salt",
+          "note": null,
+          "scalable": true
+        },
+        {
+          "quantity": 0.25,
+          "quantityMax": null,
+          "unit": "cup",
+          "item": "white sugar",
+          "note": null,
+          "scalable": true
+        },
+        {
+          "quantity": 1,
+          "quantityMax": null,
+          "unit": "packet",
+          "item": "instant dry yeast",
+          "note": null,
+          "scalable": true
+        },
+        {
+          "quantity": 0.5,
+          "quantityMax": null,
+          "unit": "cup",
+          "item": "warm whole milk",
+          "note": "110°F; can also infuse",
+          "scalable": true
+        },
+        {
+          "quantity": 1,
+          "quantityMax": null,
+          "unit": "",
+          "item": "large egg",
+          "note": "beaten",
+          "scalable": true
+        },
+        {
+          "quantity": 4,
+          "quantityMax": null,
+          "unit": "tbsp",
+          "item": "unsalted butter",
+          "note": "room temperature, cubed",
+          "scalable": true
+        }
+      ]
+    },
+    {
+      "name": "To Finish",
+      "items": [
+        {
+          "quantity": null,
+          "quantityMax": null,
+          "unit": "",
+          "item": "milk",
+          "note": "for brushing",
+          "scalable": false
+        },
+        {
+          "quantity": null,
+          "quantityMax": null,
+          "unit": "",
+          "item": "butter",
+          "note": "for pan — go overboard",
+          "scalable": false
+        }
+      ]
+    }
+  ],
+  "directions": [
+    {
+      "step": 1,
+      "title": "Tangzhong",
+      "text": "Whisk bread flour, water, and milk in a small saucepan until smooth. Cook over medium-low, stirring often, until very thick and just about to bubble (at least 150°F). Transfer to a measuring cup — you need exactly ½ cup. To cool quickly, spread a thin layer around the inside of your stand mixer bowl — takes about 5 minutes instead of 30."
+    },
+    {
+      "step": 2,
+      "title": "Dough",
+      "text": "Combine bread flour, cooled tangzhong, salt, sugar, yeast, warm milk, and egg in a stand mixer with dough hook. Beat on low until dough forms a ball and pulls away from the sides, scraping down as needed, about 5 minutes."
+    },
+    {
+      "step": 3,
+      "title": "Add Butter",
+      "text": "Scrape dough off the hook and into the bowl. Add butter and knead on low until dough is slightly tacky but very smooth and elastic, 10–12 more minutes."
+    },
+    {
+      "step": 4,
+      "title": "First Rise",
+      "text": "Shape into a smooth ball, transfer to a lightly buttered bowl, cover, and let rise until doubled, about 1–1½ hours."
+    },
+    {
+      "step": 5,
+      "title": "Shape",
+      "text": "Preheat oven to 350°F. Generously butter a 9×5 loaf pan. Transfer dough to work surface (no flour needed). Press and knead out all the air, shape into a 9-inch wide rectangle. This is where you can add toppings — cheese and pepper, whatever — before rolling. Roll lengthwise into a log, transfer to pan seam-down, press to distribute evenly."
+    },
+    {
+      "step": 6,
+      "title": "Second Rise",
+      "text": "Cover and let rise until dough reaches just about the top of the pan, 35–45 minutes."
+    },
+    {
+      "step": 7,
+      "title": "Bake",
+      "text": "Brush top with milk. Bake in center of oven until golden brown and beautifully puffed, about 35 minutes. Rest in pan 10 minutes, then remove to wire rack. Cool completely before slicing, about 1 hour."
+    }
+  ],
+  "notes": [
+    "Requires a stand mixer — don't attempt by hand.",
+    "High butterfat butter is worth seeking out for this.",
+    "Every time you're buttering something for nonstick, go overboard. Who gives a fuck.",
+    "Brown butter would be a great variation here, especially if you add milk powder during the browning to brown-butter-maxx."
+  ],
+  "deviations": [
+    {
+      "what": "Infuse the milk with herbs before using in tangzhong and dough",
+      "why": "Imparts flavor throughout the whole bread — think herbaceous, aromatic, whatever you want."
+    },
+    {
+      "what": "Add toppings like grana padano and black pepper before the final roll",
+      "why": "Builds flavor into the bread layers. Cheese and pepper is an easy win; fruit jam would probably work too."
+    }
+  ],
+  "log": []
+}

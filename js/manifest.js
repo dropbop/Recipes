@@ -25,5 +25,13 @@ const RECIPE_MANIFEST = [
     tags: ["polish", "casserole", "comfort"],
     time: { prep: 15, cook: 35 },
     canonical: true
+  },
+  {
+    id: "milk-bread",
+    title: "Milk Bread",
+    desc: "Soft tangzhong bread with herb or topping variations",
+    tags: ["bread", "baking", "japanese"],
+    time: { prep: 20, cook: 250 },
+    canonical: true
   }
 ];
