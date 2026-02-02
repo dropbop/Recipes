@@ -47,7 +47,7 @@ const RECIPE_MANIFEST = [
     title: "Grilled Sambal Shrimp",
     desc: "Spicy coconut-lime marinade for shrimp or chicken",
     tags: ["seafood", "grilling", "marinade", "thai"],
-    time: { prep: 10, cook: 10 },
+    time: { prep: 10, cook: 130 },
     canonical: true
   }
 ];
