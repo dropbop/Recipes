@@ -5,9 +5,9 @@ const RECIPE_MANIFEST = [
   {
     id: "braised-short-rib",
     title: "Braised Short Rib",
-    desc: "Pepper-heavy wine braise with garlic paste",
+    desc: "Blows every restaurant's version out of the water",
     tags: ["beef", "braise", "dutch-oven", "winter"],
-    time: { prep: 20, cook: 210 },
+    time: { prep: 20, cook: 270 },
     canonical: true
   },
   {

@@ -1,13 +1,13 @@
 {
   "id": "braised-short-rib",
   "title": "Braised Short Rib",
-  "description": "A pepper-heavy wine braise. The garlic paste is the whole trick — it penetrates the meat in a way whole cloves can't.",
+  "description": "A braised beef short rib that blows every restaurant's version out of the water. Heavy on the black pepper, heavy on the garlic.",
   "canonical": true,
   "tags": ["beef", "braise", "dutch-oven", "winter"],
   "source": "Chef John's Peposa dell'Impruneta, with adaptations",
   "time": {
     "prep": 20,
-    "cook": 210
+    "cook": 270
   },
   "servings": {
     "base": 4,
@@ -60,17 +60,18 @@
       "name": "Herbs & Aromatics",
       "items": [
         {
-          "quantity": null,
+          "quantity": 4,
+          "quantityMax": 5,
           "unit": "",
-          "item": "sage",
-          "note": "a few sprigs",
+          "item": "sage leaves",
+          "note": null,
           "scalable": false
         },
         {
-          "quantity": null,
-          "unit": "",
+          "quantity": 3,
+          "unit": "sprigs",
           "item": "thyme",
-          "note": "a few sprigs",
+          "note": null,
           "scalable": false
         },
         {
@@ -89,7 +90,7 @@
           "quantity": null,
           "unit": "",
           "item": "pearl onions, carrot, celery, onion, bell pepper, potato",
-          "note": "add them at the right time, not the wrong one",
+          "note": "add them at the right time, not the wrong one. Onion can be diced and sautéed early to deglaze fond if you've built it. The rest should be large chunks added late — about 1.5 hours of cook time keeps them from turning to mush",
           "scalable": false
         }
       ]
@@ -98,34 +99,43 @@
   "directions": [
     {
       "step": 1,
-      "text": "Salt short ribs. You may sear them but need not. I sometimes sear them and use the fond for something else entirely, then use the seared ribs with a fondless pot. Chaos."
+      "title": "Dry Brine",
+      "text": "Heavily salt the short ribs 4–24 hours in advance and refrigerate uncovered. The salt penetrates deep into the meat and makes a real difference."
     },
     {
       "step": 2,
-      "text": "Turn the garlic into a paste using salt and a mortar and pestle. A garlic press works fine too — the mortar probably makes a difference but life is short."
+      "title": "Garlic Paste",
+      "text": "Turn the garlic into a paste using salt and a mortar and pestle, or use a garlic press. Paste or pressed garlic punches way harder than minced or crushed cloves."
     },
     {
       "step": 3,
-      "text": "Rub short ribs with garlic paste and tomato paste. Get messy."
+      "title": "Prep the Meat",
+      "text": "Sear the ribs if you want fond, or skip it. Rub the ribs with the garlic paste and tomato paste."
     },
     {
       "step": 4,
-      "text": "Fill your Dutch oven with ribs in a single layer. Add wine until it comes almost to the top of the meat — 2 cups is a safe minimum but use more if needed. Add all the herbs n shit. Braise tightly covered, about 3.5 hours, turning every 30 mins or so. Set timers or forget and panic."
+      "title": "Braise",
+      "text": "Arrange ribs in a single layer in your Dutch oven. Add wine until it comes almost to the top of the meat — 2 cups minimum, more if needed. Add the herbs and bay leaves. Cover tightly and braise at 300°F, turning every 30 minutes or so. The meat needs 3.5–4.5 hours to become properly tender."
     },
     {
       "step": 5,
-      "text": "Serve with polenta or mashed potato or something. Top with parsnip chips if you're feeling fancy."
+      "title": "Optional: Reduce the Sauce",
+      "text": "Strain the braising liquid and reduce it over medium heat for 30–60 minutes to thicken. Highly recommended but not required."
+    },
+    {
+      "step": 6,
+      "title": "Serve",
+      "text": "Serve over polenta or mashed potatoes. Top with parsnip chips if you want."
     }
   ],
   "notes": [
     "Wine only, no beef broth. This is what makes the recipe — comes out way better than broth-based braises.",
-    "What the right time is for adding vegetables is left as an exercise to the reader.",
-    "The longer you braise, the more the meat falls off the bone. 3.5 hours is minimum; 4+ is better if you have time."
+    "Short ribs really benefit from a dry brine. Heavily salt them 4–24 hours in advance and let the salt penetrate."
   ],
   "deviations": [
     {
-      "what": "Garlic paste instead of whole cloves",
-      "why": "More intense flavor distribution. The paste penetrates the meat surface; whole cloves just sit next to it."
+      "what": "Garlic paste or pressed garlic instead of crushed or minced cloves",
+      "why": "Paste or pressed garlic punches way harder than typical crushed or minced cloves. It penetrates the meat surface; whole or chunked cloves just sit next to it."
     },
     {
       "what": "Just coarsely ground pepper instead of separate ground and crushed",
