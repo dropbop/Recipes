@@ -64,6 +64,17 @@ function formatQuantity(num, unit, numMax) {
 }
 
 /**
+ * Format minutes as hours and minutes (e.g., 230 → "3h 50m")
+ */
+function formatTime(minutes) {
+  if (minutes < 60) return `${minutes} min`;
+  const hours = Math.floor(minutes / 60);
+  const mins = minutes % 60;
+  if (mins === 0) return `${hours}h`;
+  return `${hours}h ${mins}m`;
+}
+
+/**
  * Get a consistent color for a tag based on hash
  */
 function getTagColor(tag) {
@@ -139,6 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Export to window for use across pages
 window.formatQuantity = formatQuantity;
+window.formatTime = formatTime;
 window.getTagColor = getTagColor;
 window.FRACTIONS = FRACTIONS;
 window.setTheme = setTheme;
