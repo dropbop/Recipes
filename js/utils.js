@@ -107,7 +107,7 @@ function updateThemeCheckmarks(activeName) {
 
 // Apply saved theme immediately (before DOMContentLoaded)
 (function() {
-  const saved = localStorage.getItem('recipe-lab-theme') || 'teal';
+  const saved = localStorage.getItem('recipe-lab-theme') || 'plum';
   if (THEMES[saved]) {
     document.body.style.backgroundColor = THEMES[saved];
   }
@@ -115,7 +115,7 @@ function updateThemeCheckmarks(activeName) {
 
 // Update checkmarks after DOM ready
 document.addEventListener('DOMContentLoaded', () => {
-  const saved = localStorage.getItem('recipe-lab-theme') || 'teal';
+  const saved = localStorage.getItem('recipe-lab-theme') || 'plum';
   updateThemeCheckmarks(saved);
 
   // Menu click handler for mobile

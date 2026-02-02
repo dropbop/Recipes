@@ -51,7 +51,7 @@ Key fields:
 ## Theme System
 
 Six desktop background colors selectable via View menu, persisted in localStorage:
-- teal `#547E7E` (default), slate `#5A6A7A`, olive `#6B6B4A`, plum `#6B4A5E`, storm `#4A5A6B`, charcoal `#4A4A4A`
+- teal `#547E7E`, slate `#5A6A7A`, olive `#6B6B4A`, plum `#6B4A5E` (default), storm `#4A5A6B`, charcoal `#4A4A4A`
 
 ## Design Constraints
 
