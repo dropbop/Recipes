@@ -4,7 +4,7 @@
   "description": "A pepper-heavy wine braise. The garlic paste is the whole trick — it penetrates the meat in a way whole cloves can't.",
   "canonical": true,
   "tags": ["beef", "braise", "dutch-oven", "winter"],
-  "source": "Family tradition, heavily improvised",
+  "source": "Chef John's Peposa dell'Impruneta, with adaptations",
   "time": {
     "prep": 20,
     "cook": 210
@@ -26,17 +26,10 @@
           "scalable": true
         },
         {
-          "quantity": 1,
+          "quantity": 3,
           "unit": "tbsp",
-          "item": "ground pepper",
-          "note": "a lot is what matters not the volume",
-          "scalable": true
-        },
-        {
-          "quantity": 2,
-          "unit": "tbsp",
-          "item": "crushed peppercorns",
-          "note": "it's more pepper! grind it if you want",
+          "item": "black pepper",
+          "note": "coarsely ground; with quality pepper you don't need separate ground and crushed",
           "scalable": true
         },
         {
@@ -109,7 +102,7 @@
     },
     {
       "step": 2,
-      "text": "Turn the garlic into a paste using salt and a mortar and pestle. This is important."
+      "text": "Turn the garlic into a paste using salt and a mortar and pestle. A garlic press works fine too — the mortar probably makes a difference but life is short."
     },
     {
       "step": 3,
@@ -117,7 +110,7 @@
     },
     {
       "step": 4,
-      "text": "In a tightly covered dutch oven, braise in 2 cups wine with all the herbs n shit, about 3.5 hours, turning every 30 mins or so. Set timers or forget and panic."
+      "text": "Fill your Dutch oven with ribs in a single layer. Add wine until it comes almost to the top of the meat — 2 cups is a safe minimum but use more if needed. Add all the herbs n shit. Braise tightly covered, about 3.5 hours, turning every 30 mins or so. Set timers or forget and panic."
     },
     {
       "step": 5,
@@ -125,6 +118,7 @@
     }
   ],
   "notes": [
+    "Wine only, no beef broth. This is what makes the recipe — comes out way better than broth-based braises.",
     "What the right time is for adding vegetables is left as an exercise to the reader.",
     "The longer you braise, the more the meat falls off the bone. 3.5 hours is minimum; 4+ is better if you have time."
   ],
@@ -134,8 +128,8 @@
       "why": "More intense flavor distribution. The paste penetrates the meat surface; whole cloves just sit next to it."
     },
     {
-      "what": "Double pepper (ground AND crushed)",
-      "why": "Ground pepper integrates into the paste and rub. Crushed peppercorns add texture and bursts of heat. Why choose?"
+      "what": "Just coarsely ground pepper instead of separate ground and crushed",
+      "why": "With quality pepper, one coarse grind gives you both the integration and the texture. Simpler."
     }
   ],
   "log": []

@@ -22,7 +22,7 @@
           "quantity": 2.5,
           "unit": "lbs",
           "item": "colossal shrimp",
-          "note": "peeled, deveined, no tails",
+          "note": "head-off, peeled, deveined, no tails — colossal stands up to the sear without overcooking",
           "scalable": true
         },
         {
@@ -105,7 +105,7 @@
     {
       "step": 1,
       "title": "Shrimp",
-      "text": "Toss shrimp with salt, pepper, and MSG. Lay out in a single layer on paper towels on a plate - let the surface dry out. Get a stainless steel pan ripping hot with a thin layer of avocado oil. Sear shrimp mostly on one side until you build a deep golden crust and a good fond in the pan, flipping briefly to finish. Pull shrimp out and set aside. They can be slightly underdone; they're going back in later."
+      "text": "Toss shrimp with salt, pepper, and MSG. Lay out in a single layer on paper towels on a plate - let the surface dry out. Get a stainless steel pan ripping hot with a thin layer of avocado oil. Work in batches — don't overcrowd the pan. Every shrimp needs to make contact with the pan, especially the thick part near where the head was. Sear mostly on one side until you build a deep golden crust and a good fond in the pan, flipping briefly to finish. Pull shrimp out and set aside. They can be slightly underdone; they're going back in later."
     },
     {
       "step": 2,
@@ -120,7 +120,7 @@
     {
       "step": 4,
       "title": "Combine",
-      "text": "Toss pasta into the sauce with a splash of pasta water. Return shrimp to the pan, finish cooking them if necessary. Kill the heat, add parsley, toss everything together."
+      "text": "Return shrimp to the sauce first. Then pour everything over the pasta with a splash of pasta water. Kill the heat, add parsley, toss everything together."
     }
   ],
   "notes": [

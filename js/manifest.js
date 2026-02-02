@@ -17,5 +17,13 @@ const RECIPE_MANIFEST = [
     tags: ["seafood", "italian", "quick", "weeknight"],
     time: { prep: 15, cook: 10 },
     canonical: false
+  },
+  {
+    id: "pierogi-x-plosion",
+    title: "Pierogi X-plosion",
+    desc: "Pierogies and kielbasa in creamy dijon sauce",
+    tags: ["polish", "casserole", "comfort"],
+    time: { prep: 15, cook: 35 },
+    canonical: true
   }
 ];

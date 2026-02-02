@@ -1,0 +1,161 @@
+{
+  "id": "pierogi-x-plosion",
+  "title": "Pierogi X-plosion",
+  "description": "Pan-fried pierogies, kielbasa, and sautéed peppers in a creamy dijon sauce, finished under the broiler.",
+  "canonical": true,
+  "tags": ["polish", "casserole", "comfort"],
+  "source": "Payton's recipe",
+  "time": {
+    "prep": 15,
+    "cook": 35
+  },
+  "servings": {
+    "base": 4,
+    "unit": "servings"
+  },
+  "ingredientGroups": [
+    {
+      "name": "Main Components",
+      "items": [
+        {
+          "quantity": 2,
+          "quantityMax": null,
+          "unit": "packages",
+          "item": "cheddar and potato pierogies",
+          "note": null,
+          "scalable": true
+        },
+        {
+          "quantity": 1,
+          "quantityMax": null,
+          "unit": "",
+          "item": "beef kielbasa",
+          "note": null,
+          "scalable": true
+        }
+      ]
+    },
+    {
+      "name": "Vegetables",
+      "items": [
+        {
+          "quantity": 2,
+          "quantityMax": null,
+          "unit": "",
+          "item": "bell peppers",
+          "note": "de-seeded, sliced into strips",
+          "scalable": true
+        },
+        {
+          "quantity": 1,
+          "quantityMax": null,
+          "unit": "",
+          "item": "red onion",
+          "note": "sliced into strips",
+          "scalable": true
+        },
+        {
+          "quantity": 3,
+          "quantityMax": null,
+          "unit": "cloves",
+          "item": "garlic",
+          "note": null,
+          "scalable": true
+        }
+      ]
+    },
+    {
+      "name": "Sauce & Cheese",
+      "items": [
+        {
+          "quantity": 1,
+          "quantityMax": null,
+          "unit": "cup",
+          "item": "chicken broth",
+          "note": null,
+          "scalable": true
+        },
+        {
+          "quantity": 1,
+          "quantityMax": 2,
+          "unit": "tbsp",
+          "item": "dijon mustard",
+          "note": null,
+          "scalable": true
+        },
+        {
+          "quantity": 0.25,
+          "quantityMax": 0.5,
+          "unit": "brick",
+          "item": "cream cheese",
+          "note": null,
+          "scalable": true
+        },
+        {
+          "quantity": 1,
+          "quantityMax": null,
+          "unit": "package",
+          "item": "sharp cheddar",
+          "note": "finely grated",
+          "scalable": true
+        }
+      ]
+    },
+    {
+      "name": "Seasonings",
+      "items": [
+        {
+          "quantity": null,
+          "quantityMax": null,
+          "unit": "",
+          "item": "salt, black pepper, cayenne",
+          "note": "to taste",
+          "scalable": false
+        },
+        {
+          "quantity": null,
+          "quantityMax": null,
+          "unit": "",
+          "item": "butter",
+          "note": "for the pierogies",
+          "scalable": false
+        }
+      ]
+    }
+  ],
+  "directions": [
+    {
+      "step": 1,
+      "title": "Vegetables",
+      "text": "Sauté peppers and onions seasoned with salt, pepper, garlic, and cayenne. Add a spoonful of hot water if they start to smoke or stick. When done, add to a baking dish."
+    },
+    {
+      "step": 2,
+      "title": "Kielbasa",
+      "text": "Cook kielbasa in a pan until browned on the edges. Add to the baking dish."
+    },
+    {
+      "step": 3,
+      "title": "Pierogies",
+      "text": "Boil pierogies for 2 minutes 30 seconds. Transfer to a sauté pan with butter, garlic, and cayenne. Cook until golden, then add to the baking dish."
+    },
+    {
+      "step": 4,
+      "title": "Assembly",
+      "text": "Coat contents of baking dish with roughly half the cheddar and stir well."
+    },
+    {
+      "step": 5,
+      "title": "Sauce",
+      "text": "Simmer chicken broth, dijon, cream cheese, and garlic until combined. Pour over the baking dish contents and stir until fully coated."
+    },
+    {
+      "step": 6,
+      "title": "Finish",
+      "text": "Top with remaining cheddar. Broil until cheese is melted or golden brown."
+    }
+  ],
+  "notes": [],
+  "deviations": [],
+  "log": []
+}
