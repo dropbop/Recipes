@@ -10,7 +10,7 @@
 
 <div class="window">
   <div class="title-bar">
-    <span class="title-bar-text">📂 Recipe Explorer - Lab Notebook</span>
+    <span class="title-bar-text">Recipe Explorer - Lab Notebook</span>
     <div class="window-controls">
       <div class="window-btn">_</div>
       <div class="window-btn">□</div>
@@ -94,6 +94,7 @@
 
     card.innerHTML = `
       <div class="recipe-card-title">${recipe.title}</div>
+      <div class="recipe-card-desc">${recipe.desc || ''}</div>
       <div style="font-size: 10px; color: #666; margin-top: 5px;">${totalTime} min total</div>
       <div class="tags">${tagsHtml}</div>
     `;

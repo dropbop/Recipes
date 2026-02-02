@@ -26,6 +26,16 @@ A personal recipe lab notebook site with Win98 aesthetic. Static HTML/CSS/JS, no
 1. Create `recipes/{slug}.json` following the schema (see existing recipes)
 2. Add entry to `RECIPE_MANIFEST` array in `js/manifest.js`
 
+## Manifest Schema (`js/manifest.js`)
+
+Each entry in `RECIPE_MANIFEST` has:
+- `id` — matches the JSON filename (e.g., `"shrimp-scampi"` → `recipes/shrimp-scampi.json`)
+- `title` — display name on index cards
+- `desc` — short description (50-60 chars) shown on index cards below title
+- `tags` — array of strings for filtering/display
+- `time` — `{ prep, cook }` in minutes
+- `canonical` — boolean, shows burgundy border on index cards
+
 ## Recipe JSON Schema
 
 Key fields:

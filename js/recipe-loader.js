@@ -40,7 +40,7 @@ async function loadRecipe(id) {
 function renderRecipe(recipe) {
   // Update window title
   document.title = `Recipe Viewer - ${recipe.title}`;
-  document.getElementById('window-title').textContent = `\uD83D\uDCCB ${recipe.title}`;
+  document.getElementById('window-title').textContent = recipe.title;
 
   // Header
   document.getElementById('recipe-title').textContent = recipe.title;
