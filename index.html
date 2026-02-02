@@ -81,6 +81,13 @@
     });
   }
 
+  function formatTime(minutes) {
+    if (minutes < 60) return `${minutes} min`;
+    const h = Math.floor(minutes / 60);
+    const m = minutes % 60;
+    return m > 0 ? `${h}h ${m}m` : `${h}h`;
+  }
+
   function createRecipeCard(recipe) {
     const card = document.createElement('div');
     card.className = 'recipe-card' + (recipe.canonical ? ' canonical' : '');
@@ -95,7 +102,7 @@
     card.innerHTML = `
       <div class="recipe-card-title">${recipe.title}</div>
       <div class="recipe-card-desc">${recipe.desc || ''}</div>
-      <div style="font-size: 10px; color: #666; margin-top: 5px;">${totalTime} min total</div>
+      <div style="font-size: 10px; color: #666; margin-top: 5px;">${formatTime(totalTime)} total</div>
       <div class="tags">${tagsHtml}</div>
     `;
 
