@@ -33,5 +33,13 @@ const RECIPE_MANIFEST = [
     tags: ["bread", "baking", "japanese"],
     time: { prep: 20, cook: 250 },
     canonical: true
+  },
+  {
+    id: "chipotle-braised-pork",
+    title: "Chipotle Braised Pork",
+    desc: "Cheap, easy, complex. Great for bulk prep.",
+    tags: ["pork", "mexican", "braise", "pressure-cooker", "meal-prep"],
+    time: { prep: 20, cook: 90 },
+    canonical: false
   }
 ];

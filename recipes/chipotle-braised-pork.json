@@ -1,0 +1,168 @@
+{
+  "id": "chipotle-braised-pork",
+  "title": "Chipotle Braised Pork",
+  "description": "Pork shoulder braised with chipotle. Dirt cheap, dead simple, surprisingly complex. Great for bulk prep — tacos, bowls, whatever.",
+  "canonical": false,
+  "tags": ["pork", "mexican", "braise", "pressure-cooker", "meal-prep"],
+  "time": {
+    "prep": 20,
+    "cook": 90
+  },
+  "servings": {
+    "base": 4.5,
+    "unit": "lbs pork"
+  },
+  "ingredientGroups": [
+    {
+      "name": "Pork",
+      "items": [
+        {
+          "quantity": 4.5,
+          "quantityMax": null,
+          "unit": "lbs",
+          "item": "pork shoulder butt",
+          "note": "cut into 3-inch cubes",
+          "scalable": true
+        }
+      ]
+    },
+    {
+      "name": "Aromatics & Braising Liquid",
+      "items": [
+        {
+          "quantity": 1,
+          "quantityMax": null,
+          "unit": "",
+          "item": "onion",
+          "note": "diced",
+          "scalable": true
+        },
+        {
+          "quantity": 6,
+          "quantityMax": null,
+          "unit": "cloves",
+          "item": "garlic",
+          "note": null,
+          "scalable": true
+        },
+        {
+          "quantity": 1,
+          "quantityMax": null,
+          "unit": "can",
+          "item": "chipotle in adobo",
+          "note": null,
+          "scalable": true
+        },
+        {
+          "quantity": 2,
+          "quantityMax": null,
+          "unit": "tbsp",
+          "item": "tomato paste",
+          "note": null,
+          "scalable": true
+        },
+        {
+          "quantity": null,
+          "quantityMax": null,
+          "unit": "",
+          "item": "chicken stock",
+          "note": "minimize — meat peeks an inch over the liquid",
+          "scalable": false
+        },
+        {
+          "quantity": null,
+          "quantityMax": null,
+          "unit": "",
+          "item": "bay leaves",
+          "note": null,
+          "scalable": false
+        }
+      ]
+    },
+    {
+      "name": "Spices",
+      "items": [
+        {
+          "quantity": null,
+          "quantityMax": null,
+          "unit": "",
+          "item": "salt, black pepper, cumin, Mexican oregano, mustard powder, cocoa powder",
+          "note": "to taste",
+          "scalable": false
+        },
+        {
+          "quantity": null,
+          "quantityMax": null,
+          "unit": "",
+          "item": "cinnamon",
+          "note": "pinch",
+          "scalable": false
+        },
+        {
+          "quantity": null,
+          "quantityMax": null,
+          "unit": "",
+          "item": "brown sugar",
+          "note": "to taste",
+          "scalable": false
+        }
+      ]
+    },
+    {
+      "name": "To Finish",
+      "items": [
+        {
+          "quantity": 1,
+          "quantityMax": null,
+          "unit": "",
+          "item": "lime",
+          "note": "juiced and zested — can sub vinegar, just needs acid",
+          "scalable": true
+        }
+      ]
+    }
+  ],
+  "directions": [
+    {
+      "step": 1,
+      "title": "Prep",
+      "text": "Cube pork, salt generously, dry brine if you have time. The sear is the most important step though — you can handle salting later if needed."
+    },
+    {
+      "step": 2,
+      "title": "Sear",
+      "text": "Sear pork in small batches until well browned. Take care not to scorch the bottom of the pot — you don't want burnt flavors."
+    },
+    {
+      "step": 3,
+      "title": "Aromatics",
+      "text": "Sautee onion and garlic."
+    },
+    {
+      "step": 4,
+      "title": "Tomato Paste",
+      "text": "Add tomato paste, cook the funk off."
+    },
+    {
+      "step": 5,
+      "title": "Braise",
+      "text": "Deglaze with stock. Add chipotles, seared pork, and all spices. Minimize liquid — you don't want it wet."
+    },
+    {
+      "step": 6,
+      "title": "Pressure Cook",
+      "text": "Pressure cook 90 minutes at high (~11 psi). Natural release — no \"keep warm,\" don't touch the vent."
+    },
+    {
+      "step": 7,
+      "title": "Finish",
+      "text": "Add lime juice and zest. Consider frying it up when it's done."
+    }
+  ],
+  "notes": [
+    "Cubed because you don't want muscle fibers to be weirdly long. Imagine long pulled pork — gross.",
+    "If you don't make your own stock or can't get gelatinous stock from the refrigerated section, just use white wine."
+  ],
+  "deviations": [],
+  "log": []
+}
