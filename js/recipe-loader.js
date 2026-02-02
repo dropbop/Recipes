@@ -80,20 +80,10 @@ function renderRecipe(recipe) {
   // Status bar source
   document.getElementById('status-info').textContent = recipe.source || '';
 
-  // Ingredients
-  renderIngredients(recipe);
-
-  // Directions
-  renderDirections(recipe);
-
-  // Notes
+  // Render tabs
+  renderOverview(recipe);
+  renderRecipeTab(recipe);
   renderNotes(recipe);
-
-  // Deviations
-  renderDeviations(recipe);
-
-  // Lab Log
-  renderLog(recipe);
 }
 
 function renderIngredients(recipe) {
@@ -119,16 +109,42 @@ function renderIngredients(recipe) {
   container.innerHTML = html;
 }
 
-function renderDirections(recipe) {
-  const container = document.getElementById('directions-content');
+function renderOverview(recipe) {
+  const container = document.getElementById('overview-content');
   let html = '';
 
-  // Description blurb before method
   if (recipe.description) {
-    html += `<p class="note">${recipe.description}</p>`;
+    html += `<p style="line-height: 1.6; margin-bottom: 15px;">${recipe.description}</p>`;
   }
 
-  html += '<div class="section"><div class="section-title">\u25C6 Method</div>';
+  if (recipe.deviations && recipe.deviations.length > 0) {
+    html += '<div class="section"><div class="section-title">\u25C6 Deviations from Tradition</div>';
+    recipe.deviations.forEach(dev => {
+      if (typeof dev === 'string') {
+        html += `<div class="deviation-item">${dev}</div>`;
+      } else {
+        html += `<div class="deviation-item"><strong>${dev.what}</strong> \u2014 ${dev.why}</div>`;
+      }
+    });
+    html += '</div>';
+  }
+
+  if (recipe.source) {
+    html += `<div class="section"><div class="section-title">\u25C6 Source</div><p>${recipe.source}</p></div>`;
+  }
+
+  if (!html) {
+    html = '<div class="empty-log">No overview information yet.</div>';
+  }
+
+  container.innerHTML = html;
+}
+
+function renderRecipeTab(recipe) {
+  renderIngredients(recipe);
+
+  const container = document.getElementById('directions-list');
+  let html = '<div class="section"><div class="section-title">\u25C6 Method</div>';
 
   recipe.directions.forEach(dir => {
     const title = dir.title ? `<span class="direction-title">${dir.title}:</span> ` : '';
@@ -144,72 +160,43 @@ function renderDirections(recipe) {
 
 function renderNotes(recipe) {
   const container = document.getElementById('notes-content');
+  const hasNotes = recipe.notes && recipe.notes.length > 0;
+  const hasLog = recipe.log && recipe.log.length > 0;
 
-  if (!recipe.notes || recipe.notes.length === 0) {
-    container.innerHTML = '<div class="empty-log">No notes yet.</div>';
+  if (!hasNotes && !hasLog) {
+    container.innerHTML = '<div class="empty-log">No notes yet. Make the recipe and add your observations!</div>';
     return;
   }
 
-  let html = '<div class="section"><div class="section-title">\u25C6 Notes</div>';
-  recipe.notes.forEach(note => {
-    html += `<div class="note-item">${note}</div>`;
-  });
-  html += '</div>';
+  let html = '';
 
-  container.innerHTML = html;
-}
-
-function renderDeviations(recipe) {
-  const container = document.getElementById('deviations-content');
-
-  if (!recipe.deviations || recipe.deviations.length === 0) {
-    container.innerHTML = '<div class="empty-log">No deviations from tradition documented.</div>';
-    return;
+  if (hasNotes) {
+    html += '<div class="section"><div class="section-title">\u25C6 Notes</div>';
+    recipe.notes.forEach(note => {
+      html += `<div class="note-item">${note}</div>`;
+    });
+    html += '</div>';
   }
 
-  let html = '<div class="section"><div class="section-title">\u25C6 Deviations from Tradition</div>';
-  recipe.deviations.forEach(dev => {
-    // Support both string format (legacy) and object format {what, why}
-    if (typeof dev === 'string') {
-      html += `<div class="deviation-item">${dev}</div>`;
-    } else {
-      html += `<div class="deviation-item"><strong>${dev.what}</strong> \u2014 ${dev.why}</div>`;
-    }
-  });
-  html += '</div>';
-
-  if (recipe.source) {
-    html += `<div class="section">
-      <div class="section-title">\u25C6 Source</div>
-      <p>${recipe.source}</p>
-    </div>`;
+  if (hasNotes && hasLog) {
+    html += '<hr class="win-hr">';
   }
 
-  container.innerHTML = html;
-}
+  if (hasLog) {
+    const sortedLog = [...recipe.log].sort((a, b) =>
+      new Date(b.date) - new Date(a.date)
+    );
 
-function renderLog(recipe) {
-  const container = document.getElementById('log-content');
-
-  if (!recipe.log || recipe.log.length === 0) {
-    container.innerHTML = '<div class="empty-log">No lab entries yet. Make the recipe and add your observations!</div>';
-    return;
+    html += '<div class="section"><div class="section-title">\u25C6 Lab Log</div>';
+    sortedLog.forEach(entry => {
+      const date = formatDate(entry.date);
+      html += `<div class="log-entry">
+        <div class="log-date">${date}</div>
+        <div class="log-text">${entry.entry}</div>
+      </div>`;
+    });
+    html += '</div>';
   }
-
-  // Sort by date, newest first
-  const sortedLog = [...recipe.log].sort((a, b) =>
-    new Date(b.date) - new Date(a.date)
-  );
-
-  let html = '<div class="section"><div class="section-title">\u25C6 Lab Notebook</div>';
-  sortedLog.forEach(entry => {
-    const date = formatDate(entry.date);
-    html += `<div class="log-entry">
-      <div class="log-date">${date}</div>
-      <div class="log-text">${entry.entry}</div>
-    </div>`;
-  });
-  html += '</div>';
 
   container.innerHTML = html;
 }

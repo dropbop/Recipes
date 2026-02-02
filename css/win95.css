@@ -706,11 +706,9 @@ hr.win-hr {
         margin-bottom: 15px;
     }
 
-    #ingredients-content::before { content: "Ingredients"; }
-    #directions-content::before { content: "Directions"; }
-    #deviations-content::before { content: "Deviations from Tradition"; }
+    #overview-content::before { content: "Overview"; }
+    #recipe-content::before { content: "Recipe"; }
     #notes-content::before { content: "Notes"; }
-    #log-content::before { content: "Lab Log"; }
 
     .content {
         padding: 0;

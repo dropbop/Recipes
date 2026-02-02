@@ -30,7 +30,7 @@ A personal recipe lab notebook site with Win98 aesthetic. Static HTML/CSS/JS, no
 
 Key fields:
 - `id`, `title`, `canonical` (boolean for "dialed in" recipes)
-- `description` — 1-2 sentence blurb shown at top of directions; reminds future-you what the point of this dish is
+- `description` — 1-2 sentence blurb shown in Overview tab; explains what the dish is and what makes this version distinct
 - `subtitle`, `source` — optional metadata
 - `ingredientGroups[].items[]` with `quantity`, `quantityMax` (for ranges like "4–6"), `unit`, `item`, `note`, `scalable`
 - `directions[]` with `step`, `title` (optional), `text`
@@ -48,4 +48,4 @@ Six desktop background colors selectable via View menu, persisted in localStorag
 - Win98 aesthetic is intentional — no soft shadows, no gradients on body, use Trebuchet MS not Comic Sans
 - All paths must be relative (works on GitHub Pages at `/Recipes/`)
 - `.nojekyll` file prevents Jekyll processing
-- Tab order: Ingredients → Directions → Deviations → Notes → Lab Log
+- Tab order: Overview → Recipe → Notes
