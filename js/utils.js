@@ -118,23 +118,36 @@ document.addEventListener('DOMContentLoaded', () => {
   const saved = localStorage.getItem('recipe-lab-theme') || 'plum';
   updateThemeCheckmarks(saved);
 
-  // Menu click handler for mobile
+  // Menu click handlers
   const viewMenu = document.getElementById('view-menu');
+  const fileMenu = document.getElementById('file-menu');
+
   if (viewMenu) {
     viewMenu.addEventListener('click', (e) => {
-      // Don't toggle when clicking dropdown items
       if (e.target.classList.contains('menu-dropdown-item')) return;
       if (e.target.classList.contains('checkmark')) return;
       viewMenu.classList.toggle('menu-open');
-    });
-
-    // Close dropdown when clicking outside
-    document.addEventListener('click', (e) => {
-      if (!viewMenu.contains(e.target)) {
-        viewMenu.classList.remove('menu-open');
-      }
+      if (fileMenu) fileMenu.classList.remove('menu-open');
     });
   }
+
+  if (fileMenu) {
+    fileMenu.addEventListener('click', (e) => {
+      if (e.target.classList.contains('menu-dropdown-item')) return;
+      fileMenu.classList.toggle('menu-open');
+      if (viewMenu) viewMenu.classList.remove('menu-open');
+    });
+  }
+
+  // Close dropdowns when clicking outside
+  document.addEventListener('click', (e) => {
+    if (viewMenu && !viewMenu.contains(e.target)) {
+      viewMenu.classList.remove('menu-open');
+    }
+    if (fileMenu && !fileMenu.contains(e.target)) {
+      fileMenu.classList.remove('menu-open');
+    }
+  });
 });
 
 // Export to window for use across pages
