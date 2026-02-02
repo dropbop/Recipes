@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nRemove version/difficulty clutter, add theme selector\n\n- Remove difficulty stamps and version numbers from all layers\n- Add View menu dropdown with 6 theme options \\(teal, slate, olive, plum, storm, charcoal\\)\n- Theme persists via localStorage across page navigation\n- Fix multiplier button active state highlighting\n- Fix toolbar filter button active states\n- Add canonical recipe card burgundy border accent\n- Add meta bullets via CSS pseudo-element\n- Fix ingredients list += bug with dedicated wrapper div\n- Simplify recipe header layout after version removal\n- Status bar now shows recipe source instead of version\n- Add CLAUDE.md project documentation\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git commit:*)",
+      "Bash(git push)"
+    ]
+  }
+}
