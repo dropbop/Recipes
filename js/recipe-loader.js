@@ -54,11 +54,6 @@ function renderRecipe(recipe) {
     subtitleEl.style.display = 'none';
   }
 
-  // Canonical badge
-  if (recipe.canonical) {
-    document.getElementById('canonical-badge').style.display = 'inline-block';
-  }
-
   // Meta info (time)
   if (recipe.time) {
     const totalTime = (recipe.time.prep || 0) + (recipe.time.cook || 0);
