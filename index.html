@@ -73,6 +73,7 @@
     grid.innerHTML = '';
 
     const filtered = filterByCurrentFilter(recipes);
+    filtered.sort((a, b) => (b.canonical ? 1 : 0) - (a.canonical ? 1 : 0));
 
     if (filtered.length === 0) {
       grid.innerHTML = '<p style="text-align: center; color: #666; grid-column: 1/-1;">No recipes match the current filter.</p>';
