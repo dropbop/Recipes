@@ -1,0 +1,92 @@
+{
+  "id": "pressure-cooker-white-beans",
+  "title": "Pressure Cooker White Beans",
+  "description": "Dead simple no-soak white beans in the Instant Pot. Rancho Gordo Alubia Blanca with just garlic, bay leaf, and salt — a blank canvas side dish.",
+  "canonical": false,
+  "tags": ["beans", "pressure-cooker", "side"],
+  "source": "First attempt, winged it",
+  "time": {
+    "prep": 5,
+    "cook": 20
+  },
+  "servings": {
+    "base": 225,
+    "unit": "g beans"
+  },
+  "ingredientGroups": [
+    {
+      "name": "Main Components",
+      "items": [
+        {
+          "quantity": 225,
+          "quantityMax": null,
+          "unit": "g",
+          "item": "dried Alubia Blanca beans",
+          "note": "Rancho Gordo",
+          "scalable": true
+        },
+        {
+          "quantity": null,
+          "quantityMax": null,
+          "unit": "",
+          "item": "water",
+          "note": "just enough to cover beans",
+          "scalable": false
+        },
+        {
+          "quantity": 4,
+          "quantityMax": 5,
+          "unit": "cloves",
+          "item": "garlic",
+          "note": "crushed",
+          "scalable": true
+        },
+        {
+          "quantity": 1,
+          "quantityMax": null,
+          "unit": "",
+          "item": "bay leaf",
+          "note": null,
+          "scalable": false
+        },
+        {
+          "quantity": null,
+          "quantityMax": null,
+          "unit": "",
+          "item": "salt, black pepper",
+          "note": "to taste",
+          "scalable": false
+        }
+      ]
+    }
+  ],
+  "directions": [
+    {
+      "step": 1,
+      "text": "Salt beans, then add to the Instant Pot with water, crushed garlic, and bay leaf. Water should just cover the beans — don't overdo it."
+    },
+    {
+      "step": 2,
+      "text": "Pressure cook on high for 20 minutes."
+    },
+    {
+      "step": 3,
+      "text": "Natural pressure release. Open it when it's done — don't let it sit."
+    },
+    {
+      "step": 4,
+      "text": "Pepper to taste."
+    }
+  ],
+  "notes": [
+    "No soak needed — straight from the bag to the pot.",
+    "Err on less water, but the pressure cooker has a minimum liquid requirement and beans absorb a lot — don't go under the minimum trying to cut back."
+  ],
+  "deviations": [],
+  "log": [
+    {
+      "date": "2026-02-08",
+      "entry": "First attempt. 23 mins on high with natural release — overcooked. Didn't open it right away after the pressure released because I was distracted, so it kept cooking in there. 1.5 quarts water for 225g beans was also too much. Dialing down to 20 mins and less water next time."
+    }
+  ]
+}

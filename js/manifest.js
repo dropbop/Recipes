@@ -49,5 +49,13 @@ const RECIPE_MANIFEST = [
     tags: ["seafood", "grilling", "marinade", "thai"],
     time: { prep: 10, cook: 130 },
     canonical: true
+  },
+  {
+    id: "pressure-cooker-white-beans",
+    title: "Pressure Cooker White Beans",
+    desc: "No-soak Instant Pot white beans — dead simple blank canvas",
+    tags: ["beans", "pressure-cooker", "side"],
+    time: { prep: 5, cook: 20 },
+    canonical: false
   }
 ];
