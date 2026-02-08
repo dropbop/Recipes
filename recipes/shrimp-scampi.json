@@ -19,7 +19,7 @@
       "name": "Shrimp",
       "items": [
         {
-          "quantity": 2.5,
+          "quantity": 2,
           "unit": "lbs",
           "item": "colossal shrimp",
           "note": "head-off, peeled, deveined, no tails — colossal stands up to the sear without overcooking",
@@ -45,17 +45,17 @@
       "name": "Sauce",
       "items": [
         {
-          "quantity": 4,
+          "quantity": 8,
           "unit": "tbsp",
           "item": "butter",
-          "note": "see notes - may need 5-6 tbsp",
+          "note": "1 stick",
           "scalable": true
         },
         {
           "quantity": 5,
           "unit": "cloves",
-          "item": "garlic, pressed",
-          "note": "see notes on pressed vs sliced",
+          "item": "garlic",
+          "note": "see notes on crushed vs sliced",
           "scalable": true
         },
         {
@@ -69,13 +69,13 @@
           "quantity": 0.5,
           "unit": "cup",
           "item": "dry white wine",
-          "note": null,
+          "note": "enough to deglaze",
           "scalable": true
         },
         {
           "quantity": 1,
           "unit": "",
-          "item": "lemon, juiced",
+          "item": "lemon, zested and juiced",
           "note": null,
           "scalable": true
         }
@@ -105,12 +105,12 @@
     {
       "step": 1,
       "title": "Shrimp",
-      "text": "Toss shrimp with salt, pepper, and MSG. Lay out in a single layer on paper towels on a plate - let the surface dry out. Get a stainless steel pan ripping hot with a thin layer of avocado oil. Work in batches — don't overcrowd the pan. Every shrimp needs to make contact with the pan, especially the thick part near where the head was. Sear mostly on one side until you build a deep golden crust and a good fond in the pan, flipping briefly to finish. Pull shrimp out and set aside. They can be slightly underdone; they're going back in later."
+      "text": "Make sure shrimp is fully thawed and properly dried or you will struggle to get the sear. Toss shrimp with salt, pepper, and MSG. Lay out in a single layer on paper towels on a plate - let the surface dry out. Get a stainless steel pan ripping hot with a thin layer of avocado oil. Work in batches — don't overcrowd the pan. Every shrimp needs to make contact with the pan, especially the thick part near where the head was. Sear mostly on one side until you build a deep golden crust and a good fond in the pan, flipping briefly to finish. Pull shrimp out and set aside. They can be slightly underdone; they're going back in later."
     },
     {
       "step": 2,
       "title": "Sauce",
-      "text": "Same pan. Add 4 tbsp butter - the water content in the butter will help deglaze the fond as it melts. Add pressed garlic and red pepper flakes, cook until fragrant. Add white wine and lemon juice, let it reduce. It's still going to be liquidy in its final form; that's fine."
+      "text": "Same pan. Add butter — it'll help deglaze the fond (use a wooden spoon to scrape) or at the very least stop it from burning until the white wine shows up. Add garlic and red pepper flakes, cook until fragrant. Add white wine and lemon juice, reduce until you can drag a spoon through and see the bottom of the pan."
     },
     {
       "step": 3,
@@ -120,11 +120,10 @@
     {
       "step": 4,
       "title": "Combine",
-      "text": "Return shrimp to the sauce first. Then pour everything over the pasta with a splash of pasta water. Kill the heat, add parsley, toss everything together."
+      "text": "Return shrimp to the sauce first. Then pour everything over the pasta with a splash of pasta water. Kill the heat, add parsley and lemon zest, toss everything together."
     }
   ],
   "notes": [
-    "The sauce was a little lean at these ratios. Next time, bump butter to 5-6 tbsp, or mount a tablespoon of cold butter into the finished sauce off-heat. The cold butter trick emulsifies and gives it a glossy, clingy consistency instead of pooling.",
     "Deglazing with butter before the wine means the fond dissolves into the fat phase first, carrying more sear flavor into the lipid-soluble side of the sauce. Worth keeping intentional.",
     "Avocado oil for the sear, not butter. Butter burns at the temperatures you need for a proper Maillard sear. Butter is the sauce fat. Oil is the sear fat. Don't combine."
   ],
@@ -134,8 +133,8 @@
       "why": "Builds fond in the pan and creates a crispy crust on the shrimp. Different texture profile, richer flavor base for the sauce."
     },
     {
-      "what": "Pressed garlic instead of sliced",
-      "why": "Pressing releases more allicin — sharper, more pungent, burns faster. Sliced gives a mellower, sweeter presence. Both work; this version wants the punch."
+      "what": "Crushed garlic instead of sliced",
+      "why": "Optional, but using a garlic press releases more allicin — sharper, more pungent, burns faster. Sliced gives a mellower, sweeter presence. Both work; this version wants the punch."
     },
     {
       "what": "MSG instead of shell stock",
@@ -146,6 +145,10 @@
     {
       "date": "2026-01-31",
       "entry": "Sauce ran lean at these ratios. Next time bump butter to 5-6 tbsp, or mount cold butter at the end for emulsification."
+    },
+    {
+      "date": "2026-02-08",
+      "entry": "Made this as a meal prep with white beans as a base. Increased butter to a full stick, used sliced garlic instead of crushed. Came out delicious, adjusted recipe as I saw fit."
     }
   ]
 }
