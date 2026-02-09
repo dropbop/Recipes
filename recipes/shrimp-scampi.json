@@ -47,7 +47,7 @@
         {
           "quantity": 8,
           "unit": "tbsp",
-          "item": "butter",
+          "item": "unsalted butter",
           "note": "1 stick",
           "scalable": true
         },
@@ -125,7 +125,8 @@
   ],
   "notes": [
     "Deglazing with butter before the wine means the fond dissolves into the fat phase first, carrying more sear flavor into the lipid-soluble side of the sauce. Worth keeping intentional.",
-    "Avocado oil for the sear, not butter. Butter burns at the temperatures you need for a proper Maillard sear. Butter is the sauce fat. Oil is the sear fat. Don't combine."
+    "Avocado oil for the sear, not butter. Butter burns at the temperatures you need for a proper Maillard sear. Butter is the sauce fat. Oil is the sear fat. Don't combine.",
+    "Pasta is the default base, but this works great over white beans, with bread, or just on its own as an appetizer."
   ],
   "deviations": [
     {
