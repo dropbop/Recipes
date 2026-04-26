@@ -19,6 +19,14 @@ const RECIPE_MANIFEST = [
     canonical: false
   },
   {
+    id: "polpette-del-rinascimento",
+    title: "Polpette del Rinascimento",
+    desc: "Orange-fennel meatballs with scappi spice",
+    tags: ["pork", "chicken", "italian", "meatballs", "weeknight"],
+    time: { prep: 25, cook: 35 },
+    canonical: false
+  },
+  {
     id: "pierogi-x-plosion",
     title: "Pierogi X-plosion",
     desc: "Pierogies and kielbasa in creamy dijon sauce",

@@ -1,0 +1,280 @@
+{
+  "id": "polpette-del-rinascimento",
+  "title": "Polpette del Rinascimento",
+  "description": "Pork-and-chicken meatballs with orange zest, fennel, garlic, herbs, parmesan, and warm spice. They get seared hard, finished in the oven, then tossed in a quick orange-tomato pan sauce with capers and a touch of honey.",
+  "canonical": false,
+  "tags": ["pork", "chicken", "italian", "meatballs", "weeknight"],
+  "source": "Original house meatball recipe, Renaissance-spiced",
+  "time": {
+    "prep": 25,
+    "cook": 35
+  },
+  "servings": {
+    "base": 6,
+    "unit": "servings"
+  },
+  "ingredientGroups": [
+    {
+      "name": "Panade",
+      "items": [
+        {
+          "quantity": 1,
+          "quantityMax": null,
+          "unit": "",
+          "item": "egg",
+          "note": "whisked",
+          "scalable": true
+        },
+        {
+          "quantity": 0.5,
+          "quantityMax": null,
+          "unit": "cup",
+          "item": "breadcrumbs",
+          "note": "eyeball it",
+          "scalable": true
+        },
+        {
+          "quantity": 0.5,
+          "quantityMax": null,
+          "unit": "cup",
+          "item": "milk",
+          "note": "enough to make the panade look like oatmeal",
+          "scalable": true
+        }
+      ]
+    },
+    {
+      "name": "Meatballs",
+      "items": [
+        {
+          "quantity": 1,
+          "quantityMax": null,
+          "unit": "lb",
+          "item": "ground pork",
+          "note": null,
+          "scalable": true
+        },
+        {
+          "quantity": 1,
+          "quantityMax": null,
+          "unit": "lb",
+          "item": "ground chicken",
+          "note": "or use 2 lb total meat of your choice",
+          "scalable": true
+        },
+        {
+          "quantity": null,
+          "quantityMax": null,
+          "unit": "",
+          "item": "salt",
+          "note": "to taste",
+          "scalable": false
+        }
+      ]
+    },
+    {
+      "name": "Seasonings",
+      "items": [
+        {
+          "quantity": 1,
+          "quantityMax": null,
+          "unit": "bunch",
+          "item": "parsley",
+          "note": "chopped; like a whole store bunch",
+          "scalable": true
+        },
+        {
+          "quantity": 3,
+          "quantityMax": null,
+          "unit": "tbsp",
+          "item": "fresh savory",
+          "note": "chopped; hard to find, leave it out or sub fresh oregano, maybe tarragon",
+          "scalable": true
+        },
+        {
+          "quantity": 1,
+          "quantityMax": null,
+          "unit": "tsp",
+          "item": "scappi spice blend",
+          "note": "cinnamon, cloves, ginger, nutmeg, grains of paradise; sub individual spices, pepper for grains of paradise",
+          "scalable": true
+        },
+        {
+          "quantity": null,
+          "quantityMax": null,
+          "unit": "",
+          "item": "black pepper, cayenne",
+          "note": "more than you think",
+          "scalable": false
+        },
+        {
+          "quantity": 5,
+          "quantityMax": null,
+          "unit": "cloves",
+          "item": "garlic",
+          "note": "minced",
+          "scalable": true
+        },
+        {
+          "quantity": 2,
+          "quantityMax": null,
+          "unit": "",
+          "item": "shallots",
+          "note": "minced",
+          "scalable": true
+        },
+        {
+          "quantity": 0.5,
+          "quantityMax": null,
+          "unit": "cup",
+          "item": "grated parmesan",
+          "note": null,
+          "scalable": true
+        },
+        {
+          "quantity": 1,
+          "quantityMax": null,
+          "unit": "tsp",
+          "item": "fennel seed",
+          "note": "toasted and crushed",
+          "scalable": true
+        },
+        {
+          "quantity": 1,
+          "quantityMax": null,
+          "unit": "",
+          "item": "orange",
+          "note": "zested; save the orange for the sauce",
+          "scalable": true
+        }
+      ]
+    },
+    {
+      "name": "Orange-Tomato Pan Sauce",
+      "items": [
+        {
+          "quantity": null,
+          "quantityMax": null,
+          "unit": "",
+          "item": "olive oil",
+          "note": "for the pan",
+          "scalable": false
+        },
+        {
+          "quantity": 2,
+          "quantityMax": null,
+          "unit": "cloves",
+          "item": "garlic",
+          "note": "minced",
+          "scalable": true
+        },
+        {
+          "quantity": 1,
+          "quantityMax": null,
+          "unit": "",
+          "item": "reserved orange",
+          "note": "juiced",
+          "scalable": true
+        },
+        {
+          "quantity": 1,
+          "quantityMax": null,
+          "unit": "small can",
+          "item": "tomato sauce or crushed tomato",
+          "note": null,
+          "scalable": true
+        },
+        {
+          "quantity": null,
+          "quantityMax": null,
+          "unit": "",
+          "item": "capers",
+          "note": "to taste",
+          "scalable": false
+        },
+        {
+          "quantity": null,
+          "quantityMax": null,
+          "unit": "",
+          "item": "black pepper",
+          "note": "to taste",
+          "scalable": false
+        },
+        {
+          "quantity": null,
+          "quantityMax": null,
+          "unit": "",
+          "item": "honey",
+          "note": "a little tiny bit",
+          "scalable": false
+        }
+      ]
+    }
+  ],
+  "directions": [
+    {
+      "step": 1,
+      "title": "Panade",
+      "text": "In a large bowl, whisk the egg, breadcrumbs, and milk. You're looking for oatmeal texture. Don't get precious about the measurement; adjust breadcrumbs or milk until it looks right."
+    },
+    {
+      "step": 2,
+      "title": "Mix",
+      "text": "Add the meat and salt, then add parsley, savory, scappi, black pepper, cayenne, garlic, shallots, parmesan, fennel seed, and orange zest. Mix until combined, but don't beat the hell out of it."
+    },
+    {
+      "step": 3,
+      "title": "Shape",
+      "text": "Form meatballs. Keep them consistent enough that they cook at the same pace."
+    },
+    {
+      "step": 4,
+      "title": "Sear",
+      "text": "Sear meatballs in batches in a pan until you get real color. Move them to a sheet pan seared-side down so they don't stick."
+    },
+    {
+      "step": 5,
+      "title": "Oven",
+      "text": "Finish the meatballs in the oven to your desired temp. Pull them when they're done and keep the searing pan for the sauce."
+    },
+    {
+      "step": 6,
+      "title": "Sauce",
+      "text": "Same pan. Add olive oil if the pan needs it, then saute the minced garlic. Squeeze in the juice from the zested orange and reduce slightly. Add tomato sauce or crushed tomato, capers, black pepper, and a little tiny bit of honey."
+    },
+    {
+      "step": 7,
+      "title": "Finish",
+      "text": "Simmer the sauce briefly, then toss the meatballs in it. Serve."
+    }
+  ],
+  "notes": [
+    "The panade is texture-driven, not measurement-driven. Half a cup each breadcrumbs and milk is a starting point; oatmeal texture is the actual target.",
+    "Savory is hard to find. If you don't grow it, leave it out or use fresh oregano. Tarragon might work if you want the stranger aromatic lane.",
+    "Scappi blend means cinnamon, cloves, ginger, nutmeg, and grains of paradise. You can sub individual spices; grains of paradise can become black pepper.",
+    "Sear first, oven second. The sauce is quick and built in the searing pan, so don't try to cook the meatballs through by simmering them forever."
+  ],
+  "deviations": [
+    {
+      "what": "Pork and chicken instead of the usual beef/pork meatball base",
+      "why": "Keeps the meatballs lighter while still getting enough richness from the pork."
+    },
+    {
+      "what": "Orange zest in the meatballs plus orange juice in the sauce",
+      "why": "Makes citrus a through-line instead of a finishing note, and gives the tomato sauce some lift."
+    },
+    {
+      "what": "Scappi-style warm spice profile",
+      "why": "Pushes the seasoning toward something older and more aromatic than standard Italian-American meatballs."
+    },
+    {
+      "what": "Sear then oven-finish",
+      "why": "Gets crust without over-handling batches in sauce, and keeps the pan available for a fast fond-driven sauce."
+    },
+    {
+      "what": "Brief orange-tomato pan sauce instead of long tomato sauce",
+      "why": "The sauce is there to glaze the meatballs and carry the pan fond, not become a full Sunday gravy."
+    }
+  ],
+  "log": []
+}
