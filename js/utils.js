@@ -121,6 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Menu click handlers
   const viewMenu = document.getElementById('view-menu');
   const fileMenu = document.getElementById('file-menu');
+  const printMenu = document.getElementById('print-menu');
 
   if (viewMenu) {
     viewMenu.addEventListener('click', (e) => {
@@ -128,6 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (e.target.classList.contains('checkmark')) return;
       viewMenu.classList.toggle('menu-open');
       if (fileMenu) fileMenu.classList.remove('menu-open');
+      if (printMenu) printMenu.classList.remove('menu-open');
     });
   }
 
@@ -135,6 +137,16 @@ document.addEventListener('DOMContentLoaded', () => {
     fileMenu.addEventListener('click', (e) => {
       if (e.target.classList.contains('menu-dropdown-item')) return;
       fileMenu.classList.toggle('menu-open');
+      if (viewMenu) viewMenu.classList.remove('menu-open');
+      if (printMenu) printMenu.classList.remove('menu-open');
+    });
+  }
+
+  if (printMenu) {
+    printMenu.addEventListener('click', (e) => {
+      if (e.target.classList.contains('menu-dropdown-item')) return;
+      printMenu.classList.toggle('menu-open');
+      if (fileMenu) fileMenu.classList.remove('menu-open');
       if (viewMenu) viewMenu.classList.remove('menu-open');
     });
   }
@@ -146,6 +158,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     if (fileMenu && !fileMenu.contains(e.target)) {
       fileMenu.classList.remove('menu-open');
+    }
+    if (printMenu && !printMenu.contains(e.target)) {
+      printMenu.classList.remove('menu-open');
     }
   });
 });

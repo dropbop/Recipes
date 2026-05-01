@@ -38,7 +38,13 @@
         <span class="menu-dropdown-item" onclick="setTheme('charcoal')"><span class="checkmark"></span> Charcoal</span>
       </div>
     </span>
-    <span class="menu-item" onclick="window.print()"><u>P</u>rint</span>
+    <span class="menu-item" id="print-menu">
+      <u>P</u>rint
+      <div class="menu-dropdown" id="print-dropdown">
+        <span class="menu-dropdown-item" onclick="window.print()">Print</span>
+        <span class="menu-dropdown-item" onclick="openRawJsonView()">Raw JSON</span>
+      </div>
+    </span>
   </div>
 
   <div class="content">

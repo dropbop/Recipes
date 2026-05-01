@@ -11,6 +11,12 @@ async function init() {
   }
 
   try {
+    if (isRawJsonView()) {
+      const rawJson = await loadRecipeText(recipeId);
+      renderRawJsonView(recipeId, rawJson);
+      return;
+    }
+
     const recipe = await loadRecipe(recipeId);
     if (recipe) {
       renderRecipe(recipe);
@@ -29,12 +35,51 @@ function getRecipeIdFromUrl() {
   return params.get('id');
 }
 
+function isRawJsonView() {
+  const params = new URLSearchParams(window.location.search);
+  return params.get('view') === 'json';
+}
+
 async function loadRecipe(id) {
   const response = await fetch(`recipes/${id}.json`);
   if (!response.ok) {
     throw new Error(`Recipe "${id}" not found`);
   }
   return await response.json();
+}
+
+async function loadRecipeText(id) {
+  const response = await fetch(`recipes/${id}.json`);
+  if (!response.ok) {
+    throw new Error(`Recipe "${id}" not found`);
+  }
+  return await response.text();
+}
+
+function openRawJsonView() {
+  const recipeId = getRecipeIdFromUrl();
+  if (!recipeId) return;
+  location.href = `recipe.html?id=${encodeURIComponent(recipeId)}&view=json`;
+}
+
+function renderRawJsonView(recipeId, rawJson) {
+  document.title = `Recipe JSON - ${recipeId}`;
+  document.body.innerHTML = '';
+  document.body.style.background = '#FFFFFF';
+  document.body.style.color = '#000000';
+  document.body.style.fontFamily = '"Courier New", monospace';
+  document.body.style.fontSize = '14px';
+  document.body.style.lineHeight = '1.35';
+  document.body.style.margin = '0';
+  document.body.style.padding = '12px';
+  document.body.style.minHeight = '';
+
+  const pre = document.createElement('pre');
+  pre.textContent = rawJson;
+  pre.style.margin = '0';
+  pre.style.whiteSpace = 'pre-wrap';
+  pre.style.wordBreak = 'break-word';
+  document.body.appendChild(pre);
 }
 
 function renderRecipe(recipe) {
