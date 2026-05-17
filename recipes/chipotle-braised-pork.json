@@ -6,7 +6,8 @@
   "tags": ["pork", "mexican", "braise", "pressure-cooker", "meal-prep"],
   "time": {
     "prep": 20,
-    "cook": 90
+    "active": 30,
+    "passive": 110
   },
   "servings": {
     "base": 4.5,

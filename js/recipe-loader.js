@@ -101,10 +101,12 @@ function renderRecipe(recipe) {
 
   // Meta info (time)
   if (recipe.time) {
-    const totalTime = (recipe.time.prep || 0) + (recipe.time.cook || 0);
+    const t = recipe.time;
+    const totalTime = (t.prep || 0) + (t.active || 0) + (t.passive || 0);
     document.getElementById('recipe-meta').innerHTML = `
-      <span>Prep: ${recipe.time.prep || '?'} min</span>
-      <span>Cook: ${recipe.time.cook || '?'} min</span>
+      <span>Prep: ${t.prep || 0} min</span>
+      <span>Active: ${t.active || 0} min</span>
+      <span>Passive: ${t.passive || 0} min</span>
       <span>Total: ${totalTime} min</span>
     `;
   }

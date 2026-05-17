@@ -98,7 +98,8 @@
     card.className = 'recipe-card' + (recipe.canonical ? ' canonical' : '');
     card.onclick = () => location.href = `recipe.html?id=${recipe.id}`;
 
-    const totalTime = (recipe.time?.prep || 0) + (recipe.time?.cook || 0);
+    const totalTime = (recipe.time?.prep || 0) + (recipe.time?.active || 0) + (recipe.time?.passive || 0);
+    const handsOnTime = (recipe.time?.prep || 0) + (recipe.time?.active || 0);
 
     const tagsHtml = recipe.tags.slice(0, 3).map(tag =>
       `<span class="tag" style="background: ${getTagColor(tag)}">${tag}</span>`
@@ -107,7 +108,7 @@
     card.innerHTML = `
       <div class="recipe-card-title">${recipe.title}</div>
       <div class="recipe-card-desc">${recipe.desc || ''}</div>
-      <div style="font-size: 10px; color: #666; margin-top: 5px;">${formatTime(totalTime)} total</div>
+      <div style="font-size: 10px; color: #666; margin-top: 5px;">${formatTime(totalTime)} total · ${formatTime(handsOnTime)} hands-on</div>
       <div class="tags">${tagsHtml}</div>
     `;
 

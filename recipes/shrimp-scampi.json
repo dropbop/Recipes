@@ -8,7 +8,8 @@
   "source": "Traditional Italian-American, heavily adapted",
   "time": {
     "prep": 15,
-    "cook": 10
+    "active": 10,
+    "passive": 0
   },
   "servings": {
     "base": 4,

@@ -37,7 +37,7 @@ Each entry in `RECIPE_MANIFEST` has:
 - `title` — display name on index cards
 - `desc` — short description (50-60 chars) shown on index cards below title
 - `tags` — array of strings for filtering/display
-- `time` — `{ prep, cook }` in minutes
+- `time` — `{ prep, active, passive }` in minutes
 - `canonical` — boolean, shows burgundy border on index cards
 
 ## Recipe JSON Schema
@@ -46,6 +46,7 @@ Key fields:
 - `id`, `title`, `canonical` (boolean — shows burgundy border on index cards, used for filtering; not displayed on recipe page)
 - `description` — 1-2 sentence blurb shown in Overview tab; explains what the dish is and what makes this version distinct
 - `subtitle`, `source` — optional metadata
+- `time` — `{ prep, active, passive }` in minutes: hands-on prep, hands-on cooking, unattended time
 - `ingredientGroups[].items[]` with `quantity`, `quantityMax` (for ranges like "4–6"), `unit`, `item`, `note`, `scalable`
 - `directions[]` with `step`, `title` (optional), `text`
 - `deviations[]` — array of `{ what, why }` objects explaining what you changed from tradition and why

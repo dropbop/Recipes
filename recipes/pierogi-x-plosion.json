@@ -7,7 +7,8 @@
   "source": "Payton's recipe",
   "time": {
     "prep": 15,
-    "cook": 35
+    "active": 35,
+    "passive": 0
   },
   "servings": {
     "base": 4,

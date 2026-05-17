@@ -7,7 +7,8 @@
   "source": "Chef John — https://www.allrecipes.com/recipe/283940/chef-johns-milk-bread/ — https://www.youtube.com/watch?v=8N1BXksM-8Y",
   "time": {
     "prep": 20,
-    "cook": 250
+    "active": 35,
+    "passive": 215
   },
   "servings": {
     "base": 1,

@@ -1,0 +1,100 @@
+{
+  "id": "frozen-lemon-posset",
+  "title": "Frozen Lemon Posset",
+  "description": "A traditional British posset — sweetened cream set by lemon juice — frozen instead of chilled. The freezer turns the soft pudding into a dense, custardy semi-frozen dessert.",
+  "canonical": true,
+  "tags": ["dessert", "lemon", "frozen", "british", "make-ahead"],
+  "source": "Traditional British posset, frozen variation",
+  "time": {
+    "prep": 5,
+    "active": 8,
+    "passive": 250
+  },
+  "servings": {
+    "base": 4,
+    "unit": "servings"
+  },
+  "ingredientGroups": [
+    {
+      "name": "Posset",
+      "items": [
+        {
+          "quantity": 473,
+          "quantityMax": null,
+          "unit": "ml",
+          "item": "heavy whipping cream",
+          "note": "1 pint",
+          "scalable": true
+        },
+        {
+          "quantity": null,
+          "quantityMax": null,
+          "unit": "",
+          "item": "salt",
+          "note": "pinch",
+          "scalable": false
+        },
+        {
+          "quantity": 140,
+          "quantityMax": null,
+          "unit": "g",
+          "item": "sugar",
+          "note": null,
+          "scalable": true
+        },
+        {
+          "quantity": 2,
+          "quantityMax": null,
+          "unit": "",
+          "item": "lemons, zested",
+          "note": "zest gets strained out later",
+          "scalable": true
+        },
+        {
+          "quantity": 115,
+          "quantityMax": null,
+          "unit": "ml",
+          "item": "lemon juice",
+          "note": "freshly squeezed — about 2-3 lemons' worth",
+          "scalable": true
+        }
+      ]
+    }
+  ],
+  "directions": [
+    {
+      "step": 1,
+      "title": "Simmer",
+      "text": "Simmer the heavy cream with a pinch of salt, the sugar, and the lemon zest for 3-5 minutes."
+    },
+    {
+      "step": 2,
+      "title": "Set",
+      "text": "Pull off the heat and whisk in the lemon juice. Rest 10 minutes."
+    },
+    {
+      "step": 3,
+      "title": "Strain",
+      "text": "Strain to pull the zest out. Microplaned zest is not pleasant to eat."
+    },
+    {
+      "step": 4,
+      "title": "Freeze",
+      "text": "Pour into ramekins (or hollowed-out lemon halves) and freeze about 4 hours. Serve straight from the freezer."
+    }
+  ],
+  "notes": [
+    "Worth trying with other citrus. Lime is close to a straight swap. Blood orange would need its acid bumped — supplement with lemon juice — since it isn't tart enough on its own to set the cream."
+  ],
+  "deviations": [
+    {
+      "what": "Frozen instead of refrigerated",
+      "why": "A traditional posset sets in the fridge into a soft, spoonable pudding. Freezing it gives a denser, custardy semi-frozen texture."
+    },
+    {
+      "what": "Heavier on the lemon than a typical posset",
+      "why": "Slightly more zest and juice than standard, pushing the lemon flavor further forward."
+    }
+  ],
+  "log": []
+}

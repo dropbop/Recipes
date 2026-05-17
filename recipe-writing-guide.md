@@ -55,7 +55,8 @@ Show the user the complete JSON (or summarize key fields) and confirm before com
   "source": "Where it came from",
   "time": {
     "prep": 20,
-    "cook": 45
+    "active": 25,
+    "passive": 0
   },
   "servings": {
     "base": 4,
@@ -89,7 +90,12 @@ Show the user the complete JSON (or summarize key fields) and confirm before com
 
 **source**: One line. Can be casual: "Family tradition, heavily improvised" or "Kenji's recipe with modifications" or "Made it up after eating something similar at Sézanne."
 
-**time**: Prep and cook in minutes. Estimate honestly. If braise time is 3.5 hours, `cook: 210`.
+**time**: Three buckets, all in whole minutes — `prep`, `active`, `passive`.
+- `prep` — hands-on work before cooking starts: knife work, measuring, forming, dry-brining setup.
+- `active` — hands-on work *during* cooking that needs your attention: searing, stirring, monitoring a reduction.
+- `passive` — unattended time the dish takes care of itself: braising, proofing, marinating, chilling, freezing.
+
+Split honestly. A 4-hour freeze is `passive: 240`, never active time. A 10-minute sear you can't walk away from is `active`. Total is all three summed; the index card also shows "hands-on" (`prep + active`). The whole point of the split is telling a 20-minutes-of-attention recipe apart from a 5-minute-active-plus-4-hour-wait one — don't bury passive time inside `active`.
 
 **servings**: `base` is the number this recipe makes at 1×. `unit` is usually "servings" but could be "portions", "bowls", "sandwiches", whatever's natural.
 
@@ -227,7 +233,7 @@ After creating the recipe JSON, add an entry to `RECIPE_MANIFEST` in `js/manifes
   title: "Title Case Name",
   desc: "Short description for index card (50-60 chars)",
   tags: ["tag1", "tag2", "tag3"],
-  time: { prep: 20, cook: 45 },
+  time: { prep: 20, active: 25, passive: 0 },
   canonical: false
 }
 ```
