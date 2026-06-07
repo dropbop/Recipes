@@ -1,0 +1,388 @@
+{
+  "id": "caramelized-onion-protein-pasta",
+  "title": "Caramelized Onion Protein Pasta",
+  "description": "A high-protein meal-prep pasta built on real caramelized onions, shredded chicken breast, bone broth reduction, and a blended cottage-cheese Gruyere sauce. The pasta cooks directly in the mix, so the starch helps pull the whole thing together without par-boiling.",
+  "canonical": true,
+  "tags": ["chicken", "pasta", "meal-prep", "high-protein"],
+  "source": "Adapted from @stealth_health_life; converted from a slow-cooker/crock-pot version to a stovetop method",
+  "time": {
+    "prep": 25,
+    "active": 100,
+    "passive": 85
+  },
+  "servings": {
+    "base": 8,
+    "unit": "containers"
+  },
+  "nutrition": {
+    "batch": {
+      "calories": 6350,
+      "protein": 650,
+      "fat": 218,
+      "carbs": 458,
+      "fiber": 45
+    },
+    "ingredients": [
+      {
+        "label": "Chicken breast",
+        "recipeQuantity": { "amount": 48, "unit": "oz" },
+        "basis": { "amount": 4, "unit": "oz" },
+        "macros": { "calories": 136.25, "protein": 25.5, "fat": 2.92, "carbs": 0, "fiber": 0 }
+      },
+      {
+        "label": "Barilla Protein+ penne",
+        "recipeQuantity": { "amount": 14.5, "unit": "oz" },
+        "basis": { "amount": 2, "unit": "oz" },
+        "macros": { "calories": 193.1, "protein": 9.93, "fat": 0.97, "carbs": 39.31, "fiber": 2.76 }
+      },
+      {
+        "label": "Roli Roti beef broth",
+        "recipeQuantity": { "amount": 35.4, "unit": "oz" },
+        "basis": { "amount": 8, "unit": "oz" },
+        "macros": { "calories": 80.23, "protein": 16.95, "fat": 1.58, "carbs": 0, "fiber": 0 }
+      },
+      {
+        "label": "2% cottage cheese",
+        "recipeQuantity": { "amount": 24, "unit": "oz" },
+        "basis": { "amount": 4, "unit": "oz" },
+        "macros": { "calories": 95, "protein": 12.5, "fat": 2.67, "carbs": 5.17, "fiber": 0 }
+      },
+      {
+        "label": "Gruyere",
+        "recipeQuantity": { "amount": 150, "unit": "g" },
+        "basis": { "amount": 50, "unit": "g" },
+        "macros": { "calories": 206.67, "protein": 15, "fat": 16.67, "carbs": 0.33, "fiber": 0 }
+      },
+      {
+        "label": "Parmesan",
+        "recipeQuantity": { "amount": 100, "unit": "g" },
+        "basis": { "amount": 50, "unit": "g" },
+        "macros": { "calories": 195, "protein": 18, "fat": 13, "carbs": 1.5, "fiber": 0 }
+      },
+      {
+        "label": "2% milk",
+        "recipeQuantity": { "amount": 350, "unit": "ml" },
+        "basis": { "amount": 100, "unit": "ml" },
+        "macros": { "calories": 50, "protein": 3.43, "fat": 2, "carbs": 4.86, "fiber": 0 }
+      },
+      {
+        "label": "Butter",
+        "recipeQuantity": { "amount": 6, "unit": "tbsp" },
+        "basis": { "amount": 1, "unit": "tbsp" },
+        "macros": { "calories": 100, "protein": 0.17, "fat": 11.33, "carbs": 0, "fiber": 0 }
+      },
+      {
+        "label": "Onions",
+        "recipeQuantity": { "amount": 550, "unit": "g" },
+        "basis": { "amount": 100, "unit": "g" },
+        "macros": { "calories": 40, "protein": 1.09, "fat": 0.18, "carbs": 9.27, "fiber": 1.64 }
+      },
+      {
+        "label": "White beans",
+        "recipeQuantity": { "amount": 250, "unit": "g drained" },
+        "basis": { "amount": 100, "unit": "g drained" },
+        "macros": { "calories": 110, "protein": 7.2, "fat": 0.4, "carbs": 20, "fiber": 5.6 }
+      },
+      {
+        "label": "Worcestershire, mustard, garlic, spices",
+        "recipeQuantity": { "amount": 1, "unit": "batch" },
+        "basis": { "amount": 1, "unit": "batch" },
+        "macros": { "calories": 105, "protein": 4, "fat": 1, "carbs": 20, "fiber": 2 }
+      }
+    ]
+  },
+  "ingredientGroups": [
+    {
+      "name": "Caramelized Onions",
+      "items": [
+        {
+          "quantity": 4,
+          "quantityMax": null,
+          "unit": "",
+          "item": "large yellow onions",
+          "note": "sliced into thin half moons",
+          "scalable": true
+        },
+        {
+          "quantity": 6,
+          "quantityMax": null,
+          "unit": "tbsp",
+          "item": "butter",
+          "note": "if making the recommended 6-onion batch for leftovers, use 8 tbsp",
+          "scalable": true
+        },
+        {
+          "quantity": null,
+          "quantityMax": null,
+          "unit": "",
+          "item": "salt",
+          "note": "to draw moisture out",
+          "scalable": false
+        },
+        {
+          "quantity": null,
+          "quantityMax": null,
+          "unit": "",
+          "item": "water",
+          "note": "for deglazing near the end",
+          "scalable": false
+        }
+      ]
+    },
+    {
+      "name": "Chicken Braise",
+      "items": [
+        {
+          "quantity": 48,
+          "quantityMax": null,
+          "unit": "oz",
+          "item": "chicken breast",
+          "note": "raw weight; butterfly if needed to 1-1.5 inches thick",
+          "scalable": true
+        },
+        {
+          "quantity": null,
+          "quantityMax": null,
+          "unit": "",
+          "item": "salt",
+          "note": "for seasoning the chicken",
+          "scalable": false
+        },
+        {
+          "quantity": null,
+          "quantityMax": null,
+          "unit": "",
+          "item": "neutral oil",
+          "note": "for searing",
+          "scalable": false
+        },
+        {
+          "quantity": 100,
+          "quantityMax": null,
+          "unit": "ml",
+          "item": "collagen-rich broth or bone broth",
+          "note": "keep this tight; it is braising liquid, not soup",
+          "scalable": true
+        },
+        {
+          "quantity": 3,
+          "quantityMax": null,
+          "unit": "cloves",
+          "item": "garlic",
+          "note": "minced; jar-lic works here",
+          "scalable": true
+        },
+        {
+          "quantity": 2,
+          "quantityMax": null,
+          "unit": "tbsp",
+          "item": "Worcestershire sauce",
+          "note": null,
+          "scalable": true
+        },
+        {
+          "quantity": 1,
+          "quantityMax": null,
+          "unit": "tbsp",
+          "item": "whole grain mustard",
+          "note": "a spoonful",
+          "scalable": true
+        },
+        {
+          "quantity": null,
+          "quantityMax": null,
+          "unit": "",
+          "item": "garlic powder, onion powder, black pepper, cayenne, thyme",
+          "note": "to taste",
+          "scalable": false
+        },
+        {
+          "quantity": 1,
+          "quantityMax": null,
+          "unit": "sprig",
+          "item": "rosemary",
+          "note": "optional",
+          "scalable": false
+        }
+      ]
+    },
+    {
+      "name": "Onion Reduction",
+      "items": [
+        {
+          "quantity": 32,
+          "quantityMax": null,
+          "unit": "oz",
+          "item": "collagen-rich broth or bone broth",
+          "note": "proper gelatinous broth is ideal; store-bought bone broth works in a pinch to keep protein high",
+          "scalable": true
+        },
+        {
+          "quantity": 1,
+          "quantityMax": null,
+          "unit": "sprig",
+          "item": "rosemary",
+          "note": null,
+          "scalable": false
+        },
+        {
+          "quantity": 1,
+          "quantityMax": null,
+          "unit": "tsp",
+          "item": "whole grain mustard",
+          "note": null,
+          "scalable": true
+        }
+      ]
+    },
+    {
+      "name": "Cheese Sauce",
+      "items": [
+        {
+          "quantity": 24,
+          "quantityMax": null,
+          "unit": "oz",
+          "item": "2% cottage cheese",
+          "note": null,
+          "scalable": true
+        },
+        {
+          "quantity": 350,
+          "quantityMax": null,
+          "unit": "ml",
+          "item": "2% milk",
+          "note": null,
+          "scalable": true
+        },
+        {
+          "quantity": 150,
+          "quantityMax": null,
+          "unit": "g",
+          "item": "Gruyere",
+          "note": null,
+          "scalable": true
+        },
+        {
+          "quantity": 100,
+          "quantityMax": null,
+          "unit": "g",
+          "item": "Parmesan",
+          "note": null,
+          "scalable": true
+        },
+        {
+          "quantity": 20,
+          "quantityMax": null,
+          "unit": "g",
+          "item": "sodium citrate",
+          "note": "optional, but I always reach for it to be safe",
+          "scalable": true
+        },
+        {
+          "quantity": 16,
+          "quantityMax": null,
+          "unit": "oz",
+          "item": "white beans",
+          "note": "optional; regular can, drained, any neutral white bean",
+          "scalable": true
+        }
+      ]
+    },
+    {
+      "name": "Assembly",
+      "items": [
+        {
+          "quantity": 14.5,
+          "quantityMax": null,
+          "unit": "oz",
+          "item": "Barilla Protein+ penne",
+          "note": "uncooked; no par-boiling necessary",
+          "scalable": true
+        }
+      ]
+    }
+  ],
+  "directions": [
+    {
+      "step": 1,
+      "title": "Onions",
+      "text": "Slice the onions in half, then cross-section into relatively thin half moons. Put them in a large pot, ideally stainless, over high heat until they are translucent and starting to brown. Salt them to help draw moisture out. Add the butter only once the onions are already going; throw it in too early and you risk burning it."
+    },
+    {
+      "step": 2,
+      "title": "Caramelize",
+      "text": "Drop to medium and keep cooking until all the liquid is evaporated, stirring occasionally. This takes about 60-90 minutes. Once the liquid is gone, caramelize them with frequent stirring. When they get deep caramel and start sticking to the bottom, deglaze with splashes of water until they are the color you like. No cheating, it's not the same. Careful near the end; deglazing frequently will save you."
+    },
+    {
+      "step": 3,
+      "title": "Chicken",
+      "text": "Butterfly the chicken if needed to get it around 1-1.5 inches thick. Salt it, then sear in a large pot or Dutch oven to get color. Do not worry about cooking it through yet. Pull it out and cut into 1-2 inch cubes so the shredded texture stays right instead of getting weird and stringy."
+    },
+    {
+      "step": 4,
+      "title": "Braise",
+      "text": "Deglaze the searing pot with 100 ml broth, then add the cubed chicken back in with garlic, Worcestershire, whole grain mustard, garlic powder, onion powder, black pepper, cayenne, thyme, and optional rosemary. Mix, cover, and simmer over medium-low for about an hour, stirring occasionally, until the chicken is just ready to shred."
+    },
+    {
+      "step": 5,
+      "title": "Reduce",
+      "text": "In parallel, take the 4 onions' worth of caramelized onions and add 32 oz broth, rosemary, and whole grain mustard. Reduce in a wide stainless saute pan until almost dry, about an hour. Careful not to burn it."
+    },
+    {
+      "step": 6,
+      "title": "Sauce",
+      "text": "Blend the cottage cheese, milk, Gruyere, Parmesan, sodium citrate, drained white beans, and half of the caramelized onion mixture until thick and smooth. The beans are totally optional and only serve to add a little fiber; they end up completely unnoticeable."
+    },
+    {
+      "step": 7,
+      "title": "Assembly",
+      "text": "Shred the chicken. Pour the cheese sauce over it and mix to coat, then add the remaining caramelized onion mixture. Add the dry protein penne directly to the chicken, cheese, and onions. Mix, cover, and cook at a low gentle simmer until the pasta is done, about 28 minutes, stirring every 5 minutes or so."
+    },
+    {
+      "step": 8,
+      "title": "Portion",
+      "text": "Divide into 8 containers. Make extra onions when you have the time and freeze the leftovers for other stuff."
+    }
+  ],
+  "notes": [
+    "The recipe itself calls for 4 onions, but doing 6 onions at once is recommended so you get leftovers. Use 8 tbsp butter for 6 large onions.",
+    "Stainless is ideal for the onions. Enameled cast iron seems to slow the process slightly.",
+    "The ideal broth here is proper collagen-rich gelatinous broth. In a pinch, grab store-bought bone broth to keep the protein high; avoid using a protein-free flavor-only broth.",
+    "Keep the chicken braising liquid tight. You do not want this too wet before the sauce and pasta go in.",
+    "Cooking the pasta directly in the mix is part of the method. No par-boiling necessary.",
+    "The white beans are optional. They add a little fiber and disappear completely once blended.",
+    "Sodium is not worth tracking here; this clearly is not a low-sodium recipe."
+  ],
+  "deviations": [
+    {
+      "what": "Real caramelized onions instead of shortcut browning",
+      "why": "The long cook is the point. No cheating, it's not the same."
+    },
+    {
+      "what": "Stovetop shredded chicken breast instead of the original slow-cooker version",
+      "why": "Searing the chicken first builds flavor, and cubing before braising gives better shredded texture than long stringy fibers."
+    },
+    {
+      "what": "High-protein meal-prep structure instead of a simple onion pasta",
+      "why": "Chicken breast, bone broth, cottage cheese, aged cheese, and protein pasta make it a full macro-targeted meal."
+    },
+    {
+      "what": "Blended cottage cheese sauce with optional sodium citrate",
+      "why": "Keeps the sauce smooth and protein-dense without turning it into a heavy cream sauce. Sodium citrate is optional, but it is the safe reach."
+    },
+    {
+      "what": "Pasta cooks directly in the chicken, cheese, and onion mixture",
+      "why": "No par-boiling. The pasta absorbs flavor while its starch helps the sauce come together."
+    },
+    {
+      "what": "Optional white beans blended into the sauce",
+      "why": "Adds fiber and disappears completely, but is not structurally required."
+    }
+  ],
+  "log": [
+    {
+      "date": "2026-06-06",
+      "entry": "This cook used 5 large yellow onions: 90 minutes to evaporate all the water, then another 30 minutes to caramelize to the final point. Recipe is written for 4 onions, with a note to make 6 when you want leftovers."
+    }
+  ]
+}

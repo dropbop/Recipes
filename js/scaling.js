@@ -50,6 +50,7 @@ function setMultiplier(factor) {
   const scaleFactor = currentServings / baseServings;
   updateScalingInfo(scaleFactor);
   scaleIngredients(scaleFactor);
+  updateNutrition(scaleFactor);
   updateStatusBar(scaleFactor);
 }
 
@@ -68,6 +69,7 @@ function adjustServings(delta) {
   const scaleFactor = currentServings / baseServings;
   updateScalingInfo(scaleFactor);
   scaleIngredients(scaleFactor);
+  updateNutrition(scaleFactor);
   updateStatusBar(scaleFactor);
 }
 
@@ -118,7 +120,22 @@ function scaleIngredients(factor) {
   });
 }
 
+function updateNutrition(factor) {
+  if (typeof window.renderNutrition === 'function' && recipeData) {
+    window.renderNutrition(recipeData, factor, currentServings);
+  }
+}
+
+function getRecipeScaleState() {
+  return {
+    baseServings,
+    currentServings,
+    scaleFactor: currentServings / baseServings
+  };
+}
+
 // Export for use in recipe-loader
 window.initScaling = initScaling;
 window.adjustServings = adjustServings;
 window.setMultiplier = setMultiplier;
+window.getRecipeScaleState = getRecipeScaleState;

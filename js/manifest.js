@@ -73,5 +73,13 @@ const RECIPE_MANIFEST = [
     tags: ["dessert", "lemon", "frozen", "british", "make-ahead"],
     time: { prep: 5, active: 8, passive: 250 },
     canonical: true
+  },
+  {
+    id: "caramelized-onion-protein-pasta",
+    title: "Caramelized Onion Protein Pasta",
+    desc: "High-protein pasta with real caramelized onions",
+    tags: ["chicken", "pasta", "meal-prep", "high-protein"],
+    time: { prep: 25, active: 100, passive: 85 },
+    canonical: true
   }
 ];

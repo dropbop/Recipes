@@ -388,6 +388,137 @@ hr.win-hr {
     font-style: italic;
 }
 
+/* === Nutrition === */
+.nutrition-controls {
+    background: #C0C0C0;
+    border: 1px solid #808080;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    font-family: "MS Sans Serif", Tahoma, sans-serif;
+    font-size: 11px;
+}
+
+.nutrition-control-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nutrition-multiplier-buttons {
+    display: flex;
+    gap: 3px;
+}
+
+.nutrition-multiplier-btn {
+    background: #C0C0C0;
+    border: 1px solid;
+    border-color: #FFFFFF #808080 #808080 #FFFFFF;
+    padding: 2px 8px;
+    font-family: "MS Sans Serif", Tahoma, sans-serif;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.nutrition-multiplier-btn:active,
+.nutrition-multiplier-btn.active {
+    border-color: #808080 #FFFFFF #FFFFFF #808080;
+    background: #B0B0B0;
+}
+
+.nutrition-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 10px;
+}
+
+.nutrition-stat {
+    background: white;
+    border: 1px inset #808080;
+    padding: 10px;
+    text-align: center;
+}
+
+.nutrition-value {
+    font-family: "MS Sans Serif", Tahoma, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000080;
+}
+
+.nutrition-label {
+    font-family: "MS Sans Serif", Tahoma, sans-serif;
+    font-size: 10px;
+    color: #666;
+    margin-top: 4px;
+    text-transform: uppercase;
+}
+
+.nutrition-grid.batch .nutrition-value {
+    color: #800020;
+}
+
+.nutrition-view-controls {
+    display: flex;
+    gap: 3px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.nutrition-view-btn {
+    background: #C0C0C0;
+    border: 1px solid;
+    border-color: #FFFFFF #808080 #808080 #FFFFFF;
+    padding: 3px 8px;
+    font-family: "MS Sans Serif", Tahoma, sans-serif;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.nutrition-view-btn:active,
+.nutrition-view-btn.active {
+    border-color: #808080 #FFFFFF #FFFFFF #808080;
+    background: #B0B0B0;
+}
+
+.nutrition-table-wrap {
+    overflow-x: auto;
+    border: 1px inset #808080;
+    background: white;
+}
+
+.nutrition-table {
+    width: 100%;
+    min-width: 620px;
+    border-collapse: collapse;
+    font-family: "MS Sans Serif", Tahoma, sans-serif;
+    font-size: 11px;
+}
+
+.nutrition-table th,
+.nutrition-table td {
+    border: 1px solid #C0C0C0;
+    padding: 5px 6px;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.nutrition-table th {
+    background: #C0C0C0;
+    border-color: #FFFFFF #808080 #808080 #FFFFFF;
+    color: #000080;
+    font-weight: bold;
+}
+
+.nutrition-table th:first-child,
+.nutrition-table td:first-child {
+    text-align: left;
+    white-space: normal;
+}
+
 /* === Directions === */
 .direction {
     margin: 15px 0;
@@ -654,7 +785,8 @@ hr.win-hr {
         flex-shrink: 0;
     }
 
-    .scaling-controls {
+    .scaling-controls,
+    .nutrition-controls {
         flex-direction: column;
         gap: 10px;
         align-items: flex-start;
@@ -715,6 +847,7 @@ hr.win-hr {
 
     #overview-content::before { content: "Overview"; }
     #recipe-content::before { content: "Recipe"; }
+    #nutrition-content::before { content: "Nutrition"; }
     #notes-content::before { content: "Notes"; }
 
     .content {

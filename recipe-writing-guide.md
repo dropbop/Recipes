@@ -62,6 +62,29 @@ Show the user the complete JSON (or summarize key fields) and confirm before com
     "base": 4,
     "unit": "servings"
   },
+  "nutrition": {
+    "batch": {
+      "calories": 0,
+      "protein": 0,
+      "fat": 0,
+      "carbs": 0,
+      "fiber": 0
+    },
+    "ingredients": [
+      {
+        "label": "Parmesan",
+        "recipeQuantity": { "amount": 100, "unit": "g" },
+        "basis": { "amount": 50, "unit": "g" },
+        "macros": {
+          "calories": 195,
+          "protein": 18,
+          "fat": 13,
+          "carbs": 1.5,
+          "fiber": 0
+        }
+      }
+    ]
+  },
   "ingredientGroups": [],
   "directions": [],
   "notes": [],
@@ -98,6 +121,10 @@ Show the user the complete JSON (or summarize key fields) and confirm before com
 Split honestly. A 4-hour freeze is `passive: 240`, never active time. A 10-minute sear you can't walk away from is `active`. Total is all three summed; the index card also shows "hands-on" (`prep + active`). The whole point of the split is telling a 20-minutes-of-attention recipe apart from a 5-minute-active-plus-4-hour-wait one — don't bury passive time inside `active`.
 
 **servings**: `base` is the number this recipe makes at 1×. `unit` is usually "servings" but could be "portions", "bowls", "sandwiches", whatever's natural.
+
+**nutrition**: Optional. Use when batch-level nutrition is known. Store totals for the whole batch under `nutrition.batch`: `calories`, `protein`, `fat`, `carbs`, and `fiber`. The site calculates per-serving values from `servings.base`; the Nutrition tab also lets the reader independently adjust batch size and split the batch into a different number of servings or containers. Skip sodium unless the user explicitly wants it tracked.
+
+For ingredient-level macro breakdowns, add standalone rows under `nutrition.ingredients`. Each row should include a display `label`, the full `recipeQuantity`, a flexible `basis`, and the macros for that basis. Keep `nutrition.batch` as the source of truth for the total; ingredient rows are for identifying major contributors and may have small rounding drift.
 
 ---
 

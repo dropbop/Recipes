@@ -3,6 +3,13 @@
 
 document.addEventListener('DOMContentLoaded', init);
 
+let nutritionRecipe = null;
+let nutritionTouched = false;
+let nutritionBaseServings = 1;
+let nutritionBatchServings = 1;
+let nutritionContainerCount = 1;
+let nutritionIngredientView = 'basis';
+
 async function init() {
   const recipeId = getRecipeIdFromUrl();
   if (!recipeId) {
@@ -125,6 +132,7 @@ function renderRecipe(recipe) {
   // Render tabs
   renderOverview(recipe);
   renderRecipeTab(recipe);
+  renderNutrition(recipe);
   renderNotes(recipe);
 }
 
@@ -198,6 +206,287 @@ function renderRecipeTab(recipe) {
 
   html += '</div>';
   container.innerHTML = html;
+}
+
+function renderNutrition(recipe, scaleFactor = 1, servingCount = null) {
+  nutritionRecipe = recipe;
+
+  const container = document.getElementById('nutrition-content');
+  if (!container) return;
+
+  const batch = recipe.nutrition?.batch;
+  if (!batch) {
+    container.innerHTML = '<div class="empty-log">No nutrition data yet.</div>';
+    return;
+  }
+
+  nutritionBaseServings = recipe.servings?.base || 1;
+  if (!nutritionTouched) {
+    const syncedServings = servingCount || Math.max(1, Math.round(nutritionBaseServings * scaleFactor));
+    nutritionBatchServings = syncedServings;
+    nutritionContainerCount = syncedServings;
+  }
+
+  renderNutritionContent();
+}
+
+function renderNutritionContent() {
+  if (!nutritionRecipe) return;
+
+  const container = document.getElementById('nutrition-content');
+  const batch = nutritionRecipe.nutrition?.batch;
+  if (!container || !batch) return;
+
+  const batchScale = nutritionBatchServings / nutritionBaseServings;
+  const unit = nutritionRecipe.servings?.unit || 'servings';
+  const scaledBatch = {
+    calories: (batch.calories || 0) * batchScale,
+    protein: (batch.protein || 0) * batchScale,
+    fat: (batch.fat || 0) * batchScale,
+    carbs: (batch.carbs || 0) * batchScale,
+    fiber: (batch.fiber || 0) * batchScale
+  };
+
+  const perServing = {
+    calories: scaledBatch.calories / nutritionContainerCount,
+    protein: scaledBatch.protein / nutritionContainerCount,
+    fat: scaledBatch.fat / nutritionContainerCount,
+    carbs: scaledBatch.carbs / nutritionContainerCount,
+    fiber: scaledBatch.fiber / nutritionContainerCount
+  };
+
+  container.innerHTML = `
+    ${renderNutritionControls(batchScale, unit)}
+    <div class="section">
+      <div class="section-title">\u25C6 Per ${titleCase(singularizeUnit(unit))}</div>
+      <div class="nutrition-grid">
+        ${renderNutritionStat('Calories', perServing.calories, 'cal')}
+        ${renderNutritionStat('Protein', perServing.protein, 'g')}
+        ${renderNutritionStat('Fat', perServing.fat, 'g')}
+        ${renderNutritionStat('Carbs', perServing.carbs, 'g')}
+        ${renderNutritionStat('Fiber', perServing.fiber, 'g')}
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-title">\u25C6 Batch Total</div>
+      <div class="nutrition-grid batch">
+        ${renderNutritionStat('Calories', scaledBatch.calories, 'cal')}
+        ${renderNutritionStat('Protein', scaledBatch.protein, 'g')}
+        ${renderNutritionStat('Fat', scaledBatch.fat, 'g')}
+        ${renderNutritionStat('Carbs', scaledBatch.carbs, 'g')}
+        ${renderNutritionStat('Fiber', scaledBatch.fiber, 'g')}
+      </div>
+    </div>
+    ${renderIngredientNutritionBreakdown(batchScale)}
+  `;
+}
+
+function renderNutritionControls(batchScale, unit) {
+  const unitLabel = unit || 'servings';
+  return `<div class="nutrition-controls">
+    <div class="nutrition-control-group">
+      <span class="scaling-label">Batch Size:</span>
+      <div class="nutrition-multiplier-buttons">
+        ${renderNutritionMultiplierButton(0.5, batchScale, '\u00BD\u00D7')}
+        ${renderNutritionMultiplierButton(1, batchScale, '1\u00D7')}
+        ${renderNutritionMultiplierButton(2, batchScale, '2\u00D7')}
+      </div>
+      <div class="spin-button-container">
+        <input type="text" class="spin-input" id="nutrition-batch-input" value="${nutritionBatchServings}" readonly>
+        <div class="spin-buttons">
+          <button class="spin-btn" onclick="adjustNutritionBatchSize(1)">\u25B2</button>
+          <button class="spin-btn" onclick="adjustNutritionBatchSize(-1)">\u25BC</button>
+        </div>
+      </div>
+    </div>
+    <div class="nutrition-control-group">
+      <span class="scaling-label">${titleCase(unitLabel)}:</span>
+      <div class="spin-button-container">
+        <input type="text" class="spin-input" id="nutrition-containers-input" value="${nutritionContainerCount}" readonly>
+        <div class="spin-buttons">
+          <button class="spin-btn" onclick="adjustNutritionContainers(1)">\u25B2</button>
+          <button class="spin-btn" onclick="adjustNutritionContainers(-1)">\u25BC</button>
+        </div>
+      </div>
+    </div>
+    <span class="scaling-info">Nutrition: ${formatNutritionScaleFactor(batchScale)}\u00D7 batch split into ${nutritionContainerCount} ${unitLabel}</span>
+  </div>`;
+}
+
+function renderNutritionMultiplierButton(factor, activeFactor, label) {
+  const active = Math.abs(factor - activeFactor) < 0.001 ? ' active' : '';
+  return `<button class="nutrition-multiplier-btn${active}" onclick="setNutritionBatchMultiplier(${factor})">${label}</button>`;
+}
+
+function setNutritionBatchMultiplier(factor) {
+  nutritionTouched = true;
+  nutritionBatchServings = clampNutritionCount(Math.round(nutritionBaseServings * factor));
+  renderNutritionContent();
+}
+
+function adjustNutritionBatchSize(delta) {
+  nutritionTouched = true;
+  nutritionBatchServings = clampNutritionCount(nutritionBatchServings + delta);
+  renderNutritionContent();
+}
+
+function adjustNutritionContainers(delta) {
+  nutritionTouched = true;
+  nutritionContainerCount = clampNutritionCount(nutritionContainerCount + delta);
+  renderNutritionContent();
+}
+
+function clampNutritionCount(value) {
+  return Math.max(1, Math.min(20, value));
+}
+
+function setNutritionIngredientView(view) {
+  if (!['basis', 'batch', 'container'].includes(view)) return;
+  nutritionIngredientView = view;
+  renderNutritionContent();
+}
+
+function renderIngredientNutritionBreakdown(batchScale) {
+  const rows = nutritionRecipe.nutrition?.ingredients;
+  if (!rows || rows.length === 0) return '';
+
+  const sortedRows = rows
+    .map(row => ({
+      ...row,
+      batchValues: getIngredientNutritionValues(row, 'batch', batchScale)
+    }))
+    .sort((a, b) => b.batchValues.macros.calories - a.batchValues.macros.calories);
+
+  const tableRows = sortedRows.map(row => {
+    const values = nutritionIngredientView === 'batch'
+      ? row.batchValues
+      : getIngredientNutritionValues(row, nutritionIngredientView, batchScale);
+    return renderIngredientNutritionRow(row.label, values);
+  }).join('');
+
+  return `<div class="section">
+    <div class="section-title">\u25C6 Ingredient Breakdown</div>
+    <div class="nutrition-view-controls">
+      ${renderNutritionViewButton('basis', 'Basis')}
+      ${renderNutritionViewButton('batch', 'Batch')}
+      ${renderNutritionViewButton('container', `Per ${titleCase(singularizeUnit(nutritionRecipe.servings?.unit || 'serving'))}`)}
+    </div>
+    <div class="nutrition-table-wrap">
+      <table class="nutrition-table">
+        <thead>
+          <tr>
+            <th>Ingredient</th>
+            <th>Amount</th>
+            <th>Calories</th>
+            <th>Protein</th>
+            <th>Fat</th>
+            <th>Carbs</th>
+            <th>Fiber</th>
+          </tr>
+        </thead>
+        <tbody>${tableRows}</tbody>
+      </table>
+    </div>
+  </div>`;
+}
+
+function renderNutritionViewButton(view, label) {
+  const active = nutritionIngredientView === view ? ' active' : '';
+  return `<button class="nutrition-view-btn${active}" onclick="setNutritionIngredientView('${view}')">${label}</button>`;
+}
+
+function getIngredientNutritionValues(row, view, batchScale) {
+  const basisAmount = row.basis?.amount || 1;
+  const recipeAmount = row.recipeQuantity?.amount || basisAmount;
+  const recipeUnit = row.recipeQuantity?.unit || row.basis?.unit || '';
+  const amountFactor = recipeAmount / basisAmount;
+  const batchFactor = amountFactor * batchScale;
+
+  if (view === 'basis') {
+    return {
+      amount: row.basis?.amount || 1,
+      unit: row.basis?.unit || recipeUnit,
+      macros: row.macros || {}
+    };
+  }
+
+  if (view === 'container') {
+    return {
+      amount: (recipeAmount * batchScale) / nutritionContainerCount,
+      unit: recipeUnit,
+      macros: scaleMacroSet(row.macros, batchFactor / nutritionContainerCount)
+    };
+  }
+
+  return {
+    amount: recipeAmount * batchScale,
+    unit: recipeUnit,
+    macros: scaleMacroSet(row.macros, batchFactor)
+  };
+}
+
+function scaleMacroSet(macros = {}, factor) {
+  return {
+    calories: (macros.calories || 0) * factor,
+    protein: (macros.protein || 0) * factor,
+    fat: (macros.fat || 0) * factor,
+    carbs: (macros.carbs || 0) * factor,
+    fiber: (macros.fiber || 0) * factor
+  };
+}
+
+function renderIngredientNutritionRow(label, values) {
+  return `<tr>
+    <td>${label}</td>
+    <td>${formatNutritionAmount(values.amount, values.unit)}</td>
+    <td>${formatIngredientMacro(values.macros.calories)}</td>
+    <td>${formatIngredientMacro(values.macros.protein)}g</td>
+    <td>${formatIngredientMacro(values.macros.fat)}g</td>
+    <td>${formatIngredientMacro(values.macros.carbs)}g</td>
+    <td>${formatIngredientMacro(values.macros.fiber)}g</td>
+  </tr>`;
+}
+
+function formatNutritionAmount(amount, unit) {
+  if (!Number.isFinite(amount)) return unit || '';
+  if (unit === 'batch') return `${formatIngredientMacro(amount)} batch`;
+  return `${formatIngredientMacro(amount)}${unit ? ` ${unit}` : ''}`;
+}
+
+function formatIngredientMacro(value) {
+  if (!Number.isFinite(value)) return '0';
+  if (Math.abs(value - Math.round(value)) < 0.05) return Math.round(value).toString();
+  return value.toFixed(1).replace(/\.0$/, '');
+}
+
+function renderNutritionStat(label, value, unit) {
+  return `<div class="nutrition-stat">
+    <div class="nutrition-value">${formatNutritionValue(value)}</div>
+    <div class="nutrition-label">${label}${unit ? ` (${unit})` : ''}</div>
+  </div>`;
+}
+
+function formatNutritionValue(value) {
+  if (!Number.isFinite(value)) return '0';
+  return Math.round(value).toString();
+}
+
+function singularizeUnit(unit) {
+  if (!unit) return 'serving';
+  return unit.endsWith('s') ? unit.slice(0, -1) : unit;
+}
+
+function titleCase(text) {
+  if (!text) return '';
+  return text.charAt(0).toUpperCase() + text.slice(1);
+}
+
+function formatNutritionScaleFactor(factor) {
+  if (factor === 0.5) return '\u00BD';
+  if (factor === 0.25) return '\u00BC';
+  if (factor === 0.75) return '\u00BE';
+  if (Number.isInteger(factor)) return factor.toString();
+  return factor.toFixed(2).replace(/\.?0+$/, '');
 }
 
 function renderNotes(recipe) {
@@ -280,3 +569,9 @@ function showError(message) {
     </div>
   `;
 }
+
+window.renderNutrition = renderNutrition;
+window.setNutritionBatchMultiplier = setNutritionBatchMultiplier;
+window.adjustNutritionBatchSize = adjustNutritionBatchSize;
+window.adjustNutritionContainers = adjustNutritionContainers;
+window.setNutritionIngredientView = setNutritionIngredientView;

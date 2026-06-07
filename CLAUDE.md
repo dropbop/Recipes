@@ -47,6 +47,7 @@ Key fields:
 - `description` — 1-2 sentence blurb shown in Overview tab; explains what the dish is and what makes this version distinct
 - `subtitle`, `source` — optional metadata
 - `time` — `{ prep, active, passive }` in minutes: hands-on prep, hands-on cooking, unattended time
+- `nutrition` — optional `{ batch: { calories, protein, fat, carbs, fiber }, ingredients: [...] }` for batch totals and ingredient macro breakdowns
 - `ingredientGroups[].items[]` with `quantity`, `quantityMax` (for ranges like "4–6"), `unit`, `item`, `note`, `scalable`
 - `directions[]` with `step`, `title` (optional), `text`
 - `deviations[]` — array of `{ what, why }` objects explaining what you changed from tradition and why
@@ -63,7 +64,8 @@ Six desktop background colors selectable via View menu, persisted in localStorag
 - Win98 aesthetic is intentional — no soft shadows, no gradients on body, use Trebuchet MS not Comic Sans
 - All paths must be relative (works on GitHub Pages at `/Recipes/`)
 - `.nojekyll` file prevents Jekyll processing
-- Tab order: Overview → Recipe → Notes
+- Tab order: Overview → Recipe → Nutrition → Notes
   - **Overview:** description, deviations from tradition, source
   - **Recipe:** scaling controls, ingredients, directions (single scroll for cooking)
+  - **Nutrition:** optional batch/per-serving macro totals and ingredient macro breakdowns with independent batch-size and split-count controls
   - **Notes:** cooking notes + lab log combined
