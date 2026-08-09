@@ -16,6 +16,8 @@ const STATUS_LABELS = {
   'to-cook': '\u2610 TO COOK'
 };
 
+const RECIPE_DATA_VERSION = '20260809-tocook1';
+
 async function init() {
   const recipeId = getRecipeIdFromUrl();
   if (!recipeId) {
@@ -54,7 +56,7 @@ function isRawJsonView() {
 }
 
 async function loadRecipe(id) {
-  const response = await fetch(`recipes/${id}.json`);
+  const response = await fetch(`recipes/${id}.json?v=${RECIPE_DATA_VERSION}`);
   if (!response.ok) {
     throw new Error(`Recipe "${id}" not found`);
   }
@@ -62,7 +64,7 @@ async function loadRecipe(id) {
 }
 
 async function loadRecipeText(id) {
-  const response = await fetch(`recipes/${id}.json`);
+  const response = await fetch(`recipes/${id}.json?v=${RECIPE_DATA_VERSION}`);
   if (!response.ok) {
     throw new Error(`Recipe "${id}" not found`);
   }
