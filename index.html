@@ -47,8 +47,9 @@
 
   <div class="toolbar">
     <button class="toolbar-btn active" onclick="filterRecipes('all', event)">All</button>
-    <button class="toolbar-btn" onclick="filterRecipes('canonical', event)">Dialed In</button>
+    <button class="toolbar-btn" onclick="filterRecipes('dialed-in', event)">Dialed In</button>
     <button class="toolbar-btn" onclick="filterRecipes('experimenting', event)">Experimenting</button>
+    <button class="toolbar-btn" onclick="filterRecipes('to-cook', event)">To Cook</button>
   </div>
 
   <div class="content" style="min-height: 400px;">
@@ -78,7 +79,11 @@
     grid.innerHTML = '';
 
     const filtered = filterByCurrentFilter(recipes);
-    filtered.sort((a, b) => (b.canonical ? 1 : 0) - (a.canonical ? 1 : 0));
+    if (currentFilter === 'all') {
+      filtered.sort((a, b) =>
+        (b.status === 'dialed-in' ? 1 : 0) - (a.status === 'dialed-in' ? 1 : 0)
+      );
+    }
 
     if (filtered.length === 0) {
       grid.innerHTML = '<p style="text-align: center; color: #666; grid-column: 1/-1;">No recipes match the current filter.</p>';
@@ -100,21 +105,30 @@
 
   function createRecipeCard(recipe) {
     const card = document.createElement('div');
-    card.className = 'recipe-card' + (recipe.canonical ? ' canonical' : '');
+    card.className = `recipe-card status-${recipe.status}`;
     card.onclick = () => location.href = `recipe.html?id=${recipe.id}`;
 
-    const totalTime = (recipe.time?.prep || 0) + (recipe.time?.active || 0) + (recipe.time?.passive || 0);
-    const handsOnTime = (recipe.time?.prep || 0) + (recipe.time?.active || 0);
+    let timeHtml = '';
+    if (recipe.time) {
+      const totalTime = (recipe.time.prep || 0) + (recipe.time.active || 0) + (recipe.time.passive || 0);
+      const handsOnTime = (recipe.time.prep || 0) + (recipe.time.active || 0);
+      timeHtml = `<div class="recipe-card-time">${formatTime(totalTime)} total · ${formatTime(handsOnTime)} hands-on</div>`;
+    }
 
-    const tagsHtml = recipe.tags.slice(0, 3).map(tag =>
+    const tagsHtml = (recipe.tags || []).slice(0, 3).map(tag =>
       `<span class="tag" style="background: ${getTagColor(tag)}">${tag}</span>`
     ).join('');
+
+    const toCookHtml = recipe.status === 'to-cook'
+      ? '<div class="to-cook-status">&#9744; TO COOK</div>'
+      : '';
 
     card.innerHTML = `
       <div class="recipe-card-title">${recipe.title}</div>
       <div class="recipe-card-desc">${recipe.desc || ''}</div>
-      <div style="font-size: 10px; color: #666; margin-top: 5px;">${formatTime(totalTime)} total · ${formatTime(handsOnTime)} hands-on</div>
+      ${timeHtml}
       <div class="tags">${tagsHtml}</div>
+      ${toCookHtml}
     `;
 
     return card;
@@ -135,10 +149,8 @@
   }
 
   function filterByCurrentFilter(recipes) {
-    if (currentFilter === 'all') return recipes;
-    if (currentFilter === 'canonical') return recipes.filter(r => r.canonical);
-    if (currentFilter === 'experimenting') return recipes.filter(r => !r.canonical);
-    return recipes;
+    if (currentFilter === 'all') return recipes.filter(r => r.status !== 'to-cook');
+    return recipes.filter(r => r.status === currentFilter);
   }
 
   function updateStatus() {
@@ -147,8 +159,9 @@
 
     const filterLabels = {
       'all': 'All',
-      'canonical': 'Dialed In',
-      'experimenting': 'Experimenting'
+      'dialed-in': 'Dialed In',
+      'experimenting': 'Experimenting',
+      'to-cook': 'To Cook'
     };
     document.getElementById('filter-status').textContent = `Filter: ${filterLabels[currentFilter]}`;
   }

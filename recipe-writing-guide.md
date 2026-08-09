@@ -6,7 +6,7 @@ Reference for translating a casual recipe description into a structured JSON fil
 
 ## Workflow
 
-This is a **collaborative process**, not a one-shot generation. The user may not know what fields like "deviations" or "canonical" mean. Walk them through it.
+This is a **collaborative process**, not a one-shot generation. The user may not know what fields like "deviations" or recipe `status` mean. Walk them through it.
 
 ### Step 1: Gather the raw recipe
 User describes a recipe in their own voice — stream of consciousness, shorthand, whatever. Don't interrupt. Let them dump it all out.
@@ -16,7 +16,7 @@ Before writing any JSON, confirm these with the user:
 
 - **Title**: "I'm calling this [X] — does that work?"
 - **Description**: Draft 1-2 sentences explaining what the dish is and what makes this version distinct. Show it to the user: "Here's how I'd describe this for the overview — [description]. Does that capture it?"
-- **Canonical status**: Explain what this means: "Is this recipe dialed in — you'd make it the same way next time? Or still experimenting?" Set `canonical` accordingly.
+- **Status**: Confirm whether this is `to-cook` (not made yet), `experimenting` (made but still changing), or `dialed-in` (you'd make it the same way next time).
 - **Deviations**: This is the core of the site. Ask: "What did you change from the traditional version, and why?" If the user doesn't know what's traditional, help them identify deviations based on culinary knowledge. Confirm each one: "So the deviation is [what] because [why] — right?"
 
 ### Step 3: Confirm ingredients
@@ -35,7 +35,7 @@ Draft the directions preserving the user's voice. Show them: "Here's how I wrote
 
 ### Step 6: Create files
 1. Write `recipes/{slug}.json`
-2. Add entry to `js/manifest.js` with matching `id`, `title`, `desc`, `tags`, `time`, `canonical`
+2. Add an entry to `js/manifest.js` with matching `id`, `title`, `desc`, `tags`, optional `time`, and `status`
 
 ### Step 7: Final review
 Show the user the complete JSON (or summarize key fields) and confirm before committing.
@@ -50,7 +50,7 @@ Show the user the complete JSON (or summarize key fields) and confirm before com
   "title": "Title Case Name",
   "subtitle": "optional — short qualifier if needed",
   "description": "1-2 sentences. What the dish IS and what makes THIS version distinct.",
-  "canonical": false,
+  "status": "experimenting",
   "tags": ["protein", "cuisine", "method", "context"],
   "source": "Where it came from",
   "time": {
@@ -89,6 +89,7 @@ Show the user the complete JSON (or summarize key fields) and confirm before com
   "directions": [],
   "notes": [],
   "deviations": [],
+  "openQuestions": [],
   "log": []
 }
 ```
@@ -107,11 +108,27 @@ Show the user the complete JSON (or summarize key fields) and confirm before com
 - "A pepper-heavy wine braise. The garlic paste is the whole trick — it penetrates the meat in a way whole cloves can't."
 - "A hard-seared take on scampi that trades the traditional gentle saute for fond and crust. The MSG is doing the work that shell stock would do in a restaurant version."
 
-**canonical**: `true` if the recipe is dialed in and you'd make it again without changes. `false` if still experimenting. Most new recipes start `false`.
+**status**: Exactly one lifecycle value:
+- `to-cook` — a planning brief that has not been made yet
+- `experimenting` — cooked at least once but still being adjusted
+- `dialed-in` — cooked and settled enough that you'd make it the same way next time
+
+Do not add a separate `canonical` boolean. A To Cook record moves to `experimenting` after the first cook, once the recipe is completed and the first dated log entry is added.
 
 **tags**: 3-5 tags. Consistent vocabulary across recipes. Categories: protein (beef, seafood, chicken), cuisine (italian, japanese, cajun), method (braise, grill, quick), context (weeknight, winter, meal-prep). Lowercase, hyphenated if multi-word.
 
 **source**: One line. Can be casual: "Family tradition, heavily improvised" or "Kenji's recipe with modifications" or "Made it up after eating something similar at Sézanne."
+
+### To Cook records
+
+A `to-cook` record is an honest planning brief, not a fake finished recipe. Use the normal recipe fields for everything already known and `openQuestions` for decisions that remain unresolved.
+
+- `time`, `servings`, and `nutrition` may be omitted when unknown.
+- `ingredientGroups` and `directions` may be partial or empty arrays.
+- Unknown quantities should be `null`; do not invent numbers just to complete the schema.
+- `notes` should preserve useful planning context, equipment needs, and menu ideas.
+- `log` stays empty until the dish has actually been cooked.
+- After the first cook, fill in the recipe, change `status` to `experimenting`, and add the first dated log entry.
 
 **time**: Three buckets, all in whole minutes — `prep`, `active`, `passive`.
 - `prep` — hands-on work before cooking starts: knife work, measuring, forming, dry-brining setup.
@@ -261,11 +278,11 @@ After creating the recipe JSON, add an entry to `RECIPE_MANIFEST` in `js/manifes
   desc: "Short description for index card (50-60 chars)",
   tags: ["tag1", "tag2", "tag3"],
   time: { prep: 20, active: 25, passive: 0 },
-  canonical: false
+  status: "experimenting"
 }
 ```
 
-The `desc` field is a truncated version of the recipe's description — punchy enough to differentiate recipes while browsing. Tags, time, and canonical must match the recipe JSON.
+The `desc` field is a truncated version of the recipe's description — punchy enough to differentiate recipes while browsing. Tags and status must match the recipe JSON. Time must also match when known; omit it from both places for an unresolved To Cook record.
 
 ---
 
@@ -288,4 +305,4 @@ The `desc` field is a truncated version of the recipe's description — punchy e
 - **Food blog voice.** No "this delicious recipe is perfect for weeknight dinners!" No SEO. No life stories.
 - **Imprecise scaling flags.** Think about each ingredient: does it actually scale? "2 bay leaves" doesn't become "4 bay leaves" for double servings.
 - **Forgetting `quantityMax`.** If the user says "4-6 ribs" or "1-2 tablespoons", use the range fields.
-- **Skipping confirmations.** Don't assume — ask the user about title, description, deviations, and canonical status.
+- **Skipping confirmations.** Don't assume — ask the user about title, description, deviations, and lifecycle status.

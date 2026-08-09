@@ -1,0 +1,96 @@
+{
+  "id": "xinjiang-chuanr",
+  "title": "Xinjiang Chuanr",
+  "subtitle": "Coworker BBQ Trial",
+  "description": "Uyghur charcoal lamb skewers for the coworker cookout: alternating lean and fat, cooked close over coals, with cumin and coarse chili rained onto the meat while the fat renders.",
+  "status": "to-cook",
+  "tags": ["lamb", "uyghur", "grilling", "skewers", "cookout"],
+  "source": "Coworker BBQ menu brainstorm; quantities TBD",
+  "ingredientGroups": [
+    {
+      "name": "Lamb",
+      "items": [
+        {
+          "quantity": null,
+          "quantityMax": null,
+          "unit": "",
+          "item": "lamb shoulder",
+          "note": "hand-cut into thumbnail-size chunks; quantity TBD",
+          "scalable": true
+        },
+        {
+          "quantity": null,
+          "quantityMax": null,
+          "unit": "",
+          "item": "pure lamb fat",
+          "note": "cut to match the lean pieces and alternated on the skewers; quantity TBD",
+          "scalable": true
+        }
+      ]
+    },
+    {
+      "name": "Dry Rain",
+      "items": [
+        {
+          "quantity": null,
+          "quantityMax": null,
+          "unit": "",
+          "item": "salt",
+          "note": "apply ahead; amount TBD",
+          "scalable": true
+        },
+        {
+          "quantity": null,
+          "quantityMax": null,
+          "unit": "",
+          "item": "whole cumin seed",
+          "note": "toast and half-crack; amount TBD",
+          "scalable": true
+        },
+        {
+          "quantity": null,
+          "quantityMax": null,
+          "unit": "",
+          "item": "coarse chili flake",
+          "note": "amount and exact variety TBD",
+          "scalable": true
+        }
+      ]
+    }
+  ],
+  "directions": [
+    {
+      "step": 1,
+      "title": "Cut and skewer",
+      "text": "Hand-cut the lamb shoulder and pure fat into thumbnail-size chunks. Alternate lean pieces with fat pieces on flat metal skewers so the rendering fat bastes the lamb."
+    },
+    {
+      "step": 2,
+      "title": "Salt ahead",
+      "text": "Salt the skewered lamb before the cook. This is not a marinade; the cumin and chili come later over the fire."
+    },
+    {
+      "step": 3,
+      "title": "Build the fire",
+      "text": "Make a narrow, close charcoal bed with bricks flanking chimney-dumped coals. Bridge the skewers directly across the bricks with no grate and cook hot and fast."
+    },
+    {
+      "step": 4,
+      "title": "Dry rain",
+      "text": "As the fat renders, shower the skewers with toasted half-cracked cumin and coarse chili flake. Turn them over the coals so the spices toast in the lamb fat."
+    }
+  ],
+  "notes": [
+    "Flat metal skewers are non-negotiable so the meat does not spin.",
+    "Optional supporting menu: smashed cucumber salad with black vinegar, store-bought naan hit hard on the grill, cold watermelon, and Yanjing or Tsingtao in an ice bucket."
+  ],
+  "deviations": [],
+  "openQuestions": [
+    "How much lamb shoulder and lamb fat is needed for the final guest count?",
+    "What salt, cumin, and chili ratios should the first batch use?",
+    "Where should the lamb fat, coarse chili, and flat metal skewers come from?",
+    "What brick spacing and coal-bed dimensions fit the skewers?",
+    "Is a smaller test cook needed before the coworker BBQ?"
+  ],
+  "log": []
+}

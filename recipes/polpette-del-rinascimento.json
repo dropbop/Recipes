@@ -2,7 +2,7 @@
   "id": "polpette-del-rinascimento",
   "title": "Polpette del Rinascimento",
   "description": "Pork-and-chicken meatballs with orange zest, fennel, garlic, herbs, parmesan, and warm spice. They get seared hard, finished in the oven, then tossed in a quick orange-tomato pan sauce with capers and a touch of honey.",
-  "canonical": false,
+  "status": "experimenting",
   "tags": ["pork", "chicken", "italian", "meatballs", "weeknight"],
   "source": "Original house meatball recipe, Renaissance-spiced",
   "time": {

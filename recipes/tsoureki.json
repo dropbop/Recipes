@@ -1,0 +1,51 @@
+{
+  "id": "tsoureki",
+  "title": "Tsoureki",
+  "subtitle": "Mahlab + Tonka Trial",
+  "description": "A braided Greek Easter bread plan built around mahlab's bitter cherry-almond character, with tonka extending it into vanilla, hay, and marzipan. The point is to use the spices already in the cabinet without pretending the formula is settled.",
+  "status": "to-cook",
+  "tags": ["bread", "greek", "baking", "spiced"],
+  "source": "Spice-cabinet planning conversation; base formula TBD",
+  "ingredientGroups": [
+    {
+      "name": "Flavor Direction",
+      "items": [
+        {
+          "quantity": null,
+          "quantityMax": null,
+          "unit": "",
+          "item": "mahlab",
+          "note": "the traditional signature; dosage TBD",
+          "scalable": true
+        },
+        {
+          "quantity": null,
+          "quantityMax": null,
+          "unit": "",
+          "item": "tonka bean",
+          "note": "grated; dosage TBD",
+          "scalable": true
+        }
+      ]
+    }
+  ],
+  "directions": [],
+  "notes": [
+    "The whole point is to use the mahlab and tonka already in the cabinet, not to engineer a generic Easter bread.",
+    "Regulatory curiosity: the <a href=\"https://hfpappexternal.fda.gov/scripts/fdcc/index.cfm?id=COUMARINPROHIBITED&amp;set=FoodSubstances\" target=\"_blank\" rel=\"noopener noreferrer\">FDA lists coumarin</a> as prohibited for use as a flavoring agent or adjuvant under 21 CFR 189.130."
+  ],
+  "deviations": [
+    {
+      "what": "Tonka bean in the tsoureki spice profile",
+      "why": "Extends mahlab's bitter cherry-almond character into vanilla, hay, and marzipan while using the beans already on hand."
+    }
+  ],
+  "openQuestions": [
+    "Which traditional tsoureki formula should be the base?",
+    "How much mahlab and freshly grated tonka belongs in the first test?",
+    "Should clove, mastiha, or cinnamon join the spice profile?",
+    "What proofing schedule and bake time fit the chosen formula?",
+    "What finish makes sense: egg wash, sesame, sliced almonds, or something else?"
+  ],
+  "log": []
+}

@@ -2,7 +2,7 @@
   "id": "pressure-cooker-white-beans",
   "title": "Pressure Cooker White Beans",
   "description": "Dead simple no-soak white beans in the Instant Pot. Rancho Gordo Alubia Blanca with just garlic, bay leaf, and salt — a blank canvas side dish.",
-  "canonical": false,
+  "status": "experimenting",
   "tags": ["beans", "pressure-cooker", "side"],
   "source": "First attempt, winged it",
   "time": {

@@ -10,6 +10,12 @@ let nutritionBatchServings = 1;
 let nutritionContainerCount = 1;
 let nutritionIngredientView = 'basis';
 
+const STATUS_LABELS = {
+  'dialed-in': 'DIALED IN',
+  'experimenting': 'EXPERIMENTING',
+  'to-cook': '\u2610 TO COOK'
+};
+
 async function init() {
   const recipeId = getRecipeIdFromUrl();
   if (!recipeId) {
@@ -93,9 +99,17 @@ function renderRecipe(recipe) {
   // Update window title
   document.title = `Recipe Viewer - ${recipe.title}`;
   document.getElementById('window-title').textContent = recipe.title;
+  document.body.dataset.recipeStatus = recipe.status;
 
   // Header
   document.getElementById('recipe-title').textContent = recipe.title;
+
+  const statusBadge = document.getElementById('recipe-status-badge');
+  statusBadge.textContent = STATUS_LABELS[recipe.status] || recipe.status || '';
+  statusBadge.className = `recipe-status-badge status-${recipe.status || 'unknown'}`;
+
+  const recipeTab = document.getElementById('recipe-tab');
+  recipeTab.textContent = recipe.status === 'to-cook' ? 'Plan' : 'Recipe';
 
   // Subtitle - hide if empty
   const subtitleEl = document.getElementById('recipe-subtitle');
@@ -116,6 +130,8 @@ function renderRecipe(recipe) {
       <span>Passive: ${t.passive || 0} min</span>
       <span>Total: ${totalTime} min</span>
     `;
+  } else {
+    document.getElementById('recipe-meta').innerHTML = '';
   }
 
   // Tags with dynamic colors
@@ -124,6 +140,8 @@ function renderRecipe(recipe) {
       `<span class="tag" style="background: ${getTagColor(tag)}">${tag}</span>`
     ).join('');
     document.getElementById('recipe-tags').innerHTML = tagsHtml;
+  } else {
+    document.getElementById('recipe-tags').innerHTML = '';
   }
 
   // Status bar source
@@ -138,9 +156,16 @@ function renderRecipe(recipe) {
 
 function renderIngredients(recipe) {
   const container = document.getElementById('ingredients-list');
+  const groups = recipe.ingredientGroups || [];
+
+  if (groups.length === 0) {
+    container.innerHTML = '<div class="empty-log">Ingredients not decided yet.</div>';
+    return;
+  }
+
   let html = '';
 
-  recipe.ingredientGroups.forEach((group, groupIndex) => {
+  groups.forEach((group, groupIndex) => {
     html += `<div class="section">
       <div class="section-title">\u25C6 ${group.name}</div>`;
 
@@ -194,15 +219,20 @@ function renderRecipeTab(recipe) {
   renderIngredients(recipe);
 
   const container = document.getElementById('directions-list');
+  const directions = recipe.directions || [];
   let html = '<div class="section"><div class="section-title">\u25C6 Method</div>';
 
-  recipe.directions.forEach(dir => {
-    const title = dir.title ? `<span class="direction-title">${dir.title}:</span> ` : '';
-    html += `<div class="direction">
-      <span class="direction-number">${dir.step}</span>
-      ${title}${dir.text}
-    </div>`;
-  });
+  if (directions.length === 0) {
+    html += '<div class="empty-log">Method not decided yet.</div>';
+  } else {
+    directions.forEach(dir => {
+      const title = dir.title ? `<span class="direction-title">${dir.title}:</span> ` : '';
+      html += `<div class="direction">
+        <span class="direction-number">${dir.step}</span>
+        ${title}${dir.text}
+      </div>`;
+    });
+  }
 
   html += '</div>';
   container.innerHTML = html;
@@ -493,23 +523,40 @@ function renderNotes(recipe) {
   const container = document.getElementById('notes-content');
   const hasNotes = recipe.notes && recipe.notes.length > 0;
   const hasLog = recipe.log && recipe.log.length > 0;
+  const hasOpenQuestions = recipe.openQuestions && recipe.openQuestions.length > 0;
 
-  if (!hasNotes && !hasLog) {
-    container.innerHTML = '<div class="empty-log">No notes yet. Make the recipe and add your observations!</div>';
+  if (!hasNotes && !hasLog && !hasOpenQuestions) {
+    const emptyMessage = recipe.status === 'to-cook'
+      ? 'No planning notes yet.'
+      : 'No notes yet. Make the recipe and add your observations!';
+    container.innerHTML = `<div class="empty-log">${emptyMessage}</div>`;
     return;
   }
 
   let html = '';
 
   if (hasNotes) {
-    html += '<div class="section"><div class="section-title">\u25C6 Notes</div>';
+    const notesTitle = recipe.status === 'to-cook' ? 'Planning Notes' : 'Notes';
+    html += `<div class="section"><div class="section-title">\u25C6 ${notesTitle}</div>`;
     recipe.notes.forEach(note => {
       html += `<div class="note-item">${note}</div>`;
     });
     html += '</div>';
   }
 
-  if (hasNotes && hasLog) {
+  if (hasOpenQuestions) {
+    if (hasNotes) {
+      html += '<hr class="win-hr">';
+    }
+
+    html += '<div class="section open-questions"><div class="section-title">\u25C6 Open Questions</div>';
+    recipe.openQuestions.forEach(question => {
+      html += `<div class="question-item">${question}</div>`;
+    });
+    html += '</div>';
+  }
+
+  if ((hasNotes || hasOpenQuestions) && hasLog) {
     html += '<hr class="win-hr">';
   }
 

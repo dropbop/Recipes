@@ -40,9 +40,9 @@ Preserve the existing plain JavaScript style. Script load order matters: `utils.
 
 ## Recipe Data Guidelines
 
-Read `recipe-writing-guide.md` before adding or rewriting recipes. Confirm title, description, canonical status, deviations, ingredients, directions, notes, and log entries with the user before creating JSON.
+Read `recipe-writing-guide.md` before adding or rewriting recipes. Confirm title, description, lifecycle status, deviations, ingredients, directions, notes, and log entries with the user before creating JSON.
 
-Use `canonical: true` only for dialed-in recipes. Put deliberate departures from tradition in `deviations`, durable cooking advice in `notes`, and dated cook-session observations in `log`.
+Use `status: "to-cook"` for unmade planning briefs, `status: "experimenting"` for cooked recipes still being adjusted, and `status: "dialed-in"` only for settled recipes. Put unresolved planning decisions in `openQuestions`, deliberate departures from tradition in `deviations`, durable cooking advice in `notes`, and dated cook-session observations in `log`.
 
 ## Testing Guidelines
 

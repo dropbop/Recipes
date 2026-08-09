@@ -1,17 +1,30 @@
 // Ingredient Scaling Calculator
 // Depends on: utils.js (must load first — provides formatQuantity)
 
-let baseServings = 4;
-let currentServings = 4;
+let baseServings = null;
+let currentServings = null;
 let recipeData = null;
 
 function initScaling(recipe) {
   recipeData = recipe;
-  baseServings = recipe.servings?.base || 4;
-  currentServings = baseServings;
-
   const container = document.getElementById('scaling-controls');
   if (!container) return;
+
+  if (!recipe.servings?.base) {
+    baseServings = null;
+    currentServings = null;
+    container.style.display = 'none';
+
+    const statusEl = document.getElementById('status-servings');
+    if (statusEl) {
+      statusEl.textContent = recipe.status === 'to-cook' ? 'Status: To Cook' : 'Scale: Not set';
+    }
+    return;
+  }
+
+  baseServings = recipe.servings.base;
+  currentServings = baseServings;
+  container.style.display = '';
 
   container.innerHTML = `
     <div class="multiplier-buttons">
@@ -106,7 +119,7 @@ function updateStatusBar(factor) {
 function scaleIngredients(factor) {
   if (!recipeData) return;
 
-  recipeData.ingredientGroups.forEach((group, groupIndex) => {
+  (recipeData.ingredientGroups || []).forEach((group, groupIndex) => {
     group.items.forEach((item, itemIndex) => {
       const el = document.querySelector(`[data-group="${groupIndex}"][data-item="${itemIndex}"] .ingredient-quantity`);
       if (!el) return;
@@ -130,7 +143,7 @@ function getRecipeScaleState() {
   return {
     baseServings,
     currentServings,
-    scaleFactor: currentServings / baseServings
+    scaleFactor: baseServings ? currentServings / baseServings : null
   };
 }
 

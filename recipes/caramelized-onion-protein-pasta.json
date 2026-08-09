@@ -2,7 +2,7 @@
   "id": "caramelized-onion-protein-pasta",
   "title": "Caramelized Onion Protein Pasta",
   "description": "A high-protein meal-prep pasta built on real caramelized onions, shredded chicken breast, bone broth reduction, and a blended cottage-cheese Gruyere sauce. The pasta cooks directly in the mix, so the starch helps pull the whole thing together without par-boiling.",
-  "canonical": true,
+  "status": "dialed-in",
   "tags": ["chicken", "pasta", "meal-prep", "high-protein"],
   "source": "Adapted from @stealth_health_life; converted from a slow-cooker/crock-pot version to a stovetop method",
   "time": {

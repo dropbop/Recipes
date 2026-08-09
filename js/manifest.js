@@ -8,7 +8,7 @@ const RECIPE_MANIFEST = [
     desc: "Blows every restaurant's version out of the water",
     tags: ["beef", "braise", "dutch-oven", "winter"],
     time: { prep: 20, active: 15, passive: 285 },
-    canonical: true
+    status: "dialed-in"
   },
   {
     id: "shrimp-scampi",
@@ -16,7 +16,7 @@ const RECIPE_MANIFEST = [
     desc: "Hard-seared scampi with fond and crust",
     tags: ["seafood", "italian", "quick", "weeknight"],
     time: { prep: 15, active: 10, passive: 0 },
-    canonical: false
+    status: "experimenting"
   },
   {
     id: "polpette-del-rinascimento",
@@ -24,7 +24,7 @@ const RECIPE_MANIFEST = [
     desc: "Orange-fennel meatballs with scappi spice",
     tags: ["pork", "chicken", "italian", "meatballs", "weeknight"],
     time: { prep: 25, active: 20, passive: 15 },
-    canonical: false
+    status: "experimenting"
   },
   {
     id: "pierogi-x-plosion",
@@ -32,7 +32,7 @@ const RECIPE_MANIFEST = [
     desc: "Pierogies and kielbasa in creamy dijon sauce",
     tags: ["polish", "casserole", "comfort"],
     time: { prep: 15, active: 35, passive: 0 },
-    canonical: true
+    status: "dialed-in"
   },
   {
     id: "milk-bread",
@@ -40,7 +40,7 @@ const RECIPE_MANIFEST = [
     desc: "Soft tangzhong bread with herb or topping variations",
     tags: ["bread", "baking", "japanese"],
     time: { prep: 20, active: 35, passive: 215 },
-    canonical: true
+    status: "dialed-in"
   },
   {
     id: "chipotle-braised-pork",
@@ -48,7 +48,7 @@ const RECIPE_MANIFEST = [
     desc: "Cheap, easy, complex. Great for bulk prep.",
     tags: ["pork", "mexican", "braise", "pressure-cooker", "meal-prep"],
     time: { prep: 20, active: 30, passive: 110 },
-    canonical: false
+    status: "experimenting"
   },
   {
     id: "grilled-sambal-shrimp",
@@ -56,7 +56,7 @@ const RECIPE_MANIFEST = [
     desc: "Spicy coconut-lime marinade for shrimp or chicken",
     tags: ["seafood", "grilling", "marinade", "thai"],
     time: { prep: 10, active: 15, passive: 120 },
-    canonical: true
+    status: "dialed-in"
   },
   {
     id: "pressure-cooker-white-beans",
@@ -64,7 +64,7 @@ const RECIPE_MANIFEST = [
     desc: "No-soak Instant Pot white beans — dead simple blank canvas",
     tags: ["beans", "pressure-cooker", "side"],
     time: { prep: 5, active: 0, passive: 30 },
-    canonical: false
+    status: "experimenting"
   },
   {
     id: "frozen-lemon-posset",
@@ -72,7 +72,7 @@ const RECIPE_MANIFEST = [
     desc: "British posset, frozen into a dense custardy dessert",
     tags: ["dessert", "lemon", "frozen", "british", "make-ahead"],
     time: { prep: 5, active: 8, passive: 250 },
-    canonical: true
+    status: "dialed-in"
   },
   {
     id: "caramelized-onion-protein-pasta",
@@ -80,6 +80,20 @@ const RECIPE_MANIFEST = [
     desc: "High-protein pasta with real caramelized onions",
     tags: ["chicken", "pasta", "meal-prep", "high-protein"],
     time: { prep: 25, active: 100, passive: 85 },
-    canonical: true
+    status: "dialed-in"
+  },
+  {
+    id: "tsoureki",
+    title: "Tsoureki",
+    desc: "Mahlab and tonka braided bread trial",
+    tags: ["bread", "greek", "baking", "spiced"],
+    status: "to-cook"
+  },
+  {
+    id: "xinjiang-chuanr",
+    title: "Xinjiang Chuanr",
+    desc: "Uyghur charcoal lamb skewers for the coworker BBQ",
+    tags: ["lamb", "uyghur", "grilling", "skewers", "cookout"],
+    status: "to-cook"
   }
 ];

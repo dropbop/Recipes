@@ -2,7 +2,7 @@
   "id": "pierogi-x-plosion",
   "title": "Pierogi X-plosion",
   "description": "Pan-fried pierogies, kielbasa, and sautéed peppers in a creamy dijon sauce, finished under the broiler.",
-  "canonical": true,
+  "status": "dialed-in",
   "tags": ["polish", "casserole", "comfort"],
   "source": "Payton's recipe",
   "time": {

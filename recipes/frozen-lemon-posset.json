@@ -2,7 +2,7 @@
   "id": "frozen-lemon-posset",
   "title": "Frozen Lemon Posset",
   "description": "A traditional British posset — sweetened cream set by lemon juice — frozen instead of chilled. The freezer turns the soft pudding into a dense, custardy semi-frozen dessert.",
-  "canonical": true,
+  "status": "dialed-in",
   "tags": ["dessert", "lemon", "frozen", "british", "make-ahead"],
   "source": "Traditional British posset, frozen variation",
   "time": {
