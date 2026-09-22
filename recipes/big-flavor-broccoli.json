@@ -1,0 +1,113 @@
+{
+  "id": "big-flavor-broccoli",
+  "title": "Big-Flavor Broccoli",
+  "description": "Skillet-charred broccoli, stems included, roasted with red onion, garlic, and anchovies. Parmesan and lemon finish it.",
+  "status": "dialed-in",
+  "tags": ["broccoli", "roast", "side"],
+  "source": "Chris Morocco, Bon Appétit, November 7, 2019 — https://www.bonappetit.com/recipe/big-flavor-broccoli",
+  "servings": {
+    "base": 4,
+    "unit": "servings"
+  },
+  "ingredientGroups": [
+    {
+      "name": "Broccoli & Aromatics",
+      "items": [
+        {
+          "quantity": 1,
+          "quantityMax": null,
+          "unit": "lbs",
+          "item": "broccoli",
+          "note": "about 1 large or 2 medium heads",
+          "scalable": true
+        },
+        {
+          "quantity": 5,
+          "quantityMax": null,
+          "unit": "tbsp",
+          "item": "extra-virgin olive oil",
+          "note": "divided",
+          "scalable": true
+        },
+        {
+          "quantity": null,
+          "quantityMax": null,
+          "unit": "",
+          "item": "kosher salt",
+          "note": null,
+          "scalable": false
+        },
+        {
+          "quantity": 1,
+          "quantityMax": null,
+          "unit": "",
+          "item": "small red onion",
+          "note": "cut lengthwise into ½-inch-thick slices",
+          "scalable": true
+        },
+        {
+          "quantity": 4,
+          "quantityMax": null,
+          "unit": "cloves",
+          "item": "garlic",
+          "note": "sliced",
+          "scalable": true
+        },
+        {
+          "quantity": 6,
+          "quantityMax": null,
+          "unit": "",
+          "item": "oil-packed anchovy fillets",
+          "note": null,
+          "scalable": true
+        }
+      ]
+    },
+    {
+      "name": "To Finish",
+      "items": [
+        {
+          "quantity": 1,
+          "quantityMax": null,
+          "unit": "oz",
+          "item": "Parmesan",
+          "note": "finely grated (about ¼ cup)",
+          "scalable": true
+        },
+        {
+          "quantity": null,
+          "quantityMax": null,
+          "unit": "",
+          "item": "lemon wedges",
+          "note": "for serving",
+          "scalable": false
+        }
+      ]
+    }
+  ],
+  "directions": [
+    {
+      "step": 1,
+      "text": "Preheat oven to 400°. Trim only the very bottom, woody part of broccoli stem. Peel tough outer layer from stem, from the florets down to the end of the stalk. Starting from stem end, cut broccoli at a 45° angle into ¾\"-thick slices until you reach the florets. Break florets apart with your hands into bite-size pieces (this avoids getting bitsy trimmings all over the place)."
+    },
+    {
+      "step": 2,
+      "text": "Heat 3 Tbsp. oil in a large heatproof skillet over medium-high until shimmering. Add broccoli; season with salt. Cook, tossing occasionally, until broccoli is bright green and lightly charred, about 3 minutes. Transfer to a plate. Wipe out skillet."
+    },
+    {
+      "step": 3,
+      "text": "Heat remaining 2 Tbsp. oil in same skillet over medium. Cook onion and garlic, stirring often, until onion is beginning to soften, about 3 minutes. Add anchovies and cook, breaking apart with a spoon, until broken down and garlic is beginning to turn golden around the edges, about 2 minutes."
+    },
+    {
+      "step": 4,
+      "text": "Return broccoli to skillet and toss to coat with oil. Transfer to oven and roast, tossing once, until broccoli is browned and tender, 20–25 minutes. Wrap handle of skillet with a towel before you forget it’s REALLY HOT."
+    },
+    {
+      "step": 5,
+      "text": "Scatter Parmesan over hot broccoli. Divide among plates. Serve with lemon wedges alongside."
+    }
+  ],
+  "notes": [],
+  "deviations": [],
+  "log": []
+}

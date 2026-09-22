@@ -83,6 +83,13 @@ const RECIPE_MANIFEST = [
     status: "dialed-in"
   },
   {
+    id: "big-flavor-broccoli",
+    title: "Big-Flavor Broccoli",
+    desc: "Roasted broccoli with anchovies, Parmesan, and lemon",
+    tags: ["broccoli", "roast", "side"],
+    status: "dialed-in"
+  },
+  {
     id: "kvass",
     title: "Kvass",
     desc: "Dark-toasted bread kvass with raisins and lemon",
