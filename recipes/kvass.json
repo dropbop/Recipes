@@ -1,0 +1,135 @@
+{
+  "id": "kvass",
+  "title": "Kvass",
+  "description": "Dark-toasted rye or pumpernickel kvass with raisins and lemon, fermented with ordinary bread yeast. A two-day ferment, with optional carbonation before chilling.",
+  "status": "experimenting",
+  "tags": ["beverage", "fermented", "bread"],
+  "servings": {
+    "base": 1,
+    "unit": "batches"
+  },
+  "ingredientGroups": [
+    {
+      "name": "Steep",
+      "items": [
+        {
+          "quantity": 1.5,
+          "quantityMax": null,
+          "unit": "liters",
+          "item": "filtered water",
+          "note": "measure by filling your 1.5-liter jar to the top — tap is probably fine but chlorine is enemy of yeast — maybe use spring water instead if you don't have a solid filter",
+          "scalable": true
+        },
+        {
+          "quantity": 2,
+          "quantityMax": null,
+          "unit": "slices",
+          "item": "rye or pumpernickel bread",
+          "note": "any dark bread works",
+          "scalable": true
+        },
+        {
+          "quantity": 75,
+          "quantityMax": null,
+          "unit": "g",
+          "item": "sugar",
+          "note": null,
+          "scalable": true
+        },
+        {
+          "quantity": 1,
+          "quantityMax": null,
+          "unit": "slice",
+          "item": "lemon",
+          "note": null,
+          "scalable": true
+        },
+        {
+          "quantity": 15,
+          "quantityMax": null,
+          "unit": "",
+          "item": "raisins",
+          "note": "about a small handful, rinsed",
+          "scalable": true
+        }
+      ]
+    },
+    {
+      "name": "Fermentation",
+      "items": [
+        {
+          "quantity": 0.125,
+          "quantityMax": null,
+          "unit": "tsp",
+          "item": "active dry yeast",
+          "note": "I use Red Star, the same stuff you'd use for baking bread",
+          "scalable": true
+        },
+        {
+          "quantity": 15,
+          "quantityMax": null,
+          "unit": "",
+          "item": "fresh raisins",
+          "note": "another small handful, rinsed",
+          "scalable": true
+        }
+      ]
+    },
+    {
+      "name": "To Finish",
+      "items": [
+        {
+          "quantity": 0.5,
+          "quantityMax": null,
+          "unit": "",
+          "item": "lemon, juiced",
+          "note": "about half a lemon at the base batch size; adjust to taste",
+          "scalable": true
+        }
+      ]
+    }
+  ],
+  "directions": [
+    {
+      "step": 1,
+      "title": "Measure and toast",
+      "text": "Fill the jar to the top with filtered water, then dump that into a pot. Toast the bread as far as possible without burning."
+    },
+    {
+      "step": 2,
+      "title": "Steep",
+      "text": "Bring the water to a boil, then turn off the heat. Add the toasted bread, sugar, lemon slice, and first handful of raisins. Cover with the pot lid and steep off heat for at least 4 hours."
+    },
+    {
+      "step": 3,
+      "title": "Strain and add yeast",
+      "text": "Once the mixture is at room temperature, strain out the bread, raisins, and lemon. Transfer the liquid to the clean glass fermentation jar. Add the yeast and fresh handful of rinsed raisins, then stir to combine."
+    },
+    {
+      "step": 4,
+      "title": "Ferment",
+      "text": "Put the lid on with the gasket removed—you don't want to build up pressure like that. Leave about a finger of headspace. Ferment at room temperature, ideally 66–77°F, for 2 days."
+    },
+    {
+      "step": 5,
+      "title": "Finish",
+      "text": "Strain again and adjust the taste with juice from about half a lemon."
+    },
+    {
+      "step": 6,
+      "title": "Bottle",
+      "text": "Transfer to clean bottles and refrigerate immediately, or try the current carbonation timing: about 6 hours at room temperature before refrigerating. Use bottles intended to hold carbonation for that option."
+    }
+  ],
+  "notes": [
+    "One batch is sized for a 1.5-liter fermentation jar, not a guaranteed 1.5 liters of finished kvass.",
+    "I use a 1.5-liter Bormioli Rocco Fido glass jar with the gasket removed during fermentation.",
+    "Measure the water with the full jar before steeping. The bread absorbs some, so after straining you should have the right amount, with about a finger of headspace.",
+    "Ideally organic raisins because pesticides, but it's not like you're avoiding them regardless. Rinse both handfuls before adding.",
+    "I reuse GT's kombucha bottles for storage.",
+    "The six-hour carbonation period is a trial timing, not a guarantee against excess pressure from continued fermentation.",
+    "Mostly working on repeatability at this point."
+  ],
+  "deviations": [],
+  "log": []
+}

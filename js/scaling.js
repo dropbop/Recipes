@@ -32,7 +32,7 @@ function initScaling(recipe) {
       <button class="multiplier-btn active" onclick="setMultiplier(1)">1\u00D7</button>
       <button class="multiplier-btn" onclick="setMultiplier(2)">2\u00D7</button>
     </div>
-    <span class="scaling-label">Servings:</span>
+    <span class="scaling-label">${recipe.servings.unit === 'batches' ? 'Batches' : 'Servings'}:</span>
     <div class="spin-button-container">
       <input type="text" class="spin-input" id="servings-input" value="${currentServings}" readonly>
       <div class="spin-buttons">
@@ -45,7 +45,9 @@ function initScaling(recipe) {
 }
 
 function setMultiplier(factor) {
-  currentServings = Math.max(1, Math.round(baseServings * factor));
+  currentServings = recipeData.servings.unit === 'batches'
+    ? baseServings * factor
+    : Math.max(1, Math.round(baseServings * factor));
   document.getElementById('servings-input').value = currentServings;
 
   // Update multiplier button states

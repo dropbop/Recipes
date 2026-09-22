@@ -83,6 +83,13 @@ const RECIPE_MANIFEST = [
     status: "dialed-in"
   },
   {
+    id: "kvass",
+    title: "Kvass",
+    desc: "Dark-toasted bread kvass with raisins and lemon",
+    tags: ["beverage", "fermented", "bread"],
+    status: "experimenting"
+  },
+  {
     id: "tsoureki",
     title: "Tsoureki",
     desc: "Mahlab and tonka braided bread trial",
