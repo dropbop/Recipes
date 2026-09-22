@@ -97,6 +97,13 @@ const RECIPE_MANIFEST = [
     status: "dialed-in"
   },
   {
+    id: "pressure-cooked-chicken-veg-stock",
+    title: "Pressure-Cooked Chicken & Veg Stock",
+    desc: "Collagen-rich stock with chicken feet, necks, and veg",
+    tags: ["chicken", "stock", "pressure-cooker", "meal-prep"],
+    status: "dialed-in"
+  },
+  {
     id: "kvass",
     title: "Kvass",
     desc: "Dark-toasted bread kvass with raisins and lemon",

@@ -1,0 +1,194 @@
+{
+  "id": "pressure-cooked-chicken-veg-stock",
+  "title": "Pressure-Cooked Chicken & Veg Stock",
+  "description": "Super collagen-rich chicken and vegetable stock made with feet and necks, aromatic vegetables, herbs, and warm spices. Delicious on its own or as a base for other cooking.",
+  "status": "dialed-in",
+  "tags": [
+    "chicken",
+    "stock",
+    "pressure-cooker",
+    "meal-prep"
+  ],
+  "source": "My own creation",
+  "servings": {
+    "base": 1,
+    "unit": "batches"
+  },
+  "ingredientGroups": [
+    {
+      "name": "Chicken & Water",
+      "items": [
+        {
+          "quantity": 2.5,
+          "quantityMax": null,
+          "unit": "lbs",
+          "item": "chicken feet and necks, or feet and wings",
+          "note": "approximate total weight",
+          "scalable": true
+        },
+        {
+          "quantity": null,
+          "quantityMax": null,
+          "unit": "",
+          "item": "water",
+          "note": "for blanching",
+          "scalable": false
+        },
+        {
+          "quantity": null,
+          "quantityMax": null,
+          "unit": "",
+          "item": "fresh water",
+          "note": "bring the loaded cooker to just shy of its pressure-cooking maximum fill line—4 quarts on my Instant Pot Pro",
+          "scalable": false
+        }
+      ]
+    },
+    {
+      "name": "Vegetables",
+      "items": [
+        {
+          "quantity": 2,
+          "quantityMax": null,
+          "unit": "stalks",
+          "item": "celery",
+          "note": "cut into 1-inch pieces—or substitute a fennel bulb",
+          "scalable": true
+        },
+        {
+          "quantity": 1,
+          "quantityMax": null,
+          "unit": "",
+          "item": "medium yellow onion",
+          "note": "French-cut/julienned—or substitute shallots or leeks",
+          "scalable": true
+        },
+        {
+          "quantity": 2,
+          "quantityMax": null,
+          "unit": "",
+          "item": "large carrots",
+          "note": "cores removed; cut into 1-inch pieces—or substitute parsnip",
+          "scalable": true
+        },
+        {
+          "quantity": 3,
+          "quantityMax": null,
+          "unit": "cloves",
+          "item": "garlic",
+          "note": "peeled and smashed",
+          "scalable": true
+        },
+        {
+          "quantity": 1,
+          "quantityMax": null,
+          "unit": "bunch",
+          "item": "parsley stems",
+          "note": "I just cut off the bottom half; easy to find something else to use the leaves in",
+          "scalable": true
+        },
+        {
+          "quantity": null,
+          "quantityMax": null,
+          "unit": "",
+          "item": "dried shiitake, porcini, or other mushrooms",
+          "note": "optional",
+          "scalable": false
+        }
+      ]
+    },
+    {
+      "name": "Seasoning",
+      "items": [
+        {
+          "quantity": 1,
+          "quantityMax": null,
+          "unit": "",
+          "item": "large bay leaf",
+          "note": null,
+          "scalable": false
+        },
+        {
+          "quantity": 15,
+          "quantityMax": null,
+          "unit": "",
+          "item": "peppercorns",
+          "note": null,
+          "scalable": true
+        },
+        {
+          "quantity": 2,
+          "quantityMax": null,
+          "unit": "",
+          "item": "allspice berries",
+          "note": null,
+          "scalable": true
+        },
+        {
+          "quantity": 1,
+          "quantityMax": null,
+          "unit": "sprig",
+          "item": "thyme",
+          "note": "or a pinch of dried thyme",
+          "scalable": false
+        },
+        {
+          "quantity": null,
+          "quantityMax": null,
+          "unit": "",
+          "item": "crushed red pepper flakes",
+          "note": "pinch",
+          "scalable": false
+        },
+        {
+          "quantity": 1,
+          "quantityMax": null,
+          "unit": "",
+          "item": "whole clove",
+          "note": null,
+          "scalable": true
+        },
+        {
+          "quantity": null,
+          "quantityMax": null,
+          "unit": "",
+          "item": "salt",
+          "note": "pinch",
+          "scalable": false
+        }
+      ]
+    }
+  ],
+  "directions": [
+    {
+      "step": 1,
+      "title": "Blanch",
+      "text": "Put the chicken parts in a pot and cover with cold tap water. Bring to a boil, then boil hard for 5 minutes. Drain and rinse the chicken parts with tap water. Discard the blanching water."
+    },
+    {
+      "step": 2,
+      "title": "Load the cooker",
+      "text": "Put the chicken, vegetables, and seasoning into the Instant Pot. Add fresh water until the contents sit just shy of the pressure-cooking maximum fill line—4 quarts on my model. That's the final fill level with everything in the pot, not 4 quarts of added water."
+    },
+    {
+      "step": 3,
+      "title": "Pressure cook",
+      "text": "Cook on high pressure for 90 minutes, then let the pressure release naturally."
+    },
+    {
+      "step": 4,
+      "title": "Strain and store",
+      "text": "Strain out the solids. This usually gives me about 3 quarts, enough for three quart-size mason jars. Cool rapidly in shallow containers or an ice-water bath, then transfer to clean jars for refrigerated storage. Refrigerate for 3–4 days, or freeze for longer storage."
+    }
+  ],
+  "notes": [
+    "One base batch yields about 96 fl oz / 3 quarts.",
+    "I tend to use necks and feet. Wings alone are fine if that's what you can find; flats and tips are better than drums.",
+    "I wouldn't suggest feet alone. Haven't established whether necks alone work well.",
+    "The 4-quart line is specific to my Instant Pot Pro. Follow your cooker's pressure-cooking fill limit. Scaling ingredients doesn't increase the cooker's capacity.",
+    "The 90 minutes is time at pressure; allow extra time for heating and natural pressure release.",
+    "<strong>Optional variations</strong><br>Clarified consommé—not tried yet. Try Chris Young's chicken-breast/myosin clarification technique: blend stock with raw chicken breast, then pressure cook again and strain. Follow the <a href=\"https://www.youtube.com/watch?v=3k20zFlbFfE&amp;t=713s\" target=\"_blank\" rel=\"noopener noreferrer\">linked demonstration starting at 11:53</a> for the complete method. Chicken quantity and second cooking time haven't been recorded here."
+  ],
+  "deviations": [],
+  "log": []
+}
