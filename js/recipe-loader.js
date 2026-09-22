@@ -5,8 +5,7 @@ document.addEventListener('DOMContentLoaded', init);
 
 let nutritionRecipe = null;
 let nutritionTouched = false;
-let nutritionBaseServings = 1;
-let nutritionBatchServings = 1;
+let nutritionBatchScale = 1;
 let nutritionContainerCount = 1;
 let nutritionIngredientView = 'basis';
 
@@ -16,7 +15,7 @@ const STATUS_LABELS = {
   'to-cook': '\u2610 TO COOK'
 };
 
-const RECIPE_DATA_VERSION = '20260809-tocook1';
+const RECIPE_DATA_VERSION = '20260922-nutrition1';
 
 async function init() {
   const recipeId = getRecipeIdFromUrl();
@@ -240,7 +239,11 @@ function renderRecipeTab(recipe) {
   container.innerHTML = html;
 }
 
-function renderNutrition(recipe, scaleFactor = 1, servingCount = null) {
+function renderNutrition(recipe, scaleFactor = 1) {
+  if (nutritionRecipe?.id !== recipe.id) {
+    nutritionTouched = false;
+    nutritionIngredientView = 'basis';
+  }
   nutritionRecipe = recipe;
 
   const container = document.getElementById('nutrition-content');
@@ -248,15 +251,13 @@ function renderNutrition(recipe, scaleFactor = 1, servingCount = null) {
 
   const batch = recipe.nutrition?.batch;
   if (!batch) {
-    container.innerHTML = '<div class="empty-log">No nutrition data yet.</div>';
+    container.innerHTML = renderNutritionNotes(recipe.nutrition);
     return;
   }
 
-  nutritionBaseServings = recipe.servings?.base || 1;
   if (!nutritionTouched) {
-    const syncedServings = servingCount || Math.max(1, Math.round(nutritionBaseServings * scaleFactor));
-    nutritionBatchServings = syncedServings;
-    nutritionContainerCount = syncedServings;
+    nutritionBatchScale = scaleFactor;
+    nutritionContainerCount = Math.max(1, (recipe.nutrition.servings?.base || recipe.servings?.base || 1) * scaleFactor);
   }
 
   renderNutritionContent();
@@ -269,8 +270,9 @@ function renderNutritionContent() {
   const batch = nutritionRecipe.nutrition?.batch;
   if (!container || !batch) return;
 
-  const batchScale = nutritionBatchServings / nutritionBaseServings;
-  const unit = nutritionRecipe.servings?.unit || 'servings';
+  const batchScale = nutritionBatchScale;
+  const unit = getNutritionUnit();
+  const reference = nutritionRecipe.nutrition.status === 'reference' ? 'Reference ' : '';
   const scaledBatch = {
     calories: (batch.calories || 0) * batchScale,
     protein: (batch.protein || 0) * batchScale,
@@ -288,9 +290,11 @@ function renderNutritionContent() {
   };
 
   container.innerHTML = `
+    <p class="nutrition-estimate-label">${reference ? '<strong>Reference only.</strong> Uses store-bought broth as a comparison; homemade values are unknown.' : '<strong>Estimated nutrition.</strong> Assumptions and sources are listed below.'}</p>
+    <p class="nutrition-summary">${formatNutritionScaleFactor(batchScale)}\u00D7 batch split into ${formatIngredientMacro(nutritionContainerCount)} ${nutritionContainerCount === 1 ? singularizeUnit(unit) : unit}</p>
     ${renderNutritionControls(batchScale, unit)}
     <div class="section">
-      <div class="section-title">\u25C6 Per ${titleCase(singularizeUnit(unit))}</div>
+      <div class="section-title">\u25C6 ${reference}Per ${titleCase(singularizeUnit(unit))}</div>
       <div class="nutrition-grid">
         ${renderNutritionStat('Calories', perServing.calories, 'cal')}
         ${renderNutritionStat('Protein', perServing.protein, 'g')}
@@ -300,7 +304,7 @@ function renderNutritionContent() {
       </div>
     </div>
     <div class="section">
-      <div class="section-title">\u25C6 Batch Total</div>
+      <div class="section-title">\u25C6 ${reference}Batch Total</div>
       <div class="nutrition-grid batch">
         ${renderNutritionStat('Calories', scaledBatch.calories, 'cal')}
         ${renderNutritionStat('Protein', scaledBatch.protein, 'g')}
@@ -309,8 +313,33 @@ function renderNutritionContent() {
         ${renderNutritionStat('Fiber', scaledBatch.fiber, 'g')}
       </div>
     </div>
+    ${renderNutritionNotes(nutritionRecipe.nutrition)}
     ${renderIngredientNutritionBreakdown(batchScale)}
+    ${renderNutritionSources()}
   `;
+}
+
+function getNutritionUnit() {
+  return nutritionRecipe.nutrition?.servings?.unit || nutritionRecipe.servings?.unit || 'portions';
+}
+
+function escapeNutritionText(value) {
+  return String(value).replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
+}
+
+function renderNutritionNotes(nutrition) {
+  const heading = !nutrition?.batch ? 'Nutrition not yet calculable' : nutrition.status === 'reference' ? 'Reference only' : 'Estimated nutrition';
+  const notes = nutrition?.notes?.length ? nutrition.notes : ['Ingredient amounts and a serving yield are needed for an estimate.'];
+  return `<div class="section nutrition-notes"><div class="section-title">\u25C6 ${heading}</div>
+    <ul>${notes.map(note => `<li>${escapeNutritionText(note)}</li>`).join('')}</ul></div>`;
+}
+
+function renderNutritionSources() {
+  const rows = nutritionRecipe.nutrition?.ingredients || [];
+  const links = rows.filter(row => /^https?:\/\//.test(row.source || '')).map(row =>
+    `<li>${escapeNutritionText(row.label)}: <a href="${escapeNutritionText(row.source)}" target="_blank" rel="noopener noreferrer">${escapeNutritionText(row.sourceLabel || 'Nutrition label / reference')}</a></li>`
+  );
+  return links.length ? `<details class="nutrition-sources"><summary>Nutrition sources</summary><ul>${links.join('')}</ul></details>` : '';
 }
 
 function renderNutritionControls(batchScale, unit) {
@@ -324,24 +353,25 @@ function renderNutritionControls(batchScale, unit) {
         ${renderNutritionMultiplierButton(2, batchScale, '2\u00D7')}
       </div>
       <div class="spin-button-container">
-        <input type="text" class="spin-input" id="nutrition-batch-input" value="${nutritionBatchServings}" readonly>
+        <input type="text" class="spin-input" id="nutrition-batch-input" aria-label="Nutrition batch multiplier" value="${formatNutritionScaleFactor(batchScale)}\u00D7" readonly>
         <div class="spin-buttons">
-          <button class="spin-btn" onclick="adjustNutritionBatchSize(1)">\u25B2</button>
-          <button class="spin-btn" onclick="adjustNutritionBatchSize(-1)">\u25BC</button>
+          <button class="spin-btn" aria-label="Increase nutrition batch by a quarter" onclick="adjustNutritionBatchSize(0.25)">\u25B2</button>
+          <button class="spin-btn" aria-label="Decrease nutrition batch by a quarter" onclick="adjustNutritionBatchSize(-0.25)">\u25BC</button>
         </div>
       </div>
     </div>
     <div class="nutrition-control-group">
       <span class="scaling-label">${titleCase(unitLabel)}:</span>
       <div class="spin-button-container">
-        <input type="text" class="spin-input" id="nutrition-containers-input" value="${nutritionContainerCount}" readonly>
+        <input type="text" class="spin-input" id="nutrition-containers-input" aria-label="Nutrition portion count" value="${formatIngredientMacro(nutritionContainerCount)}" readonly>
         <div class="spin-buttons">
-          <button class="spin-btn" onclick="adjustNutritionContainers(1)">\u25B2</button>
-          <button class="spin-btn" onclick="adjustNutritionContainers(-1)">\u25BC</button>
+          <button class="spin-btn" aria-label="Increase nutrition portions" onclick="adjustNutritionContainers(1)">\u25B2</button>
+          <button class="spin-btn" aria-label="Decrease nutrition portions" onclick="adjustNutritionContainers(-1)">\u25BC</button>
         </div>
       </div>
     </div>
-    <span class="scaling-info">Nutrition: ${formatNutritionScaleFactor(batchScale)}\u00D7 batch split into ${nutritionContainerCount} ${unitLabel}</span>
+    <button class="nutrition-view-btn" onclick="resetNutritionScale()">Use recipe scale</button>
+    <span class="scaling-info">These controls change nutrition only.</span>
   </div>`;
 }
 
@@ -351,25 +381,34 @@ function renderNutritionMultiplierButton(factor, activeFactor, label) {
 }
 
 function setNutritionBatchMultiplier(factor) {
+  if (!Number.isFinite(factor) || factor <= 0) return;
   nutritionTouched = true;
-  nutritionBatchServings = clampNutritionCount(Math.round(nutritionBaseServings * factor));
+  nutritionBatchScale = factor;
   renderNutritionContent();
 }
 
 function adjustNutritionBatchSize(delta) {
+  if (!Number.isFinite(delta)) return;
   nutritionTouched = true;
-  nutritionBatchServings = clampNutritionCount(nutritionBatchServings + delta);
+  nutritionBatchScale = Math.max(0.25, nutritionBatchScale + delta);
   renderNutritionContent();
 }
 
 function adjustNutritionContainers(delta) {
+  if (!Number.isFinite(delta)) return;
   nutritionTouched = true;
   nutritionContainerCount = clampNutritionCount(nutritionContainerCount + delta);
   renderNutritionContent();
 }
 
 function clampNutritionCount(value) {
-  return Math.max(1, Math.min(20, value));
+  return Math.max(1, value);
+}
+
+function resetNutritionScale() {
+  nutritionTouched = false;
+  const scale = typeof getRecipeScaleState === 'function' ? getRecipeScaleState().scaleFactor : 1;
+  renderNutrition(nutritionRecipe, scale || 1);
 }
 
 function setNutritionIngredientView(view) {
@@ -396,12 +435,17 @@ function renderIngredientNutritionBreakdown(batchScale) {
     return renderIngredientNutritionRow(row.label, values);
   }).join('');
 
-  return `<div class="section">
+  const viewLabel = nutritionIngredientView === 'basis' ? 'Reference amounts'
+    : nutritionIngredientView === 'batch' ? 'Whole batch'
+    : `Per ${singularizeUnit(getNutritionUnit())}`;
+
+  return `<div class="section nutrition-breakdown">
     <div class="section-title">\u25C6 Ingredient Breakdown</div>
+    <p class="nutrition-breakdown-caption">${viewLabel}</p>
     <div class="nutrition-view-controls">
       ${renderNutritionViewButton('basis', 'Basis')}
       ${renderNutritionViewButton('batch', 'Batch')}
-      ${renderNutritionViewButton('container', `Per ${titleCase(singularizeUnit(nutritionRecipe.servings?.unit || 'serving'))}`)}
+      ${renderNutritionViewButton('container', `Per ${titleCase(singularizeUnit(getNutritionUnit()))}`)}
     </div>
     <div class="nutrition-table-wrap">
       <table class="nutrition-table">
@@ -429,7 +473,7 @@ function renderNutritionViewButton(view, label) {
 
 function getIngredientNutritionValues(row, view, batchScale) {
   const basisAmount = row.basis?.amount || 1;
-  const recipeAmount = row.recipeQuantity?.amount || basisAmount;
+  const recipeAmount = row.recipeQuantity?.amount ?? basisAmount;
   const recipeUnit = row.recipeQuantity?.unit || row.basis?.unit || '';
   const amountFactor = recipeAmount / basisAmount;
   const batchFactor = amountFactor * batchScale;
@@ -486,7 +530,7 @@ function formatNutritionAmount(amount, unit) {
 }
 
 function formatIngredientMacro(value) {
-  if (!Number.isFinite(value)) return '0';
+  if (!Number.isFinite(value)) return '\u2014';
   if (Math.abs(value - Math.round(value)) < 0.05) return Math.round(value).toString();
   return value.toFixed(1).replace(/\.0$/, '');
 }
@@ -499,12 +543,13 @@ function renderNutritionStat(label, value, unit) {
 }
 
 function formatNutritionValue(value) {
-  if (!Number.isFinite(value)) return '0';
+  if (!Number.isFinite(value)) return '\u2014';
   return Math.round(value).toString();
 }
 
 function singularizeUnit(unit) {
   if (!unit) return 'serving';
+  if (unit === 'batches') return 'batch';
   return unit.endsWith('s') ? unit.slice(0, -1) : unit;
 }
 

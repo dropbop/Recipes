@@ -139,9 +139,16 @@ Split honestly. A 4-hour freeze is `passive: 240`, never active time. A 10-minut
 
 **servings**: `base` is the number this recipe makes at 1×. `unit` is usually "servings" but could be "portions", "bowls", "sandwiches", whatever's natural.
 
-**nutrition**: Optional. Use when batch-level nutrition is known. Store totals for the whole batch under `nutrition.batch`: `calories`, `protein`, `fat`, `carbs`, and `fiber`. The site calculates per-serving values from `servings.base`; the Nutrition tab also lets the reader independently adjust batch size and split the batch into a different number of servings or containers. Skip sodium unless the user explicitly wants it tracked.
+**nutrition**: Store totals for the whole batch under `nutrition.batch`: `calories`, `protein`, `fat`, `carbs`, and `fiber`. Skip sodium unless the user explicitly wants it tracked.
 
-For ingredient-level macro breakdowns, add standalone rows under `nutrition.ingredients`. Each row should include a display `label`, the full `recipeQuantity`, a flexible `basis`, and the macros for that basis. Keep `nutrition.batch` as the source of truth for the total; ingredient rows are for identifying major contributors and may have small rounding drift.
+- Set `nutrition.status` to `estimated` for ingredient-based estimates, `reference` for an explicitly labeled comparison product, or `unavailable` when finished-food nutrition cannot be calculated. An unavailable record has explanatory `nutrition.notes` and no `batch`, rather than invented zeros.
+- Add `nutrition.notes` explaining assumed weights, package sizes, included optional ingredients, and cooking losses. Estimates count the listed ingredients as eaten unless the notes say otherwise. Do not sum strained bones or fermented inputs as though they were the finished food.
+- Set `nutrition.servings` with a positive `base` and a natural `unit` such as `portions`, `slices`, or `cups`. This overrides the recipe yield for nutrition only, so 225 g dry beans does not become 225 servings. A volume-based portion assumes the stated final batch volume.
+- Nutrition initially follows the recipe scale. Its batch multiplier and portion count can then be changed independently; **Use recipe scale** restores synchronization. These controls do not change the ingredient list.
+
+For ingredient-level macro breakdowns, add standalone rows under `nutrition.ingredients`. Each row should include a display `label`, the full `recipeQuantity`, a flexible `basis`, and the macros for that basis. Normalize `recipeQuantity` and `basis` to the same unit before storing them: the renderer does not convert units. Include a `source` URL and optional `sourceLabel` identifying the product or USDA entry; these appear under Nutrition sources. Store all five macro values explicitly. Calculate `nutrition.batch` by summing the ingredient rows and rounding only the final totals to two decimal places.
+
+Run `node --test tests/nutrition.test.js` after changing nutrition or scaling. This checks every recipe's data, totals, manifest membership, and serving/batch calculations. Also check the changed tabs in the browser.
 
 ---
 

@@ -16,12 +16,22 @@
     "unit": "portions"
   },
   "nutrition": {
+    "status": "estimated",
+    "notes": [
+      "Estimate for the 2 lb boneless, skinless thigh version, split into 4 portions. Change the portion count to 5 for smaller meal-prep portions.",
+      "Uses FAGE 0% as the nonfat Greek yogurt reference, 50 g Parmesan, 2 tbsp avocado oil, and Roli Roti chicken bone broth at 45 calories / 11 g protein per cup. Homemade stock can differ.",
+      "Counts all cooking oil. Vegetable sizes are estimates; unmeasured Cajun seasoning, Tabasco, lemon, and optional extras are excluded."
+    ],
+    "servings": {
+      "base": 4,
+      "unit": "portions"
+    },
     "batch": {
-      "calories": 2554,
-      "protein": 275.9,
-      "fat": 80.3,
+      "calories": 2554.09,
+      "protein": 275.89,
+      "fat": 80.35,
       "carbs": 192.1,
-      "fiber": 29
+      "fiber": 29.0
     },
     "ingredients": [
       {

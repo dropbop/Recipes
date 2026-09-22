@@ -6,6 +6,13 @@
   "status": "to-cook",
   "tags": ["bread", "greek", "baking", "spiced"],
   "source": "Spice-cabinet planning conversation; base formula TBD",
+  "nutrition": {
+    "status": "unavailable",
+    "notes": [
+      "This is an unfinished To Cook plan. Flour, sugar, butter, milk, egg quantities, and loaf yield have not been set.",
+      "Nutrition can be calculated once the ingredient amounts and serving count are decided."
+    ]
+  },
   "ingredientGroups": [
     {
       "name": "Flavor Direction",

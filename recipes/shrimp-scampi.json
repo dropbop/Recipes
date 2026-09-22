@@ -15,6 +15,167 @@
     "base": 4,
     "unit": "servings"
   },
+  "nutrition": {
+    "status": "estimated",
+    "notes": [
+      "Assumes 8 oz dry pasta and 2 tbsp avocado oil for the unmeasured amounts, with 2 lb peeled raw shrimp, split into 4 servings.",
+      "Counts all 8 tbsp butter, cooking oil, sauce, and wine calories before cooking; wine evaporation and anything left in the pan reduce the amount eaten.",
+      "Assumes about 3 tbsp juice from the lemon. Unmeasured parsley, chile flakes, lemon zest, and optional serving extras are excluded."
+    ],
+    "servings": {
+      "base": 4,
+      "unit": "servings"
+    },
+    "batch": {
+      "calories": 2803.89,
+      "protein": 214.09,
+      "fat": 128.38,
+      "carbs": 180.75,
+      "fiber": 7.72
+    },
+    "ingredients": [
+      {
+        "label": "Peeled raw shrimp",
+        "recipeQuantity": {
+          "amount": 907.1847,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 85.0,
+          "protein": 20.1,
+          "fat": 0.51,
+          "carbs": 0.0,
+          "fiber": 0.0
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 15270: CRUSTACEANS,SHRIMP,RAW (NOT PREVIOUSLY FROZEN)"
+      },
+      {
+        "label": "Avocado / neutral oil",
+        "recipeQuantity": {
+          "amount": 28,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 884.0,
+          "protein": 0.0,
+          "fat": 100.0,
+          "carbs": 0.0,
+          "fiber": 0.0
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 04581: OIL,AVOCADO"
+      },
+      {
+        "label": "Butter",
+        "recipeQuantity": {
+          "amount": 113.6,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 717.0,
+          "protein": 0.85,
+          "fat": 81.11,
+          "carbs": 0.06,
+          "fiber": 0.0
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 01145: BUTTER,WITHOUT SALT"
+      },
+      {
+        "label": "Garlic",
+        "recipeQuantity": {
+          "amount": 15,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 149.0,
+          "protein": 6.36,
+          "fat": 0.5,
+          "carbs": 33.06,
+          "fiber": 2.1
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 11215: GARLIC,RAW"
+      },
+      {
+        "label": "Dry pasta",
+        "recipeQuantity": {
+          "amount": 226.7962,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 371.0,
+          "protein": 13.04,
+          "fat": 1.51,
+          "carbs": 74.67,
+          "fiber": 3.2
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 20120: PASTA,DRY,ENR"
+      },
+      {
+        "label": "White wine, before cooking",
+        "recipeQuantity": {
+          "amount": 117.6,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 82.0,
+          "protein": 0.07,
+          "fat": 0.0,
+          "carbs": 2.6,
+          "fiber": 0.0
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 14106: ALCOHOLIC BEV,WINE,TABLE,WHITE"
+      },
+      {
+        "label": "Lemon juice",
+        "recipeQuantity": {
+          "amount": 48,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 22.0,
+          "protein": 0.35,
+          "fat": 0.24,
+          "carbs": 6.9,
+          "fiber": 0.3
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 09152: LEMON JUICE,RAW"
+      }
+    ]
+  },
   "ingredientGroups": [
     {
       "name": "Shrimp",

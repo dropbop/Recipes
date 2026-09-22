@@ -14,6 +14,147 @@
     "base": 1,
     "unit": "loaf"
   },
+  "nutrition": {
+    "status": "estimated",
+    "notes": [
+      "Reference split: 12 equal slices per loaf. Weighing the finished loaf is needed for nutrition per gram.",
+      "Assumes 120 g flour per cup (330 g total), 50 g sugar per ¼ cup, a 7 g yeast packet, and one large egg. Counts all the tangzhong ingredients as used.",
+      "Includes the 4 tbsp dough butter plus an estimated 1 tbsp pan butter, and 1 tbsp extra milk for brushing. All are counted as eaten. Cheese and other optional variations are excluded."
+    ],
+    "servings": {
+      "base": 12,
+      "unit": "slices"
+    },
+    "batch": {
+      "calories": 2121.46,
+      "protein": 56.13,
+      "fat": 75.46,
+      "carbs": 303.12,
+      "fiber": 9.8
+    },
+    "ingredients": [
+      {
+        "label": "Bread flour",
+        "recipeQuantity": {
+          "amount": 330,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 361.0,
+          "protein": 11.98,
+          "fat": 1.66,
+          "carbs": 72.53,
+          "fiber": 2.4
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 20083: WHEAT FLR,WHITE,BREAD,ENR"
+      },
+      {
+        "label": "Whole milk, including brushing",
+        "recipeQuantity": {
+          "amount": 218.5833,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 61.0,
+          "protein": 3.15,
+          "fat": 3.25,
+          "carbs": 4.8,
+          "fiber": 0.0
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 01077: MILK,WHL,3.25% MILKFAT,W/ ADDED VITAMIN D"
+      },
+      {
+        "label": "Sugar",
+        "recipeQuantity": {
+          "amount": 50,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 387.0,
+          "protein": 0.0,
+          "fat": 0.0,
+          "carbs": 99.98,
+          "fiber": 0.0
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 19335: SUGARS,GRANULATED"
+      },
+      {
+        "label": "Active dry yeast",
+        "recipeQuantity": {
+          "amount": 7,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 325.0,
+          "protein": 40.44,
+          "fat": 7.61,
+          "carbs": 41.22,
+          "fiber": 26.9
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 18375: LEAVENING AGENTS,YEAST,BAKER'S,ACTIVE DRY"
+      },
+      {
+        "label": "Large egg",
+        "recipeQuantity": {
+          "amount": 50,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 143.0,
+          "protein": 12.56,
+          "fat": 9.51,
+          "carbs": 0.72,
+          "fiber": 0.0
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 01123: EGG,WHL,RAW,FRSH"
+      },
+      {
+        "label": "Butter",
+        "recipeQuantity": {
+          "amount": 71.0,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 717.0,
+          "protein": 0.85,
+          "fat": 81.11,
+          "carbs": 0.06,
+          "fiber": 0.0
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 01145: BUTTER,WITHOUT SALT"
+      }
+    ]
+  },
   "ingredientGroups": [
     {
       "name": "Tangzhong (Roux Starter)",

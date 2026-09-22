@@ -14,6 +14,127 @@
     "base": 4,
     "unit": "servings"
   },
+  "nutrition": {
+    "status": "estimated",
+    "notes": [
+      "Rough reference: assumes the 4–6 bone-in ribs weigh 3 lb total, yielding 2 lb raw edible meat and fat after bones are excluded. Rib size and fat content can change this estimate substantially.",
+      "Uses the midpoint of the tomato-paste range (1½ tbsp), the minimum 2 cups wine, and 4 servings. Counts all wine calories before cooking and all edible fat; evaporation and discarded fat will lower the amount eaten.",
+      "Excludes optional vegetables, small herb quantities, and serving suggestions such as polenta or mashed potatoes."
+    ],
+    "servings": {
+      "base": 4,
+      "unit": "servings"
+    },
+    "batch": {
+      "calories": 4027.73,
+      "protein": 135.71,
+      "fat": 329.58,
+      "carbs": 38.13,
+      "fiber": 6.76
+    },
+    "ingredients": [
+      {
+        "label": "Short rib meat and fat, raw edible weight",
+        "recipeQuantity": {
+          "amount": 907.1847,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 388.0,
+          "protein": 14.4,
+          "fat": 36.23,
+          "carbs": 0.0,
+          "fiber": 0.0
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 13147: BEEF,RIB,SHORTRIBS,LN&FAT,CHOIC,RAW"
+      },
+      {
+        "label": "Black pepper",
+        "recipeQuantity": {
+          "amount": 20.7,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 251.0,
+          "protein": 10.39,
+          "fat": 3.26,
+          "carbs": 63.95,
+          "fiber": 25.3
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 02030: PEPPER,BLACK"
+      },
+      {
+        "label": "Garlic",
+        "recipeQuantity": {
+          "amount": 24,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 149.0,
+          "protein": 6.36,
+          "fat": 0.5,
+          "carbs": 33.06,
+          "fiber": 2.1
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 11215: GARLIC,RAW"
+      },
+      {
+        "label": "Tomato paste",
+        "recipeQuantity": {
+          "amount": 24.75,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 82.0,
+          "protein": 4.32,
+          "fat": 0.47,
+          "carbs": 18.91,
+          "fiber": 4.1
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 11546: TOMATO PRODUCTS,CND,PASTE,WO/ SALT ADDED"
+      },
+      {
+        "label": "Red wine, before cooking",
+        "recipeQuantity": {
+          "amount": 470.4,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 85.0,
+          "protein": 0.07,
+          "fat": 0.0,
+          "carbs": 2.61,
+          "fiber": 0.0
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 14096: ALCOHOLIC BEV,WINE,TABLE,RED"
+      }
+    ]
+  },
   "ingredientGroups": [
     {
       "name": "Main Components",

@@ -14,6 +14,167 @@
     "base": 2,
     "unit": "lbs shrimp"
   },
+  "nutrition": {
+    "status": "estimated",
+    "notes": [
+      "Assumes the base batch uses 2 lb peeled raw shrimp, divided into 4 servings. The chicken variation is not included.",
+      "Counts all of the marinade as eaten, including the sauce reduced after grilling. Assumes 30 g ginger and full-fat Thai Kitchen coconut milk; its less-than-1 g protein label is modeled as 0.5 g per label serving.",
+      "Huy Fong sambal rounds macros to zero per teaspoon and is omitted, along with unmeasured garnishes and salt. Label rounding can hide small contributions across the ¼ cup used."
+    ],
+    "servings": {
+      "base": 4,
+      "unit": "servings"
+    },
+    "batch": {
+      "calories": 1454.6,
+      "protein": 185.26,
+      "fat": 59.97,
+      "carbs": 44.61,
+      "fiber": 1.16
+    },
+    "ingredients": [
+      {
+        "label": "Peeled raw shrimp",
+        "recipeQuantity": {
+          "amount": 907.1847,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 85.0,
+          "protein": 20.1,
+          "fat": 0.51,
+          "carbs": 0.0,
+          "fiber": 0.0
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 15270: CRUSTACEANS,SHRIMP,RAW (NOT PREVIOUSLY FROZEN)"
+      },
+      {
+        "label": "Ginger",
+        "recipeQuantity": {
+          "amount": 30,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 80.0,
+          "protein": 1.82,
+          "fat": 0.75,
+          "carbs": 17.77,
+          "fiber": 2.0
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 11216: GINGER ROOT,RAW"
+      },
+      {
+        "label": "Garlic",
+        "recipeQuantity": {
+          "amount": 15,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 149.0,
+          "protein": 6.36,
+          "fat": 0.5,
+          "carbs": 33.06,
+          "fiber": 2.1
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 11215: GARLIC,RAW"
+      },
+      {
+        "label": "Full-fat coconut milk",
+        "recipeQuantity": {
+          "amount": 0.75,
+          "unit": "cups"
+        },
+        "basis": {
+          "amount": 0.3333333333333333,
+          "unit": "cups"
+        },
+        "macros": {
+          "calories": 120,
+          "protein": 0.5,
+          "fat": 12,
+          "carbs": 1,
+          "fiber": 0
+        },
+        "source": "https://www.webstaurantstore.com/documents/nutrition/thai_kitchen_coconut_milk_874thai1370.pdf",
+        "sourceLabel": "Thai Kitchen nutrition label; <1 g protein represented as 0.5 g"
+      },
+      {
+        "label": "Lime juice",
+        "recipeQuantity": {
+          "amount": 60.5,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 25.0,
+          "protein": 0.42,
+          "fat": 0.07,
+          "carbs": 8.42,
+          "fiber": 0.4
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 09160: LIME JUICE,RAW"
+      },
+      {
+        "label": "Brown sugar",
+        "recipeQuantity": {
+          "amount": 27.5,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 380.0,
+          "protein": 0.12,
+          "fat": 0.0,
+          "carbs": 98.09,
+          "fiber": 0.0
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 19334: SUGARS,BROWN"
+      },
+      {
+        "label": "Avocado / neutral oil",
+        "recipeQuantity": {
+          "amount": 28,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 884.0,
+          "protein": 0.0,
+          "fat": 100.0,
+          "carbs": 0.0,
+          "fiber": 0.0
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 04581: OIL,AVOCADO"
+      }
+    ]
+  },
   "ingredientGroups": [
     {
       "name": "Marinade",

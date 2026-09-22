@@ -9,6 +9,146 @@
     "base": 4,
     "unit": "servings"
   },
+  "nutrition": {
+    "status": "estimated",
+    "notes": [
+      "Estimate for the original recipe, divided into 4 servings. Assumes a 100 g small onion, 3 g per garlic clove, and 4 g per anchovy fillet.",
+      "Counts all 5 tbsp oil even though some may stay in the pan. Optional lemon wedges and salt are excluded."
+    ],
+    "servings": {
+      "base": 4,
+      "unit": "servings"
+    },
+    "batch": {
+      "calories": 970.33,
+      "protein": 31.72,
+      "fat": 78.99,
+      "carbs": 44.34,
+      "fiber": 13.75
+    },
+    "ingredients": [
+      {
+        "label": "Broccoli",
+        "recipeQuantity": {
+          "amount": 453.5924,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 34.0,
+          "protein": 2.82,
+          "fat": 0.37,
+          "carbs": 6.64,
+          "fiber": 2.6
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 11090: BROCCOLI,RAW"
+      },
+      {
+        "label": "Olive oil",
+        "recipeQuantity": {
+          "amount": 67.5,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 884.0,
+          "protein": 0.0,
+          "fat": 100.0,
+          "carbs": 0.0,
+          "fiber": 0.0
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 04053: OIL,OLIVE,SALAD OR COOKING"
+      },
+      {
+        "label": "Onion",
+        "recipeQuantity": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 40.0,
+          "protein": 1.1,
+          "fat": 0.1,
+          "carbs": 9.34,
+          "fiber": 1.7
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 11282: ONIONS,RAW"
+      },
+      {
+        "label": "Garlic",
+        "recipeQuantity": {
+          "amount": 12,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 149.0,
+          "protein": 6.36,
+          "fat": 0.5,
+          "carbs": 33.06,
+          "fiber": 2.1
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 11215: GARLIC,RAW"
+      },
+      {
+        "label": "Oil-packed anchovies, drained",
+        "recipeQuantity": {
+          "amount": 24,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 210.0,
+          "protein": 28.89,
+          "fat": 9.71,
+          "carbs": 0.0,
+          "fiber": 0.0
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 15002: ANCHOVY,EUROPEAN,CND IN OIL,DRND SOL"
+      },
+      {
+        "label": "Parmesan",
+        "recipeQuantity": {
+          "amount": 28.3495,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 392.0,
+          "protein": 35.75,
+          "fat": 25.83,
+          "carbs": 3.22,
+          "fiber": 0.0
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 01033: CHEESE,PARMESAN,HARD"
+      }
+    ]
+  },
   "ingredientGroups": [
     {
       "name": "Broccoli & Aromatics",

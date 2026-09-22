@@ -14,6 +14,47 @@
     "base": 1,
     "unit": "batches"
   },
+  "nutrition": {
+    "status": "reference",
+    "notes": [
+      "Reference only: these are Roli Roti chicken bone broth label values applied to a 96 fl oz batch (12 cups), not measured nutrition for this homemade stock. The default split is 12 portions of 1 cup each.",
+      "The actual calories and protein depend on the chicken parts, fat removal, extraction, and final volume. Strained bones, meat, and vegetables cannot be counted as if they were eaten.",
+      "This is the same store-bought reference used for the Cajun chicken pasta. No separate estimate is available for the untested clarified consommé variation."
+    ],
+    "servings": {
+      "base": 12,
+      "unit": "portions"
+    },
+    "batch": {
+      "calories": 540.0,
+      "protein": 132.0,
+      "fat": 0.0,
+      "carbs": 0.0,
+      "fiber": 0.0
+    },
+    "ingredients": [
+      {
+        "label": "Roli Roti chicken bone broth",
+        "recipeQuantity": {
+          "amount": 12,
+          "unit": "cups"
+        },
+        "basis": {
+          "amount": 1,
+          "unit": "cups"
+        },
+        "macros": {
+          "calories": 45,
+          "protein": 11,
+          "fat": 0,
+          "carbs": 0,
+          "fiber": 0
+        },
+        "source": "https://www.heb.com/product-detail/roli-roti-butcher-s-organic-chicken-bone-broth/2176373",
+        "sourceLabel": "Roli Roti label at H-E-B"
+      }
+    ]
+  },
   "ingredientGroups": [
     {
       "name": "Chicken & Water",

@@ -6,6 +6,13 @@
   "status": "to-cook",
   "tags": ["lamb", "uyghur", "grilling", "skewers", "cookout"],
   "source": "Coworker BBQ menu brainstorm; quantities TBD",
+  "nutrition": {
+    "status": "unavailable",
+    "notes": [
+      "This is an unfinished To Cook plan. The weights and ratio of lamb shoulder to lamb fat, plus the serving count, have not been set.",
+      "Those choices determine most of the calories, fat, and protein. Nutrition can be calculated once they are decided."
+    ]
+  },
   "ingredientGroups": [
     {
       "name": "Lamb",

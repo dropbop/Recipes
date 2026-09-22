@@ -8,6 +8,14 @@
     "base": 1,
     "unit": "batches"
   },
+  "nutrition": {
+    "status": "unavailable",
+    "notes": [
+      "Finished-drink nutrition is not reliably calculable from this recipe. Bread and fruit are strained out, and fermentation changes the remaining sugar and alcohol.",
+      "The base batch starts with 75 g added sugar, plus bread and raisins. This is an input amount, not the sugar remaining in the bottled kvass.",
+      "A useful finished-drink estimate would need measured final volume and residual sugar/alcohol. No zero-calorie or zero-carb claim is implied."
+    ]
+  },
   "ingredientGroups": [
     {
       "name": "Steep",

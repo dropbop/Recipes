@@ -14,6 +14,67 @@
     "base": 225,
     "unit": "g beans"
   },
+  "nutrition": {
+    "status": "estimated",
+    "notes": [
+      "Reference split: 4 portions of the batch made from 225 g dry beans. Nutrition is based on dry beans, not 225 g cooked beans. Water changes the cooked weight but contributes no calories.",
+      "Uses USDA generic dry white beans as a reference for Rancho Gordo Alubia Blanca, plus 4½ garlic cloves (the midpoint). Bay leaf, salt, and unmeasured pepper are excluded.",
+      "Assumes the beans and cooking broth are eaten. Discarded broth may carry away some nutrients."
+    ],
+    "servings": {
+      "base": 4,
+      "unit": "portions"
+    },
+    "batch": {
+      "calories": 769.37,
+      "protein": 53.42,
+      "fat": 1.98,
+      "carbs": 140.07,
+      "fiber": 34.48
+    },
+    "ingredients": [
+      {
+        "label": "Dry white beans",
+        "recipeQuantity": {
+          "amount": 225,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 333.0,
+          "protein": 23.36,
+          "fat": 0.85,
+          "carbs": 60.27,
+          "fiber": 15.2
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 16049: BEANS,WHITE,MATURE SEEDS,RAW"
+      },
+      {
+        "label": "Garlic",
+        "recipeQuantity": {
+          "amount": 13.5,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 149.0,
+          "protein": 6.36,
+          "fat": 0.5,
+          "carbs": 33.06,
+          "fiber": 2.1
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 11215: GARLIC,RAW"
+      }
+    ]
+  },
   "ingredientGroups": [
     {
       "name": "Main Components",

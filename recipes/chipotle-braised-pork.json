@@ -13,6 +13,187 @@
     "base": 4.5,
     "unit": "lbs pork"
   },
+  "nutrition": {
+    "status": "estimated",
+    "notes": [
+      "Reference split: 8 portions from the 4½ lb batch. Assumes 4½ lb raw edible pork, with bones excluded, using generic shoulder meat and fat.",
+      "Unmeasured amounts are estimated as one 7 oz can chipotles, 1 cup chicken bone broth, 1 tbsp packed brown sugar, and juice from one lime (about 1 fl oz).",
+      "Counts all edible pork fat and braising liquid. Discarded fat or sauce reduces what you eat. Excludes unmeasured dry spices, cocoa, lime zest, and side dishes."
+    ],
+    "servings": {
+      "base": 8,
+      "unit": "portions"
+    },
+    "batch": {
+      "calories": 5185.18,
+      "protein": 372.02,
+      "fat": 373.62,
+      "carbs": 60.1,
+      "fiber": 16.37
+    },
+    "ingredients": [
+      {
+        "label": "Pork shoulder, raw edible meat and fat",
+        "recipeQuantity": {
+          "amount": 2041.1657,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 236.0,
+          "protein": 17.18,
+          "fat": 17.99,
+          "carbs": 0.0,
+          "fiber": 0.0
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 10070: PORK,FRSH,SHLDR,WHL,LN&FAT,RAW"
+      },
+      {
+        "label": "Onion",
+        "recipeQuantity": {
+          "amount": 148,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 40.0,
+          "protein": 1.1,
+          "fat": 0.1,
+          "carbs": 9.34,
+          "fiber": 1.7
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 11282: ONIONS,RAW"
+      },
+      {
+        "label": "Garlic",
+        "recipeQuantity": {
+          "amount": 18,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 149.0,
+          "protein": 6.36,
+          "fat": 0.5,
+          "carbs": 33.06,
+          "fiber": 2.1
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 11215: GARLIC,RAW"
+      },
+      {
+        "label": "Goya chipotles in adobo (one 7 oz can)",
+        "recipeQuantity": {
+          "amount": 6,
+          "unit": "label servings"
+        },
+        "basis": {
+          "amount": 1,
+          "unit": "label servings"
+        },
+        "macros": {
+          "calories": 25,
+          "protein": 1,
+          "fat": 1,
+          "carbs": 3,
+          "fiber": 2
+        },
+        "source": "https://www.heb.com/product-detail/goya-chipotle-peppers-in-adobo-sauce/128984",
+        "sourceLabel": "Goya label: 6 servings per can"
+      },
+      {
+        "label": "Tomato paste",
+        "recipeQuantity": {
+          "amount": 33,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 82.0,
+          "protein": 4.32,
+          "fat": 0.47,
+          "carbs": 18.91,
+          "fiber": 4.1
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 11546: TOMATO PRODUCTS,CND,PASTE,WO/ SALT ADDED"
+      },
+      {
+        "label": "Roli Roti chicken bone broth",
+        "recipeQuantity": {
+          "amount": 1,
+          "unit": "cups"
+        },
+        "basis": {
+          "amount": 1,
+          "unit": "cups"
+        },
+        "macros": {
+          "calories": 45,
+          "protein": 11,
+          "fat": 0,
+          "carbs": 0,
+          "fiber": 0
+        },
+        "source": "https://www.heb.com/product-detail/roli-roti-butcher-s-organic-chicken-bone-broth/2176373",
+        "sourceLabel": "Roli Roti label at H-E-B"
+      },
+      {
+        "label": "Brown sugar",
+        "recipeQuantity": {
+          "amount": 13.75,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 380.0,
+          "protein": 0.12,
+          "fat": 0.0,
+          "carbs": 98.09,
+          "fiber": 0.0
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 19334: SUGARS,BROWN"
+      },
+      {
+        "label": "Lime juice",
+        "recipeQuantity": {
+          "amount": 30.8,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 25.0,
+          "protein": 0.42,
+          "fat": 0.07,
+          "carbs": 8.42,
+          "fiber": 0.4
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 09160: LIME JUICE,RAW"
+      }
+    ]
+  },
   "ingredientGroups": [
     {
       "name": "Pork",

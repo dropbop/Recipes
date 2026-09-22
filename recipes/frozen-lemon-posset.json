@@ -14,6 +14,86 @@
     "base": 4,
     "unit": "servings"
   },
+  "nutrition": {
+    "status": "estimated",
+    "notes": [
+      "Assumes a full US pint of heavy cream (about 476 g) and 115 ml lemon juice, split into 4 portions. Uses generic heavy cream at about 36% fat.",
+      "Strained lemon zest and salt are excluded. Different cream fat percentages will change the result."
+    ],
+    "servings": {
+      "base": 4,
+      "unit": "servings"
+    },
+    "batch": {
+      "calories": 2186.29,
+      "protein": 13.93,
+      "fat": 172.03,
+      "carbs": 161.2,
+      "fiber": 0.36
+    },
+    "ingredients": [
+      {
+        "label": "Heavy cream",
+        "recipeQuantity": {
+          "amount": 476,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 340.0,
+          "protein": 2.84,
+          "fat": 36.08,
+          "carbs": 2.74,
+          "fiber": 0.0
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 01053: CREAM,FLUID,HVY WHIPPING"
+      },
+      {
+        "label": "Sugar",
+        "recipeQuantity": {
+          "amount": 140,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 387.0,
+          "protein": 0.0,
+          "fat": 0.0,
+          "carbs": 99.98,
+          "fiber": 0.0
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 19335: SUGARS,GRANULATED"
+      },
+      {
+        "label": "Lemon juice",
+        "recipeQuantity": {
+          "amount": 118.6027,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 22.0,
+          "protein": 0.35,
+          "fat": 0.24,
+          "carbs": 6.9,
+          "fiber": 0.3
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 09152: LEMON JUICE,RAW"
+      }
+    ]
+  },
   "ingredientGroups": [
     {
       "name": "Posset",

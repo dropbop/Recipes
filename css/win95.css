@@ -855,6 +855,29 @@ hr.win-hr {
     }
 }
 
+.nutrition-notes ul,
+.nutrition-sources ul {
+  padding-left: 20px;
+}
+
+.nutrition-notes li,
+.nutrition-sources li {
+  margin-bottom: 8px;
+}
+
+.nutrition-sources {
+  overflow-wrap: anywhere;
+  margin-top: 16px;
+}
+
+.nutrition-sources summary {
+  cursor: pointer;
+}
+
+.nutrition-summary {
+  font-weight: bold;
+}
+
 /* === Print Styles === */
 @media print {
     body {
@@ -908,4 +931,30 @@ hr.win-hr {
     .section {
         break-inside: avoid;
     }
+
+  .nutrition-controls,
+  .nutrition-view-controls {
+    display: none !important;
+  }
+
+  .nutrition-breakdown {
+    break-inside: auto;
+  }
+
+  .nutrition-table-wrap {
+    overflow: visible;
+  }
+
+  .nutrition-table {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .nutrition-table tr {
+    break-inside: avoid;
+  }
+
+  .nutrition-sources > ul {
+    display: block;
+  }
 }

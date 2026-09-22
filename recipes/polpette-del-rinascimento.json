@@ -14,6 +14,348 @@
     "base": 6,
     "unit": "servings"
   },
+  "nutrition": {
+    "status": "estimated",
+    "notes": [
+      "Estimate for 6 servings using generic raw ground pork (about 21% fat) and ground chicken (about 8% fat). Leaner or fattier meat changes the result.",
+      "Assumes 54 g dry breadcrumbs, whole milk, 40 g freshly grated Parmesan, 60 g parsley, 50 g shallots, and 3 g per garlic clove.",
+      "Unmeasured sauce amounts use 2 tbsp olive oil total, one 8 oz can tomato sauce, 1 tbsp capers, and 1 tsp honey. One orange supplies about ¼ cup juice and 1 tbsp zest.",
+      "Counts all cooking fat and sauce; small amounts of savory and spice blend are excluded."
+    ],
+    "servings": {
+      "base": 6,
+      "unit": "servings"
+    },
+    "batch": {
+      "calories": 2803.48,
+      "protein": 195.46,
+      "fat": 183.59,
+      "carbs": 92.92,
+      "fiber": 11.7
+    },
+    "ingredients": [
+      {
+        "label": "Ground pork, raw",
+        "recipeQuantity": {
+          "amount": 453.5924,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 263.0,
+          "protein": 16.88,
+          "fat": 21.19,
+          "carbs": 0.0,
+          "fiber": 0.0
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 10219: PORK,FRESH,GROUND,RAW"
+      },
+      {
+        "label": "Ground chicken, raw",
+        "recipeQuantity": {
+          "amount": 453.5924,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 143.0,
+          "protein": 17.44,
+          "fat": 8.1,
+          "carbs": 0.04,
+          "fiber": 0.0
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 05332: CHICKEN,GROUND,RAW"
+      },
+      {
+        "label": "Large egg",
+        "recipeQuantity": {
+          "amount": 50,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 143.0,
+          "protein": 12.56,
+          "fat": 9.51,
+          "carbs": 0.72,
+          "fiber": 0.0
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 01123: EGG,WHL,RAW,FRSH"
+      },
+      {
+        "label": "Dry breadcrumbs",
+        "recipeQuantity": {
+          "amount": 54,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 395.0,
+          "protein": 13.35,
+          "fat": 5.3,
+          "carbs": 71.98,
+          "fiber": 4.5
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 18079: BREAD CRUMBS,DRY,GRATED,PLN"
+      },
+      {
+        "label": "Whole milk",
+        "recipeQuantity": {
+          "amount": 122,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 61.0,
+          "protein": 3.15,
+          "fat": 3.25,
+          "carbs": 4.8,
+          "fiber": 0.0
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 01077: MILK,WHL,3.25% MILKFAT,W/ ADDED VITAMIN D"
+      },
+      {
+        "label": "Parsley",
+        "recipeQuantity": {
+          "amount": 60,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 36.0,
+          "protein": 2.97,
+          "fat": 0.79,
+          "carbs": 6.33,
+          "fiber": 3.3
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 11297: PARSLEY,FRSH"
+      },
+      {
+        "label": "Garlic",
+        "recipeQuantity": {
+          "amount": 21,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 149.0,
+          "protein": 6.36,
+          "fat": 0.5,
+          "carbs": 33.06,
+          "fiber": 2.1
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 11215: GARLIC,RAW"
+      },
+      {
+        "label": "Shallots",
+        "recipeQuantity": {
+          "amount": 50,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 72.0,
+          "protein": 2.5,
+          "fat": 0.1,
+          "carbs": 16.8,
+          "fiber": 3.2
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 11677: SHALLOTS,RAW"
+      },
+      {
+        "label": "Parmesan",
+        "recipeQuantity": {
+          "amount": 40,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 392.0,
+          "protein": 35.75,
+          "fat": 25.83,
+          "carbs": 3.22,
+          "fiber": 0.0
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 01033: CHEESE,PARMESAN,HARD"
+      },
+      {
+        "label": "Fennel seed",
+        "recipeQuantity": {
+          "amount": 2,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 345.0,
+          "protein": 15.8,
+          "fat": 14.87,
+          "carbs": 52.29,
+          "fiber": 39.8
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 02018: FENNEL SEED"
+      },
+      {
+        "label": "Orange juice",
+        "recipeQuantity": {
+          "amount": 62,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 45.0,
+          "protein": 0.7,
+          "fat": 0.2,
+          "carbs": 10.4,
+          "fiber": 0.2
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 09206: ORANGE JUICE,RAW"
+      },
+      {
+        "label": "Orange zest",
+        "recipeQuantity": {
+          "amount": 6,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 97.0,
+          "protein": 1.5,
+          "fat": 0.2,
+          "carbs": 25.0,
+          "fiber": 10.6
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 09216: ORANGE PEEL,RAW"
+      },
+      {
+        "label": "Olive oil",
+        "recipeQuantity": {
+          "amount": 27.0,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 884.0,
+          "protein": 0.0,
+          "fat": 100.0,
+          "carbs": 0.0,
+          "fiber": 0.0
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 04053: OIL,OLIVE,SALAD OR COOKING"
+      },
+      {
+        "label": "Tomato sauce",
+        "recipeQuantity": {
+          "amount": 226.7962,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 24.0,
+          "protein": 1.2,
+          "fat": 0.3,
+          "carbs": 5.31,
+          "fiber": 1.5
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 11549: TOMATO PRODUCTS,CND,SAU"
+      },
+      {
+        "label": "Capers",
+        "recipeQuantity": {
+          "amount": 8.6,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 23.0,
+          "protein": 2.36,
+          "fat": 0.86,
+          "carbs": 4.89,
+          "fiber": 3.2
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 02054: CAPERS,CANNED"
+      },
+      {
+        "label": "Honey",
+        "recipeQuantity": {
+          "amount": 7,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 304.0,
+          "protein": 0.3,
+          "fat": 0.0,
+          "carbs": 82.4,
+          "fiber": 0.2
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 19296: HONEY"
+      }
+    ]
+  },
   "ingredientGroups": [
     {
       "name": "Panade",
