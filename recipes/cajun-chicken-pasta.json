@@ -1,0 +1,383 @@
+{
+  "id": "cajun-chicken-pasta",
+  "title": "Cajun Chicken Pasta",
+  "description": "Spicy, tangy chicken thigh pasta with the holy trinity, a proper fond, and an off-heat Greek yogurt–Parmesan sauce. High-protein meal prep.",
+  "status": "dialed-in",
+  "tags": [
+    "chicken",
+    "pasta",
+    "cajun",
+    "meal-prep",
+    "high-protein"
+  ],
+  "source": "My own creation",
+  "servings": {
+    "base": 4,
+    "unit": "portions"
+  },
+  "nutrition": {
+    "batch": {
+      "calories": 2554,
+      "protein": 275.9,
+      "fat": 80.3,
+      "carbs": 192.1,
+      "fiber": 29
+    },
+    "ingredients": [
+      {
+        "label": "Chicken thighs",
+        "recipeQuantity": {
+          "amount": 32,
+          "unit": "oz"
+        },
+        "basis": {
+          "amount": 4,
+          "unit": "oz"
+        },
+        "macros": {
+          "calories": 130,
+          "protein": 22,
+          "fat": 4.5,
+          "carbs": 0,
+          "fiber": 0
+        },
+        "source": "https://www.heb.com/product-detail/h-e-b-natural-boneless-skinless-chicken-thighs/790544"
+      },
+      {
+        "label": "Barilla Protein+ penne",
+        "recipeQuantity": {
+          "amount": 8,
+          "unit": "oz dry"
+        },
+        "basis": {
+          "amount": 2,
+          "unit": "oz dry"
+        },
+        "macros": {
+          "calories": 190,
+          "protein": 10,
+          "fat": 1,
+          "carbs": 38,
+          "fiber": 5
+        },
+        "source": "https://www.target.com/p/-/A-13156217"
+      },
+      {
+        "label": "Nonfat Greek yogurt",
+        "recipeQuantity": {
+          "amount": 283.495,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 170,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 90,
+          "protein": 18,
+          "fat": 0,
+          "carbs": 5,
+          "fiber": 0
+        },
+        "source": "https://usa.fage/products/yogurt/fage-total-0"
+      },
+      {
+        "label": "Avocado oil",
+        "recipeQuantity": {
+          "amount": 2,
+          "unit": "tbsp"
+        },
+        "basis": {
+          "amount": 1,
+          "unit": "tbsp"
+        },
+        "macros": {
+          "calories": 120,
+          "protein": 0,
+          "fat": 14,
+          "carbs": 0,
+          "fiber": 0
+        },
+        "source": "https://www.heb.com/product-detail/h-e-b-avocado-oil-texas-size-pack/3677516"
+      },
+      {
+        "label": "Roli Roti chicken bone broth",
+        "recipeQuantity": {
+          "amount": 1,
+          "unit": "cup"
+        },
+        "basis": {
+          "amount": 1,
+          "unit": "cup"
+        },
+        "macros": {
+          "calories": 45,
+          "protein": 11,
+          "fat": 0,
+          "carbs": 0,
+          "fiber": 0
+        },
+        "source": "https://www.heb.com/product-detail/roli-roti-butcher-s-organic-chicken-bone-broth/2176373"
+      },
+      {
+        "label": "Parmesan",
+        "recipeQuantity": {
+          "amount": 50,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 28.3495,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 110,
+          "protein": 9,
+          "fat": 7,
+          "carbs": 1,
+          "fiber": 0
+        },
+        "source": "https://www.safeway.com/shop/pd/belgioioso-parmesan-cheese-wedge-specialty-hard-cheese-8-oz/960039600"
+      },
+      {
+        "label": "Bell peppers",
+        "recipeQuantity": {
+          "amount": 296,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 148,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 25,
+          "protein": 1,
+          "fat": 0,
+          "carbs": 6,
+          "fiber": 2
+        },
+        "source": "https://www.fda.gov/food/nutrition-food-labeling-and-critical-foods/nutrition-information-raw-vegetables"
+      },
+      {
+        "label": "Celery",
+        "recipeQuantity": {
+          "amount": 110,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 110,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 15,
+          "protein": 0,
+          "fat": 0,
+          "carbs": 4,
+          "fiber": 2
+        },
+        "source": "https://www.fda.gov/food/nutrition-food-labeling-and-critical-foods/nutrition-information-raw-vegetables"
+      },
+      {
+        "label": "Yellow onion",
+        "recipeQuantity": {
+          "amount": 148,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 148,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 45,
+          "protein": 1,
+          "fat": 0,
+          "carbs": 11,
+          "fiber": 3
+        },
+        "source": "https://www.fda.gov/food/nutrition-food-labeling-and-critical-foods/nutrition-information-raw-vegetables"
+      },
+      {
+        "label": "Garlic",
+        "recipeQuantity": {
+          "amount": 3,
+          "unit": "cloves"
+        },
+        "basis": {
+          "amount": 1,
+          "unit": "cloves"
+        },
+        "macros": {
+          "calories": 5,
+          "protein": 0,
+          "fat": 0,
+          "carbs": 1,
+          "fiber": 0
+        },
+        "source": "https://www.heb.com/product-detail/h-e-b-fresh-peeled-garlic-cloves/593989"
+      }
+    ]
+  },
+  "ingredientGroups": [
+    {
+      "name": "Chicken & Pasta",
+      "items": [
+        {
+          "quantity": 0.5,
+          "quantityMax": null,
+          "unit": "lbs",
+          "item": "Barilla Protein+ penne",
+          "note": "dry weight",
+          "scalable": true
+        },
+        {
+          "quantity": 2,
+          "quantityMax": null,
+          "unit": "lbs",
+          "item": "boneless skinless chicken thighs",
+          "note": "raw weight; cut into 2-inch chunks",
+          "scalable": true
+        },
+        {
+          "quantity": 2,
+          "quantityMax": null,
+          "unit": "tbsp",
+          "item": "avocado oil or another neutral oil",
+          "note": "divided between batches",
+          "scalable": true
+        },
+        {
+          "quantity": null,
+          "quantityMax": null,
+          "unit": "",
+          "item": "Tony's seasoning",
+          "note": "to taste—or a blend of salt, black pepper, smoked paprika, garlic powder, onion powder, cayenne, oregano, and thyme",
+          "scalable": false
+        },
+        {
+          "quantity": null,
+          "quantityMax": null,
+          "unit": "",
+          "item": "salt",
+          "note": "for the pasta water",
+          "scalable": false
+        }
+      ]
+    },
+    {
+      "name": "Vegetables & Stock",
+      "items": [
+        {
+          "quantity": 1,
+          "quantityMax": null,
+          "unit": "cups",
+          "item": "chicken stock or bone broth",
+          "note": "if using water instead, use only enough to deglaze",
+          "scalable": true
+        },
+        {
+          "quantity": 2,
+          "quantityMax": null,
+          "unit": "",
+          "item": "bell peppers",
+          "note": "small dice",
+          "scalable": true
+        },
+        {
+          "quantity": 2,
+          "quantityMax": null,
+          "unit": "stalks",
+          "item": "celery",
+          "note": "small dice",
+          "scalable": true
+        },
+        {
+          "quantity": 1,
+          "quantityMax": null,
+          "unit": "",
+          "item": "medium yellow onion",
+          "note": "medium dice",
+          "scalable": true
+        },
+        {
+          "quantity": 3,
+          "quantityMax": null,
+          "unit": "cloves",
+          "item": "garlic",
+          "note": "about this much; minced",
+          "scalable": true
+        }
+      ]
+    },
+    {
+      "name": "Sauce",
+      "items": [
+        {
+          "quantity": 10,
+          "quantityMax": null,
+          "unit": "oz",
+          "item": "nonfat Greek yogurt",
+          "note": null,
+          "scalable": true
+        },
+        {
+          "quantity": 50,
+          "quantityMax": null,
+          "unit": "g",
+          "item": "Parmesan",
+          "note": "freshly grated; an approximate amount—I normally don't measure",
+          "scalable": true
+        },
+        {
+          "quantity": null,
+          "quantityMax": null,
+          "unit": "",
+          "item": "Tabasco or lemon juice",
+          "note": "to taste",
+          "scalable": false
+        }
+      ]
+    }
+  ],
+  "directions": [
+    {
+      "step": 1,
+      "title": "Pasta",
+      "text": "Boil the penne in salted water until al dente, erring slightly underdone. It'll absorb some sauce and soften in the fridge. Drain."
+    },
+    {
+      "step": 2,
+      "title": "Chicken",
+      "text": "Season the chicken. Get a Dutch oven or large pot hot with some of the oil and cook the chicken hard, in batches so you don't crowd it. We're looking for fond on the bottom of the pot—the pot matters more than getting every piece beautifully browned. Cook the chicken through, then set aside. I time it so the pasta finishes around here and they can hang out together. Saves a bowl."
+    },
+    {
+      "step": 3,
+      "title": "Deglaze",
+      "text": "Add the stock and scrape up the fond. Reduce to almost dry, concentrating the stock into the base. If you're using water instead, use only enough to deglaze."
+    },
+    {
+      "step": 4,
+      "title": "Vegetables",
+      "text": "Add the bell peppers, celery, and onion. Season with your Cajun blend and cook for about 10 minutes, until softened. Add the garlic for the last minute or two."
+    },
+    {
+      "step": 5,
+      "title": "Sauce",
+      "text": "Take the pot off the heat and mix in the chicken and pasta. Let it cool for a minute—you don't want it ripping hot. Add the yogurt and Parmesan and mix. Off heat, no more heat."
+    },
+    {
+      "step": 6,
+      "title": "Finish",
+      "text": "Adjust with Tabasco or lemon juice. The yogurt already brings plenty of tang, but I feel like you have to. Divide into 4–5 portions."
+    }
+  ],
+  "notes": [
+    "I make my own stock from chicken feet and necks.",
+    "My approved store-bought alternative is Roli Roti Butcher's Organic Chicken Bone Broth, 24 fl oz. High collagen; look for it refrigerated in the meat section at H-E-B. Use one cup, not the whole bottle.",
+    "Cool promptly in shallow containers. Refrigerate for 3–4 days; freeze portions intended for later.",
+    "One batch makes 4–5 portions. The default is 4; to split the same batch into 5, leave Batch Size at 1× in the Nutrition tab and change Portions to 5.",
+    "Nutrition is an estimate based on 2 lb raw boneless skinless thighs, 8 oz dry pasta, 10 oz nonfat Greek yogurt, 50 g Parmesan, and all 2 tbsp oil. Reference labels use H-E-B Natural thighs, Barilla Protein+ penne, FAGE Total 0%, H-E-B avocado oil, BelGioioso Parmesan, and Roli Roti chicken bone broth. Homemade stock and other brands will vary.",
+    "Vegetable estimates assume two medium bell peppers (296 g total), two celery stalks (110 g total), one medium onion (148 g), and three garlic cloves. Unmeasured seasoning and finishing Tabasco or lemon are excluded.",
+    "Approximate nutrition per portion: split into 4, about 640 calories, 69 g protein, 20 g fat, 48 g carbs, and 7 g fiber; split into 5, about 510 calories, 55 g protein, 16 g fat, 38 g carbs, and 6 g fiber."
+  ],
+  "deviations": [],
+  "log": []
+}

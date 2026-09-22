@@ -90,6 +90,13 @@ const RECIPE_MANIFEST = [
     status: "dialed-in"
   },
   {
+    id: "cajun-chicken-pasta",
+    title: "Cajun Chicken Pasta",
+    desc: "Spicy, tangy chicken pasta with a Greek yogurt sauce",
+    tags: ["chicken", "pasta", "cajun", "meal-prep", "high-protein"],
+    status: "dialed-in"
+  },
+  {
     id: "kvass",
     title: "Kvass",
     desc: "Dark-toasted bread kvass with raisins and lemon",
