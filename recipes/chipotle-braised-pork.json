@@ -3,6 +3,7 @@
   "title": "Chipotle Braised Pork",
   "description": "Pork shoulder braised with chipotle. Dirt cheap, dead simple, surprisingly complex. Great for bulk prep — tacos, bowls, whatever.",
   "status": "experimenting",
+  "category": "meal-prep",
   "tags": ["pork", "mexican", "braise", "pressure-cooker", "meal-prep"],
   "time": {
     "prep": 20,

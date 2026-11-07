@@ -17,6 +17,7 @@ Before writing any JSON, confirm these with the user:
 - **Title**: "I'm calling this [X] — does that work?"
 - **Description**: Draft 1-2 sentences explaining what the dish is and what makes this version distinct. Show it to the user: "Here's how I'd describe this for the overview — [description]. Does that capture it?"
 - **Status**: Confirm whether this is `to-cook` (not made yet), `experimenting` (made but still changing), or `dialed-in` (you'd make it the same way next time).
+- **Category**: Propose one and confirm: "I'm filing this under Mains — right?" See `category` below for the list and tie-breaks.
 - **Deviations**: This is the core of the site. Ask: "What did you change from the traditional version, and why?" If the user doesn't know what's traditional, help them identify deviations based on culinary knowledge. Confirm each one: "So the deviation is [what] because [why] — right?"
 
 ### Step 3: Confirm ingredients
@@ -35,7 +36,8 @@ Draft the directions preserving the user's voice. Show them: "Here's how I wrote
 
 ### Step 6: Create files
 1. Write `recipes/{slug}.json`
-2. Add an entry to `js/manifest.js` with matching `id`, `title`, `desc`, `tags`, optional `time`, and `status`
+2. Add an entry to `js/manifest.js` with matching `id`, `title`, `desc`, `tags`, optional `time`, `status`, and `category`
+3. Run `node --test` from the repo root. It fails if the category is missing or unknown, or if the manifest entry doesn't match the JSON.
 
 ### Step 7: Final review
 Show the user the complete JSON (or summarize key fields) and confirm before committing.
@@ -51,6 +53,7 @@ Show the user the complete JSON (or summarize key fields) and confirm before com
   "subtitle": "optional — short qualifier if needed",
   "description": "1-2 sentences. What the dish IS and what makes THIS version distinct.",
   "status": "experimenting",
+  "category": "mains",
   "tags": ["protein", "cuisine", "method", "context"],
   "source": "Where it came from",
   "time": {
@@ -113,7 +116,23 @@ Show the user the complete JSON (or summarize key fields) and confirm before com
 - `experimenting` — cooked at least once but still being adjusted
 - `dialed-in` — cooked and settled enough that you'd make it the same way next time
 
-Do not add a separate `canonical` boolean. A To Cook record moves to `experimenting` after the first cook, once the recipe is completed and the first dated log entry is added.
+A To Cook record moves to `experimenting` after the first cook, once the recipe is completed and the first dated log entry is added.
+
+**category**: Exactly one key from `js/categories.js`. It decides which section of the index page the recipe is listed under; tags are still where the looser descriptors go.
+- `small-plates` — appetizers and passed or shared bites (Shrimp à la Strike)
+- `mains` — the center of a meal, cooked to be eaten that day (short rib, scampi, cookout skewers)
+- `sides` — goes next to a main: vegetables, table sauces like cranberry sauce, garlic bread
+- `meal-prep` — cooked in bulk to be portioned out over the week (Cajun chicken pasta, chipotle pork)
+- `breads` — doughs and baked breads, sweet or savory (milk bread, Parker House rolls, tsoureki)
+- `desserts`
+- `staples` — building blocks that go into other cooking: stocks, plain beans
+- `beverages` — drinks, fermented or not (kvass)
+
+Tie-breaks:
+- Meal prep beats mains when the recipe exists to be batch-cooked and portioned.
+- Staples beats meal prep for ingredients: stock is a staple even though you make a big batch of it.
+- A bread dish served alongside a meal (garlic bread) is a side. The dough or loaf itself goes under breads.
+- If nothing fits, ask the user. A new category is added to `RECIPE_CATEGORIES` in `js/categories.js`, and its position there is its position on the page. A recipe with a missing or unknown category still shows up, in an Uncategorized section at the bottom, but the tests will fail.
 
 **tags**: 3-5 tags. Consistent vocabulary across recipes. Categories: protein (beef, seafood, chicken), cuisine (italian, japanese, cajun), method (braise, grill, quick), context (weeknight, winter, meal-prep). Lowercase, hyphenated if multi-word.
 
@@ -148,7 +167,7 @@ Split honestly. A 4-hour freeze is `passive: 240`, never active time. A 10-minut
 
 For ingredient-level macro breakdowns, add standalone rows under `nutrition.ingredients`. Each row should include a display `label`, the full `recipeQuantity`, a flexible `basis`, and the macros for that basis. Normalize `recipeQuantity` and `basis` to the same unit before storing them: the renderer does not convert units. Include a `source` URL and optional `sourceLabel` identifying the product or USDA entry; these appear under Nutrition sources. Store all five macro values explicitly. Calculate `nutrition.batch` by summing the ingredient rows and rounding only the final totals to two decimal places.
 
-Run `node --test tests/nutrition.test.js` after changing nutrition or scaling. This checks every recipe's data, totals, manifest membership, and serving/batch calculations. Also check the changed tabs in the browser.
+Run `node --test` after changing nutrition or scaling. This checks every recipe's data, totals, manifest membership, and serving/batch calculations. Also check the changed tabs in the browser.
 
 ---
 
@@ -233,7 +252,7 @@ The voice should sound like someone telling a friend how to cook, not a cookbook
 These are three distinct things. Getting the categorization right matters.
 
 ### Deviations (`deviations[]`)
-**What changed from tradition, and why.** The philosophical core of the site. Every recipe should be honest about where it departs from the canonical version.
+**What changed from tradition, and why.** The philosophical core of the site. Every recipe should be honest about where it departs from the traditional version.
 
 ```json
 {
@@ -285,11 +304,12 @@ After creating the recipe JSON, add an entry to `RECIPE_MANIFEST` in `js/manifes
   desc: "Short description for index card (50-60 chars)",
   tags: ["tag1", "tag2", "tag3"],
   time: { prep: 20, active: 25, passive: 0 },
-  status: "experimenting"
+  status: "experimenting",
+  category: "mains"
 }
 ```
 
-The `desc` field is a truncated version of the recipe's description — punchy enough to differentiate recipes while browsing. Tags and status must match the recipe JSON. Time must also match when known; omit it from both places for an unresolved To Cook record.
+The `desc` field is a truncated version of the recipe's description — punchy enough to differentiate recipes while browsing. Title, tags, status, and category must match the recipe JSON. Time must also match when known; omit it from both places for an unresolved To Cook record.
 
 ---
 

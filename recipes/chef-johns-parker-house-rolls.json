@@ -1,8 +1,9 @@
 {
   "id": "chef-johns-parker-house-rolls",
-  "title": "Chef John's Parker House Rolls",
+  "title": "Parker House Rolls",
   "description": "Classic fold-over dinner rolls from an egg-enriched dough with a full stick of butter in it, plus more brushed on before folding and after baking.",
   "status": "experimenting",
+  "category": "breads",
   "tags": [
     "bread",
     "baking",

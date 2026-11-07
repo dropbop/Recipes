@@ -644,6 +644,47 @@ hr.win-hr {
     color: #333;
 }
 
+/* === Recipe Sections (Index Page) === */
+.recipe-section + .recipe-section {
+    margin-top: 10px;
+}
+
+.recipe-section-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 0;
+    padding: 0 20px;
+    font-family: "MS Sans Serif", Tahoma, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    color: #800020;
+    text-transform: uppercase;
+}
+
+.recipe-section-header::after {
+    content: "";
+    flex: 1;
+    border-top: 1px solid #808080;
+    border-bottom: 1px solid #FFFFFF;
+    margin-left: 4px;
+}
+
+.recipe-section-count {
+    color: #808080;
+    font-weight: normal;
+}
+
+.recipe-section .recipe-grid {
+    padding-top: 12px;
+}
+
+.recipe-list-empty {
+    text-align: center;
+    color: #666;
+    padding: 20px;
+}
+
 /* === Recipe Cards (Index Page) === */
 .recipe-grid {
     display: grid;
@@ -846,6 +887,10 @@ hr.win-hr {
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
         padding: 10px;
+    }
+
+    .recipe-section-header {
+        padding: 0 10px;
     }
 }
 

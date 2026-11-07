@@ -4,7 +4,7 @@
 
 This is a static GitHub Pages recipe notebook. There is no build step.
 
-- `index.html` renders the recipe explorer from `js/manifest.js`.
+- `index.html` renders the recipe explorer from `js/manifest.js` via `js/index.js`, grouped into the sections defined in `js/categories.js`.
 - `recipe.html` renders individual recipes from `recipes/{id}.json`.
 - `recommendations.html` contains standalone recommendation content.
 - `css/win95.css` holds the Win98-style visual system and responsive/print styles.
@@ -28,7 +28,13 @@ Validate recipe JSON before committing:
 jq empty recipes/*.json
 ```
 
-Check manifest/file consistency manually when adding recipes: each manifest `id` must match `recipes/{id}.json`.
+Run the tests (Node 18+, no dependencies):
+
+```bash
+node --test
+```
+
+They check that each manifest entry matches `recipes/{id}.json` (including `category`), that the index renders every recipe under the right section, and the nutrition math.
 
 ## Coding Style & Naming Conventions
 
@@ -36,17 +42,19 @@ Use two-space indentation in HTML, JavaScript, CSS, and JSON. Keep paths relativ
 
 Recipe IDs and filenames are lowercase hyphenated slugs, for example `polpette-del-rinascimento` and `recipes/polpette-del-rinascimento.json`. Tags are lowercase and hyphenated when multi-word.
 
-Preserve the existing plain JavaScript style. Script load order matters: `utils.js`, then `scaling.js`, then `recipe-loader.js`.
+Preserve the existing plain JavaScript style. Script load order matters: on `recipe.html`, `utils.js` → `scaling.js` → `recipe-loader.js`; on `index.html`, `utils.js` → `categories.js` → `manifest.js` → `index.js`.
 
 ## Recipe Data Guidelines
 
 Read `recipe-writing-guide.md` before adding or rewriting recipes. Confirm title, description, lifecycle status, deviations, ingredients, directions, notes, and log entries with the user before creating JSON.
 
+Every recipe needs exactly one `category` from `js/categories.js`; see `recipe-writing-guide.md` for definitions and tie-breaks.
+
 Use `status: "to-cook"` for unmade planning briefs, `status: "experimenting"` for cooked recipes still being adjusted, and `status: "dialed-in"` only for settled recipes. Put unresolved planning decisions in `openQuestions`, deliberate departures from tradition in `deviations`, durable cooking advice in `notes`, and dated cook-session observations in `log`.
 
 ## Testing Guidelines
 
-There is no automated test suite. At minimum, validate JSON with `jq`, load `index.html`, open the new recipe page, switch tabs, test scaling buttons, and verify print layout if the recipe format changed.
+Run `node --test`. Tests should assert what the page is supposed to do for a reader, not restate the implementation. Beyond that, load `index.html`, open the new recipe page, switch tabs, test scaling buttons, and verify print layout if the recipe format changed.
 
 ## Commit & Pull Request Guidelines
 

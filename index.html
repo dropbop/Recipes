@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Recipe Explorer</title>
-  <link rel="stylesheet" href="css/win95.css?v=20260809-tocook1">
+  <link rel="stylesheet" href="css/win95.css?v=20261107-cat1">
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
@@ -53,8 +53,8 @@
   </div>
 
   <div class="content" style="min-height: 400px;">
-    <div class="recipe-grid" id="recipe-grid">
-      <!-- Recipe cards rendered by JS -->
+    <div id="recipe-list">
+      <!-- Category sections rendered by js/index.js -->
     </div>
   </div>
 
@@ -65,106 +65,8 @@
 </div>
 
 <script src="js/utils.js"></script>
-<script src="js/manifest.js?v=20261107-rolls1"></script>
-<script>
-  let currentFilter = 'all';
-
-  document.addEventListener('DOMContentLoaded', () => {
-    renderRecipeGrid(RECIPE_MANIFEST);
-    updateStatus();
-  });
-
-  function renderRecipeGrid(recipes) {
-    const grid = document.getElementById('recipe-grid');
-    grid.innerHTML = '';
-
-    const filtered = filterByCurrentFilter(recipes);
-    if (currentFilter === 'all') {
-      filtered.sort((a, b) =>
-        (b.status === 'dialed-in' ? 1 : 0) - (a.status === 'dialed-in' ? 1 : 0)
-      );
-    }
-
-    if (filtered.length === 0) {
-      grid.innerHTML = '<p style="text-align: center; color: #666; grid-column: 1/-1;">No recipes match the current filter.</p>';
-      return;
-    }
-
-    filtered.forEach(recipe => {
-      const card = createRecipeCard(recipe);
-      grid.appendChild(card);
-    });
-  }
-
-  function formatTime(minutes) {
-    if (minutes < 60) return `${minutes} min`;
-    const h = Math.floor(minutes / 60);
-    const m = minutes % 60;
-    return m > 0 ? `${h}h ${m}m` : `${h}h`;
-  }
-
-  function createRecipeCard(recipe) {
-    const card = document.createElement('div');
-    card.className = `recipe-card status-${recipe.status}`;
-    card.onclick = () => location.href = `recipe.html?id=${recipe.id}`;
-
-    let timeHtml = '';
-    if (recipe.time) {
-      const totalTime = (recipe.time.prep || 0) + (recipe.time.active || 0) + (recipe.time.passive || 0);
-      const handsOnTime = (recipe.time.prep || 0) + (recipe.time.active || 0);
-      timeHtml = `<div class="recipe-card-time">${formatTime(totalTime)} total · ${formatTime(handsOnTime)} hands-on</div>`;
-    }
-
-    const tagsHtml = (recipe.tags || []).slice(0, 3).map(tag =>
-      `<span class="tag" style="background: ${getTagColor(tag)}">${tag}</span>`
-    ).join('');
-
-    const toCookHtml = recipe.status === 'to-cook'
-      ? '<div class="to-cook-status">&#9744; TO COOK</div>'
-      : '';
-
-    card.innerHTML = `
-      <div class="recipe-card-title">${recipe.title}</div>
-      <div class="recipe-card-desc">${recipe.desc || ''}</div>
-      ${timeHtml}
-      <div class="tags">${tagsHtml}</div>
-      ${toCookHtml}
-    `;
-
-    return card;
-  }
-
-  function filterRecipes(filter, event) {
-    currentFilter = filter;
-    renderRecipeGrid(RECIPE_MANIFEST);
-    updateStatus();
-
-    // Update toolbar button states
-    document.querySelectorAll('.toolbar-btn').forEach(btn => {
-      btn.classList.remove('active');
-    });
-    if (event && event.target) {
-      event.target.classList.add('active');
-    }
-  }
-
-  function filterByCurrentFilter(recipes) {
-    if (currentFilter === 'all') return recipes.filter(r => r.status !== 'to-cook');
-    return recipes.filter(r => r.status === currentFilter);
-  }
-
-  function updateStatus() {
-    const filtered = filterByCurrentFilter(RECIPE_MANIFEST);
-    document.getElementById('recipe-count').textContent = `${filtered.length} recipe${filtered.length !== 1 ? 's' : ''}`;
-
-    const filterLabels = {
-      'all': 'All',
-      'dialed-in': 'Dialed In',
-      'experimenting': 'Experimenting',
-      'to-cook': 'To Cook'
-    };
-    document.getElementById('filter-status').textContent = `Filter: ${filterLabels[currentFilter]}`;
-  }
-</script>
+<script src="js/categories.js?v=20261107-cat1"></script>
+<script src="js/manifest.js?v=20261107-cat1"></script>
+<script src="js/index.js?v=20261107-cat1"></script>
 </body>
 </html>

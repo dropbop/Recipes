@@ -3,6 +3,7 @@
   "title": "Kvass",
   "description": "Dark-toasted rye or pumpernickel kvass with raisins and lemon, fermented with ordinary bread yeast. A two-day ferment, with optional carbonation before chilling.",
   "status": "experimenting",
+  "category": "beverages",
   "tags": ["beverage", "fermented", "bread"],
   "servings": {
     "base": 1,
