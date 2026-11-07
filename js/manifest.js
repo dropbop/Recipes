@@ -147,5 +147,13 @@ const RECIPE_MANIFEST = [
     tags: ["seafood", "grilling", "skewers", "appetizer"],
     time: { prep: 20, active: 10, passive: 0 },
     status: "dialed-in"
+  },
+  {
+    id: "chef-johns-parker-house-rolls",
+    title: "Chef John's Parker House Rolls",
+    desc: "Buttery fold-over dinner rolls from Chef John's dough",
+    tags: ["bread", "baking", "side", "holiday"],
+    time: { prep: 40, active: 5, passive: 215 },
+    status: "experimenting"
   }
 ];

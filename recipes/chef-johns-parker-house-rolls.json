@@ -1,0 +1,301 @@
+{
+  "id": "chef-johns-parker-house-rolls",
+  "title": "Chef John's Parker House Rolls",
+  "description": "Classic fold-over dinner rolls from an egg-enriched dough with a full stick of butter in it, plus more brushed on before folding and after baking.",
+  "status": "experimenting",
+  "tags": [
+    "bread",
+    "baking",
+    "side",
+    "holiday"
+  ],
+  "source": "Chef John — https://www.allrecipes.com/recipe/8514987/chef-johns-parker-house-rolls/",
+  "time": {
+    "prep": 40,
+    "active": 5,
+    "passive": 215
+  },
+  "servings": {
+    "base": 24,
+    "unit": "rolls"
+  },
+  "nutrition": {
+    "status": "estimated",
+    "notes": [
+      "Reference split: 24 rolls, matching the recipe yield.",
+      "Assumes 120 g flour per cup (540 g total), whole milk at 122 g per ½ cup, a 7 g yeast packet, 50 g per large egg, 12.5 g sugar per tbsp, and 14.2 g butter per tbsp. Extra flour added while kneading is not counted.",
+      "Counts all 12 tbsp butter as eaten: 8 in the dough, 4 brushed before folding and after baking. Water and salt add no macros."
+    ],
+    "servings": {
+      "base": 24,
+      "unit": "portions"
+    },
+    "batch": {
+      "calories": 3572.66,
+      "protein": 76.46,
+      "fat": 157.51,
+      "carbs": 459.13,
+      "fiber": 16.46
+    },
+    "ingredients": [
+      {
+        "label": "All-purpose flour",
+        "recipeQuantity": {
+          "amount": 540,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 364.0,
+          "protein": 10.33,
+          "fat": 0.98,
+          "carbs": 76.31,
+          "fiber": 2.7
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 20081: WHEAT FLOUR,WHITE,ALL-PURPOSE,ENRICHED,BLEACHED"
+      },
+      {
+        "label": "Whole milk",
+        "recipeQuantity": {
+          "amount": 122,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 61.0,
+          "protein": 3.15,
+          "fat": 3.25,
+          "carbs": 4.8,
+          "fiber": 0.0
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 01077: MILK,WHL,3.25% MILKFAT,W/ ADDED VITAMIN D"
+      },
+      {
+        "label": "Active dry yeast",
+        "recipeQuantity": {
+          "amount": 7,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 325.0,
+          "protein": 40.44,
+          "fat": 7.61,
+          "carbs": 41.22,
+          "fiber": 26.9
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 18375: LEAVENING AGENTS,YEAST,BAKER'S,ACTIVE DRY"
+      },
+      {
+        "label": "Large eggs",
+        "recipeQuantity": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 143.0,
+          "protein": 12.56,
+          "fat": 9.51,
+          "carbs": 0.72,
+          "fiber": 0.0
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 01123: EGG,WHL,RAW,FRSH"
+      },
+      {
+        "label": "Sugar",
+        "recipeQuantity": {
+          "amount": 37.5,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 387.0,
+          "protein": 0.0,
+          "fat": 0.0,
+          "carbs": 99.98,
+          "fiber": 0.0
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 19335: SUGARS,GRANULATED"
+      },
+      {
+        "label": "Butter, dough and brushing",
+        "recipeQuantity": {
+          "amount": 170.4,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 717.0,
+          "protein": 0.85,
+          "fat": 81.11,
+          "carbs": 0.06,
+          "fiber": 0.0
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 01145: BUTTER,WITHOUT SALT"
+      }
+    ]
+  },
+  "ingredientGroups": [
+    {
+      "name": "Dough",
+      "items": [
+        {
+          "quantity": 0.5,
+          "quantityMax": null,
+          "unit": "cups",
+          "item": "milk",
+          "note": "warm",
+          "scalable": true
+        },
+        {
+          "quantity": 0.5,
+          "quantityMax": null,
+          "unit": "cups",
+          "item": "water",
+          "note": "warm",
+          "scalable": true
+        },
+        {
+          "quantity": 2.25,
+          "quantityMax": null,
+          "unit": "tsp",
+          "item": "active dry yeast",
+          "note": "1 package",
+          "scalable": true
+        },
+        {
+          "quantity": 2,
+          "quantityMax": null,
+          "unit": "",
+          "item": "large eggs",
+          "note": null,
+          "scalable": true
+        },
+        {
+          "quantity": 3,
+          "quantityMax": null,
+          "unit": "tbsp",
+          "item": "white sugar",
+          "note": null,
+          "scalable": true
+        },
+        {
+          "quantity": 1.5,
+          "quantityMax": null,
+          "unit": "tsp",
+          "item": "kosher salt",
+          "note": "Diamond Crystal; source doesn't say which brand",
+          "scalable": true
+        },
+        {
+          "quantity": 8,
+          "quantityMax": null,
+          "unit": "tbsp",
+          "item": "unsalted butter",
+          "note": "melted",
+          "scalable": true
+        },
+        {
+          "quantity": 4.5,
+          "quantityMax": null,
+          "unit": "cups",
+          "item": "all-purpose flour",
+          "note": "plus more as needed",
+          "scalable": true
+        }
+      ]
+    },
+    {
+      "name": "Butter for Brushing",
+      "items": [
+        {
+          "quantity": 4,
+          "quantityMax": null,
+          "unit": "tbsp",
+          "item": "unsalted butter",
+          "note": "melted; before folding and after baking",
+          "scalable": true
+        }
+      ]
+    }
+  ],
+  "directions": [
+    {
+      "step": 1,
+      "title": "Bloom the yeast",
+      "text": "Warm milk, warm water and yeast go in the stand mixer bowl. Let it sit 10 minutes."
+    },
+    {
+      "step": 2,
+      "title": "Mix and knead",
+      "text": "Add the eggs, sugar, salt and the 8 tbsp melted butter and whisk the wet stuff together. Dump in the flour and knead with the dough hook (or by hand) until it comes together into a ball, 5 to 6 minutes. Add a little more flour only if it's not coming together."
+    },
+    {
+      "step": 3,
+      "title": "Bulk rise",
+      "text": "Into a lightly buttered bowl, covered, until doubled, about 2 hours. Watch the dough, not the clock; move on as soon as it's doubled."
+    },
+    {
+      "step": 4,
+      "title": "Divide",
+      "text": "Press the dough flat. Weigh the whole thing, divide the grams by 24, and portion each piece to that weight. Roll each into a smooth ball."
+    },
+    {
+      "step": 5,
+      "title": "Shape",
+      "text": "Line a sheet pan with a Silpat or parchment. On a lightly floured surface, roll each ball into an oval 4 to 5 inches long, brush the top with some of the brushing butter, and fold it in half. Press the fold down firmly."
+    },
+    {
+      "step": 6,
+      "title": "Proof",
+      "text": "Arrange on the sheet in 6 rows of 4. Cover with a clean towel and let rise somewhere warm until almost doubled, about 1 hour."
+    },
+    {
+      "step": 7,
+      "title": "Bake",
+      "text": "Preheat the oven to 350°F. Bake until golden brown on top, about 25 minutes."
+    },
+    {
+      "step": 8,
+      "title": "Butter",
+      "text": "Brush the tops with the rest of the melted butter while they're still warm."
+    }
+  ],
+  "notes": [
+    "The source page says \"350 degrees C (175 degrees C)\". It's a typo: 350°F = 175°C.",
+    "A lightly pressed fold can pop open during the final proof."
+  ],
+  "deviations": [],
+  "openQuestions": [],
+  "log": [
+    {
+      "date": "2026-11-07",
+      "entry": "First bake, for the trial Thanksgiving. Bulk rise was doubled at about 1.5 hours, so moved on early."
+    }
+  ]
+}
