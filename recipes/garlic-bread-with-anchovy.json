@@ -1,0 +1,235 @@
+{
+  "id": "garlic-bread-with-anchovy",
+  "title": "Garlic Bread with Anchovy",
+  "description": "A demi baguette slit hasselback-style and stuffed with whipped butter loaded with three heads of roasted garlic, anchovy, and lemon zest. Baked in foil, then unwrapped to crisp.",
+  "status": "experimenting",
+  "tags": [
+    "bread",
+    "side",
+    "garlic",
+    "anchovy"
+  ],
+  "source": "Farideh Sadeghin, Munchies (VICE) — https://www.vice.com/en/article/roasted-garlic-and-anchovy-butter-garlic-bread-recipe",
+  "time": {
+    "prep": 10,
+    "active": 10,
+    "passive": 65
+  },
+  "servings": {
+    "base": 1,
+    "unit": "demi baguette"
+  },
+  "nutrition": {
+    "status": "estimated",
+    "notes": [
+      "Assumes about 40 g of cloves per garlic head, 4 g per anchovy fillet, and a 150 g demi baguette, split into 4 servings.",
+      "Counts the whole batch of butter (about 1 cup) as going on the bread, plus all the roasting oil. Butter left over after stuffing comes off the total. Lemon zest and salt are excluded."
+    ],
+    "servings": {
+      "base": 4,
+      "unit": "servings"
+    },
+    "batch": {
+      "calories": 1558.35,
+      "protein": 30.5,
+      "fat": 111.33,
+      "carbs": 117.56,
+      "fiber": 5.82
+    },
+    "ingredients": [
+      {
+        "label": "Garlic",
+        "recipeQuantity": {
+          "amount": 120,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 149.0,
+          "protein": 6.36,
+          "fat": 0.5,
+          "carbs": 33.06,
+          "fiber": 2.1
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 11215: GARLIC,RAW"
+      },
+      {
+        "label": "Olive oil",
+        "recipeQuantity": {
+          "amount": 13.5,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 884.0,
+          "protein": 0.0,
+          "fat": 100.0,
+          "carbs": 0.0,
+          "fiber": 0.0
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 04053: OIL,OLIVE,SALAD OR COOKING"
+      },
+      {
+        "label": "Unsalted butter",
+        "recipeQuantity": {
+          "amount": 113,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 717.0,
+          "protein": 0.85,
+          "fat": 81.11,
+          "carbs": 0.06,
+          "fiber": 0.0
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 01145: BUTTER,WITHOUT SALT"
+      },
+      {
+        "label": "Oil-packed anchovies, drained",
+        "recipeQuantity": {
+          "amount": 20,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 210.0,
+          "protein": 28.89,
+          "fat": 9.71,
+          "carbs": 0.0,
+          "fiber": 0.0
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 15002: ANCHOVY,EUROPEAN,CND IN OIL,DRND SOL"
+      },
+      {
+        "label": "Demi baguette",
+        "recipeQuantity": {
+          "amount": 150,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 272.0,
+          "protein": 10.75,
+          "fat": 2.42,
+          "carbs": 51.88,
+          "fiber": 2.2
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 18029: Bread, french"
+      }
+    ]
+  },
+  "ingredientGroups": [
+    {
+      "name": "Roasted Garlic Butter",
+      "items": [
+        {
+          "quantity": 3,
+          "quantityMax": null,
+          "unit": "heads",
+          "item": "garlic",
+          "note": null,
+          "scalable": true
+        },
+        {
+          "quantity": 1,
+          "quantityMax": null,
+          "unit": "tbsp",
+          "item": "olive oil",
+          "note": null,
+          "scalable": true
+        },
+        {
+          "quantity": 8,
+          "quantityMax": null,
+          "unit": "tbsp",
+          "item": "unsalted butter",
+          "note": "1 stick, room temperature",
+          "scalable": true
+        },
+        {
+          "quantity": 0.75,
+          "quantityMax": null,
+          "unit": "tsp",
+          "item": "kosher salt",
+          "note": null,
+          "scalable": true
+        },
+        {
+          "quantity": 5,
+          "quantityMax": null,
+          "unit": "",
+          "item": "anchovy fillets",
+          "note": "mashed into a paste",
+          "scalable": true
+        },
+        {
+          "quantity": 1,
+          "quantityMax": null,
+          "unit": "",
+          "item": "lemon, zested",
+          "note": null,
+          "scalable": true
+        }
+      ]
+    },
+    {
+      "name": "Bread",
+      "items": [
+        {
+          "quantity": 1,
+          "quantityMax": null,
+          "unit": "",
+          "item": "demi baguette",
+          "note": null,
+          "scalable": true
+        }
+      ]
+    }
+  ],
+  "directions": [
+    {
+      "step": 1,
+      "title": "Roast the Garlic",
+      "text": "Oven to 400°F. Cut ¼ inch off the top of each head, set each on its own square of foil, drizzle with the 1 tbsp olive oil, and wrap. Roast until very soft, about 45 minutes. Leave the oven on. Let the garlic cool until you can handle it."
+    },
+    {
+      "step": 2,
+      "title": "Whip the Butter",
+      "text": "Squeeze the garlic out of its skins into a bowl with the 8 tbsp butter, ¾ tsp salt, anchovy paste, and lemon zest. Whip with a hand mixer until light and fluffy."
+    },
+    {
+      "step": 3,
+      "title": "Stuff",
+      "text": "Cut slits into the baguette about 1 inch apart, not all the way through. Set it on a sheet of foil and push at least a teaspoon of butter into every slit with an offset spatula or butter knife. Brush more over the top."
+    },
+    {
+      "step": 4,
+      "title": "Bake",
+      "text": "Wrap it up in the foil and bake on a sheet pan for 15 minutes. Open the foil and bake another 5 minutes, until crisp. Serve immediately."
+    }
+  ],
+  "notes": [],
+  "deviations": [],
+  "log": []
+}

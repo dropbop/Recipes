@@ -1,0 +1,192 @@
+{
+  "id": "cranberry-sauce",
+  "title": "Cranberry Sauce",
+  "description": "Priya Krishna's stripped-down Bon Appétit sauce: a bag of cranberries, sugar, water, and orange zest, cooked until the berries burst and set on their own pectin. A shot of whatever's on the bar stands in for the orange liqueur.",
+  "status": "dialed-in",
+  "tags": [
+    "side",
+    "thanksgiving",
+    "make-ahead",
+    "quick"
+  ],
+  "source": "Priya Krishna, Bon Appétit — her mom's version of a fresh cranberry sauce she first had at a friend's house, cut back on sugar and brightened with orange zest. Ran on BA's site in \"The Easiest Cranberry Sauce Recipe Is Also the Best\" and in the November Thanksgiving issue as \"A Very Easy Cranberry Sauce\"; later republished as a standalone recipe.",
+  "time": {
+    "prep": 5,
+    "active": 10,
+    "passive": 60
+  },
+  "servings": {
+    "base": 2,
+    "unit": "cups"
+  },
+  "nutrition": {
+    "status": "estimated",
+    "notes": [
+      "Whole batch (about 2 cups) split into 8 quarter-cup portions. Assumes all-white sugar at 150 g per ¾ cup and 6 g of zest per tablespoon.",
+      "Optional booze, nutmeg, and cinnamon are excluded, along with salt. Swapping in brown sugar barely moves the numbers."
+    ],
+    "servings": {
+      "base": 8,
+      "unit": "portions"
+    },
+    "batch": {
+      "calories": 742.81,
+      "protein": 1.65,
+      "fat": 0.45,
+      "carbs": 192.19,
+      "fiber": 12.88
+    },
+    "ingredients": [
+      {
+        "label": "Cranberries",
+        "recipeQuantity": {
+          "amount": 340.1943,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 46.0,
+          "protein": 0.46,
+          "fat": 0.13,
+          "carbs": 11.97,
+          "fiber": 3.6
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 09078: CRANBERRIES,RAW"
+      },
+      {
+        "label": "Granulated sugar",
+        "recipeQuantity": {
+          "amount": 150,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 387.0,
+          "protein": 0.0,
+          "fat": 0.0,
+          "carbs": 99.98,
+          "fiber": 0.0
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 19335: SUGARS,GRANULATED"
+      },
+      {
+        "label": "Orange zest",
+        "recipeQuantity": {
+          "amount": 6,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 97.0,
+          "protein": 1.5,
+          "fat": 0.2,
+          "carbs": 25.0,
+          "fiber": 10.6
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 09216: ORANGE PEEL,RAW"
+      }
+    ]
+  },
+  "ingredientGroups": [
+    {
+      "name": "Sauce",
+      "items": [
+        {
+          "quantity": 12,
+          "quantityMax": null,
+          "unit": "oz",
+          "item": "cranberries",
+          "note": "1 bag, fresh or frozen",
+          "scalable": true
+        },
+        {
+          "quantity": 0.75,
+          "quantityMax": null,
+          "unit": "cup",
+          "item": "granulated sugar",
+          "note": "can swap some or all for light brown sugar",
+          "scalable": true
+        },
+        {
+          "quantity": 1,
+          "quantityMax": null,
+          "unit": "cup",
+          "item": "water",
+          "note": null,
+          "scalable": true
+        },
+        {
+          "quantity": 1,
+          "quantityMax": null,
+          "unit": "tbsp",
+          "item": "orange zest",
+          "note": "finely grated — critical, don't skip",
+          "scalable": true
+        },
+        {
+          "quantity": null,
+          "quantityMax": null,
+          "unit": "",
+          "item": "kosher salt",
+          "note": "pinch",
+          "scalable": false
+        },
+        {
+          "quantity": 1,
+          "quantityMax": 2,
+          "unit": "tbsp",
+          "item": "orange liqueur, white rum, or vodka",
+          "note": "optional — about half a shot",
+          "scalable": true
+        },
+        {
+          "quantity": null,
+          "quantityMax": null,
+          "unit": "",
+          "item": "nutmeg, cinnamon",
+          "note": "optional — a pinch each",
+          "scalable": false
+        }
+      ]
+    }
+  ],
+  "directions": [
+    {
+      "step": 1,
+      "title": "Cook",
+      "text": "Everything into a medium saucepan over medium heat: 12 oz cranberries, ¾ cup sugar, 1 cup water, 1 tbsp orange zest, a pinch of salt, 1–2 tbsp booze (about half a shot), and the warm spice if you're using them. Stir often so it doesn't stick and scorch. Done when the berries burst and it goes jammy and coats a spoon, about 10 minutes."
+    },
+    {
+      "step": 2,
+      "title": "Cool",
+      "text": "Let it cool before serving. It sets up on the cranberries' own pectin as it cools — no thickener needed."
+    }
+  ],
+  "notes": [
+    "Orange zest is critical. The rest is negotiable.",
+    "Keeps 5 days in an airtight container in the fridge, so make it ahead."
+  ],
+  "deviations": [
+    {
+      "what": "White rum or vodka instead of orange liqueur, or nothing",
+      "why": "Uses whatever's on hand. The theory is that a shot pulls out more flavor the way vodka does in vodka sauce — unproven, but no harm in it."
+    },
+    {
+      "what": "Optional pinch of nutmeg and cinnamon",
+      "why": "A little warmth without burying the sharp cranberry bite. Krishna skips warm spice entirely."
+    }
+  ],
+  "log": []
+}

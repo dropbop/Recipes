@@ -123,5 +123,29 @@ const RECIPE_MANIFEST = [
     desc: "Uyghur charcoal lamb skewers for the coworker BBQ",
     tags: ["lamb", "uyghur", "grilling", "skewers", "cookout"],
     status: "to-cook"
+  },
+  {
+    id: "cranberry-sauce",
+    title: "Cranberry Sauce",
+    desc: "Burst-berry Thanksgiving staple; the zest is non-negotiable",
+    tags: ["side", "thanksgiving", "make-ahead", "quick"],
+    time: { prep: 5, active: 10, passive: 60 },
+    status: "dialed-in"
+  },
+  {
+    id: "garlic-bread-with-anchovy",
+    title: "Garlic Bread with Anchovy",
+    desc: "Slit baguette stuffed with roasted garlic-anchovy butter",
+    tags: ["bread", "side", "garlic", "anchovy"],
+    time: { prep: 10, active: 10, passive: 65 },
+    status: "experimenting"
+  },
+  {
+    id: "shrimp-a-la-strike",
+    title: "Shrimp à la Strike",
+    desc: "Prosciutto-wrapped shrimp and Gruyère from Total Synthesis II",
+    tags: ["seafood", "grilling", "skewers", "appetizer"],
+    time: { prep: 20, active: 10, passive: 0 },
+    status: "dialed-in"
   }
 ];

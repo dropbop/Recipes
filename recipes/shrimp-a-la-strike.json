@@ -1,0 +1,153 @@
+{
+  "id": "shrimp-a-la-strike",
+  "title": "Shrimp à la Strike",
+  "description": "Colossal shrimp, Gruyère batons, and prosciutto out of Strike's Total Synthesis II, a cookbook for things that aren't shrimp. Built exactly as written, then double-skewered and grilled.",
+  "status": "dialed-in",
+  "tags": [
+    "seafood",
+    "grilling",
+    "skewers",
+    "appetizer"
+  ],
+  "source": "Strike, Total Synthesis II, pp. 161–162",
+  "time": {
+    "prep": 20,
+    "active": 10,
+    "passive": 0
+  },
+  "servings": {
+    "base": 1,
+    "unit": "shrimp"
+  },
+  "nutrition": {
+    "status": "estimated",
+    "notes": [
+      "Per shrimp. Assumes a 35 g peeled colossal shrimp, a 14 g prosciutto slice, and an 8 g Gruyère baton.",
+      "SR28 has no prosciutto entry, so lean country-style dry-cured ham stands in. Real prosciutto runs fattier."
+    ],
+    "servings": {
+      "base": 1,
+      "unit": "portions"
+    },
+    "batch": {
+      "calories": 90.09,
+      "protein": 13.31,
+      "fat": 3.93,
+      "carbs": 0.07,
+      "fiber": 0.0
+    },
+    "ingredients": [
+      {
+        "label": "Colossal shrimp, peeled",
+        "recipeQuantity": {
+          "amount": 35,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 85.0,
+          "protein": 20.1,
+          "fat": 0.51,
+          "carbs": 0.0,
+          "fiber": 0.0
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 15270: CRUSTACEANS,SHRIMP,RAW (NOT PREVIOUSLY FROZEN)"
+      },
+      {
+        "label": "Prosciutto (dry-cured ham stand-in)",
+        "recipeQuantity": {
+          "amount": 14,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 195.0,
+          "protein": 27.8,
+          "fat": 8.32,
+          "carbs": 0.3,
+          "fiber": 0.0
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 10141: PORK,CURED,HAM,CNTR SLICE,COUNTRY-STYLE,LN,RAW"
+      },
+      {
+        "label": "Gruyère",
+        "recipeQuantity": {
+          "amount": 8,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 413.0,
+          "protein": 29.81,
+          "fat": 32.34,
+          "carbs": 0.36,
+          "fiber": 0.0
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 01023: CHEESE,GRUYERE"
+      }
+    ]
+  },
+  "ingredientGroups": [
+    {
+      "name": "Per Shrimp",
+      "items": [
+        {
+          "quantity": 1,
+          "quantityMax": null,
+          "unit": "",
+          "item": "colossal shrimp",
+          "note": "peeled, tails off",
+          "scalable": true
+        },
+        {
+          "quantity": 1,
+          "quantityMax": null,
+          "unit": "slice",
+          "item": "prosciutto",
+          "note": "thinly sliced",
+          "scalable": true
+        },
+        {
+          "quantity": 1,
+          "quantityMax": null,
+          "unit": "",
+          "item": "Gruyère baton",
+          "note": "cut french-fry-sized",
+          "scalable": true
+        }
+      ]
+    }
+  ],
+  "directions": [
+    {
+      "step": 1,
+      "title": "Build",
+      "text": "Cut the Gruyère into french-fry-sized batons. Lay one against each shrimp and wrap the pair in a slice of prosciutto."
+    },
+    {
+      "step": 2,
+      "title": "Skewer",
+      "text": "Run two parallel skewers through the whole row so everything actually stays in place."
+    },
+    {
+      "step": 3,
+      "title": "Grill",
+      "text": "Grill until done."
+    }
+  ],
+  "notes": [],
+  "deviations": [],
+  "log": []
+}
