@@ -25,7 +25,8 @@
     "notes": [
       "Reference split: 24 rolls, matching the recipe yield.",
       "Assumes 120 g flour per cup (540 g total), whole milk at 122 g per ½ cup, a 7 g yeast packet, 50 g per large egg, 12.5 g sugar per tbsp, and 14.2 g butter per tbsp. Extra flour added while kneading is not counted.",
-      "Counts all 12 tbsp butter as eaten: 8 in the dough, 4 brushed before folding and after baking. Water and salt add no macros."
+      "Counts all 12 tbsp butter as eaten: 8 in the dough, 4 brushed before folding and after baking. Water and salt add no macros.",
+      "The optional milk powder (40 g) and MSG are not counted."
     ],
     "servings": {
       "base": 24,
@@ -206,11 +207,19 @@
           "scalable": true
         },
         {
-          "quantity": 1.5,
+          "quantity": 8,
           "quantityMax": null,
-          "unit": "tsp",
+          "unit": "g",
           "item": "kosher salt",
-          "note": "Diamond Crystal; source doesn't say which brand",
+          "note": "Diamond Crystal; a scant 1 tbsp",
+          "scalable": true
+        },
+        {
+          "quantity": 0.5,
+          "quantityMax": null,
+          "unit": "g",
+          "item": "MSG",
+          "note": "optional; about 1/8 tsp",
           "scalable": true
         },
         {
@@ -218,7 +227,23 @@
           "quantityMax": null,
           "unit": "tbsp",
           "item": "unsalted butter",
-          "note": "melted",
+          "note": "melted, or browned with the milk powder",
+          "scalable": true
+        },
+        {
+          "quantity": 40,
+          "quantityMax": null,
+          "unit": "g",
+          "item": "nonfat dry milk powder",
+          "note": "optional; toasted in the dough butter",
+          "scalable": true
+        },
+        {
+          "quantity": 2,
+          "quantityMax": null,
+          "unit": "tbsp",
+          "item": "water",
+          "note": "optional; to quench the brown butter",
           "scalable": true
         },
         {
@@ -253,50 +278,77 @@
     },
     {
       "step": 2,
-      "title": "Mix and knead",
-      "text": "Add the eggs, sugar, salt and the 8 tbsp melted butter and whisk the wet stuff together. Dump in the flour and knead with the dough hook (or by hand) until it comes together into a ball, 5 to 6 minutes. Add a little more flour only if it's not coming together."
+      "title": "Brown the butter (optional)",
+      "text": "Brown the 8 tbsp dough butter. Once the foam dies down and it's starting to color, whisk in the 40 g milk powder and keep stirring until it looks good on browning. Quench with about 2 tbsp water so it doesn't go too dark and cools off faster. Let it cool before it meets the wet ingredients. Skipping this? Just melt the butter."
     },
     {
       "step": 3,
+      "title": "Mix and knead",
+      "text": "Add the eggs, sugar, 8 g salt, MSG if using, and the 8 tbsp butter (melted, or the brown butter with all its solids) and whisk the wet stuff together. Dump in the flour and knead with the dough hook (or by hand) until it comes together into a ball, 5 to 6 minutes. Add a little more flour only if it's not coming together."
+    },
+    {
+      "step": 4,
       "title": "Bulk rise",
       "text": "Into a lightly buttered bowl, covered, until doubled, about 2 hours. Watch the dough, not the clock; move on as soon as it's doubled."
     },
     {
-      "step": 4,
+      "step": 5,
       "title": "Divide",
       "text": "Press the dough flat. Weigh the whole thing, divide the grams by 24, and portion each piece to that weight. Roll each into a smooth ball."
     },
     {
-      "step": 5,
+      "step": 6,
       "title": "Shape",
       "text": "Line a sheet pan with a Silpat or parchment. On a lightly floured surface, roll each ball into an oval 4 to 5 inches long, brush the top with some of the brushing butter, and fold it in half. Press the fold down firmly."
     },
     {
-      "step": 6,
+      "step": 7,
       "title": "Proof",
       "text": "Arrange on the sheet in 6 rows of 4. Cover with a clean towel and let rise somewhere warm until almost doubled, about 1 hour."
     },
     {
-      "step": 7,
+      "step": 8,
       "title": "Bake",
-      "text": "Preheat the oven to 350°F. Bake until golden brown on top, about 25 minutes."
+      "text": "Preheat the oven to 375°F. Bake until golden brown on top, about 25 minutes."
     },
     {
-      "step": 8,
+      "step": 9,
       "title": "Butter",
       "text": "Brush the tops with the rest of the melted butter while they're still warm."
     }
   ],
   "notes": [
-    "The source page says \"350 degrees C (175 degrees C)\". It's a typo: 350°F = 175°C.",
-    "A lightly pressed fold can pop open during the final proof."
+    "The source page says \"350 degrees C (175 degrees C)\". It's a typo for 350°F, and 350°F didn't brown enough anyway; see deviations.",
+    "A lightly pressed fold can pop open during the final proof.",
+    "The brown butter and milk powder flavor isn't super pronounced in the finished rolls."
   ],
-  "deviations": [],
+  "deviations": [
+    {
+      "what": "8 g Diamond Crystal kosher salt (a scant 1 tbsp) instead of 1½ tsp",
+      "why": "The source amount is light. I like the salt level at 8 g."
+    },
+    {
+      "what": "Optional 0.5 g MSG in with the salt",
+      "why": "Umami boost. 2 g was too much."
+    },
+    {
+      "what": "Optionally brown the dough butter with 40 g nonfat dry milk powder instead of just melting it",
+      "why": "Brown butter flavor throughout the roll."
+    },
+    {
+      "what": "Bake at 375°F instead of 350°F, same 25 minutes",
+      "why": "350°F didn't brown enough."
+    }
+  ],
   "openQuestions": [],
   "log": [
     {
       "date": "2026-11-07",
       "entry": "First bake, for the trial Thanksgiving. Bulk rise was doubled at about 1.5 hours, so moved on early."
+    },
+    {
+      "date": "2026-11-11",
+      "entry": "Second bake. Browned the dough butter with 40 g milk powder, quenched with about 2 tbsp water. Worked fine, flavor isn't super pronounced in the finished rolls, as expected. 8 g salt + 2 g MSG: like the salt level, MSG is too much, dialing back to 0.5 g. Baked at 375°F for 25 minutes, perfect doneness."
     }
   ]
 }
