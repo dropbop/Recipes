@@ -60,7 +60,26 @@ function formatQuantity(num, unit, numMax) {
     result = formatSingle(num);
   }
 
-  return unit ? `${result} ${unit}` : result;
+  const largest = (numMax !== null && numMax !== undefined) ? Math.max(num, numMax) : num;
+  const shownUnit = unitForAmount(unit, largest);
+  return shownUnit ? `${result} ${shownUnit}` : result;
+}
+
+// Countable units read "1 cup" / "2 cups" whichever form the recipe stored.
+// Abbreviations (tbsp, tsp, g, oz, ml) never change.
+const UNIT_FORMS = [
+  ['cup', 'cups'], ['lb', 'lbs'], ['clove', 'cloves'], ['sprig', 'sprigs'],
+  ['stalk', 'stalks'], ['slice', 'slices'], ['head', 'heads'], ['can', 'cans'],
+  ['small can', 'small cans'], ['packet', 'packets'], ['package', 'packages'],
+  ['box', 'boxes'], ['brick', 'bricks'], ['bunch', 'bunches'], ['liter', 'liters'],
+  ['inch', 'inches'], ['quart', 'quarts'], ['pinch', 'pinches']
+];
+
+function unitForAmount(unit, amount) {
+  if (!unit) return unit;
+  const forms = UNIT_FORMS.find(pair => pair.includes(unit));
+  if (!forms) return unit;
+  return amount > 1 ? forms[1] : forms[0];
 }
 
 /**
@@ -167,6 +186,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Export to window for use across pages
 window.formatQuantity = formatQuantity;
+window.unitForAmount = unitForAmount;
 window.getTagColor = getTagColor;
 window.FRACTIONS = FRACTIONS;
 window.setTheme = setTheme;

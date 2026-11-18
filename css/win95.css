@@ -554,6 +554,16 @@ hr.win-hr {
     color: #000080;
 }
 
+.direction-qty {
+    font-weight: bold;
+    color: #000080;
+}
+
+.direction-qty-missing {
+    color: #CC0000;
+    font-family: monospace;
+}
+
 /* === Notes & Deviations === */
 .note-item {
     margin: 10px 0;

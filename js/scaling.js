@@ -131,6 +131,10 @@ function scaleIngredients(factor) {
       }
     });
   });
+
+  if (typeof window.renderDirections === 'function') {
+    window.renderDirections(recipeData, factor);
+  }
 }
 
 function updateNutrition(factor) {

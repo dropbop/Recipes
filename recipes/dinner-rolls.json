@@ -166,6 +166,7 @@
       "name": "Dough",
       "items": [
         {
+          "key": "milk",
           "quantity": 0.5,
           "quantityMax": null,
           "unit": "cups",
@@ -174,6 +175,7 @@
           "scalable": true
         },
         {
+          "key": "water",
           "quantity": 0.5,
           "quantityMax": null,
           "unit": "cups",
@@ -182,6 +184,7 @@
           "scalable": true
         },
         {
+          "key": "yeast",
           "quantity": 2.25,
           "quantityMax": null,
           "unit": "tsp",
@@ -190,6 +193,7 @@
           "scalable": true
         },
         {
+          "key": "eggs",
           "quantity": 2,
           "quantityMax": null,
           "unit": "",
@@ -198,6 +202,7 @@
           "scalable": true
         },
         {
+          "key": "sugar",
           "quantity": 3,
           "quantityMax": null,
           "unit": "tbsp",
@@ -206,6 +211,7 @@
           "scalable": true
         },
         {
+          "key": "salt",
           "quantity": 8,
           "quantityMax": null,
           "unit": "g",
@@ -214,6 +220,7 @@
           "scalable": true
         },
         {
+          "key": "msg",
           "quantity": 0.5,
           "quantityMax": null,
           "unit": "g",
@@ -222,6 +229,7 @@
           "scalable": true
         },
         {
+          "key": "dough-butter",
           "quantity": 8,
           "quantityMax": null,
           "unit": "tbsp",
@@ -230,6 +238,7 @@
           "scalable": true
         },
         {
+          "key": "flour",
           "quantity": 4.5,
           "quantityMax": null,
           "unit": "cups",
@@ -243,6 +252,7 @@
       "name": "To Finish",
       "items": [
         {
+          "key": "brushing-butter",
           "quantity": 4,
           "quantityMax": null,
           "unit": "tbsp",
@@ -265,12 +275,12 @@
     {
       "step": 1,
       "title": "Bloom the yeast",
-      "text": "Warm the milk and water together in a measuring cup. About 45 seconds in a standard microwave gets you to the ~110°F you want. Into the stand mixer bowl with the yeast and let it sit 10 minutes. Melt the 8 tbsp dough butter while you wait."
+      "text": "Warm the {milk} milk and {water} water together in a measuring cup. About 45 seconds in a standard microwave gets you to the ~110°F you want. Into the stand mixer bowl with the {yeast} yeast and let it sit 10 minutes. Melt the {dough-butter} dough butter while you wait."
     },
     {
       "step": 2,
       "title": "Mix and knead",
-      "text": "Once the yeast is bloomed, all the wets go in the bowl: the eggs, sugar, 8 g salt, 0.5 g MSG and the 8 tbsp melted butter. Make sure the butter has cooled enough that it won't cook the eggs when you pour it in. Whisk it together briefly with a fork. Dump in the flour and knead with the dough hook until it comes together into a ball, about 6 minutes. Add a little more flour only if it's not coming together."
+      "text": "Once the yeast is bloomed, all the wets go in the bowl: the {eggs} eggs, {sugar} sugar, {salt} salt, {msg} MSG and the {dough-butter} melted butter. Make sure the butter has cooled enough that it won't cook the eggs when you pour it in. Whisk it together briefly with a fork. Dump in the {flour} flour and knead with the dough hook until it comes together into a ball, about 6 minutes. Add a little more flour only if it's not coming together."
     },
     {
       "step": 3,
@@ -295,7 +305,7 @@
     {
       "step": 7,
       "title": "Butter",
-      "text": "Brush the remaining 4 tbsp melted butter over the tops while they're still warm. It will look excessive, but it soaks in very quickly and it's important for the flavor. Sprinkle a little salt over the top if you want."
+      "text": "Brush the {brushing-butter} melted butter over the tops while they're still warm. It will look excessive, but it soaks in very quickly and it's important for the flavor. Sprinkle a little salt over the top if you want."
     }
   ],
   "notes": [

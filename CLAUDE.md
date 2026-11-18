@@ -21,8 +21,8 @@ If the user wants to add a new recipe, **read `recipe-writing-guide.md` in full*
 2. Individual recipes stored as JSON in `recipes/{id}.json`
 3. `js/categories.js` defines `RECIPE_CATEGORIES`, the ordered list of index sections (`{ key, label }`)
 4. `js/index.js` renders the index: filters by status, groups by category, puts missing/unknown categories in a trailing Uncategorized section
-5. `js/recipe-loader.js` fetches and renders recipe JSON
-6. `js/scaling.js` handles ingredient scaling with multiplier buttons
+5. `js/recipe-loader.js` fetches and renders recipe JSON, including method tokens (`renderDirections`)
+6. `js/scaling.js` handles ingredient scaling with multiplier buttons and re-renders the method at the new scale
 7. `js/utils.js` contains shared functions (`formatQuantity`, `getTagColor`, theme system)
 
 **Script load order matters:**
@@ -60,8 +60,8 @@ Key fields:
 - `subtitle`, `source` — optional metadata
 - `time` — `{ prep, active, passive }` in minutes: hands-on prep, hands-on cooking, unattended time
 - `nutrition` — optional `{ batch: { calories, protein, fat, carbs, fiber }, ingredients: [...] }` for batch totals and ingredient macro breakdowns
-- `ingredientGroups[].items[]` with `quantity`, `quantityMax` (for ranges like "4–6"), `unit`, `item`, `note`, `scalable`
-- `directions[]` with `step`, `title` (optional), `text`
+- `ingredientGroups[].items[]` with `key`, `quantity`, `quantityMax` (for ranges like "4–6"), `unit`, `item`, `note`, `scalable`
+- `directions[]` with `step`, `title` (optional), `text`. Amounts in `text` are tokens (`{key}`, `{key:2}`, `{key:1-2}`) that render from the ingredient and scale with it; never type amounts into steps (see "Amounts in the method" in `recipe-writing-guide.md`)
 - `deviations[]` — array of `{ what, why }` objects explaining what you changed from tradition and why
 - `notes[]` — array of strings for cooking tips and future improvements (not deviation explanations)
 - `openQuestions[]` — unresolved planning decisions (mainly To Cook records)
@@ -72,6 +72,7 @@ Key fields:
 `node --test` from the repo root runs everything in `tests/`:
 - `tests/index.test.js` — category/manifest data checks, and the rendered index (every recipe shown once under the right heading, filters, Uncategorized fallback)
 - `tests/nutrition.test.js` — nutrition data and the Nutrition tab's scaling math
+- `tests/directions.test.js` — method tokens render and scale; every recipe's tokens resolve, partials fit, no typed amounts, every quantified ingredient used in the method
 
 Tests should check what the page is supposed to do for a reader, not mirror the implementation.
 

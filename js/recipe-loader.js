@@ -15,7 +15,7 @@ const STATUS_LABELS = {
   'to-cook': '\u2610 TO COOK'
 };
 
-const RECIPE_DATA_VERSION = '20261118-rolls4';
+const RECIPE_DATA_VERSION = '20261118-qty1';
 
 async function init() {
   const recipeId = getRecipeIdFromUrl();
@@ -219,7 +219,47 @@ function renderOverview(recipe) {
 function renderRecipeTab(recipe) {
   renderIngredients(recipe);
 
+  renderDirections(recipe);
+}
+
+// Method steps can carry ingredient amounts as tokens so they scale with the recipe:
+//   {key}      the ingredient's full amount, e.g. {dough-butter} -> "8 tbsp"
+//   {key:2}    part of it, in the ingredient's unit, e.g. {brushing-butter:2} -> "2 tbsp"
+//   {key:1-2}  a partial range
+// `key` matches an ingredient item's `key` field. Scaling follows the item's `scalable` flag.
+const DIRECTION_TOKEN = /\{([a-z0-9-]+)(?::(\d*\.?\d+)(?:-(\d*\.?\d+))?)?\}/g;
+
+function ingredientsByKey(recipe) {
+  const map = new Map();
+  (recipe.ingredientGroups || []).forEach(group => {
+    group.items.forEach(item => { if (item.key) map.set(item.key, item); });
+  });
+  return map;
+}
+
+function directionQuantity(item, part, partMax, scaleFactor) {
+  const factor = item.scalable ? scaleFactor : 1;
+  const base = part !== undefined ? Number(part) : item.quantity;
+  const baseMax = part !== undefined
+    ? (partMax !== undefined ? Number(partMax) : null)
+    : item.quantityMax;
+  if (base === null || base === undefined) return null;
+  return formatQuantity(base * factor, item.unit, baseMax ? baseMax * factor : null);
+}
+
+function renderDirectionText(text, recipe, scaleFactor = 1) {
+  const items = ingredientsByKey(recipe);
+  return text.replace(DIRECTION_TOKEN, (token, key, part, partMax) => {
+    const item = items.get(key);
+    const quantity = item ? directionQuantity(item, part, partMax, scaleFactor) : null;
+    if (quantity === null) return `<span class="direction-qty-missing">${token}</span>`;
+    return `<span class="direction-qty">${quantity}</span>`;
+  });
+}
+
+function renderDirections(recipe, scaleFactor = 1) {
   const container = document.getElementById('directions-list');
+  if (!container) return;
   const directions = recipe.directions || [];
   let html = '<div class="section"><div class="section-title">\u25C6 Method</div>';
 
@@ -230,7 +270,7 @@ function renderRecipeTab(recipe) {
       const title = dir.title ? `<span class="direction-title">${dir.title}:</span> ` : '';
       html += `<div class="direction">
         <span class="direction-number">${dir.step}</span>
-        ${title}${dir.text}
+        ${title}${renderDirectionText(dir.text, recipe, scaleFactor)}
       </div>`;
     });
   }
@@ -665,6 +705,8 @@ function showError(message) {
 }
 
 window.renderNutrition = renderNutrition;
+window.renderDirections = renderDirections;
+window.renderDirectionText = renderDirectionText;
 window.setNutritionBatchMultiplier = setNutritionBatchMultiplier;
 window.adjustNutritionBatchSize = adjustNutritionBatchSize;
 window.adjustNutritionContainers = adjustNutritionContainers;

@@ -37,7 +37,7 @@ Draft the directions preserving the user's voice. Show them: "Here's how I wrote
 ### Step 6: Create files
 1. Write `recipes/{slug}.json`
 2. Add an entry to `js/manifest.js` with matching `id`, `title`, `desc`, `tags`, optional `time`, `status`, and `category`
-3. Run `node --test` from the repo root. It fails if the category is missing or unknown, or if the manifest entry doesn't match the JSON.
+3. Run `node --test` from the repo root. It fails if the category is missing or unknown, if the manifest entry doesn't match the JSON, or if the method has typed amounts or skips an ingredient (see **Amounts in the method**).
 
 ### Step 7: Final review
 Show the user the complete JSON (or summarize key fields) and confirm before committing.
@@ -181,6 +181,7 @@ Good group names: "Main Components", "Sauce", "Shrimp", "Herbs & Aromatics", "To
 
 ```json
 {
+  "key": "butter",
   "quantity": 2,
   "quantityMax": null,
   "unit": "tbsp",
@@ -189,6 +190,8 @@ Good group names: "Main Components", "Sauce", "Shrimp", "Herbs & Aromatics", "To
   "scalable": true
 }
 ```
+
+**key**: Short lowercase-hyphenated handle the method uses to pull in this ingredient's amount (see **Amounts in the method** under Directions). Required on every item with a numeric `quantity`; unique within the recipe. Name it after what it is, and disambiguate when the same ingredient shows up twice: `dough-butter`, `brushing-butter`, `finishing-salt`. Items with `quantity: null` (to taste, a pinch, oil for the pan) don't need one.
 
 **quantity**: Number or `null`. Use `null` for "to taste" or imprecise amounts. This is what the scaling calculator multiplies.
 
@@ -244,6 +247,24 @@ Bad direction writing:
 - "Gently fold in the cheese, being careful not to overmix, until just combined."
 
 The voice should sound like someone telling a friend how to cook, not a cookbook editor.
+
+### Amounts in the method
+
+The method repeats the amounts as you go, so a reader can cook straight down the steps without flipping back to the list, and the amounts scale with the ×½ / ×2 buttons. Never type an amount into step text. Use a token that points at the ingredient's `key`:
+
+| Token | Renders as (1×) | Use for |
+|---|---|---|
+| `{dough-butter}` | 8 tbsp | the ingredient's full amount |
+| `{brushing-butter:2}` | 2 tbsp | part of it, in the ingredient's unit |
+| `{garlic:2-3}` | 2–3 cloves | part of it, as a range |
+
+The token renders only the amount and unit, so write the ingredient name after it: `Melt the {dough-butter} butter` → "Melt the 8 tbsp butter"; `Add {eggs} eggs` → "Add 2 eggs"; `{garlic} garlic` → "6 cloves garlic". Countable units read singular or plural to match the scaled number.
+
+Rules (enforced by `node --test`):
+- Every ingredient with a numeric quantity appears in the method at least once. Name amounts where they're used: "Add the {garlic} garlic and {ginger} ginger", not "add the aromatics".
+- A full-amount token can be repeated (mention the butter when you melt it and again when it goes in). Partial tokens for one ingredient can't add up to more than the listed amount.
+- No typed amounts in step text (`8 tbsp`, `½ cup`, `2 lbs`). Temperatures, times, dimensions and counts that aren't ingredient amounts (375°F, 25 minutes, a 6x4 grid) stay as plain text, but remember they won't scale.
+- A token pointing at a missing key renders in red on the page and fails the tests.
 
 ---
 
@@ -331,5 +352,6 @@ The `desc` field is a truncated version of the recipe's description — punchy e
 - **Making notes redundant with directions.** If a tip is already in a direction step, it doesn't need to be in notes.
 - **Food blog voice.** No "this delicious recipe is perfect for weeknight dinners!" No SEO. No life stories.
 - **Imprecise scaling flags.** Think about each ingredient: does it actually scale? "2 bay leaves" doesn't become "4 bay leaves" for double servings.
+- **Typing amounts into the method.** "Melt 8 tbsp butter" won't scale. Use `{dough-butter}`.
 - **Forgetting `quantityMax`.** If the user says "4-6 ribs" or "1-2 tablespoons", use the range fields.
 - **Skipping confirmations.** Don't assume — ask the user about title, description, deviations, and lifecycle status.
