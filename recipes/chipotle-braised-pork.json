@@ -4,7 +4,13 @@
   "description": "Pork shoulder braised with chipotle. Dirt cheap, dead simple, surprisingly complex. Great for bulk prep — tacos, bowls, whatever.",
   "status": "experimenting",
   "category": "meal-prep",
-  "tags": ["pork", "mexican", "braise", "pressure-cooker", "meal-prep"],
+  "tags": [
+    "pork",
+    "mexican",
+    "braise",
+    "pressure-cooker",
+    "meal-prep"
+  ],
   "time": {
     "prep": 20,
     "active": 30,
@@ -200,6 +206,7 @@
       "name": "Pork",
       "items": [
         {
+          "key": "pork-shoulder",
           "quantity": 4.5,
           "quantityMax": null,
           "unit": "lbs",
@@ -213,6 +220,7 @@
       "name": "Aromatics & Braising Liquid",
       "items": [
         {
+          "key": "onion",
           "quantity": 1,
           "quantityMax": null,
           "unit": "",
@@ -221,6 +229,7 @@
           "scalable": true
         },
         {
+          "key": "garlic",
           "quantity": 6,
           "quantityMax": null,
           "unit": "cloves",
@@ -229,6 +238,7 @@
           "scalable": true
         },
         {
+          "key": "chipotle",
           "quantity": 1,
           "quantityMax": null,
           "unit": "can",
@@ -237,6 +247,7 @@
           "scalable": true
         },
         {
+          "key": "tomato-paste",
           "quantity": 2,
           "quantityMax": null,
           "unit": "tbsp",
@@ -295,6 +306,7 @@
       "name": "To Finish",
       "items": [
         {
+          "key": "lime",
           "quantity": 1,
           "quantityMax": null,
           "unit": "",
@@ -309,7 +321,7 @@
     {
       "step": 1,
       "title": "Prep",
-      "text": "Cube pork, salt generously, dry brine if you have time. The sear is the most important step though — you can handle salting later if needed."
+      "text": "Cube the {pork-shoulder} pork, salt generously, dry brine if you have time. The sear is the most important step though — you can handle salting later if needed."
     },
     {
       "step": 2,
@@ -319,17 +331,17 @@
     {
       "step": 3,
       "title": "Aromatics",
-      "text": "Sautee onion and garlic."
+      "text": "Sautee {onion} onion and {garlic} garlic."
     },
     {
       "step": 4,
       "title": "Tomato Paste",
-      "text": "Add tomato paste, cook the funk off."
+      "text": "Add {tomato-paste} tomato paste, cook the funk off."
     },
     {
       "step": 5,
       "title": "Braise",
-      "text": "Deglaze with stock. Add chipotles, seared pork, and all spices. Minimize liquid — you don't want it wet."
+      "text": "Deglaze with stock. Add {chipotle} chipotles, seared pork, and all spices. Minimize liquid — you don't want it wet."
     },
     {
       "step": 6,
@@ -339,7 +351,7 @@
     {
       "step": 7,
       "title": "Finish",
-      "text": "Add lime juice and zest. Consider frying it up when it's done."
+      "text": "Add the juice and zest of {lime} lime. Consider frying it up when it's done."
     }
   ],
   "notes": [

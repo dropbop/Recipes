@@ -4,7 +4,12 @@
   "description": "A high-protein meal-prep pasta built on real caramelized onions, shredded chicken breast, bone broth reduction, and a blended cottage-cheese Gruyere sauce. The pasta cooks directly in the mix, so the starch helps pull the whole thing together without par-boiling.",
   "status": "dialed-in",
   "category": "meal-prep",
-  "tags": ["chicken", "pasta", "meal-prep", "high-protein"],
+  "tags": [
+    "chicken",
+    "pasta",
+    "meal-prep",
+    "high-protein"
+  ],
   "source": "Adapted from @stealth_health_life; converted from a slow-cooker/crock-pot version to a stovetop method",
   "time": {
     "prep": 25,
@@ -322,6 +327,7 @@
       "name": "Caramelized Onions",
       "items": [
         {
+          "key": "onions",
           "quantity": 4,
           "quantityMax": null,
           "unit": "",
@@ -330,6 +336,7 @@
           "scalable": true
         },
         {
+          "key": "butter",
           "quantity": 6,
           "quantityMax": null,
           "unit": "tbsp",
@@ -359,6 +366,7 @@
       "name": "Chicken Braise",
       "items": [
         {
+          "key": "chicken-breast",
           "quantity": 48,
           "quantityMax": null,
           "unit": "oz",
@@ -383,6 +391,7 @@
           "scalable": false
         },
         {
+          "key": "chicken-broth",
           "quantity": 100,
           "quantityMax": null,
           "unit": "ml",
@@ -391,6 +400,7 @@
           "scalable": true
         },
         {
+          "key": "chicken-garlic",
           "quantity": 3,
           "quantityMax": null,
           "unit": "cloves",
@@ -399,6 +409,7 @@
           "scalable": true
         },
         {
+          "key": "worcestershire",
           "quantity": 2,
           "quantityMax": null,
           "unit": "tbsp",
@@ -407,6 +418,7 @@
           "scalable": true
         },
         {
+          "key": "chicken-mustard",
           "quantity": 1,
           "quantityMax": null,
           "unit": "tbsp",
@@ -423,6 +435,7 @@
           "scalable": false
         },
         {
+          "key": "chicken-rosemary",
           "quantity": 1,
           "quantityMax": null,
           "unit": "sprig",
@@ -436,6 +449,7 @@
       "name": "Onion Reduction",
       "items": [
         {
+          "key": "onion-broth",
           "quantity": 32,
           "quantityMax": null,
           "unit": "oz",
@@ -444,6 +458,7 @@
           "scalable": true
         },
         {
+          "key": "onion-rosemary",
           "quantity": 1,
           "quantityMax": null,
           "unit": "sprig",
@@ -452,6 +467,7 @@
           "scalable": false
         },
         {
+          "key": "onion-mustard",
           "quantity": 1,
           "quantityMax": null,
           "unit": "tsp",
@@ -465,6 +481,7 @@
       "name": "Cheese Sauce",
       "items": [
         {
+          "key": "cottage-cheese",
           "quantity": 24,
           "quantityMax": null,
           "unit": "oz",
@@ -473,6 +490,7 @@
           "scalable": true
         },
         {
+          "key": "milk",
           "quantity": 350,
           "quantityMax": null,
           "unit": "ml",
@@ -481,6 +499,7 @@
           "scalable": true
         },
         {
+          "key": "gruyere",
           "quantity": 150,
           "quantityMax": null,
           "unit": "g",
@@ -489,6 +508,7 @@
           "scalable": true
         },
         {
+          "key": "parmesan",
           "quantity": 100,
           "quantityMax": null,
           "unit": "g",
@@ -497,6 +517,7 @@
           "scalable": true
         },
         {
+          "key": "sodium-citrate",
           "quantity": 20,
           "quantityMax": null,
           "unit": "g",
@@ -505,6 +526,7 @@
           "scalable": true
         },
         {
+          "key": "white-beans",
           "quantity": 16,
           "quantityMax": null,
           "unit": "oz",
@@ -518,6 +540,7 @@
       "name": "Assembly",
       "items": [
         {
+          "key": "penne",
           "quantity": 14.5,
           "quantityMax": null,
           "unit": "oz",
@@ -532,7 +555,7 @@
     {
       "step": 1,
       "title": "Onions",
-      "text": "Slice the onions in half, then cross-section into relatively thin half moons. Put them in a large pot, ideally stainless, over high heat until they are translucent and starting to brown. Salt them to help draw moisture out. Add the butter only once the onions are already going; throw it in too early and you risk burning it."
+      "text": "Slice the {onions} onions in half, then cross-section into relatively thin half moons. Put them in a large pot, ideally stainless, over high heat until they are translucent and starting to brown. Salt them to help draw moisture out. Add the {butter} butter only once the onions are already going; throw it in too early and you risk burning it."
     },
     {
       "step": 2,
@@ -542,27 +565,27 @@
     {
       "step": 3,
       "title": "Chicken",
-      "text": "Butterfly the chicken if needed to get it around 1-1.5 inches thick. Salt it, then sear in a large pot or Dutch oven to get color. Do not worry about cooking it through yet. Pull it out and cut into 1-2 inch cubes so the shredded texture stays right instead of getting weird and stringy."
+      "text": "Butterfly the {chicken-breast} chicken if needed to get it around 1-1.5 inches thick. Salt it, then sear in a large pot or Dutch oven to get color. Do not worry about cooking it through yet. Pull it out and cut into 1-2 inch cubes so the shredded texture stays right instead of getting weird and stringy."
     },
     {
       "step": 4,
       "title": "Braise",
-      "text": "Deglaze the searing pot with 100 ml broth, then add the cubed chicken back in with garlic, Worcestershire, whole grain mustard, garlic powder, onion powder, black pepper, cayenne, thyme, and optional rosemary. Mix, cover, and simmer over medium-low for about an hour, stirring occasionally, until the chicken is just ready to shred."
+      "text": "Deglaze the searing pot with {chicken-broth} broth, then add the cubed chicken back in with {chicken-garlic} garlic, {worcestershire} Worcestershire, {chicken-mustard} whole grain mustard, garlic powder, onion powder, black pepper, cayenne, thyme, and optional {chicken-rosemary} rosemary. Mix, cover, and simmer over medium-low for about an hour, stirring occasionally, until the chicken is just ready to shred."
     },
     {
       "step": 5,
       "title": "Reduce",
-      "text": "In parallel, take the 4 onions' worth of caramelized onions and add 32 oz broth, rosemary, and whole grain mustard. Reduce in a wide stainless saute pan until almost dry, about an hour. Careful not to burn it."
+      "text": "In parallel, take the {onions} onions' worth of caramelized onions and add {onion-broth} broth, {onion-rosemary} rosemary, and {onion-mustard} whole grain mustard. Reduce in a wide stainless saute pan until almost dry, about an hour. Careful not to burn it."
     },
     {
       "step": 6,
       "title": "Sauce",
-      "text": "Blend the cottage cheese, milk, Gruyere, Parmesan, sodium citrate, drained white beans, and half of the caramelized onion mixture until thick and smooth. The beans are totally optional and only serve to add a little fiber; they end up completely unnoticeable."
+      "text": "Blend the {cottage-cheese} cottage cheese, {milk} milk, {gruyere} Gruyere, {parmesan} Parmesan, {sodium-citrate} sodium citrate, {white-beans} drained white beans, and half of the caramelized onion mixture until thick and smooth. The beans are totally optional and only serve to add a little fiber; they end up completely unnoticeable."
     },
     {
       "step": 7,
       "title": "Assembly",
-      "text": "Shred the chicken. Pour the cheese sauce over it and mix to coat, then add the remaining caramelized onion mixture. Add the dry protein penne directly to the chicken, cheese, and onions. Mix, cover, and cook at a low gentle simmer until the pasta is done, about 28 minutes, stirring every 5 minutes or so."
+      "text": "Shred the chicken. Pour the cheese sauce over it and mix to coat, then add the remaining caramelized onion mixture. Add the {penne} dry protein penne directly to the chicken, cheese, and onions. Mix, cover, and cook at a low gentle simmer until the pasta is done, about 28 minutes, stirring every 5 minutes or so."
     },
     {
       "step": 8,

@@ -4,7 +4,11 @@
   "description": "Dark-toasted rye or pumpernickel kvass with raisins and lemon, fermented with ordinary bread yeast. A two-day ferment, with optional carbonation before chilling.",
   "status": "experimenting",
   "category": "beverages",
-  "tags": ["beverage", "fermented", "bread"],
+  "tags": [
+    "beverage",
+    "fermented",
+    "bread"
+  ],
   "servings": {
     "base": 1,
     "unit": "batches"
@@ -22,6 +26,7 @@
       "name": "Steep",
       "items": [
         {
+          "key": "water",
           "quantity": 1.5,
           "quantityMax": null,
           "unit": "liters",
@@ -30,6 +35,7 @@
           "scalable": true
         },
         {
+          "key": "bread",
           "quantity": 2,
           "quantityMax": null,
           "unit": "slices",
@@ -38,6 +44,7 @@
           "scalable": true
         },
         {
+          "key": "sugar",
           "quantity": 75,
           "quantityMax": null,
           "unit": "g",
@@ -46,6 +53,7 @@
           "scalable": true
         },
         {
+          "key": "lemon-slice",
           "quantity": 1,
           "quantityMax": null,
           "unit": "slice",
@@ -54,6 +62,7 @@
           "scalable": true
         },
         {
+          "key": "steep-raisins",
           "quantity": 15,
           "quantityMax": null,
           "unit": "",
@@ -67,6 +76,7 @@
       "name": "Fermentation",
       "items": [
         {
+          "key": "yeast",
           "quantity": 0.125,
           "quantityMax": null,
           "unit": "tsp",
@@ -75,6 +85,7 @@
           "scalable": true
         },
         {
+          "key": "fresh-raisins",
           "quantity": 15,
           "quantityMax": null,
           "unit": "",
@@ -88,6 +99,7 @@
       "name": "To Finish",
       "items": [
         {
+          "key": "lemon-juice",
           "quantity": 0.5,
           "quantityMax": null,
           "unit": "",
@@ -102,17 +114,17 @@
     {
       "step": 1,
       "title": "Measure and toast",
-      "text": "Fill the jar to the top with filtered water, then dump that into a pot. Toast the bread as far as possible without burning."
+      "text": "Fill the jar to the top with {water} filtered water, then dump that into a pot. Toast the bread as far as possible without burning."
     },
     {
       "step": 2,
       "title": "Steep",
-      "text": "Bring the water to a boil, then turn off the heat. Add the toasted bread, sugar, lemon slice, and first handful of raisins. Cover with the pot lid and steep off heat for at least 4 hours."
+      "text": "Bring the water to a boil, then turn off the heat. Add the toasted {bread} bread, {sugar} sugar, {lemon-slice} lemon, and the first {steep-raisins} raisins. Cover with the pot lid and steep off heat for at least 4 hours."
     },
     {
       "step": 3,
       "title": "Strain and add yeast",
-      "text": "Once the mixture is at room temperature, strain out the bread, raisins, and lemon. Transfer the liquid to the clean glass fermentation jar. Add the yeast and fresh handful of rinsed raisins, then stir to combine."
+      "text": "Once the mixture is at room temperature, strain out the bread, raisins, and lemon. Transfer the liquid to the clean glass fermentation jar. Add the {yeast} yeast and another {fresh-raisins} rinsed raisins, then stir to combine."
     },
     {
       "step": 4,
@@ -122,7 +134,7 @@
     {
       "step": 5,
       "title": "Finish",
-      "text": "Strain again and adjust the taste with juice from about half a lemon."
+      "text": "Strain again and adjust the taste with juice from about {lemon-juice} lemon."
     },
     {
       "step": 6,

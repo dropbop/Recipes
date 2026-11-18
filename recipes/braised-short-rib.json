@@ -4,7 +4,12 @@
   "description": "A braised beef short rib that blows every restaurant's version out of the water. Heavy on the black pepper, heavy on the garlic.",
   "status": "dialed-in",
   "category": "mains",
-  "tags": ["beef", "braise", "dutch-oven", "winter"],
+  "tags": [
+    "beef",
+    "braise",
+    "dutch-oven",
+    "winter"
+  ],
   "source": "Chef John's Peposa dell'Impruneta, with adaptations",
   "time": {
     "prep": 20,
@@ -141,6 +146,7 @@
       "name": "Main Components",
       "items": [
         {
+          "key": "short-ribs",
           "quantity": 4,
           "quantityMax": 6,
           "unit": "",
@@ -149,6 +155,7 @@
           "scalable": true
         },
         {
+          "key": "black-pepper",
           "quantity": 3,
           "unit": "tbsp",
           "item": "black pepper",
@@ -156,6 +163,7 @@
           "scalable": true
         },
         {
+          "key": "garlic",
           "quantity": 8,
           "unit": "cloves",
           "item": "garlic",
@@ -163,6 +171,7 @@
           "scalable": true
         },
         {
+          "key": "tomato-paste",
           "quantity": 1,
           "quantityMax": 2,
           "unit": "tbsp",
@@ -171,6 +180,7 @@
           "scalable": true
         },
         {
+          "key": "wine",
           "quantity": 2,
           "unit": "cups",
           "item": "Chianti or similar wine",
@@ -183,6 +193,7 @@
       "name": "Herbs & Aromatics",
       "items": [
         {
+          "key": "sage",
           "quantity": 4,
           "quantityMax": 5,
           "unit": "",
@@ -191,6 +202,7 @@
           "scalable": false
         },
         {
+          "key": "thyme",
           "quantity": 3,
           "unit": "sprigs",
           "item": "thyme",
@@ -223,22 +235,22 @@
     {
       "step": 1,
       "title": "Dry Brine",
-      "text": "Heavily salt the short ribs 4–24 hours in advance and refrigerate uncovered. The salt penetrates deep into the meat and makes a real difference."
+      "text": "Heavily salt the {short-ribs} short ribs 4–24 hours in advance and refrigerate uncovered. The salt penetrates deep into the meat and makes a real difference."
     },
     {
       "step": 2,
       "title": "Garlic Paste",
-      "text": "Turn the garlic into a paste using salt and a mortar and pestle, or use a garlic press. Paste or pressed garlic punches way harder than minced or crushed cloves."
+      "text": "Turn the {garlic} garlic into a paste using salt and a mortar and pestle, or use a garlic press. Paste or pressed garlic punches way harder than minced or crushed cloves."
     },
     {
       "step": 3,
       "title": "Prep the Meat",
-      "text": "Sear the ribs if you want fond, or skip it. Rub the ribs with the garlic paste and tomato paste."
+      "text": "Sear the ribs if you want fond, or skip it. Rub the ribs with the garlic paste, {tomato-paste} tomato paste, and {black-pepper} black pepper."
     },
     {
       "step": 4,
       "title": "Braise",
-      "text": "Arrange ribs in a single layer in your Dutch oven. Add wine until it comes almost to the top of the meat — 2 cups minimum, more if needed. Add the herbs and bay leaves. Cover tightly and braise at 300°F, turning every 30 minutes or so. The meat needs 3.5–4.5 hours to become properly tender."
+      "text": "Arrange ribs in a single layer in your Dutch oven. Add wine until it comes almost to the top of the meat — {wine} minimum, more if needed. Add the {sage} sage leaves, {thyme} thyme, and bay leaves. Cover tightly and braise at 300°F, turning every 30 minutes or so. The meat needs 3.5–4.5 hours to become properly tender."
     },
     {
       "step": 5,

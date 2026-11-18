@@ -105,6 +105,7 @@
       "name": "Per Shrimp",
       "items": [
         {
+          "key": "shrimp",
           "quantity": 1,
           "quantityMax": null,
           "unit": "",
@@ -113,6 +114,7 @@
           "scalable": true
         },
         {
+          "key": "prosciutto",
           "quantity": 1,
           "quantityMax": null,
           "unit": "slice",
@@ -121,6 +123,7 @@
           "scalable": true
         },
         {
+          "key": "gruyere",
           "quantity": 1,
           "quantityMax": null,
           "unit": "",
@@ -135,7 +138,7 @@
     {
       "step": 1,
       "title": "Build",
-      "text": "Cut the Gruyère into french-fry-sized batons. Lay one against each shrimp and wrap the pair in a slice of prosciutto."
+      "text": "Cut the Gruyère into french-fry-sized batons, {gruyere} total. Lay one against each shrimp ({shrimp} total) and wrap the pair in a slice of prosciutto ({prosciutto} total)."
     },
     {
       "step": 2,

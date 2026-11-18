@@ -13,6 +13,7 @@ const macros = ['calories', 'protein', 'fat', 'carbs', 'fiber'];
 function viewer() {
   const elements = new Map();
   const document = {
+    body: { style: {} },
     addEventListener() {},
     getElementById(id) {
       if (!elements.has(id)) elements.set(id, { innerHTML: '', style: {}, value: '', textContent: '' });
@@ -21,8 +22,9 @@ function viewer() {
     querySelectorAll() { return []; },
     querySelector() { return null; }
   };
-  const context = vm.createContext({ document, window: {} });
-  for (const file of ['js/recipe-loader.js', 'js/scaling.js']) {
+  const context = vm.createContext({ document, window: {}, localStorage: { getItem() { return null; }, setItem() {} } });
+  // Same order as recipe.html: utils provides formatQuantity to both.
+  for (const file of ['js/utils.js', 'js/scaling.js', 'js/recipe-loader.js']) {
     vm.runInContext(fs.readFileSync(path.join(root, file), 'utf8'), context);
   }
   const html = () => document.getElementById('nutrition-content').innerHTML;

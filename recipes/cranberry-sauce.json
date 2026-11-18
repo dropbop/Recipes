@@ -125,6 +125,7 @@
       "name": "Sauce",
       "items": [
         {
+          "key": "cranberries",
           "quantity": 12,
           "quantityMax": null,
           "unit": "oz",
@@ -133,6 +134,7 @@
           "scalable": true
         },
         {
+          "key": "sugar",
           "quantity": 0.75,
           "quantityMax": null,
           "unit": "cup",
@@ -141,6 +143,7 @@
           "scalable": true
         },
         {
+          "key": "orange",
           "quantity": 1,
           "quantityMax": null,
           "unit": "",
@@ -149,6 +152,7 @@
           "scalable": true
         },
         {
+          "key": "water",
           "quantity": 1,
           "quantityMax": null,
           "unit": "cup",
@@ -165,6 +169,7 @@
           "scalable": false
         },
         {
+          "key": "orange-liqueur",
           "quantity": 1,
           "quantityMax": 2,
           "unit": "tbsp",
@@ -195,12 +200,12 @@
     {
       "step": 1,
       "title": "Prep",
-      "text": "Zest the orange, then juice it into a measuring cup and top up with water to 1 cup."
+      "text": "Zest the {orange} orange, then juice it into a measuring cup and top up with water to {water}."
     },
     {
       "step": 2,
       "title": "Cook",
-      "text": "Into a medium saucepan over medium heat: 12 oz cranberries, ¾ cup sugar (any mix of light brown and white), the orange juice and water, the zest, a pinch of salt, 1–2 tbsp liquor if using, and a pinch of nutmeg and cinnamon if you want them. Stir often so it doesn't stick and scorch. Done when the berries have burst and it's jammy and coats a spoon, about 10 minutes."
+      "text": "Into a medium saucepan over medium heat: {cranberries} cranberries, {sugar} sugar (any mix of light brown and white), the orange juice and water, the zest, a pinch of salt, {orange-liqueur} liquor if using, and a pinch of nutmeg and cinnamon if you want them. Stir often so it doesn't stick and scorch. Done when the berries have burst and it's jammy and coats a spoon, about 10 minutes."
     },
     {
       "step": 3,

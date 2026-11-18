@@ -4,7 +4,13 @@
   "description": "A traditional British posset — sweetened cream set by lemon juice — frozen instead of chilled. The freezer turns the soft pudding into a dense, custardy semi-frozen dessert.",
   "status": "dialed-in",
   "category": "desserts",
-  "tags": ["dessert", "lemon", "frozen", "british", "make-ahead"],
+  "tags": [
+    "dessert",
+    "lemon",
+    "frozen",
+    "british",
+    "make-ahead"
+  ],
   "source": "Traditional British posset, frozen variation",
   "time": {
     "prep": 5,
@@ -100,6 +106,7 @@
       "name": "Posset",
       "items": [
         {
+          "key": "heavy-cream",
           "quantity": 473,
           "quantityMax": null,
           "unit": "ml",
@@ -116,6 +123,7 @@
           "scalable": false
         },
         {
+          "key": "sugar",
           "quantity": 140,
           "quantityMax": null,
           "unit": "g",
@@ -124,6 +132,7 @@
           "scalable": true
         },
         {
+          "key": "lemons",
           "quantity": 2,
           "quantityMax": null,
           "unit": "",
@@ -132,6 +141,7 @@
           "scalable": true
         },
         {
+          "key": "lemon-juice",
           "quantity": 115,
           "quantityMax": null,
           "unit": "ml",
@@ -146,12 +156,12 @@
     {
       "step": 1,
       "title": "Simmer",
-      "text": "Simmer the heavy cream with a pinch of salt, the sugar, and the lemon zest for 3-5 minutes."
+      "text": "Simmer the {heavy-cream} heavy cream with a pinch of salt, the {sugar} sugar, and the zest of {lemons} lemons for 3-5 minutes."
     },
     {
       "step": 2,
       "title": "Set",
-      "text": "Pull off the heat and whisk in the lemon juice. Rest 10 minutes."
+      "text": "Pull off the heat and whisk in the {lemon-juice} lemon juice. Rest 10 minutes."
     },
     {
       "step": 3,

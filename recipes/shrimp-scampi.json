@@ -5,7 +5,12 @@
   "description": "A hard-seared take on scampi that trades the traditional gentle saute for fond and crust. The MSG is doing the work that shell stock would do in a restaurant version.",
   "status": "experimenting",
   "category": "mains",
-  "tags": ["seafood", "italian", "quick", "weeknight"],
+  "tags": [
+    "seafood",
+    "italian",
+    "quick",
+    "weeknight"
+  ],
   "source": "Traditional Italian-American, heavily adapted",
   "time": {
     "prep": 15,
@@ -182,6 +187,7 @@
       "name": "Shrimp",
       "items": [
         {
+          "key": "shrimp",
           "quantity": 2,
           "unit": "lbs",
           "item": "colossal shrimp",
@@ -208,6 +214,7 @@
       "name": "Sauce",
       "items": [
         {
+          "key": "butter",
           "quantity": 8,
           "unit": "tbsp",
           "item": "unsalted butter",
@@ -215,6 +222,7 @@
           "scalable": true
         },
         {
+          "key": "garlic",
           "quantity": 5,
           "unit": "cloves",
           "item": "garlic",
@@ -229,6 +237,7 @@
           "scalable": false
         },
         {
+          "key": "white-wine",
           "quantity": 0.5,
           "unit": "cup",
           "item": "dry white wine",
@@ -236,6 +245,7 @@
           "scalable": true
         },
         {
+          "key": "lemon",
           "quantity": 1,
           "unit": "",
           "item": "lemon, zested and juiced",
@@ -268,12 +278,12 @@
     {
       "step": 1,
       "title": "Shrimp",
-      "text": "Make sure shrimp is fully thawed and properly dried or you will struggle to get the sear. Toss shrimp with salt, pepper, and MSG. Lay out in a single layer on paper towels on a plate - let the surface dry out. Get a stainless steel pan ripping hot with a thin layer of avocado oil. Work in batches — don't overcrowd the pan. Every shrimp needs to make contact with the pan, especially the thick part near where the head was. Sear mostly on one side until you build a deep golden crust and a good fond in the pan, flipping briefly to finish. Pull shrimp out and set aside. They can be slightly underdone; they're going back in later."
+      "text": "Make sure the {shrimp} shrimp is fully thawed and properly dried or you will struggle to get the sear. Toss shrimp with salt, pepper, and MSG. Lay out in a single layer on paper towels on a plate - let the surface dry out. Get a stainless steel pan ripping hot with a thin layer of avocado oil. Work in batches — don't overcrowd the pan. Every shrimp needs to make contact with the pan, especially the thick part near where the head was. Sear mostly on one side until you build a deep golden crust and a good fond in the pan, flipping briefly to finish. Pull shrimp out and set aside. They can be slightly underdone; they're going back in later."
     },
     {
       "step": 2,
       "title": "Sauce",
-      "text": "Same pan. Add butter — it'll help deglaze the fond (use a wooden spoon to scrape) or at the very least stop it from burning until the white wine shows up. Add garlic and red pepper flakes, cook until fragrant. Add white wine and lemon juice, reduce until you can drag a spoon through and see the bottom of the pan."
+      "text": "Same pan. Add {butter} butter — it'll help deglaze the fond (use a wooden spoon to scrape) or at the very least stop it from burning until the white wine shows up. Add {garlic} garlic and red pepper flakes, cook until fragrant. Add {white-wine} white wine and the juice of {lemon} lemon, reduce until you can drag a spoon through and see the bottom of the pan."
     },
     {
       "step": 3,

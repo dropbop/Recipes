@@ -13,8 +13,10 @@ const recipes = fs.readdirSync(path.join(root, 'recipes')).filter(file => file.e
   .map(file => JSON.parse(read(`recipes/${file}`)));
 
 const TOKEN = /\{([a-z0-9-]+)(?::(\d*\.?\d+)(?:-(\d*\.?\d+))?)?\}/g;
-// An amount typed straight into a step, which would not scale.
-const HARDCODED = /(?:\d+(?:\.\d+)?|[½¼¾⅓⅔⅛])(?:\s*(?:-|–|to)\s*(?:\d+(?:\.\d+)?|[½¼¾⅓⅔⅛]))?\s*(?:g|kg|ml|oz|lbs?|cups?|tbsp|tsp|tablespoons?|teaspoons?|cloves?|sprigs?|liters?|quarts?|pounds?|ounces?|grams?)\b/i;
+// An amount typed straight into a step, which would not scale. Quarts and liters are left out:
+// in these recipes they describe pots, fill lines and yields, not ingredients. An ingredient
+// measured in them still has to appear as a token (checked below).
+const HARDCODED = /(?:\d+(?:\.\d+)?|[½¼¾⅓⅔⅛])(?:\s*(?:-|–|to)\s*(?:\d+(?:\.\d+)?|[½¼¾⅓⅔⅛]))?\s*(?:g|kg|ml|oz|lbs?|cups?|tbsp|tsp|tablespoons?|teaspoons?|cloves?|sprigs?|pounds?|ounces?|grams?)\b/i;
 
 function viewer() {
   const elements = new Map();

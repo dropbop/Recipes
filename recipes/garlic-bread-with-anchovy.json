@@ -145,6 +145,7 @@
       "name": "Roasted Garlic Butter",
       "items": [
         {
+          "key": "garlic",
           "quantity": 3,
           "quantityMax": null,
           "unit": "heads",
@@ -153,6 +154,7 @@
           "scalable": true
         },
         {
+          "key": "olive-oil",
           "quantity": 1,
           "quantityMax": null,
           "unit": "tbsp",
@@ -161,6 +163,7 @@
           "scalable": true
         },
         {
+          "key": "butter",
           "quantity": 8,
           "quantityMax": null,
           "unit": "tbsp",
@@ -169,6 +172,7 @@
           "scalable": true
         },
         {
+          "key": "salt",
           "quantity": 0.75,
           "quantityMax": null,
           "unit": "tsp",
@@ -177,6 +181,7 @@
           "scalable": true
         },
         {
+          "key": "anchovies",
           "quantity": 5,
           "quantityMax": null,
           "unit": "",
@@ -185,6 +190,7 @@
           "scalable": true
         },
         {
+          "key": "lemon",
           "quantity": 1,
           "quantityMax": null,
           "unit": "",
@@ -198,6 +204,7 @@
       "name": "Bread",
       "items": [
         {
+          "key": "baguette",
           "quantity": 1,
           "quantityMax": null,
           "unit": "",
@@ -212,17 +219,17 @@
     {
       "step": 1,
       "title": "Roast the Garlic",
-      "text": "Oven to 400°F. Cut ¼ inch off the top of each head, set each on its own square of foil, drizzle with the 1 tbsp olive oil, and wrap. Roast until very soft, about 45 minutes. Leave the oven on. Let the garlic cool until you can handle it."
+      "text": "Oven to 400°F. Cut ¼ inch off the top of each of the {garlic} garlic, set each on its own square of foil, drizzle with the {olive-oil} olive oil, and wrap. Roast until very soft, about 45 minutes. Leave the oven on. Let the garlic cool until you can handle it."
     },
     {
       "step": 2,
       "title": "Whip the Butter",
-      "text": "Squeeze the garlic out of its skins into a bowl with the 8 tbsp butter, ¾ tsp salt, anchovy paste, and lemon zest. Whip with a hand mixer until light and fluffy."
+      "text": "Squeeze the garlic out of its skins into a bowl with the {butter} butter, {salt} salt, paste from {anchovies} anchovy fillets, and zest of {lemon} lemon. Whip with a hand mixer until light and fluffy."
     },
     {
       "step": 3,
       "title": "Stuff",
-      "text": "Cut slits into the baguette about 1 inch apart, not all the way through. Set it on a sheet of foil and push at least a teaspoon of butter into every slit with an offset spatula or butter knife. Brush more over the top."
+      "text": "Cut slits into the {baguette} baguette about 1 inch apart, not all the way through. Set it on a sheet of foil and push at least a teaspoon of butter into every slit with an offset spatula or butter knife. Brush more over the top."
     },
     {
       "step": 4,

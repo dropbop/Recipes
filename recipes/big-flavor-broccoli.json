@@ -4,7 +4,11 @@
   "description": "Skillet-charred broccoli, stems included, roasted with red onion, garlic, and anchovies. Parmesan and lemon finish it.",
   "status": "dialed-in",
   "category": "sides",
-  "tags": ["broccoli", "roast", "side"],
+  "tags": [
+    "broccoli",
+    "roast",
+    "side"
+  ],
   "source": "Chris Morocco, Bon Appétit, November 7, 2019 — https://www.bonappetit.com/recipe/big-flavor-broccoli",
   "servings": {
     "base": 4,
@@ -155,6 +159,7 @@
       "name": "Broccoli & Aromatics",
       "items": [
         {
+          "key": "broccoli",
           "quantity": 1,
           "quantityMax": null,
           "unit": "lbs",
@@ -163,6 +168,7 @@
           "scalable": true
         },
         {
+          "key": "olive-oil",
           "quantity": 5,
           "quantityMax": null,
           "unit": "tbsp",
@@ -179,6 +185,7 @@
           "scalable": false
         },
         {
+          "key": "red-onion",
           "quantity": 1,
           "quantityMax": null,
           "unit": "",
@@ -187,6 +194,7 @@
           "scalable": true
         },
         {
+          "key": "garlic",
           "quantity": 4,
           "quantityMax": null,
           "unit": "cloves",
@@ -195,6 +203,7 @@
           "scalable": true
         },
         {
+          "key": "anchovies",
           "quantity": 6,
           "quantityMax": null,
           "unit": "",
@@ -208,6 +217,7 @@
       "name": "To Finish",
       "items": [
         {
+          "key": "parmesan",
           "quantity": 1,
           "quantityMax": null,
           "unit": "oz",
@@ -233,11 +243,11 @@
     },
     {
       "step": 2,
-      "text": "Heat 3 Tbsp. oil in a large heatproof skillet over medium-high until shimmering. Add broccoli; season with salt. Cook, tossing occasionally, until broccoli is bright green and lightly charred, about 3 minutes. Transfer to a plate. Wipe out skillet."
+      "text": "Heat {olive-oil:3} oil in a large heatproof skillet over medium-high until shimmering. Add {broccoli} broccoli; season with salt. Cook, tossing occasionally, until broccoli is bright green and lightly charred, about 3 minutes. Transfer to a plate. Wipe out skillet."
     },
     {
       "step": 3,
-      "text": "Heat remaining 2 Tbsp. oil in same skillet over medium. Cook onion and garlic, stirring often, until onion is beginning to soften, about 3 minutes. Add anchovies and cook, breaking apart with a spoon, until broken down and garlic is beginning to turn golden around the edges, about 2 minutes."
+      "text": "Heat remaining {olive-oil:2} oil in same skillet over medium. Cook {red-onion} small red onion and {garlic} garlic, stirring often, until onion is beginning to soften, about 3 minutes. Add {anchovies} anchovies and cook, breaking apart with a spoon, until broken down and garlic is beginning to turn golden around the edges, about 2 minutes."
     },
     {
       "step": 4,
@@ -245,7 +255,7 @@
     },
     {
       "step": 5,
-      "text": "Scatter Parmesan over hot broccoli. Divide among plates. Serve with lemon wedges alongside."
+      "text": "Scatter {parmesan} Parmesan over hot broccoli. Divide among plates. Serve with lemon wedges alongside."
     }
   ],
   "notes": [],

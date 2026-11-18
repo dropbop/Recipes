@@ -61,6 +61,7 @@
       "name": "Chicken & Water",
       "items": [
         {
+          "key": "chicken-parts",
           "quantity": 2.5,
           "quantityMax": null,
           "unit": "lbs",
@@ -90,6 +91,7 @@
       "name": "Vegetables",
       "items": [
         {
+          "key": "celery",
           "quantity": 2,
           "quantityMax": null,
           "unit": "stalks",
@@ -98,6 +100,7 @@
           "scalable": true
         },
         {
+          "key": "onion",
           "quantity": 1,
           "quantityMax": null,
           "unit": "",
@@ -106,6 +109,7 @@
           "scalable": true
         },
         {
+          "key": "carrots",
           "quantity": 2,
           "quantityMax": null,
           "unit": "",
@@ -114,6 +118,7 @@
           "scalable": true
         },
         {
+          "key": "garlic",
           "quantity": 3,
           "quantityMax": null,
           "unit": "cloves",
@@ -122,6 +127,7 @@
           "scalable": true
         },
         {
+          "key": "parsley-stems",
           "quantity": 1,
           "quantityMax": null,
           "unit": "bunch",
@@ -143,6 +149,7 @@
       "name": "Seasoning",
       "items": [
         {
+          "key": "bay-leaf",
           "quantity": 1,
           "quantityMax": null,
           "unit": "",
@@ -151,6 +158,7 @@
           "scalable": false
         },
         {
+          "key": "peppercorns",
           "quantity": 15,
           "quantityMax": null,
           "unit": "",
@@ -159,6 +167,7 @@
           "scalable": true
         },
         {
+          "key": "allspice",
           "quantity": 2,
           "quantityMax": null,
           "unit": "",
@@ -167,6 +176,7 @@
           "scalable": true
         },
         {
+          "key": "thyme",
           "quantity": 1,
           "quantityMax": null,
           "unit": "sprig",
@@ -183,6 +193,7 @@
           "scalable": false
         },
         {
+          "key": "clove",
           "quantity": 1,
           "quantityMax": null,
           "unit": "",
@@ -205,12 +216,12 @@
     {
       "step": 1,
       "title": "Blanch",
-      "text": "Put the chicken parts in a pot and cover with cold tap water. Bring to a boil, then boil hard for 5 minutes. Drain and rinse the chicken parts with tap water. Discard the blanching water."
+      "text": "Put the {chicken-parts} chicken parts in a pot and cover with cold tap water. Bring to a boil, then boil hard for 5 minutes. Drain and rinse the chicken parts with tap water. Discard the blanching water."
     },
     {
       "step": 2,
       "title": "Load the cooker",
-      "text": "Put the chicken, vegetables, and seasoning into the Instant Pot. Add fresh water until the contents sit just shy of the pressure-cooking maximum fill line—4 quarts on my model. That's the final fill level with everything in the pot, not 4 quarts of added water."
+      "text": "Put the chicken, vegetables ({celery} celery, {onion} onion, {carrots} carrots, {garlic} garlic, {parsley-stems} parsley stems), and seasoning ({bay-leaf} bay leaf, {peppercorns} peppercorns, {allspice} allspice berries, {thyme} thyme, {clove} whole clove) into the Instant Pot. Add fresh water until the contents sit just shy of the pressure-cooking maximum fill line—4 quarts on my model. That's the final fill level with everything in the pot, not 4 quarts of added water."
     },
     {
       "step": 3,

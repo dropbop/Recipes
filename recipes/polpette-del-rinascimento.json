@@ -4,7 +4,13 @@
   "description": "Pork-and-chicken meatballs with orange zest, fennel, garlic, herbs, parmesan, and warm spice. They get seared hard, finished in the oven, then tossed in a quick orange-tomato pan sauce with capers and a touch of honey.",
   "status": "experimenting",
   "category": "mains",
-  "tags": ["pork", "chicken", "italian", "meatballs", "weeknight"],
+  "tags": [
+    "pork",
+    "chicken",
+    "italian",
+    "meatballs",
+    "weeknight"
+  ],
   "source": "Original house meatball recipe, Renaissance-spiced",
   "time": {
     "prep": 25,
@@ -362,6 +368,7 @@
       "name": "Panade",
       "items": [
         {
+          "key": "egg",
           "quantity": 1,
           "quantityMax": null,
           "unit": "",
@@ -370,6 +377,7 @@
           "scalable": true
         },
         {
+          "key": "breadcrumbs",
           "quantity": 0.5,
           "quantityMax": null,
           "unit": "cup",
@@ -378,6 +386,7 @@
           "scalable": true
         },
         {
+          "key": "panade-milk",
           "quantity": 0.5,
           "quantityMax": null,
           "unit": "cup",
@@ -391,6 +400,7 @@
       "name": "Meatballs",
       "items": [
         {
+          "key": "ground-pork",
           "quantity": 1,
           "quantityMax": null,
           "unit": "lb",
@@ -399,6 +409,7 @@
           "scalable": true
         },
         {
+          "key": "ground-chicken",
           "quantity": 1,
           "quantityMax": null,
           "unit": "lb",
@@ -420,6 +431,7 @@
       "name": "Seasonings",
       "items": [
         {
+          "key": "parsley",
           "quantity": 1,
           "quantityMax": null,
           "unit": "bunch",
@@ -428,6 +440,7 @@
           "scalable": true
         },
         {
+          "key": "savory",
           "quantity": 3,
           "quantityMax": null,
           "unit": "tbsp",
@@ -436,6 +449,7 @@
           "scalable": true
         },
         {
+          "key": "scappi",
           "quantity": 1,
           "quantityMax": null,
           "unit": "tsp",
@@ -452,6 +466,7 @@
           "scalable": false
         },
         {
+          "key": "garlic",
           "quantity": 5,
           "quantityMax": null,
           "unit": "cloves",
@@ -460,6 +475,7 @@
           "scalable": true
         },
         {
+          "key": "shallots",
           "quantity": 2,
           "quantityMax": null,
           "unit": "",
@@ -468,6 +484,7 @@
           "scalable": true
         },
         {
+          "key": "parmesan",
           "quantity": 0.5,
           "quantityMax": null,
           "unit": "cup",
@@ -476,6 +493,7 @@
           "scalable": true
         },
         {
+          "key": "fennel-seed",
           "quantity": 1,
           "quantityMax": null,
           "unit": "tsp",
@@ -484,6 +502,7 @@
           "scalable": true
         },
         {
+          "key": "orange",
           "quantity": 1,
           "quantityMax": null,
           "unit": "",
@@ -505,6 +524,7 @@
           "scalable": false
         },
         {
+          "key": "sauce-garlic",
           "quantity": 2,
           "quantityMax": null,
           "unit": "cloves",
@@ -513,6 +533,7 @@
           "scalable": true
         },
         {
+          "key": "orange-juice",
           "quantity": 1,
           "quantityMax": null,
           "unit": "",
@@ -521,6 +542,7 @@
           "scalable": true
         },
         {
+          "key": "tomato-sauce",
           "quantity": 1,
           "quantityMax": null,
           "unit": "small can",
@@ -559,12 +581,12 @@
     {
       "step": 1,
       "title": "Panade",
-      "text": "In a large bowl, whisk the egg, breadcrumbs, and milk. You're looking for oatmeal texture. Don't get precious about the measurement; adjust breadcrumbs or milk until it looks right."
+      "text": "In a large bowl, whisk the {egg} egg, {breadcrumbs} breadcrumbs, and {panade-milk} milk. You're looking for oatmeal texture. Don't get precious about the measurement; adjust breadcrumbs or milk until it looks right."
     },
     {
       "step": 2,
       "title": "Mix",
-      "text": "Add the meat and salt, then add parsley, savory, scappi, black pepper, cayenne, garlic, shallots, parmesan, fennel seed, and orange zest. Mix until combined, but don't beat the hell out of it."
+      "text": "Add the {ground-pork} ground pork, {ground-chicken} ground chicken, and salt, then add {parsley} parsley, {savory} savory, {scappi} scappi, black pepper, cayenne, {garlic} garlic, {shallots} shallots, {parmesan} parmesan, {fennel-seed} fennel seed, and the zest of {orange} orange. Mix until combined, but don't beat the hell out of it."
     },
     {
       "step": 3,
@@ -584,7 +606,7 @@
     {
       "step": 6,
       "title": "Sauce",
-      "text": "Same pan. Add olive oil if the pan needs it, then saute the minced garlic. Squeeze in the juice from the zested orange and reduce slightly. Add tomato sauce or crushed tomato, capers, black pepper, and a little tiny bit of honey."
+      "text": "Same pan. Add olive oil if the pan needs it, then saute the {sauce-garlic} minced garlic. Squeeze in the juice from the {orange-juice} zested orange and reduce slightly. Add {tomato-sauce} tomato sauce or crushed tomato, capers, black pepper, and a little tiny bit of honey."
     },
     {
       "step": 7,

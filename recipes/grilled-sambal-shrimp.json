@@ -4,7 +4,12 @@
   "description": "Spicy coconut-lime marinade, best on grilled shrimp but works on chicken too. Don't pan sear — the sugars burn.",
   "status": "dialed-in",
   "category": "mains",
-  "tags": ["seafood", "grilling", "marinade", "thai"],
+  "tags": [
+    "seafood",
+    "grilling",
+    "marinade",
+    "thai"
+  ],
   "source": "Molly Baz — https://www.bonappetit.com/recipe/spicy-coconut-grilled-chicken-thighs",
   "time": {
     "prep": 10,
@@ -181,6 +186,7 @@
       "name": "Marinade",
       "items": [
         {
+          "key": "ginger",
           "quantity": 3,
           "quantityMax": null,
           "unit": "inches",
@@ -189,6 +195,7 @@
           "scalable": true
         },
         {
+          "key": "garlic",
           "quantity": 5,
           "quantityMax": null,
           "unit": "cloves",
@@ -197,6 +204,7 @@
           "scalable": true
         },
         {
+          "key": "coconut-milk",
           "quantity": 0.75,
           "quantityMax": null,
           "unit": "cup",
@@ -205,6 +213,7 @@
           "scalable": true
         },
         {
+          "key": "sambal",
           "quantity": 0.25,
           "quantityMax": null,
           "unit": "cup",
@@ -213,6 +222,7 @@
           "scalable": true
         },
         {
+          "key": "lime-juice",
           "quantity": 0.25,
           "quantityMax": null,
           "unit": "cup",
@@ -221,6 +231,7 @@
           "scalable": true
         },
         {
+          "key": "brown-sugar",
           "quantity": 2,
           "quantityMax": null,
           "unit": "tbsp",
@@ -229,6 +240,7 @@
           "scalable": true
         },
         {
+          "key": "salt",
           "quantity": 1.75,
           "quantityMax": null,
           "unit": "tsp",
@@ -237,6 +249,7 @@
           "scalable": true
         },
         {
+          "key": "oil",
           "quantity": 2,
           "quantityMax": null,
           "unit": "tbsp",
@@ -272,7 +285,7 @@
     {
       "step": 1,
       "title": "Marinade",
-      "text": "Blend all marinade ingredients together."
+      "text": "Blend all marinade ingredients together: {ginger} ginger, {garlic} garlic, {coconut-milk} coconut milk, {sambal} sambal oelek, {lime-juice} lime juice, {brown-sugar} brown sugar, {salt} Morton kosher salt, and {oil} neutral oil."
     },
     {
       "step": 2,

@@ -4,7 +4,11 @@
   "description": "Dead simple no-soak white beans in the Instant Pot. Rancho Gordo Alubia Blanca with just garlic, bay leaf, and salt — a blank canvas side dish.",
   "status": "experimenting",
   "category": "staples",
-  "tags": ["beans", "pressure-cooker", "side"],
+  "tags": [
+    "beans",
+    "pressure-cooker",
+    "side"
+  ],
   "source": "First attempt, winged it",
   "time": {
     "prep": 5,
@@ -81,6 +85,7 @@
       "name": "Main Components",
       "items": [
         {
+          "key": "beans",
           "quantity": 225,
           "quantityMax": null,
           "unit": "g",
@@ -97,6 +102,7 @@
           "scalable": false
         },
         {
+          "key": "garlic",
           "quantity": 4,
           "quantityMax": 5,
           "unit": "cloves",
@@ -105,6 +111,7 @@
           "scalable": true
         },
         {
+          "key": "bay-leaf",
           "quantity": 1,
           "quantityMax": null,
           "unit": "",
@@ -126,7 +133,7 @@
   "directions": [
     {
       "step": 1,
-      "text": "Salt beans, then add to the Instant Pot with water, crushed garlic, and bay leaf. Water should just cover the beans — don't overdo it."
+      "text": "Salt {beans} beans, then add to the Instant Pot with water, {garlic} crushed garlic, and {bay-leaf} bay leaf. Water should just cover the beans — don't overdo it."
     },
     {
       "step": 2,

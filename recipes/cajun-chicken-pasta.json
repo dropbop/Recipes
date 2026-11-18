@@ -232,6 +232,7 @@
       "name": "Chicken & Pasta",
       "items": [
         {
+          "key": "penne",
           "quantity": 0.5,
           "quantityMax": null,
           "unit": "lbs",
@@ -240,6 +241,7 @@
           "scalable": true
         },
         {
+          "key": "chicken-thighs",
           "quantity": 2,
           "quantityMax": null,
           "unit": "lbs",
@@ -248,6 +250,7 @@
           "scalable": true
         },
         {
+          "key": "avocado-oil",
           "quantity": 2,
           "quantityMax": null,
           "unit": "tbsp",
@@ -277,6 +280,7 @@
       "name": "Vegetables & Stock",
       "items": [
         {
+          "key": "chicken-stock",
           "quantity": 1,
           "quantityMax": null,
           "unit": "cups",
@@ -285,6 +289,7 @@
           "scalable": true
         },
         {
+          "key": "bell-peppers",
           "quantity": 2,
           "quantityMax": null,
           "unit": "",
@@ -293,6 +298,7 @@
           "scalable": true
         },
         {
+          "key": "celery",
           "quantity": 2,
           "quantityMax": null,
           "unit": "stalks",
@@ -301,6 +307,7 @@
           "scalable": true
         },
         {
+          "key": "yellow-onion",
           "quantity": 1,
           "quantityMax": null,
           "unit": "",
@@ -309,6 +316,7 @@
           "scalable": true
         },
         {
+          "key": "garlic",
           "quantity": 3,
           "quantityMax": null,
           "unit": "cloves",
@@ -322,6 +330,7 @@
       "name": "Sauce",
       "items": [
         {
+          "key": "greek-yogurt",
           "quantity": 10,
           "quantityMax": null,
           "unit": "oz",
@@ -330,6 +339,7 @@
           "scalable": true
         },
         {
+          "key": "parmesan",
           "quantity": 50,
           "quantityMax": null,
           "unit": "g",
@@ -352,27 +362,27 @@
     {
       "step": 1,
       "title": "Pasta",
-      "text": "Boil the penne in salted water until al dente, erring slightly underdone. It'll absorb some sauce and soften in the fridge. Drain."
+      "text": "Boil the {penne} penne in salted water until al dente, erring slightly underdone. It'll absorb some sauce and soften in the fridge. Drain."
     },
     {
       "step": 2,
       "title": "Chicken",
-      "text": "Season the chicken. Get a Dutch oven or large pot hot with some of the oil and cook the chicken hard, in batches so you don't crowd it. We're looking for fond on the bottom of the pot—the pot matters more than getting every piece beautifully browned. Cook the chicken through, then set aside. I time it so the pasta finishes around here and they can hang out together. Saves a bowl."
+      "text": "Season the {chicken-thighs} chicken. Get a Dutch oven or large pot hot with some of the {avocado-oil} oil and cook the chicken hard, in batches so you don't crowd it. We're looking for fond on the bottom of the pot—the pot matters more than getting every piece beautifully browned. Cook the chicken through, then set aside. I time it so the pasta finishes around here and they can hang out together. Saves a bowl."
     },
     {
       "step": 3,
       "title": "Deglaze",
-      "text": "Add the stock and scrape up the fond. Reduce to almost dry, concentrating the stock into the base. If you're using water instead, use only enough to deglaze."
+      "text": "Add the {chicken-stock} stock and scrape up the fond. Reduce to almost dry, concentrating the stock into the base. If you're using water instead, use only enough to deglaze."
     },
     {
       "step": 4,
       "title": "Vegetables",
-      "text": "Add the bell peppers, celery, and onion. Season with your Cajun blend and cook for about 10 minutes, until softened. Add the garlic for the last minute or two."
+      "text": "Add the {bell-peppers} bell peppers, {celery} celery, and {yellow-onion} onion. Season with your Cajun blend and cook for about 10 minutes, until softened. Add the {garlic} garlic for the last minute or two."
     },
     {
       "step": 5,
       "title": "Sauce",
-      "text": "Take the pot off the heat and mix in the chicken and pasta. Let it cool for a minute—you don't want it ripping hot. Add the yogurt and Parmesan and mix. Off heat, no more heat."
+      "text": "Take the pot off the heat and mix in the chicken and pasta. Let it cool for a minute—you don't want it ripping hot. Add the {greek-yogurt} yogurt and {parmesan} Parmesan and mix. Off heat, no more heat."
     },
     {
       "step": 6,
