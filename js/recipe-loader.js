@@ -15,7 +15,7 @@ const STATUS_LABELS = {
   'to-cook': '\u2610 TO COOK'
 };
 
-const RECIPE_DATA_VERSION = '20261111-rolls2';
+const RECIPE_DATA_VERSION = '20261118-rolls3';
 
 async function init() {
   const recipeId = getRecipeIdFromUrl();

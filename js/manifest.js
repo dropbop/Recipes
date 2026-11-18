@@ -168,12 +168,12 @@ const RECIPE_MANIFEST = [
     category: "small-plates"
   },
   {
-    id: "chef-johns-parker-house-rolls",
-    title: "Parker House Rolls",
-    desc: "Buttery fold-over dinner rolls from Chef John's dough",
-    tags: ["bread", "baking", "side", "holiday"],
-    time: { prep: 40, active: 5, passive: 215 },
-    status: "experimenting",
+    id: "dinner-rolls",
+    title: "Dinner Rolls",
+    desc: "Buttery egg-enriched rolls, brushed hot with more butter",
+    tags: ["bread", "baking", "side"],
+    time: { prep: 25, active: 5, passive: 170 },
+    status: "dialed-in",
     category: "breads"
   }
 ];
