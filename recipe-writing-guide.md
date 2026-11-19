@@ -197,14 +197,14 @@ Good group names: "Main Components", "Sauce", "Shrimp", "Herbs & Aromatics", "To
 
 **quantityMax**: For ranges like "4–6 ribs". Set `quantity: 4` and `quantityMax: 6`. Both scale together. Leave `null` if not a range.
 
-**unit**: Consistent abbreviations: `tbsp`, `tsp`, `cups`, `lbs`, `oz`, `cloves`, `sprigs`. Empty string `""` for countable items ("4 eggs") or items with no unit.
+**unit**: Default to grams (`g`). Weigh anything you can; use volume only where weighing is impractical: small amounts (`tsp`, `tbsp`) and butter, which goes by the tbsp marks on the stick. Other consistent abbreviations when a source or package calls for them: `cups`, `lbs`, `oz`, `ml`, `cloves`, `sprigs`. Empty string `""` for countable items ("4 eggs") or items with no unit.
 
 **item**: The ingredient name. Keep it concise. Don't repeat the unit. "garlic" not "cloves of garlic".
 
-**note**: Optional qualifier, prep instruction, or editorial comment. Examples:
+**note**: Optional qualifier, prep instruction, or editorial comment. No amounts in notes ("about 1/8 tsp", "1 stick", "about 150 g"): they don't scale with the recipe. Put the amount in `quantity`/`unit`; if a second measure matters, it's a sign the quantity should be in grams. Examples:
 - "peeled, deveined, no tails"
 - "a few sprigs"
-- "see notes — may need 5-6 tbsp"
+- "see notes — may need more"
 - "most of a head, just use a fuckton"
 - `null` if no note needed
 
