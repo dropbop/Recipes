@@ -363,7 +363,7 @@
     {
       "step": 1,
       "title": "Vegetables",
-      "text": "Sauté {bell-peppers} peppers and {red-onion} onion seasoned with salt, pepper, {garlic} garlic, and cayenne. Add a spoonful of hot water if they start to smoke or stick. When done, add to a baking dish."
+      "text": "Sauté {bell-peppers} peppers and {red-onion} onion seasoned with salt, pepper, and cayenne. Add the {garlic} garlic near the end. Add a spoonful of hot water if they start to smoke or stick. When done, add to a baking dish."
     },
     {
       "step": 2,
@@ -373,7 +373,7 @@
     {
       "step": 3,
       "title": "Pierogies",
-      "text": "Boil {pierogies} pierogies for 2 minutes 30 seconds. Transfer to a sauté pan with butter, garlic, and cayenne. Cook until golden, then add to the baking dish."
+      "text": "Boil {pierogies} pierogies for 2 minutes 30 seconds. Transfer to a sauté pan with butter and cayenne. Cook until golden, then add to the baking dish."
     },
     {
       "step": 4,
@@ -383,7 +383,7 @@
     {
       "step": 5,
       "title": "Sauce",
-      "text": "Simmer {chicken-broth} chicken broth, {dijon} dijon, {cream-cheese} cream cheese, and garlic until combined. Pour over the baking dish contents and stir until fully coated."
+      "text": "Simmer {chicken-broth} chicken broth, {dijon} dijon, and {cream-cheese} cream cheese until combined. Pour over the baking dish contents and stir until fully coated."
     },
     {
       "step": 6,

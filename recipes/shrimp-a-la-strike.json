@@ -17,31 +17,31 @@
     "passive": 0
   },
   "servings": {
-    "base": 1,
+    "base": 15,
     "unit": "shrimp"
   },
   "nutrition": {
     "status": "estimated",
     "notes": [
-      "Per shrimp. Assumes a 35 g peeled colossal shrimp, a 14 g prosciutto slice, and an 8 g Gruyère baton.",
+      "15 shrimp, about 1 lb colossal; one portion is one shrimp. Assumes a 35 g peeled colossal shrimp, a 14 g prosciutto slice, and an 8 g Gruyère baton each.",
       "SR28 has no prosciutto entry, so lean country-style dry-cured ham stands in. Real prosciutto runs fattier."
     ],
     "servings": {
-      "base": 1,
+      "base": 15,
       "unit": "portions"
     },
     "batch": {
-      "calories": 90.09,
-      "protein": 13.31,
-      "fat": 3.93,
-      "carbs": 0.07,
+      "calories": 1351.35,
+      "protein": 199.68,
+      "fat": 58.96,
+      "carbs": 1.06,
       "fiber": 0.0
     },
     "ingredients": [
       {
         "label": "Colossal shrimp, peeled",
         "recipeQuantity": {
-          "amount": 35,
+          "amount": 525,
           "unit": "g"
         },
         "basis": {
@@ -61,7 +61,7 @@
       {
         "label": "Prosciutto (dry-cured ham stand-in)",
         "recipeQuantity": {
-          "amount": 14,
+          "amount": 210,
           "unit": "g"
         },
         "basis": {
@@ -81,7 +81,7 @@
       {
         "label": "Gruyère",
         "recipeQuantity": {
-          "amount": 8,
+          "amount": 120,
           "unit": "g"
         },
         "basis": {
@@ -102,32 +102,32 @@
   },
   "ingredientGroups": [
     {
-      "name": "Per Shrimp",
+      "name": "Shrimp Wraps",
       "items": [
         {
           "key": "shrimp",
-          "quantity": 1,
+          "quantity": 15,
           "quantityMax": null,
           "unit": "",
           "item": "colossal shrimp",
-          "note": "peeled, tails off",
+          "note": "about 1 lb; peeled, tails off",
           "scalable": true
         },
         {
           "key": "prosciutto",
-          "quantity": 1,
+          "quantity": 15,
           "quantityMax": null,
-          "unit": "slice",
+          "unit": "slices",
           "item": "prosciutto",
           "note": "thinly sliced",
           "scalable": true
         },
         {
           "key": "gruyere",
-          "quantity": 1,
+          "quantity": 15,
           "quantityMax": null,
           "unit": "",
-          "item": "Gruyère baton",
+          "item": "Gruyère batons",
           "note": "cut french-fry-sized",
           "scalable": true
         }
