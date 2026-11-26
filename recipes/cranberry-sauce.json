@@ -130,7 +130,7 @@
           "quantityMax": null,
           "unit": "oz",
           "item": "cranberries",
-          "note": "1 bag, fresh or frozen",
+          "note": "fresh or frozen",
           "scalable": true
         },
         {
@@ -139,7 +139,7 @@
           "quantityMax": null,
           "unit": "cup",
           "item": "sugar",
-          "note": "about 150 g white or 165 g packed light brown; any mix of light brown and white",
+          "note": "white or packed light brown, or any mix",
           "scalable": true
         },
         {
@@ -174,7 +174,7 @@
           "quantityMax": 2,
           "unit": "tbsp",
           "item": "orange liqueur",
-          "note": "optional, about half a shot; white rum or brandy also work",
+          "note": "optional; white rum or brandy also work",
           "scalable": true
         },
         {

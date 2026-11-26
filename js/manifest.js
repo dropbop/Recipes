@@ -143,7 +143,7 @@ const RECIPE_MANIFEST = [
   {
     id: "cranberry-sauce",
     title: "Cranberry Sauce",
-    desc: "Burst-berry Thanksgiving staple; the zest is non-negotiable",
+    desc: "Whole-orange cranberry sauce, set on its own pectin",
     tags: ["side", "thanksgiving", "make-ahead", "quick"],
     time: { prep: 5, active: 10, passive: 60 },
     status: "dialed-in",
