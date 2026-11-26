@@ -175,5 +175,14 @@ const RECIPE_MANIFEST = [
     time: { prep: 25, active: 5, passive: 170 },
     status: "dialed-in",
     category: "breads"
+  },
+  {
+    id: "mac-and-cheese",
+    title: "Mac and Cheese",
+    desc: "Silky citrate cheese sauce with mozz folded in for pull",
+    tags: ["side", "pasta", "make-ahead", "comfort"],
+    time: { prep: 10, active: 25, passive: 0 },
+    status: "dialed-in",
+    category: "sides"
   }
 ];

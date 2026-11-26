@@ -1,0 +1,416 @@
+{
+  "id": "mac-and-cheese",
+  "title": "Mac and Cheese",
+  "description": "Stovetop mac with a sodium citrate cheese sauce built on evaporated milk, extra-sharp cheddar and aged Gruyère, with low-moisture mozzarella folded in at the end for pull. Holds overnight without breaking, so it doubles as a make-ahead holiday side.",
+  "status": "dialed-in",
+  "category": "sides",
+  "tags": [
+    "side",
+    "pasta",
+    "make-ahead",
+    "comfort"
+  ],
+  "source": "Jack's own, built on the sodium citrate method from Modernist Cuisine",
+  "time": {
+    "prep": 10,
+    "active": 25,
+    "passive": 0
+  },
+  "servings": {
+    "base": 8,
+    "unit": "servings"
+  },
+  "nutrition": {
+    "status": "estimated",
+    "notes": [
+      "Assumes 12 g for the 2 tsp miso and 15 g for the 1 tbsp Dijon (USDA has no Dijon entry, so it uses prepared yellow mustard). Counts the cheddar as sharp cheddar.",
+      "Pasta is counted dry. The pasta water, sodium citrate and spices are left out."
+    ],
+    "servings": {
+      "base": 8,
+      "unit": "servings"
+    },
+    "batch": {
+      "calories": 4913.48,
+      "protein": 255.16,
+      "fat": 254.51,
+      "carbs": 393.64,
+      "fiber": 15.78
+    },
+    "ingredients": [
+      {
+        "label": "Elbow macaroni, dry",
+        "recipeQuantity": {
+          "amount": 454,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 371.0,
+          "protein": 13.04,
+          "fat": 1.51,
+          "carbs": 74.67,
+          "fiber": 3.2
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 20120: PASTA,DRY,ENR"
+      },
+      {
+        "label": "Evaporated milk",
+        "recipeQuantity": {
+          "amount": 377,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 135.0,
+          "protein": 6.81,
+          "fat": 7.56,
+          "carbs": 10.04,
+          "fiber": 0.0
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 01214: MILK,CND,EVAP,WO/ ADDED VIT A & VITAMIN D"
+      },
+      {
+        "label": "Extra-sharp cheddar",
+        "recipeQuantity": {
+          "amount": 454,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 410.0,
+          "protein": 24.25,
+          "fat": 33.82,
+          "carbs": 2.13,
+          "fiber": 0.0
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 01270: CHEESE,CHEDDAR,SHARP,SLICED"
+      },
+      {
+        "label": "Gruyère",
+        "recipeQuantity": {
+          "amount": 113,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 413.0,
+          "protein": 29.81,
+          "fat": 32.34,
+          "carbs": 0.36,
+          "fiber": 0.0
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 01023: CHEESE,GRUYERE"
+      },
+      {
+        "label": "White miso",
+        "recipeQuantity": {
+          "amount": 12,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 198.0,
+          "protein": 12.79,
+          "fat": 6.01,
+          "carbs": 25.37,
+          "fiber": 5.4
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 16112: MISO"
+      },
+      {
+        "label": "Dijon mustard",
+        "recipeQuantity": {
+          "amount": 15,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 60.0,
+          "protein": 3.74,
+          "fat": 3.34,
+          "carbs": 5.83,
+          "fiber": 4.0
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 02046: MUSTARD,PREPARED,YELLOW"
+      },
+      {
+        "label": "Low-moisture mozzarella",
+        "recipeQuantity": {
+          "amount": 113,
+          "unit": "g"
+        },
+        "basis": {
+          "amount": 100,
+          "unit": "g"
+        },
+        "macros": {
+          "calories": 318.0,
+          "protein": 21.6,
+          "fat": 24.64,
+          "carbs": 2.47,
+          "fiber": 0.0
+        },
+        "source": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28abbr.zip",
+        "sourceLabel": "USDA SR28, NDB 01027: CHEESE,MOZZARELLA,WHL MILK,LO MOIST"
+      }
+    ]
+  },
+  "ingredientGroups": [
+    {
+      "name": "Pasta",
+      "items": [
+        {
+          "key": "elbows",
+          "quantity": 454,
+          "quantityMax": null,
+          "unit": "g",
+          "item": "elbow macaroni",
+          "note": null,
+          "scalable": true
+        },
+        {
+          "key": "pasta-water",
+          "quantity": 240,
+          "quantityMax": null,
+          "unit": "g",
+          "item": "pasta water",
+          "note": "reserved, unsalted",
+          "scalable": true
+        }
+      ]
+    },
+    {
+      "name": "Cheese Sauce",
+      "items": [
+        {
+          "key": "evap",
+          "quantity": 377,
+          "quantityMax": null,
+          "unit": "g",
+          "item": "evaporated milk",
+          "note": null,
+          "scalable": true
+        },
+        {
+          "key": "citrate",
+          "quantity": 18,
+          "quantityMax": null,
+          "unit": "g",
+          "item": "sodium citrate",
+          "note": null,
+          "scalable": true
+        },
+        {
+          "key": "miso",
+          "quantity": 2,
+          "quantityMax": null,
+          "unit": "tsp",
+          "item": "white miso",
+          "note": null,
+          "scalable": true
+        },
+        {
+          "key": "dijon",
+          "quantity": 1,
+          "quantityMax": null,
+          "unit": "tbsp",
+          "item": "Dijon mustard",
+          "note": null,
+          "scalable": true
+        },
+        {
+          "key": "cheddar",
+          "quantity": 454,
+          "quantityMax": null,
+          "unit": "g",
+          "item": "extra-sharp cheddar",
+          "note": "cut into 1/2-inch chunks",
+          "scalable": true
+        },
+        {
+          "key": "gruyere",
+          "quantity": 113,
+          "quantityMax": null,
+          "unit": "g",
+          "item": "aged Gruyère",
+          "note": "cut into 1/2-inch chunks",
+          "scalable": true
+        }
+      ]
+    },
+    {
+      "name": "Seasoning",
+      "items": [
+        {
+          "key": "garlic",
+          "quantity": 0.5,
+          "quantityMax": null,
+          "unit": "tsp",
+          "item": "garlic powder",
+          "note": "eyeballed",
+          "scalable": true
+        },
+        {
+          "key": "onion",
+          "quantity": 0.5,
+          "quantityMax": null,
+          "unit": "tsp",
+          "item": "onion powder",
+          "note": "eyeballed",
+          "scalable": true
+        },
+        {
+          "key": "cayenne",
+          "quantity": 0.25,
+          "quantityMax": null,
+          "unit": "tsp",
+          "item": "cayenne",
+          "note": "eyeballed",
+          "scalable": true
+        },
+        {
+          "key": "white-pepper",
+          "quantity": 0.25,
+          "quantityMax": null,
+          "unit": "tsp",
+          "item": "white pepper",
+          "note": "eyeballed",
+          "scalable": true
+        },
+        {
+          "key": "nutmeg",
+          "quantity": 0.125,
+          "quantityMax": null,
+          "unit": "tsp",
+          "item": "nutmeg",
+          "note": "freshly grated, eyeballed",
+          "scalable": true
+        },
+        {
+          "quantity": null,
+          "quantityMax": null,
+          "unit": "",
+          "item": "kosher salt",
+          "note": "to taste",
+          "scalable": false
+        }
+      ]
+    },
+    {
+      "name": "To Finish",
+      "items": [
+        {
+          "key": "mozz",
+          "quantity": 113,
+          "quantityMax": null,
+          "unit": "g",
+          "item": "low-moisture whole-milk mozzarella",
+          "note": "shredded",
+          "scalable": true
+        }
+      ]
+    }
+  ],
+  "directions": [
+    {
+      "step": 1,
+      "title": "Pasta",
+      "text": "Boil the {elbows} elbows in unsalted water until 2–3 minutes short of the box time (go the full 3 if you're making it ahead). Reserve {pasta-water} of the pasta water, then drain. Don't rinse."
+    },
+    {
+      "step": 2,
+      "title": "Sauce base",
+      "text": "In the empty pot over medium-low, whisk the {evap} evaporated milk, {miso} miso, {dijon} Dijon and {citrate} sodium citrate until the miso and Dijon are dispersed and the citrate is dissolved."
+    },
+    {
+      "step": 3,
+      "title": "Melt the cheese",
+      "text": "Add the {cheddar} cheddar and {gruyere} Gruyère a handful at a time, stirring constantly until each batch melts in. Keep it below a simmer, or the cheese browns onto the bottom of the pot and it sucks to clean."
+    },
+    {
+      "step": 4,
+      "title": "Season",
+      "text": "Off the heat, stir in the {garlic} garlic powder, {onion} onion powder, {cayenne} cayenne, {white-pepper} white pepper and {nutmeg} nutmeg. Taste, and salt only if it needs it."
+    },
+    {
+      "step": 5,
+      "title": "Combine",
+      "text": "Dump all the pasta into the sauce and mix thoroughly. If it's tight, loosen it with the reserved pasta water a splash at a time."
+    },
+    {
+      "step": 6,
+      "title": "Make ahead (optional)",
+      "text": "Pour it into a 9×13 and chill uncovered, then cover with foil once it's cold. To serve, bake covered at 350°F until the center hits 165°F, about 45–60 minutes, stirring once halfway."
+    },
+    {
+      "step": 7,
+      "title": "Finish",
+      "text": "Fold the {mozz} mozzarella into the hot mac right before serving."
+    }
+  ],
+  "notes": [
+    "The salt comes almost entirely from the sodium citrate and the cheese, which is why the pasta water stays unsalted.",
+    "No added water in the sauce is what keeps it from pooling at the bottom overnight. Round 1 used water plus evaporated milk and drained to the bottom of the pan.",
+    "Mozzarella goes in at the end, never before chilling: leftover citrate in the sauce strips its calcium overnight and kills the stretch.",
+    "No need to grate. Chunks melt fine in a citrate sauce.",
+    "Mustard powder works in place of the Dijon at a third of the volume, bloomed in cold water for 10 minutes.",
+    "Buttering the pan does nothing."
+  ],
+  "deviations": [
+    {
+      "what": "Sodium citrate holds the sauce instead of a roux",
+      "why": "Stays smooth through chilling and reheating, and there's no flour muting the cheese."
+    },
+    {
+      "what": "Evaporated milk only, no added water or milk",
+      "why": "Thicker sauce that doesn't drain to the bottom of the pan overnight."
+    },
+    {
+      "what": "Miso and Dijon in the sauce",
+      "why": "Savory depth that reads as better cheese, not as its own flavor."
+    },
+    {
+      "what": "Low-moisture mozzarella folded in at the end",
+      "why": "A citrate sauce has no stretch on its own. The mozz brings the pull back."
+    },
+    {
+      "what": "Unsalted pasta water",
+      "why": "The citrate and cheese already bring all the salt."
+    }
+  ],
+  "log": [
+    {
+      "date": "2026-11-06",
+      "entry": "Round 1, made ahead and baked the next day. Water plus evaporated milk, 22 g citrate, plain sharp cheddar, Tillamook blend and young Gruyère. Good but boring, and the sauce pooled at the bottom overnight."
+    },
+    {
+      "date": "2026-11-25",
+      "entry": "Round 2. Dropped the added water, cut citrate to 18 g, switched to extra-sharp cheddar and aged Gruyère, unsalted pasta water, mozzarella folded in at the end. Kicks ass."
+    }
+  ]
+}
