@@ -130,7 +130,7 @@
           "quantityMax": null,
           "unit": "oz",
           "item": "cranberries",
-          "note": "fresh or frozen",
+          "note": "fresh or frozen; one standard bag = 12 oz",
           "scalable": true
         },
         {
@@ -219,8 +219,6 @@
     }
   ],
   "notes": [
-    "Orange zest is critical. The rest is negotiable.",
-    "12 oz is one standard bag of cranberries.",
     "Keeps 5 days in an airtight container in the fridge, so make it ahead."
   ],
   "deviations": [

@@ -206,9 +206,10 @@ Good group names: "Main Components", "Sauce", "Shrimp", "Herbs & Aromatics", "To
 
 **item**: The ingredient name. Keep it concise. Don't repeat the unit. "garlic" not "cloves of garlic".
 
-**note**: Optional qualifier, prep instruction, or editorial comment. No amounts in notes ("about 1/8 tsp", "1 stick", "about 150 g"): they don't scale with the recipe. Put the amount in `quantity`/`unit`; if a second measure matters, pick the one unit you'd actually measure with. Examples:
+**note**: Optional qualifier, prep instruction, or editorial comment. No amounts in notes ("about 1/8 tsp", "1 stick", "about 150 g"): they don't scale with the recipe. Put the amount in `quantity`/`unit`; if a second measure matters, pick the one unit you'd actually measure with. The exception is a fixed package size, which stays true at any scale and helps at the store: "fresh or frozen; one standard bag = 12 oz". Examples:
 - "peeled, deveined, no tails"
 - "a few sprigs"
+- "fresh or frozen; one standard bag = 12 oz"
 - "see notes — may need more"
 - "most of a head, just use a fuckton"
 - `null` if no note needed
