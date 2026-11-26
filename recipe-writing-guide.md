@@ -197,11 +197,16 @@ Good group names: "Main Components", "Sauce", "Shrimp", "Herbs & Aromatics", "To
 
 **quantityMax**: For ranges like "4–6 ribs". Set `quantity: 4` and `quantityMax: 6`. Both scale together. Leave `null` if not a range.
 
-**unit**: Default to grams (`g`). Weigh anything you can; use volume only where weighing is impractical: small amounts (`tsp`, `tbsp`) and butter, which goes by the tbsp marks on the stick. Other consistent abbreviations when a source or package calls for them: `cups`, `lbs`, `oz`, `ml`, `cloves`, `sprigs`. Empty string `""` for countable items ("4 eggs") or items with no unit.
+**unit**: A pragmatic call: use the unit you'd actually measure with.
+- **Grams** where precision matters and you'd weigh it anyway: sodium citrate, flour, salt in a brine (`18 g` sodium citrate).
+- **The unit it comes in** for whole packages and round store amounts: `1 lb` pasta, a `12 oz` can of evaporated milk, `4 oz` of cheese. Don't convert these to odd gram numbers (`454 g`, `377 g`).
+- **`tsp` / `tbsp`** for small amounts nobody weighs: nobody is weighing out a tablespoon of mustard. Butter goes by the tbsp marks on the stick.
+- **`cups`** for liquids you'd scoop or pour, like `1 cup` reserved pasta water.
+- Other consistent abbreviations as needed: `ml`, `cloves`, `sprigs`. Empty string `""` for countable items ("4 eggs") or items with no unit.
 
 **item**: The ingredient name. Keep it concise. Don't repeat the unit. "garlic" not "cloves of garlic".
 
-**note**: Optional qualifier, prep instruction, or editorial comment. No amounts in notes ("about 1/8 tsp", "1 stick", "about 150 g"): they don't scale with the recipe. Put the amount in `quantity`/`unit`; if a second measure matters, it's a sign the quantity should be in grams. Examples:
+**note**: Optional qualifier, prep instruction, or editorial comment. No amounts in notes ("about 1/8 tsp", "1 stick", "about 150 g"): they don't scale with the recipe. Put the amount in `quantity`/`unit`; if a second measure matters, pick the one unit you'd actually measure with. Examples:
 - "peeled, deveined, no tails"
 - "a few sprigs"
 - "see notes — may need more"
