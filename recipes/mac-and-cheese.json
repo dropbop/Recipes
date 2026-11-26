@@ -186,18 +186,18 @@
       "items": [
         {
           "key": "elbows",
-          "quantity": 454,
+          "quantity": 1,
           "quantityMax": null,
-          "unit": "g",
+          "unit": "lb",
           "item": "elbow macaroni",
           "note": null,
           "scalable": true
         },
         {
           "key": "pasta-water",
-          "quantity": 240,
+          "quantity": 1,
           "quantityMax": null,
-          "unit": "g",
+          "unit": "cup",
           "item": "pasta water",
           "note": "reserved, unsalted",
           "scalable": true
@@ -209,9 +209,9 @@
       "items": [
         {
           "key": "evap",
-          "quantity": 377,
+          "quantity": 12,
           "quantityMax": null,
-          "unit": "g",
+          "unit": "oz",
           "item": "evaporated milk",
           "note": null,
           "scalable": true
@@ -245,18 +245,18 @@
         },
         {
           "key": "cheddar",
-          "quantity": 454,
+          "quantity": 1,
           "quantityMax": null,
-          "unit": "g",
+          "unit": "lb",
           "item": "extra-sharp cheddar",
           "note": "cut into 1/2-inch chunks",
           "scalable": true
         },
         {
           "key": "gruyere",
-          "quantity": 113,
+          "quantity": 4,
           "quantityMax": null,
-          "unit": "g",
+          "unit": "oz",
           "item": "aged Gruyère",
           "note": "cut into 1/2-inch chunks",
           "scalable": true
@@ -326,9 +326,9 @@
       "items": [
         {
           "key": "mozz",
-          "quantity": 113,
+          "quantity": 4,
           "quantityMax": null,
-          "unit": "g",
+          "unit": "oz",
           "item": "low-moisture whole-milk mozzarella",
           "note": "shredded",
           "scalable": true
