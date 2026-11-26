@@ -1,7 +1,7 @@
 {
   "id": "cranberry-sauce",
   "title": "Cranberry Sauce",
-  "description": "A bag of cranberries cooked down with sugar, orange juice, and the zest of a whole orange until the berries burst and set on their own pectin. Built off Priya Krishna's Bon Appétit sauce, with juice in the liquid, a splash of liquor, and citric acid on hand to dial the tartness.",
+  "description": "A bag of cranberries cooked down with sugar, orange juice, and the zest of a whole orange until the berries burst and set on their own pectin.",
   "status": "dialed-in",
   "category": "sides",
   "tags": [
@@ -10,7 +10,7 @@
     "make-ahead",
     "quick"
   ],
-  "source": "Priya Krishna, Bon Appétit — https://www.bonappetit.com/recipe/easiest-cranberry-sauce",
+  "source": "Bon Appétit — https://www.bonappetit.com/recipe/easiest-cranberry-sauce",
   "time": {
     "prep": 5,
     "active": 10,
@@ -238,7 +238,7 @@
     },
     {
       "what": "Optional pinch of nutmeg and cinnamon",
-      "why": "A little warmth without burying the sharp cranberry bite. Krishna skips warm spice entirely."
+      "why": "A little warmth without burying the sharp cranberry bite. Bon Appétit skips warm spice entirely."
     },
     {
       "what": "Citric acid on hand to adjust",
