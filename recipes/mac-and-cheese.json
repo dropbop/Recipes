@@ -192,15 +192,6 @@
           "item": "elbow macaroni",
           "note": null,
           "scalable": true
-        },
-        {
-          "key": "pasta-water",
-          "quantity": 1,
-          "quantityMax": null,
-          "unit": "cup",
-          "item": "pasta water",
-          "note": "reserved, unsalted",
-          "scalable": true
         }
       ]
     },
@@ -214,6 +205,15 @@
           "unit": "oz",
           "item": "evaporated milk",
           "note": null,
+          "scalable": true
+        },
+        {
+          "key": "pasta-water",
+          "quantity": 1,
+          "quantityMax": null,
+          "unit": "cup",
+          "item": "pasta water",
+          "note": "reserved",
           "scalable": true
         },
         {
@@ -340,17 +340,17 @@
     {
       "step": 1,
       "title": "Pasta",
-      "text": "Boil the {elbows} elbows in unsalted water until 2–3 minutes short of the box time (go the full 3 if you're making it ahead). Reserve {pasta-water} of the pasta water, then drain. Don't rinse."
+      "text": "Boil the {elbows} elbows in unsalted water until 2–3 minutes short of the box time (go the full 3 if you're making it ahead). Reserve {pasta-water} of the pasta water, then drain. Don't rinse the pasta."
     },
     {
       "step": 2,
       "title": "Sauce base",
-      "text": "In the empty pot over medium-low, whisk the {evap} evaporated milk, {miso} miso, {dijon} Dijon and {citrate} sodium citrate until the miso and Dijon are dispersed and the citrate is dissolved."
+      "text": "In the empty pot over medium-low, whisk the {evap} evaporated milk, {pasta-water} reserved pasta water, {miso} miso, {dijon} Dijon and {citrate} sodium citrate until the miso and Dijon are dispersed and the citrate is dissolved."
     },
     {
       "step": 3,
       "title": "Melt the cheese",
-      "text": "Add the {cheddar} cheddar and {gruyere} Gruyère a handful at a time, stirring constantly until each batch melts in. Keep it below a simmer, or the cheese browns onto the bottom of the pot and it sucks to clean."
+      "text": "Add the {cheddar} cheddar and {gruyere} Gruyère a handful at a time, stirring constantly until each batch melts in. Keep it below a simmer, or the cheese will brown onto the bottom of the pot and be a pain to scrub out."
     },
     {
       "step": 4,
@@ -360,7 +360,7 @@
     {
       "step": 5,
       "title": "Combine",
-      "text": "Dump all the pasta into the sauce and mix thoroughly. If it's tight, loosen it with the reserved pasta water a splash at a time."
+      "text": "Dump all the pasta into the sauce and mix thoroughly. If it's tight, loosen it with a splash of water at a time."
     },
     {
       "step": 6,
@@ -375,7 +375,6 @@
   ],
   "notes": [
     "The salt comes almost entirely from the sodium citrate and the cheese, which is why the pasta water stays unsalted.",
-    "No added water in the sauce is what keeps it from pooling at the bottom overnight. Round 1 used water plus evaporated milk and drained to the bottom of the pan.",
     "Mozzarella goes in at the end, never before chilling: leftover citrate in the sauce strips its calcium overnight and kills the stretch.",
     "No need to grate. Chunks melt fine in a citrate sauce.",
     "Mustard powder works in place of the Dijon at a third of the volume, bloomed in cold water for 10 minutes.",
@@ -387,8 +386,8 @@
       "why": "Stays smooth through chilling and reheating, and there's no flour muting the cheese."
     },
     {
-      "what": "Evaporated milk only, no added water or milk",
-      "why": "Thicker sauce that doesn't drain to the bottom of the pan overnight."
+      "what": "Evaporated milk and starchy pasta water instead of a milk béchamel",
+      "why": "The evaporated milk gives the sauce body without any flour, and the starch in the pasta water helps it cling to the noodles."
     },
     {
       "what": "Miso and Dijon in the sauce",
@@ -410,7 +409,7 @@
     },
     {
       "date": "2026-11-25",
-      "entry": "Round 2. Dropped the added water, cut citrate to 18 g, switched to extra-sharp cheddar and aged Gruyère, unsalted pasta water, mozzarella folded in at the end. Kicks ass."
+      "entry": "Round 2. Swapped the 1½ cups of plain water for a cup of pasta water, cut citrate to 18 g, switched to extra-sharp cheddar and aged Gruyère, unsalted pasta water, mozzarella folded in at the end. Kicks ass."
     }
   ]
 }
